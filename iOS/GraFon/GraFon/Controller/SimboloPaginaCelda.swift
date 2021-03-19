@@ -97,7 +97,7 @@ class SimboloPaginaCelda: UICollectionViewCell {
                 view.trailingAnchor.constraint(equalTo: trailingAnchor),
                 view.leadingAnchor.constraint(equalTo: leadingAnchor),
                 view.widthAnchor.constraint(equalTo: widthAnchor),
-                view.heightAnchor.constraint(equalToConstant: CGFloat(80.0)),
+                view.heightAnchor.constraint(equalToConstant: CGFloat(40.0)),
                 
                 imagenPajaroBarraAdicional.topAnchor.constraint(equalTo: view.topAnchor),
                 imagenPajaroBarraAdicional.leftAnchor.constraint(equalTo: view.leftAnchor),
