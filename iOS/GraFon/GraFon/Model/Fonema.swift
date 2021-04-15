@@ -6,9 +6,9 @@
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct Fonema {
+struct Fonema: Codable, Hashable{
     let identificador: Int
     let fonema:String
     let imagenPajaro: String

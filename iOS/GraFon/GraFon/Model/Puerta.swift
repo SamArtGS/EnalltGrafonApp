@@ -6,9 +6,9 @@
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct Puerta {
+struct Puerta: Codable, Hashable{
     var nombreImagenPuertaCerrada:String
     var nombreImagenPuertaMedio:String
     var nombreImagenPuertaAbierta:String
