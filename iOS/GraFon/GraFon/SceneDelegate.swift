@@ -17,17 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         let nav1 = UINavigationController()
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        
         let scrollLayout = UICollectionViewFlowLayout()
         scrollLayout.scrollDirection = .horizontal
-        
         nav1.viewControllers = [PagePuertasCV(collectionViewLayout: scrollLayout)]
-        
-        
         window?.rootViewController = nav1
         window?.makeKeyAndVisible()
     }

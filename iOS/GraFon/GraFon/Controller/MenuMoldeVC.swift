@@ -163,6 +163,7 @@ class SimbolosSonidosVC: UICollectionViewController{
                 print("Nada de nada")
         }
         imageView.center = view.center
+        imageView.contentMode = .bottom
         view.addSubview(imageView)
         view.sendSubviewToBack(imageView)
     }

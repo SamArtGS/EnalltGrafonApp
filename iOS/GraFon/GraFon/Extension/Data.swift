@@ -513,6 +513,8 @@ struct Data{
         )
     ]
     
+    
+    
     static let letras:[Letra] = [
         Letra(identificador: 0, imagenHoja: ""),
         Letra(identificador: 0, imagenHoja: ""),
