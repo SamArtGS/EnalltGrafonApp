@@ -13,7 +13,7 @@ import AVFoundation
 class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlowLayout{
     
     private let reuseIdentifier:String = "celdaFonema"
-    var seleccionado:Int = 10
+    var indiceSeleccionado:Int?
    
     private var reproductorAudio = AVAudioPlayer()
     
@@ -33,6 +33,8 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintsDobleBarra()
@@ -46,20 +48,18 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
                                                               imageName: "iconbar1")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
         self.toolbarItems = items
-        
-        
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        guard let indice = indiceSeleccionado else { return }
+        collectionView.scrollToItem(at: IndexPath(item: indice - 1, section: 0), at: .centeredHorizontally, animated: false)
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(false, animated: false)
-        collectionView.scrollToItem(at:IndexPath(item: seleccionado,
-                                                 section: 0),
-                                                 at: .bottom,
-                                                 animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

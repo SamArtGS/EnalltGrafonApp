@@ -15,8 +15,10 @@ class CeldaMolde: UICollectionViewCell {
     
     var fonema: Fonema? {
        didSet {
-           guard let destapado1 = fonema else { return }
-           imagenElemento.image = UIImage(named: destapado1.imagenPajaro)
+            guard let destapado1 = fonema else { return }
+        if !destapado1.imagenPajaro.isEmpty{
+            imagenElemento.image = UIImage(named: destapado1.imagenPajaro)
+        }
        }
     }
     

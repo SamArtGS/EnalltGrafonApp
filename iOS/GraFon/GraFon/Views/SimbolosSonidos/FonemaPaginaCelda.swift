@@ -38,6 +38,7 @@ class SimboloPaginaCelda: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.isUserInteractionEnabled = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -49,39 +50,38 @@ class SimboloPaginaCelda: UICollectionViewCell {
     }()
     
     override init(frame: CGRect) {
-           super.init(frame: frame)
-           distribucionConstraints()
+        super.init(frame: frame)
+        distribucionConstraints()
     }
        
     required init?(coder: NSCoder) {
-           fatalError("Falló al momento de implementar el constructor")
+        fatalError("Falló al momento de implementar el constructor")
     }
         
     func distribucionConstraints(){
-            translatesAutoresizingMaskIntoConstraints = false
-            contentMode = .scaleAspectFit
+        translatesAutoresizingMaskIntoConstraints = false
+        contentMode = .scaleAspectFit
+    
+        let imagenesApiladas:UIStackView = UIStackView()
+        imagenesApiladas.axis = .vertical
+        imagenesApiladas.distribution = .fillProportionally
+        imagenesApiladas.alignment = .center
+        imagenesApiladas.spacing = 1
+        imagenesApiladas.translatesAutoresizingMaskIntoConstraints = false
+        imagenesApiladas.addArrangedSubview(imagenFonemaAntes)
+        imagenesApiladas.addArrangedSubview(imagenObjeto)
         
-            let imagenesApiladas:UIStackView = UIStackView()
-            imagenesApiladas.axis = .vertical
-            imagenesApiladas.distribution = .fillProportionally
-            imagenesApiladas.alignment = .center
-            imagenesApiladas.spacing = 1
-            imagenesApiladas.translatesAutoresizingMaskIntoConstraints = false
-            imagenesApiladas.addArrangedSubview(imagenFonemaAntes)
-            imagenesApiladas.addArrangedSubview(imagenObjeto)
-            
-            addSubview(imagenesApiladas)
+        addSubview(imagenesApiladas)
             
     NSLayoutConstraint.activate([
         
-            imagenesApiladas.topAnchor.constraint(equalTo: topAnchor),
-            imagenesApiladas.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imagenesApiladas.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            
-            imagenFonemaAntes.topAnchor.constraint(equalTo: topAnchor,constant: 30),
-            imagenFonemaAntes.leadingAnchor.constraint(equalTo: imagenesApiladas.leadingAnchor),
-            imagenFonemaAntes.trailingAnchor.constraint(equalTo: imagenesApiladas.trailingAnchor)
+        imagenesApiladas.topAnchor.constraint(equalTo: topAnchor),
+        imagenesApiladas.trailingAnchor.constraint(equalTo: trailingAnchor),
+        imagenesApiladas.leadingAnchor.constraint(equalTo: leadingAnchor),
+        imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+        imagenFonemaAntes.topAnchor.constraint(equalTo: topAnchor,constant: 30),
+        imagenFonemaAntes.leadingAnchor.constraint(equalTo: imagenesApiladas.leadingAnchor),
+        imagenFonemaAntes.trailingAnchor.constraint(equalTo: imagenesApiladas.trailingAnchor)
             
     ])
     

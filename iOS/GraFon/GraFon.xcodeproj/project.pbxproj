@@ -198,6 +198,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5400C2AD262DE91E008F2D4A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				546B135D25DAFACD00CF2ED5 /* AppDelegate.swift */,
+				546B135F25DAFACD00CF2ED5 /* SceneDelegate.swift */,
+				546B136E25DAFACF00CF2ED5 /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		540C42F225FB5EB40084FADD /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,15 +287,13 @@
 		546B135C25DAFACD00CF2ED5 /* GraFon */ = {
 			isa = PBXGroup;
 			children = (
+				5400C2AD262DE91E008F2D4A /* Base */,
 				546B138325DAFD2F00CF2ED5 /* Model */,
 				546B138B25DB007800CF2ED5 /* Views */,
-				546B136925DAFACF00CF2ED5 /* Assets.xcassets */,
 				546B138525DAFD4F00CF2ED5 /* Extension */,
 				546B138425DAFD3E00CF2ED5 /* CoreData */,
 				546B138225DAFD2200CF2ED5 /* Controller */,
-				546B135D25DAFACD00CF2ED5 /* AppDelegate.swift */,
-				546B135F25DAFACD00CF2ED5 /* SceneDelegate.swift */,
-				546B136E25DAFACF00CF2ED5 /* Info.plist */,
+				546B136925DAFACF00CF2ED5 /* Assets.xcassets */,
 				540C42F225FB5EB40084FADD /* Sounds */,
 			);
 			path = GraFon;
@@ -697,7 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDTCRD4BVY;
-				INFOPLIST_FILE = GraFon/Info.plist;
+				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,7 +724,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDTCRD4BVY;
-				INFOPLIST_FILE = GraFon/Info.plist;
+				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

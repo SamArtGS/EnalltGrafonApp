@@ -16,10 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 13, *) {
-            // do only pure app launch stuff, not interface stuff
+            
         } else {
             let nav1 = UINavigationController()
-            //guard let windowScene = (scene as? UIWindowScene) else { return }
             window = UIWindow(frame: UIScreen.main.bounds)
             let scrollLayout = UICollectionViewFlowLayout()
             scrollLayout.scrollDirection = .horizontal

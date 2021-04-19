@@ -59,8 +59,7 @@ class SimbolosSonidosVC: UICollectionViewController{
         case 1:
             print("Hola")
         case 2:
-            let pase = Data.letras[indexPath.item].identificador
-            if pase != 0{
+            if  Data.letras[indexPath.item].identificador != 0{
                 mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
 //                let scrollLayout = UICollectionViewFlowLayout()
 //                scrollLayout.scrollDirection = .horizontal
@@ -68,13 +67,12 @@ class SimbolosSonidosVC: UICollectionViewController{
 //                self.navigationController?.pushViewController(vcs, animated: true)
             }
         case 3:
-            let pase = Data.fonemas[indexPath.item].identificador
-                let scrollLayout = UICollectionViewFlowLayout()
-                scrollLayout.scrollDirection = .horizontal
+            let scrollLayout = UICollectionViewFlowLayout()
+            scrollLayout.scrollDirection = .horizontal
             
-            if pase != 0{
+            if  Data.fonemas[indexPath.item].identificador != 0{
                 let vcs = SonidoSeleccionado(collectionViewLayout:scrollLayout)
-                vcs.seleccionado = pase
+                vcs.indiceSeleccionado = Data.fonemas[indexPath.item].identificador
                 self.navigationController?.pushViewController(vcs, animated: true)
             }
         default:
