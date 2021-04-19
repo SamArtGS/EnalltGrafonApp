@@ -37,7 +37,6 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        constraintsDobleBarra()
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = true
         personalizacionNavController()
@@ -137,63 +136,5 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         }
         
     }
-    
-    
-    private var textoSimbolos: UILabel = {
-        let texto = UILabel()
-        texto.translatesAutoresizingMaskIntoConstraints = false
-        texto.text = "Símbolos y Sonidos"
-        texto.textColor = .colorBarraSuperiorSyS
-        texto.contentMode = .scaleAspectFit
-        texto.adjustsFontForContentSizeCategory = true
-        return texto
-    }()
-    
-    private var imagenPajaroBarraAdicional:UIButton = {
-        let boton = UIButton(type: .custom)
-        boton.translatesAutoresizingMaskIntoConstraints = false
-        boton.setImage(UIImage(named: "iconbar1"), for: .normal)
-        boton.contentMode = .scaleAspectFit
-        boton.target(forAction: #selector(paginaPrincipal), withSender: .none)
-        return boton
-    }()
-    
-    @objc func paginaPrincipal(){
-        print("Regresando a la pantalla xx2")
-    }
-    
-    func constraintsDobleBarra(){
-        let barra = UIView()
-            barra.translatesAutoresizingMaskIntoConstraints = false
-            barra.contentMode = .scaleAspectFit
-        
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(barra)
-        barra.addSubview(textoSimbolos)
-        barra.addSubview(imagenPajaroBarraAdicional)
-        barra.backgroundColor = .colorToolBarSyS
-        
-        NSLayoutConstraint.activate([
-            barra.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            barra.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            barra.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            barra.widthAnchor.constraint(equalTo: view.widthAnchor),
-            barra.heightAnchor.constraint(equalToConstant: 50),
-            textoSimbolos.topAnchor.constraint(equalTo: barra.topAnchor),
-            textoSimbolos.bottomAnchor.constraint(equalTo: barra.bottomAnchor),
-            textoSimbolos.leadingAnchor.constraint(equalTo: barra.leadingAnchor,
-                                                        constant: 20),
-            imagenPajaroBarraAdicional.topAnchor.constraint(equalTo: barra.topAnchor,
-                                                        constant: 10),
-            imagenPajaroBarraAdicional.bottomAnchor.constraint(equalTo: barra.bottomAnchor,
-                                                        constant: -10),
-            imagenPajaroBarraAdicional.trailingAnchor.constraint(equalTo: barra.trailingAnchor,
-                                                        constant: -20),
-            imagenPajaroBarraAdicional.widthAnchor.constraint(equalToConstant: 35),
-            collectionView.topAnchor.constraint(equalTo: barra.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
+
 }
