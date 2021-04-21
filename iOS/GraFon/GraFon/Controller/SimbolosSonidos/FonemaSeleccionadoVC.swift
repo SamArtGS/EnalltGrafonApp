@@ -48,6 +48,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
                                                               imageName: "iconbar1")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
         self.toolbarItems = items
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SimbolosSonidosVC: UICollectionViewController{
+class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
     
     private let reuseIdentifier = "Cell"
     private var puertaInt: Int?
@@ -28,6 +28,8 @@ class SimbolosSonidosVC: UICollectionViewController{
         self.collectionView!.register(CeldaMolde.self,
                                       forCellWithReuseIdentifier: reuseIdentifier)
         configurarEntorno()
+        tabBarController?.viewControllers = [SonidoSeleccionado(), PresentacionJuegoSyS()]
+        tabBarController?.delegate = self
     }
     
    
