@@ -137,6 +137,9 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
 }
 
 extension JuegoSySCelda: UIDragInteractionDelegate {
+    
+    
+    
 
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
         guard let image = imagenFonema.image else { return [] }
@@ -181,7 +184,6 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
 
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         session.loadObjects(ofClass: UIImage.self) { imageItems in
-            //guard let images = imageItems as? [UIImage] else { return }
             guard let vista = interaction.view else{
                 return
             }
@@ -207,5 +209,4 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
             }
         }
     }
-
 }

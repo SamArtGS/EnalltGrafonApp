@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5400C2AF262E32E2008F2D4A /* TabBarSimbolosySonidos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */; };
+		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
 		5421F0F325DB751B00B309FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* Data.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
 		546301F925FA025E00E005BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colors.swift */; };
@@ -97,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSimbolosySonidos.swift; sourceTree = "<group>"; };
+		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
 		546301F825FA025E00E005BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 				546301F825FA025E00E005BC /* Colors.swift */,
 				542D5AF52604E7CE0074927F /* imageButtons.swift */,
 				54A0F8912627984D00A6D308 /* Alertas.swift */,
+				5400C2B0262E33A5008F2D4A /* TabBars.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 			children = (
 				5495D75E25F97B7F00906AEA /* FonemaSeleccionadoVC.swift */,
 				547A8BA22618B994002962CD /* PresentacionJuegoVC.swift */,
+				5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */,
 				54A0F8872627317900A6D308 /* SySJuego1VC.swift */,
 			);
 			path = SimbolosSonidos;
@@ -543,6 +549,7 @@
 				54F6993225F09ECC008F22DF /* FonemaPaginaCelda.swift in Sources */,
 				546301F925FA025E00E005BC /* Colors.swift in Sources */,
 				5492F89D25EA1CAD0006A960 /* CeldaMolde.swift in Sources */,
+				5400C2AF262E32E2008F2D4A /* TabBarSimbolosySonidos.swift in Sources */,
 				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoVC.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
 				54A0F8882627317900A6D308 /* SySJuego1VC.swift in Sources */,
@@ -556,6 +563,7 @@
 				547A8BA32618B994002962CD /* PresentacionJuegoVC.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */,
+				5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */,
 				54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */,
 				54F6993825F0AF02008F22DF /* Lines.swift in Sources */,
 				54A0F8922627984D00A6D308 /* Alertas.swift in Sources */,

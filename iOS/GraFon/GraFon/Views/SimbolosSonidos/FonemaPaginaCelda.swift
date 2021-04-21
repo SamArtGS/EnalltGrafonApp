@@ -15,7 +15,8 @@ class SimboloPaginaCelda: UICollectionViewCell {
     private var imagenFonAntes:String = ""
     private var imageFonDespues:String = ""
     
-    //Al momento de pasarle por la construcción del objeto:
+    
+    
     var fonema: Fonema? {
         didSet {
             guard let destapado = fonema else { return }
@@ -27,6 +28,8 @@ class SimboloPaginaCelda: UICollectionViewCell {
         }
     }
     
+    
+    /// <#Description#>
     func cambiarImagen() {
         imagenFonemaAntes.image = UIImage(named: imageFonDespues)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {

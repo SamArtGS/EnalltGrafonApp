@@ -12,7 +12,7 @@ class PresentacionJuegoSyS: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Símbolos y Sonidos"
+        self.title = "Instrucciones"
         self.navigationController?.setToolbarHidden(true, animated: true)
         setUpConstraints()
     }

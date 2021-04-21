@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIViewController{
+    
+    /// <#Description#>
+    /// - Parameters:
+    ///   - title: <#title description#>
+    ///   - message: <#message description#>
     func mostrarAlerta(title: String, message: String){
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)

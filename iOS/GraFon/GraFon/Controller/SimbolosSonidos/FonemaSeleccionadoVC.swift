@@ -37,6 +37,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Ejemplos"
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = true
         personalizacionNavController()
@@ -78,7 +79,17 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         navigationController?.toolbar.barTintColor = .colorToolBarSyS
     }
     
-    
+    override func viewDidLayoutSubviews() {
+        guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
+            return
+        }
+        let filtrado = Data.fonemas.filter{ elemento in
+            elemento.identificador != 0
+        }
+        items[0].title = "\(filtrado[indexPath.item].fonema)"
+        items[2].title = "\(filtrado[indexPath.item].identificador) / \(filtrado.count)"
+        
+    }
     override func collectionView(_ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
         
@@ -98,8 +109,6 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
             elemento.identificador != 0
         }
         cell.fonema = filtrado[indexPath.item]
-        items[0].title = "\(filtrado[indexPath.item].fonema)"
-        items[2].title = "\(filtrado[indexPath.item].identificador) / \(filtrado.count)"
         return cell
     }
     
