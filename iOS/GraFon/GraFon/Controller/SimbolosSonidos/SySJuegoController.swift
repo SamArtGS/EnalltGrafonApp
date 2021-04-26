@@ -18,6 +18,8 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     private var tarjetas: [ParejaSonido]?
     
+    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    
     init(collectionViewLayout layout: UICollectionViewLayout, nivelSelecionado: Int) {
         super.init(collectionViewLayout: layout)
         nivelFonema = nivelSelecionado
@@ -67,13 +69,11 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        
         barraProgreso.progress = Float(indexPath.item + 1 )/Float(tarjetas?.count ?? 1)
-        
     }
     
     private var puntaje: UIBarButtonItem = {
-        return UIBarButtonItem(title: "1 | 20",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "0 | 20",style: .plain, target: nil, action: nil)
     }()
     
 
@@ -109,6 +109,7 @@ extension SySJuego1VC{
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
 }
 
 extension SySJuego1VC: juegoSimbolosySonidosDelegate{
@@ -118,7 +119,9 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         }
         if indexPath.item != tarjetas!.count - 1 {
             collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+            finalizar()
         }else{
+            (collectionView.cellForItem(at: indexPath) as! JuegoSySCelda).finalizado()
             finalizar()
         }
     }
@@ -128,10 +131,18 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         puntaje.title = "\(puntos) | \(tarjetas?.count ?? 1)"
     }
     
+    
     func finalizar() {
-        let olvidoVC = PresentacionJuegoSyS()
-        present(olvidoVC, animated: true)
+        if #available(iOS 13, *) {
+            let olvidoVC = PuntuacionJuegoSyS(puntaje: puntos)
+            olvidoVC.modalPresentationStyle = .automatic
+            present(olvidoVC, animated: true)
+        }else{
+            let olvidoVC = PuntuacionJuegoSyS(puntaje: puntos)
+            self.halfModalTransitioningDelegate = HalfModalTransitioningDelegate(viewController: self, presentingViewController: olvidoVC)
+            olvidoVC.modalPresentationStyle = .custom
+            self.transitioningDelegate = self.halfModalTransitioningDelegate
+            present(olvidoVC,animated: true)
+        }
     }
-    
-    
 }

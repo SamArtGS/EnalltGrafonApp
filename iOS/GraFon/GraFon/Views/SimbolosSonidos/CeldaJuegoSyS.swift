@@ -180,6 +180,9 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
             self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_mdpi")
         }
     }
+    func finalizado(){
+        imagenFonema.isUserInteractionEnabled = false
+    }
 
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         session.loadObjects(ofClass: UIImage.self) {[unowned self] imageItems in

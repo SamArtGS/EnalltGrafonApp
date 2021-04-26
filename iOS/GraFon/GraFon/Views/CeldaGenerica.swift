@@ -23,7 +23,10 @@ class CeldaMolde: UICollectionViewCell {
     var letra: Letra? {
         didSet{
             guard let destapado = letra else { return }
-            imagenElemento.image = UIImage(named: destapado.imagenHoja)
+            if !destapado.imagenHoja.isEmpty{
+                imagenElemento.image = UIImage(named: destapado.imagenHoja)
+            }
+            
         }
     }
     

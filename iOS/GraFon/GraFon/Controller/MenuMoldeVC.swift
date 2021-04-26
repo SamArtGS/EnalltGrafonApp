@@ -106,7 +106,8 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
     func configurarEntorno(){
         collectionView.backgroundColor = .clear
         let imageView: UIImageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
 
         
@@ -142,6 +143,13 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
                 print("Nada de nada")
         }
         view.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
         view.sendSubviewToBack(imageView)
               
     }

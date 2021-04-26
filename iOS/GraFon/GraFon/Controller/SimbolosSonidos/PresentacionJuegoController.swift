@@ -8,51 +8,69 @@
 
 import UIKit
 
-class PresentacionJuegoSyS: UIViewController{
-
-    lazy var pantalla = PantallaJuegoSyS()
+class Carcasa: UIViewController{
     
-    override func viewDidLoad() {
+    func configure(vista:UIView){
         
-        super.viewDidLoad()
-        
-        configure()
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
-    func configure(){
-        
-        pantalla.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(pantalla)
+        vista.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(vista)
         view.backgroundColor = .white
-        pantalla.contentMode = .scaleAspectFit
-        pantalla.clipsToBounds = true
-        pantalla.delegate = self
+        vista.contentMode = .scaleAspectFit
+        vista.clipsToBounds = true
+        //vista.delegate = self
         
         NSLayoutConstraint.activate([
-            pantalla.topAnchor.constraint(equalTo: view.topAnchor),
-            pantalla.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pantalla.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pantalla.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            vista.topAnchor.constraint(equalTo: view.topAnchor),
+            vista.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            vista.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            vista.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
-    
-    
-    
-
 }
+
 extension PresentacionJuegoSyS: pantallaInstruccionesDelegate{
     func iniciarJuego() {
         let scrollLayout = UICollectionViewFlowLayout()
         scrollLayout.scrollDirection = .vertical
         navigationController?.pushViewController(SeleccionarNivelController(collectionViewLayout: scrollLayout), animated: true)
+    }
+    
+}
+
+class PresentacionJuegoSyS: Carcasa {
+    lazy var pantalla = PantallaJuegoSyS()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure(vista: pantalla)
+        pantalla.delegate = self
+    }
+}
+
+class PuntuacionJuegoSyS: Carcasa {
+    
+    init(puntaje:Int) {
+        pantalla.puntaje = puntaje
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var pantalla = PantallaResultados()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure(vista: pantalla)
+        view.layer.cornerRadius  = 20
+        view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        view.clipsToBounds = true
+        view.backgroundColor = .purple
+        
+    }
+    override func viewWillLayoutSubviews() {
+       super.viewWillLayoutSubviews()
+       
     }
 }

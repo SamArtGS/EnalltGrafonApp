@@ -24,11 +24,11 @@ extension UIFont {
         case bold = "-Bold"
     }
 
-    static func Roboto(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
-        return UIFont(name: "Roboto\(type.rawValue)", size: size)!
+    static func HelveticaNeue(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return UIFont(name: "HelveticaNeue\(type.rawValue)", size: size)!
     }
-    static func Lato(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
-        return UIFont(name: "OpenSans\(type.rawValue)", size: size)!
+    static func GillSans(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return UIFont(name: "GillSans\(type.rawValue)", size: size)!
     }
 
     var isBold: Bool {

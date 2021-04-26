@@ -147,6 +147,10 @@
 		54DCA04B26364CAE003D4F68 /* 213.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54DC9FDB26364CAE003D4F68 /* 213.mp3 */; };
 		54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA04C26365AFA003D4F68 /* PantallaResultados.swift */; };
 		54DCA04F26366A84003D4F68 /* Fuentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA04E26366A84003D4F68 /* Fuentes.swift */; };
+		54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05126367AE1003D4F68 /* HalfModalTransitionAnimator.swift */; };
+		54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05226367AE1003D4F68 /* HalfModalInteractiveTransition.swift */; };
+		54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */; };
+		54DCA05826367AE2003D4F68 /* HalfModalPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */; };
 		54F6993225F09ECC008F22DF /* CeldaFonemaPagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */; };
 		54F6993825F0AF02008F22DF /* Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993725F0AF02008F22DF /* Lines.swift */; };
 		54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993925F0C92D008F22DF /* Fonema.swift */; };
@@ -308,6 +312,10 @@
 		54DC9FDB26364CAE003D4F68 /* 213.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 213.mp3; sourceTree = "<group>"; };
 		54DCA04C26365AFA003D4F68 /* PantallaResultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaResultados.swift; sourceTree = "<group>"; };
 		54DCA04E26366A84003D4F68 /* Fuentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuentes.swift; sourceTree = "<group>"; };
+		54DCA05126367AE1003D4F68 /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
+		54DCA05226367AE1003D4F68 /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
+		54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionDelegate.swift; sourceTree = "<group>"; };
+		54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalPresentation.swift; sourceTree = "<group>"; };
 		54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaFonemaPagina.swift; sourceTree = "<group>"; };
 		54F6993725F0AF02008F22DF /* Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lines.swift; sourceTree = "<group>"; };
 		54F6993925F0C92D008F22DF /* Fonema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonema.swift; sourceTree = "<group>"; };
@@ -368,6 +376,7 @@
 				546B138325DAFD2F00CF2ED5 /* Model */,
 				546B138B25DB007800CF2ED5 /* Views */,
 				546B138525DAFD4F00CF2ED5 /* Extension */,
+				54DCA05026367AB0003D4F68 /* Helpers */,
 				546B138425DAFD3E00CF2ED5 /* CoreData */,
 				546B138225DAFD2200CF2ED5 /* Controller */,
 				546B136925DAFACF00CF2ED5 /* Assets.xcassets */,
@@ -400,6 +409,7 @@
 		546B138325DAFD2F00CF2ED5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5421F0F225DB751B00B309FC /* Data.swift */,
 				546B139625DB381400CF2ED5 /* Puerta.swift */,
 				54F6993925F0C92D008F22DF /* Fonema.swift */,
 				5463109F26210C3E00FA115C /* Pareja.swift */,
@@ -419,7 +429,6 @@
 		546B138525DAFD4F00CF2ED5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5421F0F225DB751B00B309FC /* Data.swift */,
 				54F6993725F0AF02008F22DF /* Lines.swift */,
 				54DCA04E26366A84003D4F68 /* Fuentes.swift */,
 				546301F825FA025E00E005BC /* Colors.swift */,
@@ -588,6 +597,17 @@
 				54DC9FDB26364CAE003D4F68 /* 213.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		54DCA05026367AB0003D4F68 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				54DCA05226367AE1003D4F68 /* HalfModalInteractiveTransition.swift */,
+				54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */,
+				54DCA05126367AE1003D4F68 /* HalfModalTransitionAnimator.swift */,
+				54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,6 +830,7 @@
 				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
 				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
+				54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */,
 				546310A026210C3E00FA115C /* Pareja.swift in Sources */,
 				54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
@@ -817,11 +838,13 @@
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
 				54A0F885262676B300A6D308 /* PantallaJuegoSyS.swift in Sources */,
 				546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */,
+				54DCA05826367AE2003D4F68 /* HalfModalPresentation.swift in Sources */,
 				547A8BA32618B994002962CD /* PresentacionJuegoController.swift in Sources */,
 				54DC9F682636046B003D4F68 /* SeleccionarNivelController.swift in Sources */,
 				54FF64EB2634C1DF000C9037 /* Protocolos.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */,
+				54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */,
 				546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */,
 				5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */,
 				54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */,
@@ -830,6 +853,7 @@
 				5421F0F325DB751B00B309FC /* Data.swift in Sources */,
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
 				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
+				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
 				546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
