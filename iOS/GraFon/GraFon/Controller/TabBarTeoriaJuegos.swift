@@ -31,22 +31,45 @@ class TabBarSimbolosySonidos: UITabBarController{
             break
         case 2:
             self.title = "Palabras en boca"
-            let teoria = self.crearNavegacion(titulo: "Teoría", imagenIcono: "icon-study", controller: MenuMoldeVC(collectionViewLayout: scrollLayout, puertaSeleccionada: 2))
-            let practica = self.crearNavegacion(titulo: "Práctica", imagenIcono: "icon-play", controller: PresentacionJuegoSyS())
+            let teoria = self.crearNavegacion(titulo: "Palabras en la boca", imagenIcono: "icon-study", controller: MenuMoldeVC(collectionViewLayout: scrollLayout, puertaSeleccionada: 2))
+            let practica = self.crearNavegacion(titulo: "Juegos", imagenIcono: "icon-play", controller: PresentacionJuegoSyS())
             viewControllers = [teoria,practica]
             break
         case 3:
-            self.title = "Símbolos y Sonidos"
-            let teoría = self.crearNavegacion(titulo: "Teoría", imagenIcono: "icon-study", controller: MenuMoldeVC(collectionViewLayout: scrollLayout, puertaSeleccionada: 3))
-            let practica = self.crearNavegacion(titulo: "Práctica", imagenIcono: "icon-play", controller: PresentacionJuegoSyS())
+            let teoría = self.crearNavegacion(titulo: "Símbolos y Sonidos", imagenIcono: "icon-study", controller: MenuMoldeVC(collectionViewLayout: scrollLayout, puertaSeleccionada: 3))
+            let practica = self.crearNavegacion(titulo: "Juegos", imagenIcono: "icon-play", controller: PresentacionJuegoSyS())
             viewControllers = [teoría,practica]
+            
+            if #available(iOS 13.0, *) {
+                let appearance = UITabBarAppearance()
+                appearance.backgroundColor = .colorTabBarSonidoSimbolo
+                let item = UITabBarItemAppearance()
+                item.normal.iconColor = .colorNoSeleccionadoTabBarSonidoSimbolo
+                item.selected.iconColor = .colorSeleccionadoTabBarSonidoSimbolo
+                item.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorNoSeleccionadoTabBarSonidoSimbolo]
+                item.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorSeleccionadoTabBarSonidoSimbolo]
+                appearance.stackedLayoutAppearance = item
+                appearance.inlineLayoutAppearance = item
+                appearance.compactInlineLayoutAppearance = item
+                tabBar.standardAppearance = appearance
+            } else {
+                tabBar.barTintColor = .colorTabBarSonidoSimbolo
+                tabBar.unselectedItemTintColor = .colorNoSeleccionadoTabBarSonidoSimbolo
+                tabBar.tintColor = .colorSeleccionadoTabBarSonidoSimbolo
+                tabBar.isTranslucent = false
+            }
+            
+            if viewControllers?[0] == practica{
+                self.title = "Juegos"
+            }else{
+                self.title = "Sonidos y Símbolos"
+            }
             break
         default:
             break
         
         }
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

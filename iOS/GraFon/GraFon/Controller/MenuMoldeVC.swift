@@ -129,6 +129,7 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
                     .shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
                 imageView.image = UIImage(named: "bck_n2_v2")
             case 3:
+                navigationController?.delegate = self
                 navigationController?.title = "Símbolos y sonidos"
                 navigationController?.navigationBar.setBackgroundImage(
                     UIColor.colorBarraSuperiorSyS
@@ -138,6 +139,7 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
                 navigationController?
                     .navigationBar
                     .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
+                
                 imageView.image = UIImage(named: "bck_n1_v2")
             default:
                 print("Nada de nada")

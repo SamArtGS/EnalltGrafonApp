@@ -53,6 +53,8 @@ class PantallaJuegoSyS: UIView{
         botonInicioJuego.addTarget(self, action: accion, for: .touchUpInside)
     }
     
+    
+    
     func setUpConstraints(){
         addSubview(pilaElementos)
         pilaElementos.addArrangedSubview(imagenPresentacion)

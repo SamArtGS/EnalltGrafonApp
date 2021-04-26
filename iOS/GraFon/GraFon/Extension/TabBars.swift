@@ -11,6 +11,7 @@ import UIKit
 extension UITabBarController: UINavigationControllerDelegate {
     func crearNavegacion(titulo: String, imagenIcono: String, controller: UIViewController) -> UIViewController{
         controller.title = titulo
+        controller.navigationController?.title = titulo
         controller.tabBarItem.image = UIImage(named: imagenIcono)
         controller.view.backgroundColor = .white
         return controller

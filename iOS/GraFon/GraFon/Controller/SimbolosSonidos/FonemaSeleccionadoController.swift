@@ -26,7 +26,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Ejemplos"
+        self.title = "Símbolos y Sonidos"
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = true
         self.collectionView!.register(SimboloPaginaCelda.self,

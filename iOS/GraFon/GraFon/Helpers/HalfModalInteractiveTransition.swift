@@ -9,10 +9,10 @@
 import UIKit
 
 class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {
+    
     var viewController: UIViewController
     var presentingViewController: UIViewController?
     var panGestureRecognizer: UIPanGestureRecognizer
-    
     var shouldComplete: Bool = false
     
     init(viewController: UIViewController, withView view:UIView, presentingViewController: UIViewController?) {
@@ -28,7 +28,6 @@ class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {
     
     override func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
         super.startInteractiveTransition(transitionContext)
-        
         print("start interactive")
     }
     
@@ -44,12 +43,13 @@ class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {
         
         switch pan.state {
         case .began:
+            
             self.presentingViewController?.dismiss(animated: true, completion: nil)
             
             break
             
         case .changed:
-            let screenHeight = UIScreen.main.bounds.size.height - 50
+            let screenHeight = UIScreen.main.bounds.size.height - 100
             let dragAmount = screenHeight
             let threshold: Float = 0.2
             var percent: Float = Float(translation.y) / Float(dragAmount)

@@ -69,6 +69,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
+        puntaje.title = "\(indexPath.item + 1 ) | \(tarjetas?.count ?? 1)"
         barraProgreso.progress = Float(indexPath.item + 1 )/Float(tarjetas?.count ?? 1)
     }
     
@@ -119,7 +120,6 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         }
         if indexPath.item != tarjetas!.count - 1 {
             collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
-            finalizar()
         }else{
             (collectionView.cellForItem(at: indexPath) as! JuegoSySCelda).finalizado()
             finalizar()
@@ -128,7 +128,6 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
     
     func recolectarPuntaje() {
         puntos+=1
-        puntaje.title = "\(puntos) | \(tarjetas?.count ?? 1)"
     }
     
     
