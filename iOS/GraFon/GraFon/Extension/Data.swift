@@ -9,7 +9,6 @@
 import UIKit
 
 struct Data{
-    
     static let fonemas:[Fonema] = [
         //
         //Renglón 1
@@ -415,104 +414,257 @@ struct Data{
            nombreImagenPuertaAbierta: "PuertaSonidosSimbolosAbierta",
            pantallaReferenciada: "PuertaSonidosSimbolos")]
     
-    static let Juego1SyS = [
+    static let JuegoSyS = [
+        
+        // :--------------------------:
+        // Nivel 1: Correspondiente a Juego 1
+        // :--------------------------:
+        
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_01mdpi",
-                sonido: "37",
+                sonido: "71",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_02mdpi",
-                sonido: "15",
-                correcto: false
+                sonido: "99",
+                correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_03mdpi",
                 sonido: "33",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_04mdpi",
-                sonido: "37",
-                correcto: false
+                sonido: "153",
+                correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_05mdpi",
-                sonido: "15",
-                correcto: true
+                sonido: "135",
+                correcto: false
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_06mdpi",
-                sonido: "33",
+                sonido: "37",
                 correcto: false
         ),
         ParejaSonido(
+            nivel: 1,
+                imagen: "n1_jgo1_pant_07mdpi",
+                sonido: "84",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_08mdpi",
-                sonido: "37",
+                sonido: "115",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_09mdpi",
-                sonido: "15",
-                correcto: false
+                sonido: "51",
+                correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_10mdpi",
-                sonido: "33",
+                sonido: "85",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_11mdpi",
-                sonido: "37",
-                correcto: false
+                sonido: "113",
+                correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_12mdpi",
-                sonido: "15",
+                sonido: "63",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_13mdpi",
-                sonido: "33",
-                correcto: false
+                sonido: "42",
+                correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_14mdpi",
-                sonido: "37",
+                sonido: "146",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_15mdpi",
-                sonido: "15",
-                correcto: false
-        ),
-        ParejaSonido(
-                imagen: "n1_jgo1_pant_16mdpi",
-                sonido: "33",
+                sonido: "156",
                 correcto: true
         ),
         ParejaSonido(
+            nivel: 1,
+                imagen: "n1_jgo1_pant_16mdpi",
+                sonido: "119",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 1,
                 imagen: "n1_jgo1_pant_17mdpi",
+                sonido: "121",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 1,
+                imagen: "n1_jgo1_pant_18mdpi",
+                sonido: "112",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 1,
+                imagen: "n1_jgo1_pant_19mdpi",
+                sonido: "15",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 1,
+                imagen: "n1_jgo1_pant_20mdpi",
+                sonido: "154",
+                correcto: true
+        ),
+        // :--------------------------:
+        // Nivel 2: Correspondiente a Juego 2
+        // :--------------------------:
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_01mdpi",
+                sonido: "71",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_02mdpi",
+                sonido: "99",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_03mdpi",
+                sonido: "33",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_04mdpi",
+                sonido: "153",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_05mdpi",
+                sonido: "135",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_06mdpi",
                 sonido: "37",
                 correcto: false
         ),
         ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_07mdpi",
+                sonido: "84",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_08mdpi",
+                sonido: "115",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_09mdpi",
+                sonido: "51",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_10mdpi",
+                sonido: "85",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_11mdpi",
+                sonido: "113",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_12mdpi",
+                sonido: "63",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_13mdpi",
+                sonido: "42",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_14mdpi",
+                sonido: "146",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_15mdpi",
+                sonido: "156",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_16mdpi",
+                sonido: "119",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_17mdpi",
+                sonido: "121",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
                 imagen: "n1_jgo1_pant_18mdpi",
+                sonido: "112",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo1_pant_19mdpi",
                 sonido: "15",
                 correcto: true
         ),
         ParejaSonido(
-                imagen: "n1_jgo1_pant_19mdpi",
-                sonido: "33",
-                correcto: false
-        ),
-        ParejaSonido(
+            nivel: 2,
                 imagen: "n1_jgo1_pant_20mdpi",
-                sonido: "33",
+                sonido: "154",
                 correcto: true
-        )
+        ),
+        
     ]
-    
     
     
     static let letras:[Letra] = [

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5400C2AF262E32E2008F2D4A /* TabBarSimbolosySonidos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */; };
+		5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */; };
 		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
 		5421F0F325DB751B00B309FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* Data.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
@@ -73,19 +73,21 @@
 		546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139425DB379D00CF2ED5 /* PuertaCelda.swift */; };
 		546B139725DB381400CF2ED5 /* Puerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139625DB381400CF2ED5 /* Puerta.swift */; };
 		546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */; };
-		547A8BA32618B994002962CD /* PresentacionJuegoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A8BA22618B994002962CD /* PresentacionJuegoVC.swift */; };
-		5492F89D25EA1CAD0006A960 /* CeldaMolde.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492F89C25EA1CAD0006A960 /* CeldaMolde.swift */; };
-		5495D75F25F97B7F00906AEA /* FonemaSeleccionadoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495D75E25F97B7F00906AEA /* FonemaSeleccionadoVC.swift */; };
+		547A8BA32618B994002962CD /* PresentacionJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A8BA22618B994002962CD /* PresentacionJuegoController.swift */; };
+		5492F89D25EA1CAD0006A960 /* CeldaGenerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */; };
+		5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */; };
 		54A0F885262676B300A6D308 /* PantallaJuegoSyS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */; };
-		54A0F8882627317900A6D308 /* SySJuego1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F8872627317900A6D308 /* SySJuego1VC.swift */; };
-		54A0F88B2627337700A6D308 /* JuegoSySCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88A2627337700A6D308 /* JuegoSySCelda.swift */; };
+		54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F8872627317900A6D308 /* SySJuegoController.swift */; };
+		54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */; };
 		54A0F88E262751C200A6D308 /* Letras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88D262751C200A6D308 /* Letras.swift */; };
 		54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88F2627562400A6D308 /* PalabrasEnBocaVC.swift */; };
 		54A0F8922627984D00A6D308 /* Alertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F8912627984D00A6D308 /* Alertas.swift */; };
 		54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */; };
-		54F6993225F09ECC008F22DF /* FonemaPaginaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993125F09ECC008F22DF /* FonemaPaginaCelda.swift */; };
+		54DC9F682636046B003D4F68 /* SeleccionarNivelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */; };
+		54F6993225F09ECC008F22DF /* CeldaFonemaPagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */; };
 		54F6993825F0AF02008F22DF /* Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993725F0AF02008F22DF /* Lines.swift */; };
 		54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993925F0C92D008F22DF /* Fonema.swift */; };
+		54FF64EB2634C1DF000C9037 /* Protocolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF64EA2634C1DF000C9037 /* Protocolos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSimbolosySonidos.swift; sourceTree = "<group>"; };
+		5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTeoriaJuegos.swift; sourceTree = "<group>"; };
 		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
@@ -169,19 +171,21 @@
 		546B139425DB379D00CF2ED5 /* PuertaCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuertaCelda.swift; sourceTree = "<group>"; };
 		546B139625DB381400CF2ED5 /* Puerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puerta.swift; sourceTree = "<group>"; };
 		546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginacionPuertasVC.swift; sourceTree = "<group>"; };
-		547A8BA22618B994002962CD /* PresentacionJuegoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentacionJuegoVC.swift; sourceTree = "<group>"; };
-		5492F89C25EA1CAD0006A960 /* CeldaMolde.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaMolde.swift; sourceTree = "<group>"; };
-		5495D75E25F97B7F00906AEA /* FonemaSeleccionadoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonemaSeleccionadoVC.swift; sourceTree = "<group>"; };
+		547A8BA22618B994002962CD /* PresentacionJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentacionJuegoController.swift; sourceTree = "<group>"; };
+		5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaGenerica.swift; sourceTree = "<group>"; };
+		5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonemaSeleccionadoController.swift; sourceTree = "<group>"; };
 		54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaJuegoSyS.swift; sourceTree = "<group>"; };
-		54A0F8872627317900A6D308 /* SySJuego1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SySJuego1VC.swift; sourceTree = "<group>"; };
-		54A0F88A2627337700A6D308 /* JuegoSySCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoSySCelda.swift; sourceTree = "<group>"; };
+		54A0F8872627317900A6D308 /* SySJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SySJuegoController.swift; sourceTree = "<group>"; };
+		54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaJuegoSyS.swift; sourceTree = "<group>"; };
 		54A0F88D262751C200A6D308 /* Letras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letras.swift; sourceTree = "<group>"; };
 		54A0F88F2627562400A6D308 /* PalabrasEnBocaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalabrasEnBocaVC.swift; sourceTree = "<group>"; };
 		54A0F8912627984D00A6D308 /* Alertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertas.swift; sourceTree = "<group>"; };
 		54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuMoldeVC.swift; sourceTree = "<group>"; };
-		54F6993125F09ECC008F22DF /* FonemaPaginaCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonemaPaginaCelda.swift; sourceTree = "<group>"; };
+		54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarNivelController.swift; sourceTree = "<group>"; };
+		54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaFonemaPagina.swift; sourceTree = "<group>"; };
 		54F6993725F0AF02008F22DF /* Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lines.swift; sourceTree = "<group>"; };
 		54F6993925F0C92D008F22DF /* Fonema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonema.swift; sourceTree = "<group>"; };
+		54FF64EA2634C1DF000C9037 /* Protocolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 			children = (
 				546B135D25DAFACD00CF2ED5 /* AppDelegate.swift */,
 				546B135F25DAFACD00CF2ED5 /* SceneDelegate.swift */,
+				54FF64EA2634C1DF000C9037 /* Protocolos.swift */,
 				546B136E25DAFACF00CF2ED5 /* Info.plist */,
 			);
 			path = Base;
@@ -316,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */,
+				5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */,
 				54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */,
 				54A0F8892627334900A6D308 /* SimbolosSonidos */,
 				54A0F88C26274D4A00A6D308 /* Palabras */,
@@ -360,7 +366,7 @@
 			children = (
 				546B139025DB262400CF2ED5 /* LaunchScreen.storyboard */,
 				546B139425DB379D00CF2ED5 /* PuertaCelda.swift */,
-				5492F89C25EA1CAD0006A960 /* CeldaMolde.swift */,
+				5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */,
 				54A0F886262676BD00A6D308 /* SimbolosSonidos */,
 			);
 			path = Views;
@@ -369,9 +375,9 @@
 		54A0F886262676BD00A6D308 /* SimbolosSonidos */ = {
 			isa = PBXGroup;
 			children = (
-				54F6993125F09ECC008F22DF /* FonemaPaginaCelda.swift */,
+				54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */,
 				54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */,
-				54A0F88A2627337700A6D308 /* JuegoSySCelda.swift */,
+				54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */,
 			);
 			path = SimbolosSonidos;
 			sourceTree = "<group>";
@@ -379,10 +385,10 @@
 		54A0F8892627334900A6D308 /* SimbolosSonidos */ = {
 			isa = PBXGroup;
 			children = (
-				5495D75E25F97B7F00906AEA /* FonemaSeleccionadoVC.swift */,
-				547A8BA22618B994002962CD /* PresentacionJuegoVC.swift */,
-				5400C2AE262E32E2008F2D4A /* TabBarSimbolosySonidos.swift */,
-				54A0F8872627317900A6D308 /* SySJuego1VC.swift */,
+				5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */,
+				547A8BA22618B994002962CD /* PresentacionJuegoController.swift */,
+				54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */,
+				54A0F8872627317900A6D308 /* SySJuegoController.swift */,
 			);
 			path = SimbolosSonidos;
 			sourceTree = "<group>";
@@ -546,13 +552,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F6993225F09ECC008F22DF /* FonemaPaginaCelda.swift in Sources */,
+				54F6993225F09ECC008F22DF /* CeldaFonemaPagina.swift in Sources */,
 				546301F925FA025E00E005BC /* Colors.swift in Sources */,
-				5492F89D25EA1CAD0006A960 /* CeldaMolde.swift in Sources */,
-				5400C2AF262E32E2008F2D4A /* TabBarSimbolosySonidos.swift in Sources */,
-				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoVC.swift in Sources */,
+				5492F89D25EA1CAD0006A960 /* CeldaGenerica.swift in Sources */,
+				5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */,
+				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
-				54A0F8882627317900A6D308 /* SySJuego1VC.swift in Sources */,
+				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
 				546310A026210C3E00FA115C /* Pareja.swift in Sources */,
 				54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
@@ -560,7 +566,9 @@
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
 				54A0F885262676B300A6D308 /* PantallaJuegoSyS.swift in Sources */,
 				546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */,
-				547A8BA32618B994002962CD /* PresentacionJuegoVC.swift in Sources */,
+				547A8BA32618B994002962CD /* PresentacionJuegoController.swift in Sources */,
+				54DC9F682636046B003D4F68 /* SeleccionarNivelController.swift in Sources */,
+				54FF64EB2634C1DF000C9037 /* Protocolos.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */,
 				5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */,
@@ -569,7 +577,7 @@
 				54A0F8922627984D00A6D308 /* Alertas.swift in Sources */,
 				5421F0F325DB751B00B309FC /* Data.swift in Sources */,
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
-				54A0F88B2627337700A6D308 /* JuegoSySCelda.swift in Sources */,
+				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
 				546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

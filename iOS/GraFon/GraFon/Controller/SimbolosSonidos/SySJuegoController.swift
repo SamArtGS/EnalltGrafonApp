@@ -8,20 +8,41 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate{
 
-class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
-
+    private let reuseIdentifier = "Cell"
+    
+    private var nivelFonema: Int?
+    
+    private var tarjetas: [ParejaSonido]?
+    
+    init(collectionViewLayout layout: UICollectionViewLayout, nivelSelecionado: Int) {
+        super.init(collectionViewLayout: layout)
+        nivelFonema = nivelSelecionado
+        tarjetas = Data.JuegoSyS.filter{ elemento in
+            elemento.nivel == nivelSelecionado
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
-        self.title = "Juego 1"
         super.viewDidLoad()
         configurar()
         self.collectionView!.register(JuegoSySCelda.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        view.backgroundColor = .white
         self.navigationController?.setToolbarHidden(true, animated: false)
     }
 
@@ -31,27 +52,26 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Data.Juego1SyS.count
+        return tarjetas?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! JuegoSySCelda
-        cell.ejercicio = Data.Juego1SyS[indexPath.item]
-        
-        cell.contentView.isUserInteractionEnabled = false
+        cell.delegate = self
+        cell.ejercicio = tarjetas?[indexPath.item]
         return cell
     }
     override func viewDidLayoutSubviews() {
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        puntaje.title = "\(indexPath.item + 1) | \(Data.Juego1SyS.count)"
-        barraProgreso.progress = Float(indexPath.item)/Float(Data.Juego1SyS.count)
+        puntaje.title = "\(indexPath.item + 1) | \(tarjetas?.count ?? 1)"
+        barraProgreso.progress = Float(indexPath.item + 1 )/Float(tarjetas?.count ?? 1)
         
     }
     
     private let puntaje: UIBarButtonItem = {
-        return UIBarButtonItem(title: "1 | \(Data.Juego1SyS.count)",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "1 | 20",style: .plain, target: nil, action: nil)
     }()
     
 
@@ -62,16 +82,19 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         barraprog.progressTintColor = .colorLineaBarraSuperiorSyS
         return barraprog
     }()
-    
 }
+
 extension SySJuego1VC{
     func configurar(){
+        self.title = "Juego 1"
         barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
         let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
         collectionView.backgroundColor = .white
-        collectionView?.isPagingEnabled = true
+        collectionView?.isPagingEnabled = false
+        collectionView?.isScrollEnabled = false
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -84,4 +107,23 @@ extension SySJuego1VC{
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+}
+
+extension SySJuego1VC: juegoSimbolosySonidosDelegate{
+    func siguiente() {
+        guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
+            return
+        }
+        collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    func recolectarPuntaje() {
+        print("Hola")
+    }
+    
+    func finalizar() {
+        print("Adios")
+    }
+    
+    
 }

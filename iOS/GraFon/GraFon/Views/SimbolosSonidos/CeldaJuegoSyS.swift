@@ -15,6 +15,8 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
     private var sonido: String?
     private var correcto: Bool?
     
+    weak var delegate: juegoSimbolosySonidosDelegate?
+    
     private var reproductorAudio: AVAudioPlayer = AVAudioPlayer()
     
     var ejercicio: ParejaSonido? {
@@ -96,6 +98,7 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
     
     func configurarConstraints(){
         translatesAutoresizingMaskIntoConstraints = false
+        contentMode = .scaleAspectFit
         addSubview(pilaElementos)
         pilaElementos.addArrangedSubview(botonSonido)
         pilaElementos.addArrangedSubview(imagenFonema)
@@ -104,11 +107,10 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         pilaPajaros.addArrangedSubview(imagenPajaroBien)
         
         NSLayoutConstraint.activate([
-            pilaElementos.topAnchor.constraint(equalTo: topAnchor, constant: 55),
+            pilaElementos.topAnchor.constraint(equalTo: topAnchor, constant: 70),
             pilaElementos.leadingAnchor.constraint(equalTo: leadingAnchor),
             pilaElementos.trailingAnchor.constraint(equalTo: trailingAnchor),
-            pilaElementos.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25)
-            
+            pilaElementos.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -35)
         ])
     }
     
@@ -137,9 +139,6 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
 }
 
 extension JuegoSySCelda: UIDragInteractionDelegate {
-    
-    
-    
 
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
         guard let image = imagenFonema.image else { return [] }
@@ -195,6 +194,7 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_SiCorresponde_mdpi")
+                    self.delegate?.siguiente()
                 })
             }
             if vista.isEqual(self.imagenPajaroMal){
@@ -205,6 +205,7 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_mdpi")
+                    self.delegate?.siguiente()
                 })
             }
         }

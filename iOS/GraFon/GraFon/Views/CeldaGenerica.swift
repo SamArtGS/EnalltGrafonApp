@@ -9,29 +9,35 @@
 import UIKit
 
 class CeldaMolde: UICollectionViewCell {
-    
-    //Variables para los pedidos de la profa y la diseñadora:
-    private let tamanioImagen:CGFloat = 1
+
     
     var fonema: Fonema? {
        didSet {
-            guard let destapado1 = fonema else { return }
-        if !destapado1.imagenPajaro.isEmpty{
-            imagenElemento.image = UIImage(named: destapado1.imagenPajaro)
+            guard let destapado = fonema else { return }
+        if !destapado.imagenPajaro.isEmpty{
+            imagenElemento.image = UIImage(named: destapado.imagenPajaro)
         }
        }
     }
     
     var letra: Letra? {
         didSet{
-            guard let destapado2 = letra else { return }
-            imagenElemento.image = UIImage(named: destapado2.imagenHoja)
+            guard let destapado = letra else { return }
+            imagenElemento.image = UIImage(named: destapado.imagenHoja)
+        }
+    }
+    
+    var nivel: String? {
+        didSet{
+            guard let destapado = nivel else { return }
+            imagenElemento.image = UIImage(named: destapado)
+            imagenElemento.contentMode = .scaleAspectFit
         }
     }
     
     override init(frame: CGRect) {
        super.init(frame: frame)
-       distribucionElementos()
+        distribucionElementos()
    }
     
     
@@ -46,12 +52,17 @@ class CeldaMolde: UICollectionViewCell {
        imageView.contentMode = .scaleAspectFill
        return imageView
     }()
-       
+    
     private func distribucionElementos(){
            self.translatesAutoresizingMaskIntoConstraints = false
            self.contentMode = .scaleAspectFit
            addSubview(imagenElemento)
-           imagenElemento.heightAnchor.constraint(equalTo: heightAnchor,multiplier: tamanioImagen).isActive = true
-           imagenElemento.widthAnchor.constraint(equalTo: widthAnchor,multiplier: tamanioImagen).isActive = true
+        
+        NSLayoutConstraint.activate([
+            imagenElemento.topAnchor.constraint(equalTo: topAnchor),
+            imagenElemento.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imagenElemento.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imagenElemento.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }

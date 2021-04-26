@@ -16,7 +16,6 @@ class SimboloPaginaCelda: UICollectionViewCell {
     private var imageFonDespues:String = ""
     
     
-    
     var fonema: Fonema? {
         didSet {
             guard let destapado = fonema else { return }
@@ -28,8 +27,6 @@ class SimboloPaginaCelda: UICollectionViewCell {
         }
     }
     
-    
-    /// <#Description#>
     func cambiarImagen() {
         imagenFonemaAntes.image = UIImage(named: imageFonDespues)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -52,25 +49,21 @@ class SimboloPaginaCelda: UICollectionViewCell {
         return imageView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        distribucionConstraints()
-    }
-       
-    required init?(coder: NSCoder) {
-        fatalError("Falló al momento de implementar el constructor")
-    }
+    private let imagenesApiladas: UIStackView = {
+       let elementosApilados:UIStackView = UIStackView()
+        elementosApilados.axis = .vertical
+        elementosApilados.distribution = .fillProportionally
+        elementosApilados.alignment = .center
+        elementosApilados.spacing = 10
+        elementosApilados.translatesAutoresizingMaskIntoConstraints = false
+               
+        return elementosApilados
+    }()
         
     func distribucionConstraints(){
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
     
-        let imagenesApiladas:UIStackView = UIStackView()
-        imagenesApiladas.axis = .vertical
-        imagenesApiladas.distribution = .fillProportionally
-        imagenesApiladas.alignment = .center
-        imagenesApiladas.spacing = 1
-        imagenesApiladas.translatesAutoresizingMaskIntoConstraints = false
         imagenesApiladas.addArrangedSubview(imagenFonemaAntes)
         imagenesApiladas.addArrangedSubview(imagenObjeto)
         
@@ -78,15 +71,21 @@ class SimboloPaginaCelda: UICollectionViewCell {
             
     NSLayoutConstraint.activate([
         
-        imagenesApiladas.topAnchor.constraint(equalTo: topAnchor),
+        imagenesApiladas.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70),
         imagenesApiladas.trailingAnchor.constraint(equalTo: trailingAnchor),
         imagenesApiladas.leadingAnchor.constraint(equalTo: leadingAnchor),
-        imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-        imagenFonemaAntes.topAnchor.constraint(equalTo: topAnchor,constant: 30),
-        imagenFonemaAntes.leadingAnchor.constraint(equalTo: imagenesApiladas.leadingAnchor),
-        imagenFonemaAntes.trailingAnchor.constraint(equalTo: imagenesApiladas.trailingAnchor)
+        imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50)
             
     ])
     
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        distribucionConstraints()
+    }
+       
+    required init?(coder: NSCoder) {
+        fatalError("Falló al momento de implementar el constructor")
     }
 }

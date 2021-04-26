@@ -8,11 +8,21 @@
 
 import UIKit
 
-extension UITabBarController{
-    func crearNavegacion(titulo: String, imagenIcono: String, controller: UIViewController) -> UINavigationController{
-        let navController = UINavigationController(rootViewController: controller)
-        navController.tabBarItem.title = title
-        navController.tabBarItem.image = UIImage(named: imagenIcono)
-        return navController
+extension UITabBarController: UINavigationControllerDelegate {
+    func crearNavegacion(titulo: String, imagenIcono: String, controller: UIViewController) -> UIViewController{
+        controller.title = titulo
+        controller.tabBarItem.image = UIImage(named: imagenIcono)
+        controller.view.backgroundColor = .white
+        return controller
     }
 }
+
+/// Eliminados:
+
+/*
+ //        let BarButtonItemDerecho = UIBarButtonItem.menuButton(self,
+ //                                                              action: #selector(juegos),
+ //                                                              imageName: "iconbar1")
+ //        self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+ 
+ */

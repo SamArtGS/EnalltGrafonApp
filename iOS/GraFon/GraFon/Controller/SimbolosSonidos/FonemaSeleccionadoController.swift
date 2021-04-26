@@ -24,38 +24,21 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
                  UIBarButtonItem(title: "",
                     style: .plain, target: nil, action: nil)]
     
-    @objc func menu(){
-        navigationController?.pushViewController(PresentacionJuegoSyS(), animated: true)
-    }
-    @objc func juegos(){
-        navigationController?.pushViewController(PresentacionJuegoSyS(), animated: true)
-    }
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Ejemplos"
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = true
-        personalizacionNavController()
         self.collectionView!.register(SimboloPaginaCelda.self,
                                       forCellWithReuseIdentifier: reuseIdentifier)
-        let BarButtonItemDerecho = UIBarButtonItem.menuButton(self,
-                                                              action: #selector(juegos),
-                                                              imageName: "iconbar1")
-        self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+        
         self.toolbarItems = items
+        DispatchQueue.main.async {
+            guard let indice = self.indiceSeleccionado else { return }
+            self.collectionView.scrollToItem(at: IndexPath(item: indice - 1, section: 0), at: .centeredHorizontally, animated: false)
+        }
         
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        guard let indice = indiceSeleccionado else { return }
-        collectionView.scrollToItem(at: IndexPath(item: indice - 1, section: 0), at: .centeredHorizontally, animated: false)
-    }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,16 +52,6 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         self.navigationController?.setToolbarHidden(true, animated: false)
     }
     
-    func personalizacionNavController(){
-        navigationController?.navigationBar.setBackgroundImage(
-            UIColor(red: 82/255, green: 145/255, blue: 179/255, alpha: 1).as1ptImage(), for: .default)
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = .colorBarraSuperiorSyS
-        navigationController?.navigationBar
-            .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
-        navigationController?.toolbar.barTintColor = .colorToolBarSyS
-    }
     
     override func viewDidLayoutSubviews() {
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
@@ -146,5 +119,5 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         }
         
     }
-
+    
 }

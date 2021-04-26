@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct ParejaSonido: Codable, Hashable{
+struct ParejaSonido: Codable, Hashable, Equatable{
+    let nivel: Int
     let imagen: String
     let sonido: String
     let correcto: Bool

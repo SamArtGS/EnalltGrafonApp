@@ -43,22 +43,26 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         let celda = collectionView.cellForItem(at: indexPath) as! PuertaCell
         celda.iniciarAnimacion()
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            let scrollLayout = UICollectionViewFlowLayout()
-            scrollLayout.scrollDirection = .vertical
+            
             switch indexPath.item {
                 case 0:
+//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 0)
+//                    self.navigationController?.pushViewController(viewTable, animated: true)
                     break
                 case 1:
+//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
+//                    self.navigationController?.pushViewController(viewTable, animated: true)
                     break
                 case 2:
-                    let viewTable = SimbolosSonidosVC(collectionViewLayout: scrollLayout, puertaSeleccionada: 2)
-                    
-                    self.navigationController?.pushViewController(viewTable, animated: true)
+//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 2)
+//                    self.navigationController?.pushViewController(viewTable, animated: true)
                     break
                 case 3:
-                    let viewTable = SimbolosSonidosVC(collectionViewLayout: scrollLayout,puertaSeleccionada: 3)
-                    self.navigationController?.pushViewController(viewTable, animated: true)
+                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 3)
+                self.navigationController?.pushViewController(viewTable, animated: true)
                     break
                 default:
                     break
@@ -66,8 +70,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
             
         })
         
+        
     }
-    
     
     //** Funciones del ciclo de vida del VC
     
@@ -83,6 +87,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.showsHorizontalScrollIndicator = false
         navigationController?.navigationBar.barTintColor = .white
         collectionView?.backgroundColor = .white
         collectionView?.isPagingEnabled = true

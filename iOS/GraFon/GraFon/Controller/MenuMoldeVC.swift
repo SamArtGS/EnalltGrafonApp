@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
+class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
     
     private let reuseIdentifier = "Cell"
     private var puertaInt: Int?
@@ -23,13 +23,11 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
     }
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        navigationController?.delegate = self
+        view.backgroundColor = .clear
         super.viewDidLoad()
-        self.collectionView!.register(CeldaMolde.self,
-                                      forCellWithReuseIdentifier: reuseIdentifier)
+    self.collectionView!.register(CeldaMolde.self,forCellWithReuseIdentifier: reuseIdentifier)
         configurarEntorno()
-        tabBarController?.viewControllers = [SonidoSeleccionado(), PresentacionJuegoSyS()]
-        tabBarController?.delegate = self
     }
     
    
@@ -37,8 +35,7 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
         return 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,numberOfItemsInSection section: Int) -> Int {
         switch puertaInt {
         case 0:
             return Data.fonemas.count
@@ -53,8 +50,7 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView,
-                                 didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,didSelectItemAt indexPath: IndexPath) {
         switch puertaInt {
         case 0:
             print("Hola")
@@ -88,8 +84,7 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
                                  cellForItemAt indexPath: IndexPath)
                                     -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                      for: indexPath) as! CeldaMolde
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,for: indexPath) as! CeldaMolde
         switch puertaInt {
             case 0:
                 print("Hola")
@@ -106,29 +101,14 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        view.backgroundColor = .white
-        self.navigationController?.isNavigationBarHidden = true
-    }
+    
     
     func configurarEntorno(){
         collectionView.backgroundColor = .clear
         let imageView: UIImageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.barStyle = UIBarStyle.black
+
         
         switch puertaInt {
             case 0:
@@ -136,8 +116,6 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
             case 1:
                 print("Hola")
             case 2:
-                self.title = "Palabras en la boca"
-                imageView.image = UIImage(named: "bck_n2_v2")
                 navigationController?
                     .navigationBar.barTintColor = .colorBarraSuperiorPalabras
                 navigationController?.navigationBar.setBackgroundImage(
@@ -148,8 +126,9 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
                 navigationController?
                     .navigationBar
                     .shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
+                imageView.image = UIImage(named: "bck_n2_v2")
             case 3:
-                self.title = "Símbolos y Sonidos"
+                navigationController?.title = "Símbolos y sonidos"
                 navigationController?.navigationBar.setBackgroundImage(
                     UIColor.colorBarraSuperiorSyS
                         .as1ptImage(),
@@ -162,14 +141,14 @@ class SimbolosSonidosVC: UICollectionViewController, UITabBarControllerDelegate{
             default:
                 print("Nada de nada")
         }
-        imageView.center = view.center
         view.addSubview(imageView)
         view.sendSubviewToBack(imageView)
+              
     }
 }
 
 
-extension SimbolosSonidosVC : UICollectionViewDelegateFlowLayout{
+extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -188,17 +167,17 @@ extension SimbolosSonidosVC : UICollectionViewDelegateFlowLayout{
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
                 case 1136: //5,5s,SE
-                    return view.frame.size.height/28
+                    return view.frame.size.height/70
                 case 1334: //6,7,8
-                    return view.frame.size.height/28
+                    return view.frame.size.height/60
                 case 1920, 2208:// 6+,7+,8+
-                    return view.frame.size.height/28
+                    return view.frame.size.height/55
                 case 2436: // X, Xs, 11Pro
-                    return view.frame.size.height/17.5
+                    return view.frame.size.height/30
                 case 2688: // Xs Max, 11 Pro Max
-                   return view.frame.size.height/17.5
+                   return view.frame.size.height/28
                 case 1792: // Xr, 11
-                    return view.frame.size.height/17.5
+                    return view.frame.size.height/28
                 default:
                     return view.frame.size.height/17.5
                 }
@@ -213,6 +192,7 @@ extension SimbolosSonidosVC : UICollectionViewDelegateFlowLayout{
         //top, left, bottom, right
         return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
+
 }
 
 
