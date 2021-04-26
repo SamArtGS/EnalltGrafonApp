@@ -35,42 +35,42 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         return 0
     }
     
-    /**
-            Para realizar la
-     */
     override func collectionView(_ collectionView: UICollectionView,
                                  didSelectItemAt indexPath: IndexPath) {
+        if UIApplication.shared.isIgnoringInteractionEvents {
+            return //for extra safety
+        }
         
         let celda = collectionView.cellForItem(at: indexPath) as! PuertaCell
-        celda.iniciarAnimacion()
         
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
             
-            switch indexPath.item {
-                case 0:
-//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 0)
-//                    self.navigationController?.pushViewController(viewTable, animated: true)
-                    break
-                case 1:
-//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
-//                    self.navigationController?.pushViewController(viewTable, animated: true)
-                    break
-                case 2:
-//                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 2)
-//                    self.navigationController?.pushViewController(viewTable, animated: true)
-                    break
-                case 3:
-                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 3)
-                self.navigationController?.pushViewController(viewTable, animated: true)
-                    break
-                default:
-                    break
-            }
-            
-        })
-        
-        
+            celda.iniciarAnimacion()
+            UIApplication.shared.beginIgnoringInteractionEvents()
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                UIApplication.shared.endIgnoringInteractionEvents()
+                switch indexPath.item {
+                    case 0:
+    //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 0)
+    //                    self.navigationController?.pushViewController(viewTable, animated: true)
+                        break
+                    case 1:
+    //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
+    //                    self.navigationController?.pushViewController(viewTable, animated: true)
+                        break
+                    case 2:
+                        let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 2)
+                        self.navigationController?.pushViewController(viewTable, animated: true)
+                        break
+                    case 3:
+                        let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 3)
+                    self.navigationController?.pushViewController(viewTable, animated: true)
+                        break
+                    default:
+                        break
+                }
+                
+            })
+
     }
     
     //** Funciones del ciclo de vida del VC

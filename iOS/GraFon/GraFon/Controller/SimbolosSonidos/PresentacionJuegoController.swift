@@ -32,6 +32,7 @@ class PresentacionJuegoSyS: UIViewController{
         
         pantalla.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pantalla)
+        view.backgroundColor = .white
         pantalla.contentMode = .scaleAspectFit
         pantalla.clipsToBounds = true
         pantalla.delegate = self

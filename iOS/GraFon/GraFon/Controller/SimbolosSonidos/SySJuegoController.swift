@@ -14,6 +14,8 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     private var nivelFonema: Int?
     
+    private var puntos: Int = 0
+    
     private var tarjetas: [ParejaSonido]?
     
     init(collectionViewLayout layout: UICollectionViewLayout, nivelSelecionado: Int) {
@@ -65,12 +67,12 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        puntaje.title = "\(indexPath.item + 1) | \(tarjetas?.count ?? 1)"
+        
         barraProgreso.progress = Float(indexPath.item + 1 )/Float(tarjetas?.count ?? 1)
         
     }
     
-    private let puntaje: UIBarButtonItem = {
+    private var puntaje: UIBarButtonItem = {
         return UIBarButtonItem(title: "1 | 20",style: .plain, target: nil, action: nil)
     }()
     
@@ -86,7 +88,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
 
 extension SySJuego1VC{
     func configurar(){
-        self.title = "Juego 1"
+        self.title = "Juego \(nivelFonema!)"
         barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
         let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
         self.toolbarItems = items
@@ -114,15 +116,21 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+        if indexPath.item != tarjetas!.count - 1 {
+            collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+        }else{
+            finalizar()
+        }
     }
     
     func recolectarPuntaje() {
-        print("Hola")
+        puntos+=1
+        puntaje.title = "\(puntos) | \(tarjetas?.count ?? 1)"
     }
     
     func finalizar() {
-        print("Adios")
+        let olvidoVC = PresentacionJuegoSyS()
+        present(olvidoVC, animated: true)
     }
     
     

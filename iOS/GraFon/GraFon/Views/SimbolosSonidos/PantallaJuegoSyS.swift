@@ -22,6 +22,7 @@ class PantallaJuegoSyS: UIView{
         fatalError("Error al implementar el init")
     }
     
+    
     let imagenPresentacion:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "demo_n1_jgo"))
         imageView.translatesAutoresizingMaskIntoConstraints = false

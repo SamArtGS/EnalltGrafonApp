@@ -466,7 +466,7 @@ struct Data{
             nivel: 1,
                 imagen: "n1_jgo1_pant_08mdpi",
                 sonido: "115",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
@@ -484,25 +484,25 @@ struct Data{
             nivel: 1,
                 imagen: "n1_jgo1_pant_11mdpi",
                 sonido: "113",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
                 imagen: "n1_jgo1_pant_12mdpi",
                 sonido: "63",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
                 imagen: "n1_jgo1_pant_13mdpi",
                 sonido: "42",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
                 imagen: "n1_jgo1_pant_14mdpi",
                 sonido: "146",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
@@ -526,13 +526,13 @@ struct Data{
             nivel: 1,
                 imagen: "n1_jgo1_pant_18mdpi",
                 sonido: "112",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
                 imagen: "n1_jgo1_pant_19mdpi",
                 sonido: "15",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 1,
@@ -545,125 +545,498 @@ struct Data{
         // :--------------------------:
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_01mdpi",
-                sonido: "71",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_02mdpi",
-                sonido: "99",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_03mdpi",
-                sonido: "33",
+                imagen: "n1_jgo2_pant_01mdpi",
+                sonido: "68",
                 correcto: false
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_04mdpi",
-                sonido: "153",
+                imagen: "n1_jgo2_pant_02mdpi",
+                sonido: "103",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_05mdpi",
-                sonido: "135",
+                imagen: "n1_jgo2_pant_03mdpi",
+                sonido: "166",
                 correcto: false
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_06mdpi",
-                sonido: "37",
+                imagen: "n1_jgo2_pant_04mdpi",
+                sonido: "143",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_05mdpi",
+                sonido: "70",
                 correcto: false
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_07mdpi",
-                sonido: "84",
+                imagen: "n1_jgo2_pant_06mdpi",
+                sonido: "53",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_07mdpi",
+                sonido: "107",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_08mdpi",
-                sonido: "115",
+                imagen: "n1_jgo2_pant_08mdpi",
+                sonido: "72",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_09mdpi",
-                sonido: "51",
+                imagen: "n1_jgo2_pant_09mdpi",
+                sonido: "92",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_10mdpi",
-                sonido: "85",
+                imagen: "n1_jgo2_pant_10mdpi",
+                sonido: "169",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_11mdpi",
-                sonido: "113",
+                imagen: "n1_jgo2_pant_11mdpi",
+                sonido: "45",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_12mdpi",
-                sonido: "63",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_13mdpi",
-                sonido: "42",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_14mdpi",
-                sonido: "146",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_15mdpi",
-                sonido: "156",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_16mdpi",
-                sonido: "119",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_17mdpi",
-                sonido: "121",
-                correcto: true
-        ),
-        ParejaSonido(
-            nivel: 2,
-                imagen: "n1_jgo1_pant_18mdpi",
+                imagen: "n1_jgo2_pant_12mdpi",
                 sonido: "112",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_19mdpi",
-                sonido: "15",
+                imagen: "n1_jgo2_pant_13mdpi",
+                sonido: "83",
                 correcto: true
         ),
         ParejaSonido(
             nivel: 2,
-                imagen: "n1_jgo1_pant_20mdpi",
-                sonido: "154",
+                imagen: "n1_jgo2_pant_14mdpi",
+                sonido: "161",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_15mdpi",
+                sonido: "123",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_16mdpi",
+                sonido: "33",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_17mdpi",
+                sonido: "104",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_18mdpi",
+                sonido: "12",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_19mdpi",
+                sonido: "28",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 2,
+                imagen: "n1_jgo2_pant_20mdpi",
+                sonido: "162",
                 correcto: true
         ),
         
+        // :--------------------------:
+        // Nivel 3: Correspondiente a Juego 3
+        // :--------------------------:
+        
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_01mdpi",
+                sonido: "140",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_02mdpi",
+                sonido: "151",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_03mdpi",
+                sonido: "164",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_04mdpi",
+                sonido: "179",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_05mdpi",
+                sonido: "71",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_06mdpi",
+                sonido: "125",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_07mdpi",
+                sonido: "171",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_08mdpi",
+                sonido: "215",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_09mdpi",
+                sonido: "30",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_10mdpi",
+                sonido: "113",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_11mdpi",
+                sonido: "32",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_12mdpi",
+                sonido: "182",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_13mdpi",
+                sonido: "99",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_14mdpi",
+                sonido: "126",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_15mdpi",
+                sonido: "216",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_16mdpi",
+                sonido: "214",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_17mdpi",
+                sonido: "120",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_18mdpi",
+                sonido: "124",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_19mdpi",
+                sonido: "180",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 3,
+                imagen: "n1_jgo3_pant_20mdpi",
+                sonido: "12",
+                correcto: true
+        ),
+        
+        // :--------------------------:
+        // Nivel 4: Correspondiente a Juego 4
+        // :--------------------------:
+        
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_01mdpi",
+                sonido: "161",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_02mdpi",
+                sonido: "50",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_03mdpi",
+                sonido: "51",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_04mdpi",
+                sonido: "15",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_05mdpi",
+                sonido: "84",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_06mdpi",
+                sonido: "52",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_07mdpi",
+                sonido: "34",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_08mdpi",
+                sonido: "172",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_09mdpi",
+                sonido: "115",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_10mdpi",
+                sonido: "155",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_11mdpi",
+                sonido: "132",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_12mdpi",
+                sonido: "173",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_13mdpi",
+                sonido: "163",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_14mdpi",
+                sonido: "174",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_15mdpi",
+                sonido: "94",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_16mdpi",
+                sonido: "76",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_17mdpi",
+                sonido: "71",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_18mdpi",
+                sonido: "166",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_19mdpi",
+                sonido: "117",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 4,
+                imagen: "n1_jgo4_pant_20mdpi",
+                sonido: "53",
+                correcto: true
+        ),
+        // :--------------------------:
+        // Nivel 5: Correspondiente a Juego 5
+        // :--------------------------:
+        
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_01mdpi",
+                sonido: "1",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_02mdpi",
+                sonido: "137",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_03mdpi",
+                sonido: "176",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_04mdpi",
+                sonido: "16",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_05mdpi",
+                sonido: "118",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_06mdpi",
+                sonido: "54",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_07mdpi",
+                sonido: "94",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_08mdpi",
+                sonido: "133",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_09mdpi",
+                sonido: "18",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_10mdpi",
+                sonido: "177",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_11mdpi",
+                sonido: "86",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_12mdpi",
+                sonido: "144",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_13mdpi",
+                sonido: "22",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_14mdpi",
+                sonido: "37",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_15mdpi",
+                sonido: "141",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_16mdpi",
+                sonido: "153",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_17mdpi",
+                sonido: "27",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo4_pant_18mdpi",
+                sonido: "78",
+                correcto: true
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_19mdpi",
+                sonido: "83",
+                correcto: false
+        ),
+        ParejaSonido(
+            nivel: 5,
+                imagen: "n1_jgo5_pant_20mdpi",
+                sonido: "117",
+                correcto: true
+        )
     ]
     
     

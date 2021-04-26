@@ -182,18 +182,21 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
     }
 
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        session.loadObjects(ofClass: UIImage.self) { imageItems in
+        session.loadObjects(ofClass: UIImage.self) {[unowned self] imageItems in
             guard let vista = interaction.view else{
                 return
             }
             if vista.isEqual(self.imagenPajaroBien){
                 if self.correcto ?? false{
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_acierto_mdpi")
+                    self.delegate?.recolectarPuntaje()
                 }else{
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_error_mdpi")
                 }
+                self.imagenFonema.isUserInteractionEnabled = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_SiCorresponde_mdpi")
+                    self.imagenFonema.isUserInteractionEnabled = true
                     self.delegate?.siguiente()
                 })
             }
@@ -202,9 +205,12 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_error_mdpi")
                 }else{
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_acierto_mdpi")
+                    self.delegate?.recolectarPuntaje()
                 }
+                self.imagenFonema.isUserInteractionEnabled = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_mdpi")
+                    self.imagenFonema.isUserInteractionEnabled = true
                     self.delegate?.siguiente()
                 })
             }
