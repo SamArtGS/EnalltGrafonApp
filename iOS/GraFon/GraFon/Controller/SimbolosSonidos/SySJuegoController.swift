@@ -140,6 +140,10 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         }else{
             let olvidoVC = PuntuacionJuegoSyS(puntaje: puntos)
             self.halfModalTransitioningDelegate = HalfModalTransitioningDelegate(viewController: self, presentingViewController: olvidoVC)
+            olvidoVC.view.layer.cornerRadius  = 20
+            olvidoVC.view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            olvidoVC.view.clipsToBounds = true
+            olvidoVC.view.backgroundColor = .purple
             olvidoVC.modalPresentationStyle = .custom
             self.transitioningDelegate = self.halfModalTransitioningDelegate
             present(olvidoVC,animated: true)

@@ -63,11 +63,6 @@ class PuntuacionJuegoSyS: Carcasa {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(vista: pantalla)
-        view.layer.cornerRadius  = 20
-        view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-        view.clipsToBounds = true
-        view.backgroundColor = .purple
-        
     }
     override func viewWillLayoutSubviews() {
        super.viewWillLayoutSubviews()
