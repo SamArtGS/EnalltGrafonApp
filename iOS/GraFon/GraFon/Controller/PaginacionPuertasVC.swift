@@ -10,6 +10,8 @@ import UIKit
 
 class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
+    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         return Data.puertas.count
@@ -93,6 +95,19 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         collectionView?.isPagingEnabled = true
         collectionView?.register(PuertaCell.self,
                                  forCellWithReuseIdentifier: "cellid")
+        let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-query")
+        view.addSubview(boton)
+        NSLayoutConstraint.activate([
+            boton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            boton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            boton.widthAnchor.constraint(equalToConstant: 30),
+            boton.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
     }
+    @objc func mostrarExtras(){
+        presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
+    }
+    
 }
 

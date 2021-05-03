@@ -104,46 +104,24 @@ extension MenuMoldeVC{
     }
     
     func configurarEntorno(){
-        
         collectionView.backgroundColor = .clear
-        
-        let imageView: UIImageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = .scaleToFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        
         switch puertaInt {
             case 0:
                 print("Hola")
             case 1:
                 print("Hola")
             case 2:
-                imageView.image = UIImage(named: "bck_n2_v2")
+                colocarFondo(imagen: "bck_n2_v2")
             case 3:
-//                navigationController?.title = "Símbolos y sonidos"
-//                              navigationController?.navigationBar.setBackgroundImage(
-//                                  UIColor.colorBarraSuperiorSyS
-//                                      .as1ptImage(),
-//                                  for: .default
-//                              )
-//                              navigationController?
-//                                  .navigationBar
-//                                  .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
-                imageView.image = UIImage(named: "bck_n1_v2")
+                colocarFondo(imagen: "bck_n1_v2")
+                
             default:
                 print("Nada de nada")
         }
-        view.addSubview(imageView)
-        
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-        ])
-        view.sendSubviewToBack(imageView)
     }
 }
+
+
 
 
 
@@ -180,10 +158,29 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
                 default:
                     return view.frame.size.height/17.5
                 }
-        } else {
-            return view.frame.size.height/30
+        }else{
+            if UIDevice().userInterfaceIdiom == .pad{
+                switch UIScreen.main.nativeBounds.height {
+                    case 1136: //Mini
+                        return view.frame.size.height/70
+                    case 1334: //Normal
+                        return view.frame.size.height/60
+                    case 1920, 2208://Pro 10.5
+                        return view.frame.size.height/55
+                    case 2436: //air 10.9
+                        return view.frame.size.height/30
+                    case 2688: //Pro 11
+                       return view.frame.size.height/28
+                    case 1792: //Pro 12.9
+                        return view.frame.size.height/28
+                    default:
+                        return view.frame.size.height/130
+                    }
+            }
         }
+        return 100
     }
+    
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

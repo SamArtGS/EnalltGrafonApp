@@ -36,6 +36,8 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         configurar()
         self.collectionView!.register(JuegoSySCelda.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .clear
+        colocarFondo(imagen: "bck_n1_juegos_v2")
     }
     
     override func viewWillAppear(_ animated: Bool) {

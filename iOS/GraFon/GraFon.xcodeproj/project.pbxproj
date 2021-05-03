@@ -10,6 +10,7 @@
 		5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */; };
 		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
 		5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */; };
+		5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83C2640532D00EE25B3 /* ViewControllers.swift */; };
 		5421F0F325DB751B00B309FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* Data.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
 		546301F925FA025E00E005BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colors.swift */; };
@@ -172,6 +173,7 @@
 		5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTeoriaJuegos.swift; sourceTree = "<group>"; };
 		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
 		5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPalabras.swift; sourceTree = "<group>"; };
+		5406E83C2640532D00EE25B3 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
 		546301F825FA025E00E005BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				542D5AF52604E7CE0074927F /* imageButtons.swift */,
 				54A0F8912627984D00A6D308 /* Alertas.swift */,
 				5400C2B0262E33A5008F2D4A /* TabBars.swift */,
+				5406E83C2640532D00EE25B3 /* ViewControllers.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */,
 				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
+				5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */,
 				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
 				54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */,
 				546310A026210C3E00FA115C /* Pareja.swift in Sources */,

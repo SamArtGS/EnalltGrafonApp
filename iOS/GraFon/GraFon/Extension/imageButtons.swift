@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIBarButtonItem {
+extension UIViewController {
 
-    static func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
+    func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: imageName), for: .normal)
         button.addTarget(target, action: action, for: .touchUpInside)
@@ -21,6 +21,14 @@ extension UIBarButtonItem {
         menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 30).isActive = true
 
         return menuBarItem
+    }
+    
+    func menuBotonExtras(_ target: Any?, action: Selector, imageName: String) -> UIButton {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
+        return button
     }
 }
 

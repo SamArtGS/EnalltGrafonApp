@@ -18,9 +18,10 @@ class SeleccionarNivelController: UICollectionViewController, UINavigationContro
         super.viewDidLoad()
         navigationController?.delegate = self
         self.collectionView!.register(CeldaMolde.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.title = "Selecciona Nivel"
         collectionView.backgroundColor = .white
         collectionView.clipsToBounds = true
+        collectionView.backgroundColor = .clear
+        colocarFondo(imagen: "bck_n1_juegos_v2")
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -68,9 +69,8 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.bounds.width/2.5,
-                      height: collectionView.bounds.width/2.5)
-        
+        return CGSize(width: collectionView.bounds.width,
+                      height: collectionView.bounds.height/6)
     }
     
     func collectionView(_ collectionView: UICollectionView,

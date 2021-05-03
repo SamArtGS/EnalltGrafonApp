@@ -68,22 +68,3 @@ extension UITabBarController: UINavigationBarDelegate{
     }
 }
 
-extension UIViewController{
-    func presentacionModal(viewController: UIViewController, halfTransition: inout HalfModalTransitioningDelegate?){
-        if #available(iOS 13, *) {
-            let olvidoVC = viewController
-            olvidoVC.modalPresentationStyle = .automatic
-            present(olvidoVC, animated: true)
-        }else{
-            let vc = viewController
-            halfTransition = HalfModalTransitioningDelegate(viewController: self, presentingViewController: vc)
-            vc.view.layer.cornerRadius  = 20
-            vc.view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-            vc.view.clipsToBounds = true
-            vc.view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-            vc.modalPresentationStyle = .custom
-            self.transitioningDelegate = halfTransition
-            present(vc,animated: true)
-        }
-    }
-}

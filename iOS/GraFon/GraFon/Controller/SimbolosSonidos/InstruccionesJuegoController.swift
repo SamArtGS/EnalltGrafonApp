@@ -39,6 +39,8 @@ class PresentacionJuegoSyS: Carcasa {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .clear
+        colocarFondo(imagen: "bck_n1_juegos_v2")
         configure(vista: pantalla)
         pantalla.delegate = self
     }
@@ -60,6 +62,8 @@ class PuntuacionJuegoSyS: Carcasa {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(vista: pantalla)
+        view.backgroundColor = .clear
+        colocarFondo(imagen: "bck_n1_juegos_v2")
     }
     override func viewWillLayoutSubviews() {
        super.viewWillLayoutSubviews()

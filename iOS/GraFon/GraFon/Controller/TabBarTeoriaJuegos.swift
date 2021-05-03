@@ -128,7 +128,7 @@ extension TabBarSimbolosySonidos: UITabBarControllerDelegate{
         }
         if selectedIndex == 1{
             self.title = viewController.title
-            let BarButtonItemDerecho = UIBarButtonItem.menuButton(self,
+            let BarButtonItemDerecho = menuButton(self,
             action: #selector(instrucciones),
             imageName: "icons8-query")
             self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
