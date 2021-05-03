@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
+class MenuMoldeVC: UICollectionViewController{
     
     private let reuseIdentifier = "Cell"
     private var puertaInt: Int?
@@ -23,19 +23,27 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
     }
     
     override func viewDidLoad() {
-        navigationController?.delegate = self
-        view.backgroundColor = .clear
         super.viewDidLoad()
-    self.collectionView!.register(CeldaMolde.self,forCellWithReuseIdentifier: reuseIdentifier)
+        view.backgroundColor = .clear
+        self.collectionView!.register(CeldaMolde.self,forCellWithReuseIdentifier: reuseIdentifier)
         configurarEntorno()
     }
+
     
-   
+}
+
+///
+/// Funciones de los elementos del Delegate y DataSource
+///
+
+extension MenuMoldeVC{
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView,numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         switch puertaInt {
         case 0:
             return Data.fonemas.count
@@ -50,41 +58,36 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView,didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 didSelectItemAt indexPath: IndexPath) {
         switch puertaInt {
-        case 0:
-            print("Hola")
-        case 1:
-            print("Hola")
-        case 2:
-            if  Data.letras[indexPath.item].identificador != 0{
-                mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
-//                let scrollLayout = UICollectionViewFlowLayout()
-//                scrollLayout.scrollDirection = .horizontal
-//                let vcs = PalabrasEnBocaVC(collectionViewLayout:scrollLayout)
-//                self.navigationController?.pushViewController(vcs, animated: true)
+            case 0:
+                print("Hola")
+            case 1:
+                print("Hola")
+            case 2:
+                if  Data.letras[indexPath.item].identificador != 0{
+                    mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
+                }
+            case 3:
+                let scrollLayout = UICollectionViewFlowLayout()
+                scrollLayout.scrollDirection = .horizontal
+                if  Data.fonemas[indexPath.item].identificador != 0{
+                    let vcs = SonidoSeleccionado(collectionViewLayout:scrollLayout)
+                    vcs.indiceSeleccionado = Data.fonemas[indexPath.item].identificador
+                    self.navigationController?.pushViewController(vcs, animated: true)
+                }
+            default:
+                print("Nada de nada")
             }
-        case 3:
-            let scrollLayout = UICollectionViewFlowLayout()
-            scrollLayout.scrollDirection = .horizontal
-            
-            if  Data.fonemas[indexPath.item].identificador != 0{
-                let vcs = SonidoSeleccionado(collectionViewLayout:scrollLayout)
-                vcs.indiceSeleccionado = Data.fonemas[indexPath.item].identificador
-                self.navigationController?.pushViewController(vcs, animated: true)
-            }
-        default:
-            print("Nada de nada")
-        }
-            
-            
     }
 
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath)
                                     -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,for: indexPath) as! CeldaMolde
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                      for: indexPath) as! CeldaMolde
         switch puertaInt {
             case 0:
                 print("Hola")
@@ -97,19 +100,17 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
             default:
                 print("Nada de nada")
             }
-        
         return cell
     }
     
-    
-    
     func configurarEntorno(){
+        
         collectionView.backgroundColor = .clear
+        
         let imageView: UIImageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-
         
         switch puertaInt {
             case 0:
@@ -117,29 +118,17 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
             case 1:
                 print("Hola")
             case 2:
-                navigationController?
-                    .navigationBar.barTintColor = .colorBarraSuperiorPalabras
-                navigationController?.navigationBar.setBackgroundImage(
-                    UIColor.colorBarraSuperiorPalabras
-                        .as1ptImage(),
-                    for: .default
-                )
-                navigationController?
-                    .navigationBar
-                    .shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
                 imageView.image = UIImage(named: "bck_n2_v2")
             case 3:
-                navigationController?.delegate = self
-                navigationController?.title = "Símbolos y sonidos"
-                navigationController?.navigationBar.setBackgroundImage(
-                    UIColor.colorBarraSuperiorSyS
-                        .as1ptImage(),
-                    for: .default
-                )
-                navigationController?
-                    .navigationBar
-                    .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
-                
+//                navigationController?.title = "Símbolos y sonidos"
+//                              navigationController?.navigationBar.setBackgroundImage(
+//                                  UIColor.colorBarraSuperiorSyS
+//                                      .as1ptImage(),
+//                                  for: .default
+//                              )
+//                              navigationController?
+//                                  .navigationBar
+//                                  .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
                 imageView.image = UIImage(named: "bck_n1_v2")
             default:
                 print("Nada de nada")
@@ -153,9 +142,9 @@ class MenuMoldeVC: UICollectionViewController,UINavigationControllerDelegate{
             imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
         view.sendSubviewToBack(imageView)
-              
     }
 }
+
 
 
 extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
@@ -191,7 +180,7 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
                 default:
                     return view.frame.size.height/17.5
                 }
-        }else{
+        } else {
             return view.frame.size.height/30
         }
     }

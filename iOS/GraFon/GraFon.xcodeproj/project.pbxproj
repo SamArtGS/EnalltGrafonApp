@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */; };
 		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
+		5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */; };
 		5421F0F325DB751B00B309FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* Data.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
 		546301F925FA025E00E005BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colors.swift */; };
@@ -22,10 +23,10 @@
 		546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139425DB379D00CF2ED5 /* PuertaCelda.swift */; };
 		546B139725DB381400CF2ED5 /* Puerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139625DB381400CF2ED5 /* Puerta.swift */; };
 		546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */; };
-		547A8BA32618B994002962CD /* PresentacionJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A8BA22618B994002962CD /* PresentacionJuegoController.swift */; };
+		547A8BA32618B994002962CD /* InstruccionesJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */; };
 		5492F89D25EA1CAD0006A960 /* CeldaGenerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */; };
 		5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */; };
-		54A0F885262676B300A6D308 /* PantallaJuegoSyS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */; };
+		54A0F885262676B300A6D308 /* PantallaInstrucciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */; };
 		54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F8872627317900A6D308 /* SySJuegoController.swift */; };
 		54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */; };
 		54A0F88E262751C200A6D308 /* Letras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88D262751C200A6D308 /* Letras.swift */; };
@@ -170,6 +171,7 @@
 /* Begin PBXFileReference section */
 		5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTeoriaJuegos.swift; sourceTree = "<group>"; };
 		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
+		5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPalabras.swift; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
 		546301F825FA025E00E005BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -187,10 +189,10 @@
 		546B139425DB379D00CF2ED5 /* PuertaCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuertaCelda.swift; sourceTree = "<group>"; };
 		546B139625DB381400CF2ED5 /* Puerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puerta.swift; sourceTree = "<group>"; };
 		546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginacionPuertasVC.swift; sourceTree = "<group>"; };
-		547A8BA22618B994002962CD /* PresentacionJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentacionJuegoController.swift; sourceTree = "<group>"; };
+		547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstruccionesJuegoController.swift; sourceTree = "<group>"; };
 		5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaGenerica.swift; sourceTree = "<group>"; };
 		5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonemaSeleccionadoController.swift; sourceTree = "<group>"; };
-		54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaJuegoSyS.swift; sourceTree = "<group>"; };
+		54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaInstrucciones.swift; sourceTree = "<group>"; };
 		54A0F8872627317900A6D308 /* SySJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SySJuegoController.swift; sourceTree = "<group>"; };
 		54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaJuegoSyS.swift; sourceTree = "<group>"; };
 		54A0F88D262751C200A6D308 /* Letras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letras.swift; sourceTree = "<group>"; };
@@ -351,6 +353,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		5406E83926403BAD00EE25B3 /* PalabrasEnBoca */ = {
+			isa = PBXGroup;
+			children = (
+				5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */,
+			);
+			path = PalabrasEnBoca;
+			sourceTree = "<group>";
+		};
 		546B135125DAFACD00CF2ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +456,7 @@
 				546B139425DB379D00CF2ED5 /* PuertaCelda.swift */,
 				5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */,
 				54A0F886262676BD00A6D308 /* SimbolosSonidos */,
+				5406E83926403BAD00EE25B3 /* PalabrasEnBoca */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,9 +465,9 @@
 			isa = PBXGroup;
 			children = (
 				54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */,
-				54A0F884262676B300A6D308 /* PantallaJuegoSyS.swift */,
 				54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */,
 				54DCA04C26365AFA003D4F68 /* PantallaResultados.swift */,
+				54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */,
 			);
 			path = SimbolosSonidos;
 			sourceTree = "<group>";
@@ -465,9 +476,9 @@
 			isa = PBXGroup;
 			children = (
 				5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */,
-				547A8BA22618B994002962CD /* PresentacionJuegoController.swift */,
 				54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */,
 				54A0F8872627317900A6D308 /* SySJuegoController.swift */,
+				547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */,
 			);
 			path = SimbolosSonidos;
 			sourceTree = "<group>";
@@ -835,11 +846,12 @@
 				54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
+				5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */,
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
-				54A0F885262676B300A6D308 /* PantallaJuegoSyS.swift in Sources */,
+				54A0F885262676B300A6D308 /* PantallaInstrucciones.swift in Sources */,
 				546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */,
 				54DCA05826367AE2003D4F68 /* HalfModalPresentation.swift in Sources */,
-				547A8BA32618B994002962CD /* PresentacionJuegoController.swift in Sources */,
+				547A8BA32618B994002962CD /* InstruccionesJuegoController.swift in Sources */,
 				54DC9F682636046B003D4F68 /* SeleccionarNivelController.swift in Sources */,
 				54FF64EB2634C1DF000C9037 /* Protocolos.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,

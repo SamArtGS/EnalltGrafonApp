@@ -43,9 +43,7 @@ class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {
         
         switch pan.state {
         case .began:
-            
             self.presentingViewController?.dismiss(animated: true, completion: nil)
-            
             break
             
         case .changed:
@@ -53,33 +51,24 @@ class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {
             let dragAmount = screenHeight
             let threshold: Float = 0.2
             var percent: Float = Float(translation.y) / Float(dragAmount)
-
             percent = fmaxf(percent, 0.0)
             percent = fminf(percent, 1.0)
-            
             update(CGFloat(percent))
-            
             shouldComplete = percent > threshold
-            
             break
             
         case .ended, .cancelled:
             if pan.state == .cancelled || !shouldComplete {
                 cancel()
-                
                 print("cancel transition")
             }
             else {
                 finish()
-                
                 print("finished transition")
             }
-            
             break
-            
         default:
             cancel()
-            
             break
         }
     }

@@ -6,10 +6,10 @@
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
 
-protocol pantallaInstruccionesDelegate: class{
+protocol pantallaInstruccionesDelegate: AnyObject{
     func iniciarJuego()
 }
-protocol juegoSimbolosySonidosDelegate: class{
+protocol juegoSimbolosySonidosDelegate: AnyObject{
     func siguiente()
     func recolectarPuntaje()
     func finalizar()

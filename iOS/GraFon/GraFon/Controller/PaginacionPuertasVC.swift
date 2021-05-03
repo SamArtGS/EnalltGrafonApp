@@ -63,20 +63,6 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                         break
                     case 3:
                         let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 3)
-                        self.navigationController?.title = "Símbolos y sonidos"
-                        self.navigationController?.navigationBar.setBackgroundImage(
-                            UIColor.colorBarraSuperiorSyS
-                                .as1ptImage(),
-                            for: .default
-                        )
-                        self.navigationController?
-                            .navigationBar
-                            .shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
-                        self.navigationController?.navigationBar.titleTextAttributes = [
-                            NSAttributedString.Key.foregroundColor: UIColor.white
-                        ]
-                        self.navigationController?.navigationBar.tintColor = UIColor.white
-                        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
                         self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     default:

@@ -30,11 +30,8 @@ class Carcasa: UIViewController{
 
 extension PresentacionJuegoSyS: pantallaInstruccionesDelegate{
     func iniciarJuego() {
-        let scrollLayout = UICollectionViewFlowLayout()
-        scrollLayout.scrollDirection = .vertical
-        navigationController?.pushViewController(SeleccionarNivelController(collectionViewLayout: scrollLayout), animated: true)
+        dismiss(animated: true, completion: nil)
     }
-    
 }
 
 class PresentacionJuegoSyS: Carcasa {

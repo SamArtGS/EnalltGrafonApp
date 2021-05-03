@@ -16,14 +16,74 @@ extension UITabBarController: UINavigationControllerDelegate {
         controller.view.backgroundColor = .white
         return controller
     }
+    func crearNavegacionBoton(titulo: String, imagenIcono: String, controller: UIViewController) -> UIViewController{
+        controller.title = titulo
+        controller.navigationController?.title = titulo
+        controller.tabBarItem.image = UIImage(named: imagenIcono)
+        controller.view.backgroundColor = .white
+        
+        return controller
+    }
 }
 
-/// Eliminados:
+///
+/// Funciones genericas de personalinzación para las ventanas de Tab Bar + Navigation Bar
+///
 
-/*
- //        let BarButtonItemDerecho = UIBarButtonItem.menuButton(self,
- //                                                              action: #selector(juegos),
- //                                                              imageName: "iconbar1")
- //        self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
- 
- */
+extension UITabBarController: UINavigationBarDelegate{
+    
+    func colorearTabBar(colorFondo: UIColor, colorSeleccionado: UIColor, colorNoSeleccionado: UIColor){
+        if #available(iOS 13.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundColor = colorFondo
+            let item = UITabBarItemAppearance()
+            item.normal.iconColor = colorNoSeleccionado
+            item.selected.iconColor = colorSeleccionado
+            item.normal.titleTextAttributes = [NSAttributedString.Key
+                                                .foregroundColor: colorNoSeleccionado]
+            item.selected.titleTextAttributes = [NSAttributedString.Key
+                                                .foregroundColor: colorSeleccionado]
+            appearance.stackedLayoutAppearance = item
+            appearance.inlineLayoutAppearance = item
+            appearance.compactInlineLayoutAppearance = item
+            tabBar.standardAppearance = appearance
+        }else{
+            tabBar.barTintColor = colorFondo
+            tabBar.unselectedItemTintColor = colorNoSeleccionado
+            tabBar.tintColor = colorSeleccionado
+            tabBar.isTranslucent = false
+        }
+    }
+    
+    func colorearNavigationBar(colorFondo: UIColor, colorLineaAdorno: UIColor, colorLetras: UIColor){
+        let apariencia = UINavigationBar.appearance()
+        apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
+        apariencia.shadowImage = colorLineaAdorno.as1ptImage()
+        apariencia.titleTextAttributes = [
+                    NSAttributedString.Key.foregroundColor: colorLetras
+        ]
+        apariencia.tintColor = colorLetras
+        navigationController?.delegate = self
+        navigationController?.navigationBar.delegate = self
+    }
+}
+
+extension UIViewController{
+    func presentacionModal(viewController: UIViewController, halfTransition: inout HalfModalTransitioningDelegate?){
+        if #available(iOS 13, *) {
+            let olvidoVC = viewController
+            olvidoVC.modalPresentationStyle = .automatic
+            present(olvidoVC, animated: true)
+        }else{
+            let vc = viewController
+            halfTransition = HalfModalTransitioningDelegate(viewController: self, presentingViewController: vc)
+            vc.view.layer.cornerRadius  = 20
+            vc.view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            vc.view.clipsToBounds = true
+            vc.view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
+            vc.modalPresentationStyle = .custom
+            self.transitioningDelegate = halfTransition
+            present(vc,animated: true)
+        }
+    }
+}
