@@ -187,7 +187,7 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
     }
 
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        session.loadObjects(ofClass: UIImage.self) {[unowned self] imageItems in
+        session.loadObjects(ofClass: UIImage.self) { imageItems in
             guard let vista = interaction.view else{
                 return
             }
@@ -231,8 +231,6 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
                     }catch{
                         print("Error al reproducir el audio")
                     }
-                    
-                    
                 }else{
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_acierto_mdpi")
                     

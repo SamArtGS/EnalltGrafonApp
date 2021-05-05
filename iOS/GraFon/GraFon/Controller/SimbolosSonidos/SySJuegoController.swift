@@ -80,7 +80,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     }
     
     private var puntaje: UIBarButtonItem = {
-        return UIBarButtonItem(title: "0 | 20",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "0|20",style: .plain, target: nil, action: nil)
     }()
     
 
@@ -96,7 +96,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
 extension SySJuego1VC{
     func configurar(){
         self.title = "Juego \(nivelFonema!)"
-        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
+        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 95).isActive = true
         let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
