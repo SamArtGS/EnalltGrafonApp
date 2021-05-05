@@ -10,7 +10,7 @@ import UIKit
 
 class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
-    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    //weak var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
@@ -106,7 +106,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         
     }
     @objc func mostrarExtras(){
-        presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
+        //presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
+        present(PresentacionJuegoSyS(), animated: true)
     }
     
 }

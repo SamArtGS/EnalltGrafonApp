@@ -18,7 +18,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     private var tarjetas: [ParejaSonido]?
     
-    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    weak var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
     init(collectionViewLayout layout: UICollectionViewLayout, nivelSelecionado: Int) {
         super.init(collectionViewLayout: layout)

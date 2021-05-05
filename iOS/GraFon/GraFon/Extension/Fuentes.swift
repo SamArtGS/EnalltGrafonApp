@@ -30,6 +30,14 @@ extension UIFont {
     static func GillSans(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
         return UIFont(name: "GillSans\(type.rawValue)", size: size)!
     }
+    
+    static func Roboto(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return UIFont(name: "Roboto\(type.rawValue)", size: size)!
+    }
+    
+    static func Lato(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return UIFont(name: "Lato\(type.rawValue)", size: size)!
+    }
 
     var isBold: Bool {
         return fontDescriptor.symbolicTraits.contains(.traitBold)

@@ -13,6 +13,10 @@ class MenuMoldeVC: UICollectionViewController{
     private let reuseIdentifier = "Cell"
     private var puertaInt: Int?
     
+    deinit {
+        print("Se reclama la memoria del molde de pajaros")
+    }
+    
     init(collectionViewLayout layout: UICollectionViewLayout, puertaSeleccionada: Int) {
         super.init(collectionViewLayout: layout)
         puertaInt = puertaSeleccionada

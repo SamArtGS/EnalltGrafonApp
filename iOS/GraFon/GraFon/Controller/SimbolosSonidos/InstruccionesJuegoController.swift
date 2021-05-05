@@ -57,7 +57,7 @@ class PuntuacionJuegoSyS: Carcasa {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var pantalla = PantallaResultados()
+     var pantalla = PantallaResultados()
     
     override func viewDidLoad() {
         super.viewDidLoad()

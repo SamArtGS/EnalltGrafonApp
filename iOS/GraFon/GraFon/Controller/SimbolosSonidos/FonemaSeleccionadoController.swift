@@ -17,8 +17,12 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
    
     private var reproductorAudio = AVAudioPlayer()
     
+    deinit {
+        print("Se reclama la memoria del molde de los ejemplos de Sonidos y Símbolos")
+    }
+    
     let items = [UIBarButtonItem(title: "",
-                    style: .plain, target: self, action: nil),
+                style: .plain, target: self, action: nil),
                  UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                     target: self, action: nil),
                  UIBarButtonItem(title: "",
@@ -89,13 +93,13 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-                            return 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-                            return CGSize(width: view.frame.width, height: view.frame.height)
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
     

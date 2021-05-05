@@ -18,6 +18,11 @@ class PuertaCell: UICollectionViewCell {
             
         }
     }
+    deinit {
+        print("Espacio de puerta reclamado")
+    }
+    
+    
     func iniciarAnimacion(){
         imagenPuerta.animationDuration = 1.3
         imagenPuerta.startAnimating()
@@ -29,6 +34,7 @@ class PuertaCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        print("Vista de puerta creada")
         distribucionConstraints()
     }
     required init?(coder: NSCoder) {

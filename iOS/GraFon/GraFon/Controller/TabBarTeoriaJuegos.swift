@@ -10,9 +10,13 @@ import UIKit
 
 class TabBarSimbolosySonidos: UITabBarController{
     
+    deinit {
+        print("Se ha reciclado la página de tabBar")
+    }
+    
     /// Constructor: TabBar se comporta como un VC que contiene a los VC cuando se selecciona el tab bar correspondiente
     
-    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    weak var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
     init(puertaSeleccionada: Int) {
         super.init(nibName: nil, bundle: nil)

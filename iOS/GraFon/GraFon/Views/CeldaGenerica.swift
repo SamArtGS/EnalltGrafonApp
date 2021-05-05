@@ -9,7 +9,10 @@
 import UIKit
 
 class CeldaMolde: UICollectionViewCell {
-
+    
+    deinit {
+        print("Se reclama cada una de las celdas genéricas")
+    }
     
     var fonema: Fonema? {
        didSet {
@@ -41,6 +44,7 @@ class CeldaMolde: UICollectionViewCell {
     override init(frame: CGRect) {
        super.init(frame: frame)
         distribucionElementos()
+        print("Se crea sonidos y simbolos")
    }
     
     

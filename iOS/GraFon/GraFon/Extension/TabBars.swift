@@ -60,7 +60,8 @@ extension UITabBarController: UINavigationBarDelegate{
         apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
         apariencia.shadowImage = colorLineaAdorno.as1ptImage()
         apariencia.titleTextAttributes = [
-                    NSAttributedString.Key.foregroundColor: colorLetras
+            NSAttributedString.Key.foregroundColor: colorLetras,
+            NSAttributedString.Key.font: UIFont.Lato(.semibold, size: 18)
         ]
         apariencia.tintColor = colorLetras
         navigationController?.delegate = self
