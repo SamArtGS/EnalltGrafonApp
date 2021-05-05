@@ -39,6 +39,8 @@
 		5466CAD92642DC8700443B58 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CACC2642DC8700443B58 /* Roboto-Bold.ttf */; };
 		5466CADA2642DC8700443B58 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CACD2642DC8700443B58 /* Roboto-Thin.ttf */; };
 		5466CADB2642DC8700443B58 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CACE2642DC8700443B58 /* Roboto-Black.ttf */; };
+		5466CADD2643153100443B58 /* negative.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5466CADC2643153100443B58 /* negative.mp3 */; };
+		5466CADF2643153500443B58 /* positive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5466CADE2643153500443B58 /* positive.mp3 */; };
 		546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B135D25DAFACD00CF2ED5 /* AppDelegate.swift */; };
 		546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B135F25DAFACD00CF2ED5 /* SceneDelegate.swift */; };
 		546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546B136625DAFACD00CF2ED5 /* GraFon.xcdatamodeld */; };
@@ -226,6 +228,8 @@
 		5466CACC2642DC8700443B58 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		5466CACD2642DC8700443B58 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		5466CACE2642DC8700443B58 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		5466CADC2643153100443B58 /* negative.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = negative.mp3; sourceTree = "<group>"; };
+		5466CADE2643153500443B58 /* positive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = positive.mp3; sourceTree = "<group>"; };
 		546B135A25DAFACD00CF2ED5 /* GraFon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraFon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546B135D25DAFACD00CF2ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		546B135F25DAFACD00CF2ED5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -585,6 +589,8 @@
 		54DC9F6B26364CAE003D4F68 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				5466CADE2643153500443B58 /* positive.mp3 */,
+				5466CADC2643153100443B58 /* negative.mp3 */,
 				54DC9F6C26364CAE003D4F68 /* 140.mp3 */,
 				54DC9F6D26364CAE003D4F68 /* 154.mp3 */,
 				54DC9F6E26364CAE003D4F68 /* 183.mp3 */,
@@ -813,6 +819,7 @@
 				5466CADA2642DC8700443B58 /* Roboto-Thin.ttf in Resources */,
 				54DCA04626364CAE003D4F68 /* 164.mp3 in Resources */,
 				54DCA02A26364CAE003D4F68 /* 174.mp3 in Resources */,
+				5466CADD2643153100443B58 /* negative.mp3 in Resources */,
 				5466CAD72642DC8700443B58 /* LICENSE.txt in Resources */,
 				54DC9FFB26364CAE003D4F68 /* 85.mp3 in Resources */,
 				54DCA02B26364CAE003D4F68 /* 202.mp3 in Resources */,
@@ -909,6 +916,7 @@
 				5466CADB2642DC8700443B58 /* Roboto-Black.ttf in Resources */,
 				54DCA02026364CAE003D4F68 /* 115.mp3 in Resources */,
 				54DC9FE926364CAE003D4F68 /* 143.mp3 in Resources */,
+				5466CADF2643153500443B58 /* positive.mp3 in Resources */,
 				54DCA03C26364CAE003D4F68 /* 99.mp3 in Resources */,
 				54DCA03F26364CAE003D4F68 /* 199.mp3 in Resources */,
 				54DC9FF026364CAE003D4F68 /* 208.mp3 in Resources */,

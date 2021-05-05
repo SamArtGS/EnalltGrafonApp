@@ -16,13 +16,19 @@ class TabBarSimbolosySonidos: UITabBarController{
     
     /// Constructor: TabBar se comporta como un VC que contiene a los VC cuando se selecciona el tab bar correspondiente
     
-    weak var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
     init(puertaSeleccionada: Int) {
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
         view.contentMode = .scaleAspectFit
         colocarElementosDependiendoPuerta(puerta: puertaSeleccionada)
+        let botonAtras = UIBarButtonItem()
+        botonAtras.title = "Atrás"
+        botonAtras.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+        ], for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -42,6 +48,9 @@ class TabBarSimbolosySonidos: UITabBarController{
         super.viewDidLoad()
         self.delegate = self  // <- Para delegar las funciones de UITabBarControllerDelegate a mi TabBarController
         view.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        navigationController?.delegate = self
     }
 
     override func viewWillDisappear(_ animated: Bool) {

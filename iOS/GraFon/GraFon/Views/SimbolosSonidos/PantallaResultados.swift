@@ -15,22 +15,31 @@ class PantallaResultados: UIView {
         didSet {
             guard let destapado = puntaje else { return }
             resultado.text = "\(destapado) / 20"
+            
             switch destapado {
+                
+                /// Botón de Regresar a menú de pájaros
             case 0...9:
                 retroalimentacion.text = "¡Buen Intento!"
-                consolacion.text = "Aún puedes mejorar.\nDate otra vuelta por la sección 😅"
+                consolacion.text = "Aún puedes mejorar.\nDate otra vuelta por la sección"
                 break
+                
+                /// Botón ir al siguiente juego, realizar animación
             case 10...15:
                 retroalimentacion.text = "¡Muy bien!"
-                consolacion.text = "Ya reconoces varios símbolos. \n Si tienes dudas, \n regresa a ver la sección 😆"
+                consolacion.text = "Ya reconoces varios símbolos. \n Si tienes dudas, \n regresa a ver la sección"
                 break
+                
+                
+                /// Regresar a las puertas
             case 16...20:
                 retroalimentacion.text = "¡Felicidades!"
-                consolacion.text = "Reconoces símbolos con destreza.\n ¿Por qué no exploras \n las demás puertas? 🥳"
+                consolacion.text = "Reconoces símbolos con destreza.\n ¿Por qué no exploras \n las demás puertas?"
                 break
             default:
                 break
             }
+            
         }
     }
     

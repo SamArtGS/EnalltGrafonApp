@@ -39,8 +39,10 @@ extension UITabBarController: UINavigationBarDelegate{
             let item = UITabBarItemAppearance()
             item.normal.iconColor = colorNoSeleccionado
             item.selected.iconColor = colorSeleccionado
-            item.normal.titleTextAttributes = [NSAttributedString.Key
-                                                .foregroundColor: colorNoSeleccionado]
+            item.normal.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: colorNoSeleccionado,
+                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 10)
+            ]
             item.selected.titleTextAttributes = [NSAttributedString.Key
                                                 .foregroundColor: colorSeleccionado]
             appearance.stackedLayoutAppearance = item
@@ -61,7 +63,7 @@ extension UITabBarController: UINavigationBarDelegate{
         apariencia.shadowImage = colorLineaAdorno.as1ptImage()
         apariencia.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: colorLetras,
-            NSAttributedString.Key.font: UIFont.Lato(.semibold, size: 18)
+            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
         ]
         apariencia.tintColor = colorLetras
         navigationController?.delegate = self

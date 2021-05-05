@@ -165,23 +165,9 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
 
         if vista.isEqual(self.imagenPajaroBien){
             self.imagenPajaroBien.image = UIImage(named: "n1_jgo_SiCorresponde_sel_mdpi")
-            let bien = Bundle.main.path(forResource: "154", ofType: "mp3")
-            do {
-                reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: bien ?? "a_s1_1e"))
-                reproductorAudio.play()
-            }catch{
-                print("Error al reproducir el audio")
-            }
         }
         if vista.isEqual(self.imagenPajaroMal){
             self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_sel_mdpi")
-            let mal = Bundle.main.path(forResource: "140", ofType: "mp3")
-            do {
-                reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mal ?? "a_s1_1e"))
-                reproductorAudio.play()
-            }catch{
-                print("Error al reproducir el audio")
-            }
         }
         
     }
@@ -208,9 +194,25 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
             if vista.isEqual(self.imagenPajaroBien){
                 if self.correcto ?? false{
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_acierto_mdpi")
+                    let bien = Bundle.main.path(forResource: "positive", ofType: "mp3")
+                    do {
+                        self.reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: bien ?? "a_s1_1e"))
+                        self.reproductorAudio.play()
+                    }catch{
+                        print("Error al reproducir el audio")
+                    }
+                    
+                    
                     self.delegate?.recolectarPuntaje()
                 }else{
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_error_mdpi")
+                    let mal = Bundle.main.path(forResource: "negative", ofType: "mp3")
+                    do {
+                        self.reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mal ?? "a_s1_1e"))
+                        self.reproductorAudio.play()
+                    }catch{
+                        print("Error al reproducir el audio")
+                    }
                 }
                 self.imagenFonema.isUserInteractionEnabled = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
@@ -222,8 +224,26 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
             if vista.isEqual(self.imagenPajaroMal){
                 if self.correcto ?? false{
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_error_mdpi")
+                    let mal = Bundle.main.path(forResource: "negative", ofType: "mp3")
+                    do {
+                        self.reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mal ?? "a_s1_1e"))
+                        self.reproductorAudio.play()
+                    }catch{
+                        print("Error al reproducir el audio")
+                    }
+                    
+                    
                 }else{
                     self.imagenPajaroMal.image = UIImage(named: "n1_jgo_acierto_mdpi")
+                    
+                    let bien = Bundle.main.path(forResource: "positive", ofType: "mp3")
+                    do {
+                        self.reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: bien ?? "a_s1_1e"))
+                        self.reproductorAudio.play()
+                    }catch{
+                        print("Error al reproducir el audio")
+                    }
+                    
                     self.delegate?.recolectarPuntaje()
                 }
                 self.imagenFonema.isUserInteractionEnabled = false

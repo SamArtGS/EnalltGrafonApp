@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "s2_02semiopen_mdpi.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "s2_02semiopen_xhdpi.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "PuertaPalabrasMedio.png",
+      "filename" : "s2_02semiopen_xxhdpi.png",
       "scale" : "3x"
     }
   ],

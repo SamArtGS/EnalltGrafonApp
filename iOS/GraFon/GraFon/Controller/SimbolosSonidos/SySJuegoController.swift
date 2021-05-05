@@ -18,7 +18,11 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     private var tarjetas: [ParejaSonido]?
     
-    weak var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    
+    @objc func instrucciones(){
+        presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
+    }
     
     init(collectionViewLayout layout: UICollectionViewLayout, nivelSelecionado: Int) {
         super.init(collectionViewLayout: layout)
@@ -100,6 +104,12 @@ extension SySJuego1VC{
         collectionView?.isPagingEnabled = false
         collectionView?.isScrollEnabled = false
         
+        
+        /// Configuración del botón de ayuda
+        let BarButtonItemDerecho = menuButton(self,
+        action: #selector(instrucciones),
+        imageName: "icons8-query")
+        self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
     }
     
     func collectionView(_ collectionView: UICollectionView,
