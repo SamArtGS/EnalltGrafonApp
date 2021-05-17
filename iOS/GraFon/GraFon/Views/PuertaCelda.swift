@@ -18,6 +18,7 @@ class PuertaCell: UICollectionViewCell {
             
         }
     }
+    
     deinit {
         print("Espacio de puerta reclamado")
     }
@@ -41,7 +42,6 @@ class PuertaCell: UICollectionViewCell {
         fatalError("funcion init no implementada")
     }
     
-    
     //Elementos UI
     private var imagenPuerta: UIImageView = {
         let imageView = UIImageView()
@@ -51,7 +51,6 @@ class PuertaCell: UICollectionViewCell {
     }()
     
     private func distribucionConstraints(){
-        
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
         addSubview(imagenPuerta)
@@ -61,7 +60,6 @@ class PuertaCell: UICollectionViewCell {
             imagenPuerta.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
             imagenPuerta.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
     }
 }
  

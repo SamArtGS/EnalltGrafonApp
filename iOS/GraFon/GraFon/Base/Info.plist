@@ -20,10 +20,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Lato-Italic.ttf</string>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Black.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-BlackItalic.ttf</string>
+		<string>Lato-Light.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
+		<true/>
 		<key>UISceneConfigurations</key>
 		<dict>
 			<key>UIWindowSceneSessionRoleApplication</key>
@@ -55,20 +69,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto-Medium.ttf</string>
-		<string>Roboto-Light.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-MediumItalic.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Lato-Italic.ttf</string>
-		<string>Lato-Bold.ttf</string>
-		<string>Lato-Black.ttf</string>
-		<string>Lato-Regular.ttf</string>
-		<string>Lato-BlackItalic.ttf</string>
-		<string>Lato-Light.ttf</string>
 	</array>
 </dict>
 </plist>

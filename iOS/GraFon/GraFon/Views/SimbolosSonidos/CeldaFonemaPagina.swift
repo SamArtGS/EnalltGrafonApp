@@ -55,29 +55,31 @@ class SimboloPaginaCelda: UICollectionViewCell {
         elementosApilados.distribution = .fillProportionally
         elementosApilados.alignment = .center
         elementosApilados.spacing = 10
+        elementosApilados.contentMode = .scaleAspectFit
         elementosApilados.translatesAutoresizingMaskIntoConstraints = false
-               
         return elementosApilados
     }()
         
     func distribucionConstraints(){
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
-    
+        imagenesApiladas.backgroundColor = . green
         imagenesApiladas.addArrangedSubview(imagenFonemaAntes)
         imagenesApiladas.addArrangedSubview(imagenObjeto)
         
         addSubview(imagenesApiladas)
             
     NSLayoutConstraint.activate([
-        
-        imagenesApiladas.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70),
-        imagenesApiladas.trailingAnchor.constraint(equalTo: trailingAnchor),
-        imagenesApiladas.leadingAnchor.constraint(equalTo: leadingAnchor),
-        imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50)
-            
-    ])
-    
+        imagenesApiladas.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+        imagenesApiladas.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+        imagenesApiladas.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+        imagenesApiladas.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+        imagenFonemaAntes.leadingAnchor.constraint(equalTo: imagenesApiladas.leadingAnchor),
+        imagenFonemaAntes.trailingAnchor.constraint(equalTo: imagenesApiladas.trailingAnchor),
+        imagenFonemaAntes.topAnchor.constraint(equalTo: imagenesApiladas.topAnchor),
+        imagenObjeto.leadingAnchor.constraint(equalTo: imagenesApiladas.leadingAnchor, constant: 30),
+        imagenObjeto.trailingAnchor.constraint(equalTo: imagenesApiladas.trailingAnchor, constant: -30)
+        ])
     }
     
     override init(frame: CGRect) {
@@ -85,6 +87,9 @@ class SimboloPaginaCelda: UICollectionViewCell {
         distribucionConstraints()
     }
        
+    deinit {
+        print("Se reclama Celda Fonema Ejemplo - Teoría")
+    }
     required init?(coder: NSCoder) {
         fatalError("Falló al momento de implementar el constructor")
     }

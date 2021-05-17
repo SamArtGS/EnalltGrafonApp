@@ -9,6 +9,7 @@
 import UIKit
 
 class PantallaResultados: UIView {
+    
     weak var delegate: pantallaInstruccionesDelegate?
     
     var puntaje: Int? {
@@ -17,21 +18,18 @@ class PantallaResultados: UIView {
             resultado.text = "\(destapado) / 20"
             
             switch destapado {
-                
                 /// Botón de Regresar a menú de pájaros
             case 0...9:
                 retroalimentacion.text = "¡Buen Intento!"
                 consolacion.text = "Aún puedes mejorar.\nDate otra vuelta por la sección"
                 break
                 
-                /// Botón ir al siguiente juego, realizar animación
+                /// Ir al menú de pájaros, al igual que el anterior
             case 10...15:
                 retroalimentacion.text = "¡Muy bien!"
                 consolacion.text = "Ya reconoces varios símbolos. \n Si tienes dudas, \n regresa a ver la sección"
                 break
-                
-                
-                /// Regresar a las puertas
+                /// Ir a las puerta, la de palabras en la boca
             case 16...20:
                 retroalimentacion.text = "¡Felicidades!"
                 consolacion.text = "Reconoces símbolos con destreza.\n ¿Por qué no exploras \n las demás puertas?"
@@ -42,7 +40,6 @@ class PantallaResultados: UIView {
             
         }
     }
-    
         
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,6 +51,9 @@ class PantallaResultados: UIView {
         fatalError("Error al implementar el init")
     }
     
+    deinit {
+        print("Se reclama la vista de pantalla resultados")
+    }
     
     private let imagenPresentacion:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "retro_n1_jgo"))
@@ -115,42 +115,30 @@ class PantallaResultados: UIView {
         return elementosApilados
     }()
     
-    
-    
     func agregarAcciones(accion: Selector){
         botonInicioJuego.addTarget(self, action: accion, for: .touchUpInside)
     }
     
     func setUpConstraints(){
         addSubview(imagenPresentacion)
-        
         imagenPresentacion.addSubview(pilaElementos)
-        
         pilaElementos.addArrangedSubview(textoBanner)
         pilaElementos.addArrangedSubview(resultado)
         pilaElementos.addArrangedSubview(retroalimentacion)
         pilaElementos.addArrangedSubview(consolacion)
         pilaElementos.addArrangedSubview(botonInicioJuego)
-        
         NSLayoutConstraint.activate([
             imagenPresentacion.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             imagenPresentacion.centerXAnchor.constraint(equalTo: centerXAnchor),
             imagenPresentacion.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             imagenPresentacion.leadingAnchor.constraint(equalTo: leadingAnchor),
             imagenPresentacion.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
-           
             pilaElementos.centerXAnchor.constraint(equalTo: imagenPresentacion.centerXAnchor),
             pilaElementos.centerYAnchor.constraint(equalTo: imagenPresentacion.centerYAnchor),
             pilaElementos.heightAnchor.constraint(equalTo: imagenPresentacion.widthAnchor),
             pilaElementos.widthAnchor.constraint(equalTo: imagenPresentacion.widthAnchor)
-            
-            //botonInicioJuego.heightAnchor.constraint(equalToConstant: 70)
         ])
         
     }
-        
-       
-
 }
 

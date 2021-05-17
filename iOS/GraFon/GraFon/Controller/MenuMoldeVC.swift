@@ -64,6 +64,8 @@ extension MenuMoldeVC{
     
     override func collectionView(_ collectionView: UICollectionView,
                                  didSelectItemAt indexPath: IndexPath) {
+        let scrollLayout = UICollectionViewFlowLayout()
+       
         switch puertaInt {
             case 0:
                 print("Hola")
@@ -71,12 +73,14 @@ extension MenuMoldeVC{
                 print("Hola")
             case 2:
                 if  Data.letras[indexPath.item].identificador != 0{
-                    mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
+                     scrollLayout.scrollDirection = .horizontal
+                    //mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
+                    let vcs = PalabrasEnBocaVC(collectionViewLayout:scrollLayout, indiceSeleccionado: Data.letras[indexPath.item].identificador)
+                    self.navigationController?.pushViewController(vcs, animated: true)
                 }
             case 3:
-                let scrollLayout = UICollectionViewFlowLayout()
-                scrollLayout.scrollDirection = .horizontal
                 if  Data.fonemas[indexPath.item].identificador != 0{
+                    scrollLayout.scrollDirection = .horizontal
                     let vcs = SonidoSeleccionado(collectionViewLayout:scrollLayout)
                     vcs.indiceSeleccionado = Data.fonemas[indexPath.item].identificador
                     self.navigationController?.pushViewController(vcs, animated: true)
@@ -135,9 +139,8 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.bounds.width/6.0,
-                      height: collectionView.bounds.width/6.0)
-        
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0,
+                      height: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

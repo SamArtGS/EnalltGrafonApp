@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIViewController{
+    
     func presentacionModal(viewController: UIViewController, halfTransition: inout HalfModalTransitioningDelegate?){
         if #available(iOS 13, *) {
             let olvidoVC = viewController
@@ -63,3 +64,35 @@ extension UIViewController{
         view.sendSubviewToBack(imageView)
     }
 }
+extension UIStackView {
+
+    func colorFondo(color: UIColor) {
+        let subview = UIView(frame: bounds)
+        subview.backgroundColor = color
+        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subview, at: 0)
+    }
+
+}
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+//
+//            let orient = UIApplication.shared.statusBarOrientation
+//
+//            switch orient {
+//            case .portrait:
+//                print("Portrait")
+//                self.collectionView.updateConstraints()
+//                break
+//                // Do something
+//            default:
+//                print("LandScape")
+//                self.collectionView.updateConstraints()
+//                // Do something else
+//                break
+//            }
+//            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+//                print("rotation completed")
+//        })
+//    }

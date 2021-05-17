@@ -11,10 +11,10 @@
 		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
 		5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */; };
 		5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83C2640532D00EE25B3 /* ViewControllers.swift */; };
-		5421F0F325DB751B00B309FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* Data.swift */; };
+		5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */; };
+		5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
-		546301F925FA025E00E005BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colors.swift */; };
-		546310A026210C3E00FA115C /* Pareja.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463109F26210C3E00FA115C /* Pareja.swift */; };
+		546301F925FA025E00E005BC /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colores.swift */; };
 		5466CAB62642DC7600443B58 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */; };
 		5466CAB72642DC7600443B58 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAC2642DC7600443B58 /* Lato-LightItalic.ttf */; };
 		5466CAB82642DC7600443B58 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAD2642DC7600443B58 /* Lato-Thin.ttf */; };
@@ -51,6 +51,7 @@
 		546B139725DB381400CF2ED5 /* Puerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139625DB381400CF2ED5 /* Puerta.swift */; };
 		546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */; };
 		547A8BA32618B994002962CD /* InstruccionesJuegoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */; };
+		548363982647B0F1000B31E6 /* DataPalabrasEnBoca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548363972647B0F1000B31E6 /* DataPalabrasEnBoca.swift */; };
 		5492F89D25EA1CAD0006A960 /* CeldaGenerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */; };
 		5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */; };
 		54A0F885262676B300A6D308 /* PantallaInstrucciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */; };
@@ -179,6 +180,10 @@
 		54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05226367AE1003D4F68 /* HalfModalInteractiveTransition.swift */; };
 		54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */; };
 		54DCA05826367AE2003D4F68 /* HalfModalPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */; };
+		54E22FD826508C8A006B9E82 /* ZoomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */; };
+		54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */; };
+		54E70BE1264C1ADF00DA062F /* CeldaSonidoYSilabas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BE0264C1ADF00DA062F /* CeldaSonidoYSilabas.swift */; };
+		54E70BE3264C1AF100DA062F /* CeldaSilabasYExplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */; };
 		54F6993225F09ECC008F22DF /* CeldaFonemaPagina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */; };
 		54F6993825F0AF02008F22DF /* Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993725F0AF02008F22DF /* Lines.swift */; };
 		54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F6993925F0C92D008F22DF /* Fonema.swift */; };
@@ -200,10 +205,10 @@
 		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
 		5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPalabras.swift; sourceTree = "<group>"; };
 		5406E83C2640532D00EE25B3 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
-		5421F0F225DB751B00B309FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSonidosYSimbolos.swift; sourceTree = "<group>"; };
+		5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coleccionDeColecciones.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
-		546301F825FA025E00E005BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		5463109F26210C3E00FA115C /* Pareja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pareja.swift; sourceTree = "<group>"; };
+		546301F825FA025E00E005BC /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
 		5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5466CAAC2642DC7600443B58 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		5466CAAD2642DC7600443B58 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -244,6 +249,7 @@
 		546B139625DB381400CF2ED5 /* Puerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puerta.swift; sourceTree = "<group>"; };
 		546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginacionPuertasVC.swift; sourceTree = "<group>"; };
 		547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstruccionesJuegoController.swift; sourceTree = "<group>"; };
+		548363972647B0F1000B31E6 /* DataPalabrasEnBoca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPalabrasEnBoca.swift; sourceTree = "<group>"; };
 		5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaGenerica.swift; sourceTree = "<group>"; };
 		5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonemaSeleccionadoController.swift; sourceTree = "<group>"; };
 		54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaInstrucciones.swift; sourceTree = "<group>"; };
@@ -372,6 +378,10 @@
 		54DCA05226367AE1003D4F68 /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
 		54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionDelegate.swift; sourceTree = "<group>"; };
 		54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalPresentation.swift; sourceTree = "<group>"; };
+		54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionDelegate.swift; sourceTree = "<group>"; };
+		54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaSeleccionadaController.swift; sourceTree = "<group>"; };
+		54E70BE0264C1ADF00DA062F /* CeldaSonidoYSilabas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaSonidoYSilabas.swift; sourceTree = "<group>"; };
+		54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaSilabasYExplicacion.swift; sourceTree = "<group>"; };
 		54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaFonemaPagina.swift; sourceTree = "<group>"; };
 		54F6993725F0AF02008F22DF /* Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lines.swift; sourceTree = "<group>"; };
 		54F6993925F0C92D008F22DF /* Fonema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonema.swift; sourceTree = "<group>"; };
@@ -412,7 +422,10 @@
 		5406E83926403BAD00EE25B3 /* PalabrasEnBoca */ = {
 			isa = PBXGroup;
 			children = (
+				5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */,
 				5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */,
+				54E70BE0264C1ADF00DA062F /* CeldaSonidoYSilabas.swift */,
+				54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */,
 			);
 			path = PalabrasEnBoca;
 			sourceTree = "<group>";
@@ -513,10 +526,10 @@
 		546B138325DAFD2F00CF2ED5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5421F0F225DB751B00B309FC /* Data.swift */,
+				5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */,
+				548363972647B0F1000B31E6 /* DataPalabrasEnBoca.swift */,
 				546B139625DB381400CF2ED5 /* Puerta.swift */,
 				54F6993925F0C92D008F22DF /* Fonema.swift */,
-				5463109F26210C3E00FA115C /* Pareja.swift */,
 				54A0F88D262751C200A6D308 /* Letras.swift */,
 			);
 			path = Model;
@@ -535,7 +548,7 @@
 			children = (
 				54F6993725F0AF02008F22DF /* Lines.swift */,
 				54DCA04E26366A84003D4F68 /* Fuentes.swift */,
-				546301F825FA025E00E005BC /* Colors.swift */,
+				546301F825FA025E00E005BC /* Colores.swift */,
 				542D5AF52604E7CE0074927F /* imageButtons.swift */,
 				54A0F8912627984D00A6D308 /* Alertas.swift */,
 				5400C2B0262E33A5008F2D4A /* TabBars.swift */,
@@ -582,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				54A0F88F2627562400A6D308 /* PalabrasEnBocaVC.swift */,
+				54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */,
 			);
 			path = Palabras;
 			sourceTree = "<group>";
@@ -714,6 +728,7 @@
 				54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */,
 				54DCA05126367AE1003D4F68 /* HalfModalTransitionAnimator.swift */,
 				54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */,
+				54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -771,7 +786,6 @@
 					};
 					546B137225DAFACF00CF2ED5 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 546B135925DAFACD00CF2ED5;
 					};
 				};
 			};
@@ -781,7 +795,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"es-419",
 			);
 			mainGroup = 546B135125DAFACD00CF2ED5;
 			productRefGroup = 546B135B25DAFACD00CF2ED5 /* Products */;
@@ -957,16 +971,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F6993225F09ECC008F22DF /* CeldaFonemaPagina.swift in Sources */,
-				546301F925FA025E00E005BC /* Colors.swift in Sources */,
+				546301F925FA025E00E005BC /* Colores.swift in Sources */,
 				5492F89D25EA1CAD0006A960 /* CeldaGenerica.swift in Sources */,
 				54DCA04F26366A84003D4F68 /* Fuentes.swift in Sources */,
 				5400C2AF262E32E2008F2D4A /* TabBarTeoriaJuegos.swift in Sources */,
 				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */,
+				54E70BE1264C1ADF00DA062F /* CeldaSonidoYSilabas.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
+				54E70BE3264C1AF100DA062F /* CeldaSilabasYExplicacion.swift in Sources */,
 				5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */,
 				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
 				54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */,
-				546310A026210C3E00FA115C /* Pareja.swift in Sources */,
 				54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
@@ -981,13 +996,17 @@
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */,
 				54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */,
+				54E22FD826508C8A006B9E82 /* ZoomTransitionDelegate.swift in Sources */,
 				546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */,
+				548363982647B0F1000B31E6 /* DataPalabrasEnBoca.swift in Sources */,
+				5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */,
 				5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */,
 				54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */,
 				54F6993825F0AF02008F22DF /* Lines.swift in Sources */,
 				54A0F8922627984D00A6D308 /* Alertas.swift in Sources */,
-				5421F0F325DB751B00B309FC /* Data.swift in Sources */,
+				5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */,
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
+				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
 				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
 				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
 				546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */,
@@ -1169,7 +1188,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDTCRD4BVY;
 				INFOPLIST_FILE = GraFonTests/Info.plist;
@@ -1183,7 +1201,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraFon.app/GraFon";
 			};
 			name = Debug;
 		};
@@ -1191,7 +1208,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FDTCRD4BVY;
 				INFOPLIST_FILE = GraFonTests/Info.plist;
@@ -1205,7 +1221,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraFon.app/GraFon";
 			};
 			name = Release;
 		};

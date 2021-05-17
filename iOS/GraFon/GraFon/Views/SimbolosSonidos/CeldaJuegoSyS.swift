@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-
 class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
     
     private var sonido: String?
@@ -135,6 +134,10 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print("Se reclama Celda de juego de arrastre")
     }
 }
 

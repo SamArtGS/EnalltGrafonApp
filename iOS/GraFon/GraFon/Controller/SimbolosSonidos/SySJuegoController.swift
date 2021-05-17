@@ -36,6 +36,10 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("\n\nSe reclama collection view del Juego \n\n")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurar()
@@ -115,12 +119,20 @@ extension SySJuego1VC{
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-                            return CGSize(width: view.frame.width, height: view.frame.height)
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width),
+                            height: (view.safeAreaLayoutGuide.layoutFrame.height))
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        //top, left, bottom, right
+        return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
     }
     
 }

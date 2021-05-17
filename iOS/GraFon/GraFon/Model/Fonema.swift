@@ -17,3 +17,10 @@ struct Fonema: Codable, Hashable{
     let imagenFiguraEjemplo:String
     let audio:String
 }
+
+struct ParejaSonido: Codable, Hashable, Equatable{
+    let nivel: Int
+    let imagen: String
+    let sonido: String
+    let correcto: Bool
+}

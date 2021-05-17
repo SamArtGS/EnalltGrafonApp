@@ -24,6 +24,11 @@ class SeleccionarNivelController: UICollectionViewController, UINavigationContro
         colocarFondo(imagen: "bck_n1_juegos_v2")
 
     }
+    
+    deinit {
+        print("Se reclama memoria de collection view de seleccionar nivel")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -69,8 +74,8 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.bounds.width,
-                      height: collectionView.bounds.height/6)
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/1.0,
+                             height: (view.safeAreaLayoutGuide.layoutFrame.height)/6.0)
     }
     
     func collectionView(_ collectionView: UICollectionView,

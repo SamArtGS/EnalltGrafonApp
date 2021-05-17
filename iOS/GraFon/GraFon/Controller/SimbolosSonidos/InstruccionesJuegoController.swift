@@ -44,6 +44,9 @@ class PresentacionJuegoSyS: Carcasa {
         configure(vista: pantalla)
         pantalla.delegate = self
     }
+    deinit {
+        print("\n\nSe reclama controller instrucciones\n\n")
+    }
 }
 
 class PuntuacionJuegoSyS: Carcasa {
@@ -56,6 +59,9 @@ class PuntuacionJuegoSyS: Carcasa {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    deinit {
+        print("\n\nSe reclama controller de puntuación\n\n")
+    }
     
      var pantalla = PantallaResultados()
     
@@ -67,6 +73,5 @@ class PuntuacionJuegoSyS: Carcasa {
     }
     override func viewWillLayoutSubviews() {
        super.viewWillLayoutSubviews()
-       
     }
 }

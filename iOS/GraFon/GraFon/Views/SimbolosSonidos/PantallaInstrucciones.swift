@@ -21,12 +21,16 @@ class PantallaJuegoSyS: UIView{
     required init?(coder: NSCoder) {
         fatalError("Error al implementar el init")
     }
+    deinit {
+        print("Se reclama Pantalla de instrucciones")
+    }
     
     
     let imagenPresentacion:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "demo_n1_jgo"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        imageView.enableZoom()
         return imageView
     }()
     
@@ -69,9 +73,6 @@ class PantallaJuegoSyS: UIView{
         ])
         
     }
-    
-   
-
 }
 extension PantallaJuegoSyS{
     @objc func guardarInformacion(){

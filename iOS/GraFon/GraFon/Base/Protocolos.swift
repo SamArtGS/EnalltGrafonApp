@@ -5,6 +5,7 @@
 //  Created by Samuel Arturo Garrido Sánchez on 2021-04-24.
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
+import UIKit
 
 protocol pantallaInstruccionesDelegate: AnyObject{
     func iniciarJuego()
@@ -13,4 +14,7 @@ protocol juegoSimbolosySonidosDelegate: AnyObject{
     func siguiente()
     func recolectarPuntaje()
     func finalizar()
+}
+protocol collectionViewDentro: UICollectionViewDelegate, UICollectionViewDataSource{
+    func colocarDelegados()
 }
