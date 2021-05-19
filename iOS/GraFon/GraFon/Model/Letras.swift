@@ -14,11 +14,13 @@ struct Letra: Codable, Hashable, Equatable{
     let imagenHoja: String
     let tarjetas: [Tarjeta]?
 }
+
 struct Tarjeta: Codable, Hashable, Equatable{
     let audio: String?
     let silabas: [Silaba]
     let excepciones: [Palabra]?
 }
+
 struct Silaba: Codable, Hashable, Equatable{
     let palabras: [Palabra]
     let pronuciacion: String //Posicion letra dentro de palabra: posicionLetra

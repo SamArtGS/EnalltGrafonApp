@@ -15,8 +15,7 @@ class TarjetaSeleccionadaController: UICollectionViewController {
     private var tarjeta: Tarjeta?
 
     override func viewDidLoad() {
-        
-        let logo = UIImage(named: "ico_sin-sonido_n2")
+        let logo = UIImage(named: "a_n2_mdpi")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
         super.viewDidLoad()
@@ -27,7 +26,6 @@ class TarjetaSeleccionadaController: UICollectionViewController {
     
     init(collectionViewLayout layout: UICollectionViewLayout, tarjeta: Tarjeta?) {
         super.init(collectionViewLayout: layout)
-        
         self.tarjeta = tarjeta
     }
     
@@ -65,7 +63,6 @@ extension TarjetaSeleccionadaController{
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-            
         switch indexPath.item {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaInicio, for: indexPath) as! CeldaSonidoYSilabas
@@ -93,7 +90,6 @@ extension TarjetaSeleccionadaController{
                 cell.esTarjetaNormal()
                 return cell
             }
-            
     }
 }
 
@@ -105,10 +101,9 @@ extension TarjetaSeleccionadaController{
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          if indexPath.item == 0 {
-            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: CGFloat(tarjeta?.silabas.count ?? 1) * 50  + 200)
+            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((tarjeta?.silabas.count ?? 1) * 50  + 200))
          } else {
             let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30)
-            print(palabrasCount)
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 250 + palabrasCount)
             } else {

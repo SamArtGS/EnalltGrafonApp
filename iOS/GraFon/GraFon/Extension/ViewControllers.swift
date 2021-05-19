@@ -96,3 +96,8 @@ extension UIStackView {
 //                print("rotation completed")
 //        })
 //    }
+extension UINavigationController {
+   open override var preferredStatusBarStyle: UIStatusBarStyle {
+      return topViewController?.preferredStatusBarStyle ?? .default
+   }
+}

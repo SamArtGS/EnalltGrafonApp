@@ -90,7 +90,7 @@ extension TabBarSimbolosySonidos{
                                              )
                 let practica = crearNavegacion(titulo: "Juegos",
                                                imagenIcono: "icon-play",
-                                               controller: PresentacionJuegoSyS()
+                                               controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                                              )
                 viewControllers = [teoria,practica]
                 
@@ -112,7 +112,7 @@ extension TabBarSimbolosySonidos{
                 )
                 let practica = crearNavegacion(titulo: "Juegos",
                                                imagenIcono: "icon-play",
-                                               controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos)
+                                               controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                 )
                 viewControllers = [teoría,practica]
                 

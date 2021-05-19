@@ -29,17 +29,13 @@ class PalabrasEnBocaVC: UICollectionViewController, UIToolbarDelegate{
         collectionView.isPagingEnabled = true
         self.title = "Palabras en la boca"
         self.collectionView!.register(CeldaColeccionDeColecciones.self, forCellWithReuseIdentifier: reuseIdentifier)
-        DispatchQueue.main.async {
-            guard let indice = self.indice else { return }
-            self.collectionView.scrollToItem(at: IndexPath(item: indice - 1, section: 0), at: .centeredHorizontally, animated: false)
-        }
+        
     }
     
     init(collectionViewLayout layout: UICollectionViewLayout, indiceSeleccionado: Int) {
         super.init(collectionViewLayout: layout)
         indice = indiceSeleccionado
         self.toolbarItems = items
-        
     }
 
     required init?(coder: NSCoder) {
@@ -53,6 +49,10 @@ class PalabrasEnBocaVC: UICollectionViewController, UIToolbarDelegate{
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(false, animated: false)
+        let dicindice = indice ?? 1
+        DispatchQueue.main.async {
+            self.collectionView.scrollToItem(at: IndexPath(item: dicindice - 1, section: 0), at: .centeredHorizontally, animated: false)
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,10 +87,14 @@ extension PalabrasEnBocaVC: SeleccionarTarjetaDelegate{
     }
     
     override func viewDidLayoutSubviews() {
+        
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
+        
+        
         let filtrado = Data.letras.filter{letra in letra.identificador != 0}
+        indice = filtrado[indexPath.item].identificador
         items[0].title = "\(filtrado[indexPath.item].letra)"
         items[2].title = "\(filtrado[indexPath.item].identificador) / \(filtrado.count)"
     }
@@ -115,6 +119,8 @@ extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
         delegate?.mostrarTarjeta(seleccionado: indexPath.item)
     }
     
+    
+    
 }
 
 
@@ -137,6 +143,10 @@ extension PalabrasEnBocaVC: UICollectionViewDelegateFlowLayout{
         return 0
     }
     
+    
+    override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        collectionView.reloadData()
+    }
 }
     
 extension CeldaColeccionDeColecciones: UICollectionViewDelegateFlowLayout{

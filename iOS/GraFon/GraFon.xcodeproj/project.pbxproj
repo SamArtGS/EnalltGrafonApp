@@ -11,6 +11,11 @@
 		5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400C2B0262E33A5008F2D4A /* TabBars.swift */; };
 		5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */; };
 		5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406E83C2640532D00EE25B3 /* ViewControllers.swift */; };
+		5407186E265506BF00B664D6 /* TarjetasB-G.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407186D265506BF00B664D6 /* TarjetasB-G.swift */; };
+		54071870265506CF00B664D6 /* TarjetasH-M.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407186F265506CF00B664D6 /* TarjetasH-M.swift */; };
+		54071872265506E200B664D6 /* TarjetasN-S.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54071871265506E200B664D6 /* TarjetasN-S.swift */; };
+		54071874265506EF00B664D6 /* TarjetasT-Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54071873265506EF00B664D6 /* TarjetasT-Z.swift */; };
+		5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */; };
 		5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */; };
 		5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
@@ -205,6 +210,11 @@
 		5400C2B0262E33A5008F2D4A /* TabBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBars.swift; sourceTree = "<group>"; };
 		5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPalabras.swift; sourceTree = "<group>"; };
 		5406E83C2640532D00EE25B3 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		5407186D265506BF00B664D6 /* TarjetasB-G.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasB-G.swift"; sourceTree = "<group>"; };
+		5407186F265506CF00B664D6 /* TarjetasH-M.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasH-M.swift"; sourceTree = "<group>"; };
+		54071871265506E200B664D6 /* TarjetasN-S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasN-S.swift"; sourceTree = "<group>"; };
+		54071873265506EF00B664D6 /* TarjetasT-Z.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasT-Z.swift"; sourceTree = "<group>"; };
+		5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetaEEE-Y.swift"; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSonidosYSimbolos.swift; sourceTree = "<group>"; };
 		5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coleccionDeColecciones.swift; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
@@ -430,6 +440,18 @@
 			path = PalabrasEnBoca;
 			sourceTree = "<group>";
 		};
+		5420D2262654610A0069ABF1 /* TarjetasInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */,
+				5407186D265506BF00B664D6 /* TarjetasB-G.swift */,
+				5407186F265506CF00B664D6 /* TarjetasH-M.swift */,
+				54071871265506E200B664D6 /* TarjetasN-S.swift */,
+				54071873265506EF00B664D6 /* TarjetasT-Z.swift */,
+			);
+			path = TarjetasInfo;
+			sourceTree = "<group>";
+		};
 		5466CAAA2642DC7600443B58 /* Lato */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +539,7 @@
 				546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */,
 				5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */,
 				54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */,
+				54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */,
 				54A0F8892627334900A6D308 /* SimbolosSonidos */,
 				54A0F88C26274D4A00A6D308 /* Palabras */,
 			);
@@ -528,6 +551,7 @@
 			children = (
 				5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */,
 				548363972647B0F1000B31E6 /* DataPalabrasEnBoca.swift */,
+				5420D2262654610A0069ABF1 /* TarjetasInfo */,
 				546B139625DB381400CF2ED5 /* Puerta.swift */,
 				54F6993925F0C92D008F22DF /* Fonema.swift */,
 				54A0F88D262751C200A6D308 /* Letras.swift */,
@@ -584,7 +608,6 @@
 			isa = PBXGroup;
 			children = (
 				5495D75E25F97B7F00906AEA /* FonemaSeleccionadoController.swift */,
-				54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */,
 				54A0F8872627317900A6D308 /* SySJuegoController.swift */,
 				547A8BA22618B994002962CD /* InstruccionesJuegoController.swift */,
 			);
@@ -978,6 +1001,7 @@
 				5495D75F25F97B7F00906AEA /* FonemaSeleccionadoController.swift in Sources */,
 				54E70BE1264C1ADF00DA062F /* CeldaSonidoYSilabas.swift in Sources */,
 				546B136825DAFACD00CF2ED5 /* GraFon.xcdatamodeld in Sources */,
+				54071872265506E200B664D6 /* TarjetasN-S.swift in Sources */,
 				54E70BE3264C1AF100DA062F /* CeldaSilabasYExplicacion.swift in Sources */,
 				5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */,
 				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
@@ -986,6 +1010,7 @@
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
 				5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */,
+				5407186E265506BF00B664D6 /* TarjetasB-G.swift in Sources */,
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
 				54A0F885262676B300A6D308 /* PantallaInstrucciones.swift in Sources */,
 				546B139525DB379D00CF2ED5 /* PuertaCelda.swift in Sources */,
@@ -997,15 +1022,18 @@
 				54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */,
 				54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */,
 				54E22FD826508C8A006B9E82 /* ZoomTransitionDelegate.swift in Sources */,
+				54071874265506EF00B664D6 /* TarjetasT-Z.swift in Sources */,
 				546B135E25DAFACD00CF2ED5 /* AppDelegate.swift in Sources */,
 				548363982647B0F1000B31E6 /* DataPalabrasEnBoca.swift in Sources */,
 				5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */,
 				5400C2B1262E33A5008F2D4A /* TabBars.swift in Sources */,
+				54071870265506CF00B664D6 /* TarjetasH-M.swift in Sources */,
 				54F6993A25F0C92D008F22DF /* Fonema.swift in Sources */,
 				54F6993825F0AF02008F22DF /* Lines.swift in Sources */,
 				54A0F8922627984D00A6D308 /* Alertas.swift in Sources */,
 				5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */,
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
+				5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */,
 				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
 				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
 				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
