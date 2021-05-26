@@ -12,6 +12,10 @@ struct tarjetas {
     
     static let sinSonido: String = "ico_sin-sonido_n2"
     
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------     T A R J E T A S    É È Ê      ----------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
     static let tarjetasEEE:[Tarjeta] = [
         Tarjeta(audio: "192",
             silabas: [
@@ -24,7 +28,14 @@ struct tarjetas {
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
                     imagenConsejo: nil
-                ),
+                )
+            ],
+            excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
+                          Palabra(palabra: "goal", enGriego: "gol"),
+                          Palabra(palabra: "toast", enGriego: "tost")]
+        ),
+        Tarjeta(audio: "192",
+            silabas: [
                 Silaba(
                     palabras: [
                           Palabra(palabra: "mère", enGriego: "mER"),
@@ -34,7 +45,15 @@ struct tarjetas {
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
                     imagenConsejo: "buho"
-                ),
+                )
+            ],
+            excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
+                          Palabra(palabra: "goal", enGriego: "gol"),
+                          Palabra(palabra: "toast", enGriego: "tost")]
+        ),
+        
+        Tarjeta(audio: "192",
+            silabas: [
                 Silaba(
                     palabras: [
                           Palabra(palabra: "fête", enGriego: "fEt"),
@@ -52,8 +71,14 @@ struct tarjetas {
         )
     ]
     
+    
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    A        -------------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
+    
     static let tarjetasA:[Tarjeta] =  [
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_01",
             silabas: [
                 Silaba(
                     palabras: [
@@ -89,21 +114,21 @@ struct tarjetas {
                           Palabra(palabra: "toast", enGriego: "tost")]
         ),
 
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_02",
             silabas: [
                 Silaba(
                     palabras: [
-                        Palabra(palabra: "pain", enGriego: "pĒ"),
+                        Palabra(palabra: "pain", enGriego: "pɛ̃"),
                         Palabra(palabra: "ainsi", enGriego: "ɛ̃.si")
                     ],
                     pronuciacion: "ain",
                     explicacion: "Al final de una palabra o seguida de una consonante. \n Transcribe el sonido",
                     imagenFonema: "ɛ̃",
-                    imagenConsejo: nil
+                    imagenConsejo: "i_retro_3Cb_n2"
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "ainé", enGriego: "E.nE")
+                          Palabra(palabra: "ainé", enGriego: "ᴇ.nᴇ")
                     ],
                     pronuciacion: "ain",
                     explicacion: "Seguidas de una vocal (excepto e al final de una palabra). \n La n forma parte de la sílaba que sigue. \n ai transcribe el sonido",
@@ -112,7 +137,7 @@ struct tarjetas {
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "saine", enGriego: "sEn")
+                          Palabra(palabra: "saine", enGriego: "sᴇn")
                     ],
                     pronuciacion: "-aine",
                     explicacion: "Al final de una palabra, transcribe los sonidos",
@@ -125,11 +150,11 @@ struct tarjetas {
                           Palabra(palabra: "toast", enGriego: "tost")]
         ),
 
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_03",
             silabas: [
                 Silaba(
                     palabras: [
-                        Palabra(palabra: "aimé", enGriego: "E.mE")
+                        Palabra(palabra: "aimé", enGriego: "ᴇ.mᴇ")
                     ],
                     pronuciacion: "ain",
                     explicacion: "Seguidas de una voval (excepto e al final de una palabra). \n La m forma parte de la sílaba que sigue. \n ai transcribe el sonido",
@@ -138,31 +163,56 @@ struct tarjetas {
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "tu aimes", enGriego: "ty.eM")
+                          Palabra(palabra: "tu aimes", enGriego: "ty.ᴇm")
                     ],
                     pronuciacion: "ain",
                     explicacion: "Transcribe los sonidos",
                     imagenFonema: "Em",
-                    imagenConsejo: nil
+                    imagenConsejo: "nil"
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "faim", enGriego: "tɛ̃")
+                          Palabra(palabra: "faim", enGriego: "fɛ̃")
                     ],
                     pronuciacion: "-aine",
                     explicacion: "Al inal de una palabra, transcribe los sonidos",
                     imagenFonema: "ɛ̃",
-                    imagenConsejo: "buho"
+                    imagenConsejo: nil
                 )
             ],
             excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_04",
             silabas: [
                 Silaba(
                     palabras: [
-                        Palabra(palabra: "travail", enGriego: "tRa.vaj")
+                        Palabra(palabra: "au", enGriego: "o")
+                    ],
+                    pronuciacion: "au",
+                    explicacion: "Transcriben el sonido",
+                    imagenFonema: "o",
+                    imagenConsejo: nil
+                ),
+                Silaba(
+                    palabras: [
+                          Palabra(palabra: "eau", enGriego: "o")
+                    ],
+                    pronuciacion: "eau",
+                    explicacion: "Transcribe el sonido",
+                    imagenFonema: "o",
+                    imagenConsejo: "e_retro_varias-letras_n2"
+                )
+            ],
+            excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_a_05",
+            silabas: [
+                Silaba(
+                    palabras: [
+                        Palabra(palabra: "travail", enGriego: "tʀa.vaj")
                     ],
                     pronuciacion: "-ail",
                     explicacion: "Transcriben los sonidos",
@@ -171,7 +221,7 @@ struct tarjetas {
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "ailleurs", enGriego: "a.jŒR")
+                          Palabra(palabra: "ailleurs", enGriego: "a.jɶʀ")
                     ],
                     pronuciacion: "aill",
                     explicacion: "Transcribe los sonidos",
@@ -182,7 +232,7 @@ struct tarjetas {
             excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_06",
             silabas: [
                 Silaba(
                     palabras: [
@@ -224,7 +274,24 @@ struct tarjetas {
             excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_07",
+            silabas: [
+                Silaba(
+                    palabras: [
+                        Palabra(palabra: "mai", enGriego: "mᴇ"),
+                        Palabra(palabra: "mais", enGriego: "mᴇ")
+                    ],
+                    pronuciacion: "-ail",
+                    explicacion: "Al final de una palabra o seguidas de una consonante (excepto l, m, n), transcribe el sonido",
+                    imagenFonema: "ᴇ",
+                    imagenConsejo: nil
+                ),
+            ],
+            excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_a_08",
             silabas: [
                 Silaba(
                     palabras: [
@@ -259,7 +326,7 @@ struct tarjetas {
             excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_a_09",
             silabas: [
                 Silaba(
                     palabras: [
@@ -277,8 +344,12 @@ struct tarjetas {
     ]
     
     
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    E        -------------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
     static let tarjetasE:[Tarjeta] = [
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_e_01",
            silabas: [
                Silaba(
                    palabras: [
@@ -298,16 +369,17 @@ struct tarjetas {
                    pronuciacion: "-e",
                    explicacion: "Al final de una palabra de 2 letras transcribe el sonido que le corresponde a cada uno de los elemenos",
                    imagenFonema: "Y",
-                   imagenConsejo: "buho"
-               )
-           ],
-           excepciones: nil
+                   imagenConsejo: nil // // // -> LENGUA, SE ELIMINÓ
+                  )
+                ],
+            excepciones: nil
            ),
-           Tarjeta(audio: "192",
+        
+           Tarjeta(audio: "pb_e_02",
                silabas: [
                    Silaba(
                        palabras: [
-                             Palabra(palabra: "devoir", enGriego: "dŒ.vwaR")
+                             Palabra(palabra: "devoir", enGriego: "dɶ.vwaʀ")
                        ],
                        pronuciacion: "-e-",
                        explicacion: """
@@ -316,41 +388,43 @@ struct tarjetas {
                                        Le sigue una sola constante (excepto x) más una
                                        vocal transcribe el sonido
                                    """,
-                       imagenFonema: "CE",
+                       imagenFonema: "ɶ",
                        imagenConsejo: nil
                    ),
                    Silaba(
                        palabras: [
-                             Palabra(palabra: "maxicain", enGriego: "mE.ksi.kĒ")
+                             Palabra(palabra: "maxicain", enGriego: "mᴇ.ksi.kɛ̃")
                        ],
                        pronuciacion: "e",
                        explicacion: "Seguida de x transcribe el sonido",
-                       imagenFonema: "E",
+                       imagenFonema: "ᴇ",
                        imagenConsejo: nil
                    )
                    ],
                    excepciones: nil
            ),
-           Tarjeta(audio: "192",
+           Tarjeta(audio: "pb_e_03",
                silabas: [
                    Silaba(
                        palabras: [
-                             Palabra(palabra: "samedi", enGriego: "sam.di")
+                             Palabra(palabra: "samedi", enGriego: "sam.di"),
+                             Palabra(palabra: "complètement", enGriego: "kõ.plᴇt.mɑ̃")
                        ],
                        pronuciacion: "-e-",
                        explicacion: """
-                                       Cuando la letra e:
-                                       Está en la primera sílaba de una palabra y
-                                       Le sigue una sola constante (excepto x) más una
-                                       vocal transcribe el sonido
+                                       Cuando la e está:
+                                       -de la segunda sílaba escrita en adelante,
+                                       -precedida de una sola consonante que transcribe un sonido y
+                                       -le sigue una sola consonante que transcribe un sonido (excepto en los  grupos: li, ri, mi, ni)
                                    """,
-                       imagenFonema: "CE",
-                       imagenConsejo: nil
+                       imagenFonema: sinSonido,
+                       imagenConsejo: "e_retro_3Cb_n2"
                    )
                    ],
                    excepciones: nil
            ),
-           Tarjeta(audio: "192",
+           
+           Tarjeta(audio: "pb_e_04",
                silabas: [
                    Silaba(
                        palabras: [
@@ -359,18 +433,19 @@ struct tarjetas {
                        ],
                        pronuciacion: "-e-",
                        explicacion: """
-                                       Cuando la letra e está:
-                                       - De la segunda sílaba escrita en adelante
-                                       - Precedida de 2 consonantes que transcriben un sonido
-                                       - Le siguen una sola consonante que transcribe
+                                       Cuando la e está:
+                                       -de la segunda sílaba escrita en adelante,
+                                       -precedida de dos consonantes que transcriben un sonido y
+                                       -le sigue una sola consonante que transcribe un sonido
+                                        transcribe el sonido
                                    """,
-                       imagenFonema: "",
+                       imagenFonema: "ɶ",
                        imagenConsejo: nil
                    )
                    ],
                    excepciones: nil
            ),
-           Tarjeta(audio: "192",
+           Tarjeta(audio: "pb_e_05",
                 silabas: [
                    Silaba(
                        palabras: [
@@ -382,7 +457,7 @@ struct tarjetas {
                                        Al final de una palabra de más de tres letras no transcriben ningún sonido.
                                    """,
                        imagenFonema: sinSonido,
-                       imagenConsejo: "buho"
+                       imagenConsejo: "e_retro_3Eb_n2"
                    ),
                    Silaba(
                    palabras: [
@@ -392,7 +467,7 @@ struct tarjetas {
                    explicacion: """
                                    Al final de una palabra de tres letras (por ejemplo, un determinante plural: les, mes, tes, etc.), transcriben el sonido
                                """,
-                   imagenFonema: "E",
+                   imagenFonema: "ᴇ",
                    imagenConsejo: nil),
                    Silaba(
                        palabras: [
@@ -402,13 +477,15 @@ struct tarjetas {
                        explicacion: """
                                        En la forma conjugada del verbo être, transcriben el sonido
                                    """,
-                       imagenFonema: "E",
+                       imagenFonema: "ᴇ",
                        imagenConsejo: nil
                    )
                 ],
                excepciones: nil
             ),
-            Tarjeta(audio: "192",
+           
+           
+            Tarjeta(audio: "pb_e_06",
               silabas: [
                   Silaba(
                       palabras: [
@@ -421,11 +498,12 @@ struct tarjetas {
                                       Al final de un verbo conjugado en la tercera persona del plural, no transcriben ningún sonido
                                   """,
                       imagenFonema: sinSonido,
-                      imagenConsejo: "buho"
+                      imagenConsejo: "e_retro_3Fb_n2"
                   ),
+                  
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "elles vient", enGriego: "ᴇl.vjɛ̃")
+                            Palabra(palabra: "elle vient", enGriego: "ᴇl.vjɛ̃")
                       ],
                       pronuciacion: "-ent",
                       explicacion: """
@@ -434,6 +512,7 @@ struct tarjetas {
                       imagenFonema: "ɛ̃",
                       imagenConsejo: nil
                   ),
+                  
                   Silaba(
                       palabras: [
                             Palabra(palabra: "vent", enGriego: "vɑ̃"),
@@ -451,7 +530,7 @@ struct tarjetas {
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_07",
               silabas: [
                   Silaba(
                       palabras: [
@@ -490,11 +569,11 @@ struct tarjetas {
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_08",
               silabas: [
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "enfant", enGriego: "ty.ᴇ"),
+                            Palabra(palabra: "enfant", enGriego: "ɑ̃.fɑ̃"),
                             Palabra(palabra: "centre", enGriego: "sɑ̃tʀ"),
                       ],
                       pronuciacion: "en",
@@ -530,7 +609,7 @@ struct tarjetas {
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_09",
               silabas: [
                   Silaba(
                       palabras: [
@@ -541,7 +620,7 @@ struct tarjetas {
                       explicacion: """
                                       Al inicio de una palabra y seguida de dos consonantes (excepto n, m), transcribe el sonido
                                   """,
-                      imagenFonema: "E",
+                      imagenFonema: "ᴇ",
                       imagenConsejo: nil
                   ),
                   Silaba(
@@ -552,14 +631,14 @@ struct tarjetas {
                       explicacion: """
                                       Al inicio de una palabra y seguida de x, transcribe el sonido
                                     """,
-                      imagenFonema: "E",
+                      imagenFonema: "ᴇ",
                       imagenConsejo: nil
                   )
               ],
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_10",
               silabas: [
                   Silaba(
                       palabras: [
@@ -582,32 +661,14 @@ struct tarjetas {
                                       Después de una consonante y
                                       seguidas de m, transcribe el sonido
                                   """,
-                      imagenFonema: "E",
+                      imagenFonema: "ᴇ",
                       imagenConsejo: nil
                   )
               ],
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
-              silabas: [
-                  Silaba(
-                      palabras: [
-                            Palabra(palabra: "emporter", enGriego: "ɑ̃.poʀ.tᴇ"),
-                      ],
-                      pronuciacion: "em-",
-                      explicacion: """
-                                      Al inicio de una palabra y
-                                      seguidas de una consonante transcriben el sonido
-                                  """,
-                      imagenFonema: "ɑ̃",
-                      imagenConsejo: nil
-                  )
-              ],
-              excepciones: nil
-            ),
-            
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_11",
               silabas: [
                   Silaba(
                       palabras: [
@@ -632,14 +693,14 @@ struct tarjetas {
                       explicacion: """
                                       Al inicio de una palabra, e transcribe el sonido
                                   """,
-                      imagenFonema: "Œ",
-                      imagenConsejo: "buho"
+                      imagenFonema: "ɶ",
+                      imagenConsejo: nil
                   ),
               ],
               excepciones: nil
             ),
             
-            Tarjeta(audio: "192",
+            Tarjeta(audio: "pb_e_12",
             silabas: [
                 Silaba(
                     palabras: [
@@ -647,44 +708,357 @@ struct tarjetas {
                           Palabra(palabra: "hivernal", enGriego: "i.vᴇʀ.nal"),
                           Palabra(palabra: "section", enGriego: "sᴇk.sjõ"),
                           Palabra(palabra: "responsable", enGriego: "ʀᴇs.põ.sabl"),
-                          Palabra(palabra: "restaurant", enGriego: "ty.ᴇ"),
-                          Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
-                          Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
+                          Palabra(palabra: "restaurant", enGriego: "ʀᴇs.to.ʀɑ̃"),
+                          Palabra(palabra: "reste", enGriego: "ʀᴇst"),
+                          Palabra(palabra: "insecte", enGriego: "ɛ̃.sᴇkt"),
+                          Palabra(palabra: "dernier", enGriego: "dᴇʀ.njᴇ")
                     ],
                     pronuciacion: "es",
                     explicacion: """
-                                    En la forma conjugada del verbo être, transcriben el sonido
+                                    Seguida de dos consonantes diferentes  (excepto n, m). Si la primera o las dos consonantes forman parte de la misma sílaba que la e, transcribe el sonido
                                 """,
                     imagenFonema: "E",
+                    imagenConsejo: nil
+                ),
+                Silaba(
+                    palabras: [
+                          Palabra(palabra: "degré", enGriego: "dɶ.gʀᴇ"),
+                          Palabra(palabra: "regret", enGriego: "ʀɶ.gʀᴇ"),
+                          Palabra(palabra: "secret", enGriego: "sɶ.kʀᴇ"),
+                          Palabra(palabra: "reflet", enGriego: "ʀɶ.flᴇ"),
+                          Palabra(palabra: "recruter", enGriego: "ʀɶ.kʀy.tᴇ"),
+                          Palabra(palabra: "reprendre", enGriego: "ʀɶ.pʀɑ̃dʀ")
+                    ],
+                    pronuciacion: "e",
+                    explicacion: """
+                                    Seguida de dos consonantes diferentes (excepto n, m) que no forman parte de la misma sílaba que la e, transcribe el sonido
+                                """,
+                    imagenFonema: "ɶ",
                     imagenConsejo: nil
                 )
             ],
             excepciones: nil
             ),
             
+            Tarjeta(audio: "pb_e_13",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "escalier", enGriego: "ᴇs.ka.ljᴇ"),
+                            Palabra(palabra: "descendre", enGriego: "dᴇ.sɑ̃dʀ"),
+                            Palabra(palabra: "adolescent", enGriego: "a.do.lᴇ.sɑ̃")
+                      ],
+                      pronuciacion: "esc",
+                      explicacion: """
+                                      En el grupo, e transcribe el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_14",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "chez", enGriego: "ʃᴇ"),
+                            Palabra(palabra: "vous parlez", enGriego: "vu.paʀ.lᴇ")
+                      ],
+                      pronuciacion: "-ez",
+                      explicacion: """
+                                      Al final de una palabra, transcribe el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_15",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "parler", enGriego: "paʀ.lᴇ"),
+                            Palabra(palabra: "infirmier", enGriego: "ɛ̃.fir.mjᴇ")
+                      ],
+                      pronuciacion: "-er",
+                      explicacion: """
+                                      Al final de una palabra, transcribe el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: "e_retro_3Ob_n2"
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_16",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "sorbet", enGriego: "soʀ.bᴇ"),
+                            Palabra(palabra: "elle permet", enGriego: "ᴇl.pᴇʀ.mᴇ")
+                      ],
+                      pronuciacion: "-et",
+                      explicacion: """
+                                      Al final de una palabra, transcribe el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "et", enGriego: "ᴇ")
+                      ],
+                      pronuciacion: "et",
+                      explicacion: """
+                                      Como conjunción copulativa, transcriben el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: "e_retro_3Pb_n2"
+                  ),
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_17",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "aspect", enGriego: "as.pᴇ"),
+                            Palabra(palabra: "respect", enGriego: "ʀᴇs.pᴇ"),
+                      ],
+                      pronuciacion: "-ect",
+                      explicacion: """
+                                      Al final de una palabra y precedidas de p, transcriben el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "direct", enGriego: "di.ʀᴇkt"),
+                            Palabra(palabra: "correct", enGriego: "ko.ʀᴇkt"),
+                      ],
+                      pronuciacion: "-ect",
+                      explicacion: """
+                                      Al final de una palabra y precedidas de una consonante (excepto p), transcriben los sonidos
+                                  """,
+                      imagenFonema: "ᴇkt",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_18",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "mangeable", enGriego: "mɑ̃.ʒabl"),
+                            Palabra(palabra: "vengeance", enGriego: "vɑ̃.ʒɑ̃s"),
+                            Palabra(palabra: "plongeon", enGriego: "plõ.ʒõ")
+                      ],
+                      pronuciacion: "-ge-",
+                      explicacion: """
+                                     Seguidas de a, o, g transcribe el sonido ʒ \n
+                                    La e no transcribe ningún sonido
+                                  """,
+                      imagenFonema: sinSonido,
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_19",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "peu", enGriego: "pɶ"),
+                            Palabra(palabra: "euro", enGriego: "ɶ.ʀo")
+                      ],
+                      pronuciacion: "eu",
+                      explicacion: """
+                                     Transcribe el sonido
+                                  """,
+                      imagenFonema: "ɶ",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_20",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "eau", enGriego: "o"),
+                            Palabra(palabra: "peau", enGriego: "po")
+                      ],
+                      pronuciacion: "eau",
+                      explicacion: """
+                                     Transcribe el sonido
+                                  """,
+                      imagenFonema: "o",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_21",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "neige", enGriego: "nᴇʒ")
+                      ],
+                      pronuciacion: "-ei-",
+                      explicacion: """
+                                     Seguidas de una consonante (excepto l, n), transcriben el sonido
+                                  """,
+                      imagenFonema: "ᴇ",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "réveil", enGriego: "ʀᴇ.vᴇj"),
+                            Palabra(palabra: "merveille", enGriego: "mᴇʀ.vᴇj")
+                      ],
+                      pronuciacion: "eil o eill",
+                      explicacion: """
+                                     Transcribe los sonidos
+                                  """,
+                      imagenFonema: "ᴇj",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_22",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "peintre", enGriego: "pɛ̃tʀ")
+                      ],
+                      pronuciacion: "ein",
+                      explicacion: """
+                                      Seguidas de una consonante, transcriben el sonido
+                                  """,
+                      imagenFonema: "ɛ̃",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "veinard", enGriego: "vᴇ.naʀ")
+                      ],
+                      pronuciacion: "ein",
+                      explicacion: """
+                                      Seguidas de una vocal
+                                      (excepto e al final de una palabra) transcriben los sonidos
+                                  """,
+                      imagenFonema: "ᴇn",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "plein", enGriego: "plɛ̃")
+                      ],
+                      pronuciacion: "-ein",
+                      explicacion: """
+                                      Al final de una palabra, transcriben el sonido
+                                  """,
+                      imagenFonema: "ɛ̃",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "pleine", enGriego: "plᴇn")
+                      ],
+                      pronuciacion: "-eine",
+                      explicacion: """
+                                      Al final de una palabra, transcriben el sonido
+                                  """,
+                      imagenFonema: "ᴇn",
+                      imagenConsejo: "e_retro_3Vb_n2"
+                  )
+              ],
+              excepciones: nil
+            ),
+            
+            Tarjeta(audio: "pb_e_23",
+              silabas: [
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "accueil", enGriego: "a.kɶj"),
+                      ],
+                      pronuciacion: "cueil o cueill",
+                      explicacion: """
+                                      Transcriben los sonidos
+                                  """,
+                      imagenFonema: "kɶj",
+                      imagenConsejo: nil
+                  ),
+                  Silaba(
+                      palabras: [
+                            Palabra(palabra: "orgueilleuse", enGriego: "oʀ.gɶ.jɶz"),
+                      ],
+                      pronuciacion: "gueil o gueill",
+                      explicacion: """
+                                      Transcriben los sonidos
+                                  """,
+                      imagenFonema: "gɶj",
+                      imagenConsejo: nil
+                  )
+              ],
+              excepciones: nil
+            )
     ]
     
-    /*
-     Tarjeta(audio: "192",
-       silabas: [
-           Silaba(
-               palabras: [
-                     Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
-               ],
-               pronuciacion: "es",
-               explicacion: """
-                               En la forma conjugada del verbo être, transcriben el sonido
-                           """,
-               imagenFonema: "E",
-               imagenConsejo: nil
-           )
-       ],
-       excepciones: nil
-     )
-     */
+    
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    I        ----------------------------------------------------------.---------------------
+    /// ---------------------------------------------------------------------------------
     
     static let tarjetasI:[Tarjeta] = [
-        Tarjeta(audio: "192",
+        
+        Tarjeta(audio: "pb_i_01",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ile", enGriego: "il"),
+                        Palabra(palabra: "lit", enGriego: "li")
+                  ],
+                  pronuciacion: "i",
+                  explicacion: """
+                                 Al inicio de una palabra o entre consonantes excepto en los grupos:
+                                 im+ consonante que no sea m
+                                 in+ consonante que no sea n
+                                 in al final de una palabra, transcribe el sonido
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ami", enGriego: "a.mi")
+                  ],
+                  pronuciacion: "-i",
+                  explicacion: """
+                                  Al final de una palabra, siempre y cuando la i no esté precedida de otra vocal, transcribe el sonido
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_02",
           silabas: [
               Silaba(
                   palabras: [
@@ -693,15 +1067,15 @@ struct tarjetas {
                   ],
                   pronuciacion: "i",
                   explicacion: """
-                                 Antes de una vocal, excepto e al final de una palabra transcribe el sonido
+                                 Antes de una vocal, excepto e al final de una palabra, transcribe el sonido
                               """,
                   imagenFonema: "j",
                   imagenConsejo: nil
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "piano", enGriego: "pja.no"),
-                        Palabra(palabra: "chien", enGriego: "ʃjɛ̃")
+                        Palabra(palabra: "ouvrière", enGriego: "u.vʀi.ᴇʀ"),
+                        Palabra(palabra: "plié", enGriego: "pli.ᴇ")
                   ],
                   pronuciacion: "i",
                   explicacion: """
@@ -711,6 +1085,7 @@ struct tarjetas {
                   imagenFonema: "i",
                   imagenConsejo: nil
               ),
+              
               Silaba(
                   palabras: [
                         Palabra(palabra: "amie", enGriego: "a.mi")
@@ -726,17 +1101,411 @@ struct tarjetas {
           excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_i_03",
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
+                        Palabra(palabra: "pain", enGriego: "pɛ̃"),
+                        Palabra(palabra: "ainsi", enGriego: "ɛ̃.si")
                   ],
-                  pronuciacion: "es",
+                  pronuciacion: "ain",
                   explicacion: """
-                                  En la forma conjugada del verbo être, transcriben el sonido
+                                 Al final de una palabra o seguidas de una consonante, transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ainé", enGriego: "ᴇ.nᴇ")
+                  ],
+                  pronuciacion: "ain",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue \n
+                                  Seguidas de una vocal (exepto e al final de una palabra), ai transcriben el sonido
+                              """,
+                  imagenFonema: "ᴇ",
+                  imagenConsejo: "i_retro_3Cb_n2"
+              ),
+              
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "saine", enGriego: "sᴇn")
+                  ],
+                  pronuciacion: "-aine",
+                  explicacion: """
+                                  Al final de una palabra, transcriben los sonidos
+                              """,
+                  imagenFonema: "ᴇn",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_04",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "aimé", enGriego: "ᴇ.mᴇ")
+                  ],
+                  pronuciacion: "aim",
+                  explicacion: """
+                                La m forma parte de la sílaba que sigue.
+                                Seguidas de una vocal
+                                (excepto e al final de una palabra), ai transcriben el sonido
+                              """,
+                  imagenFonema: "ᴇ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "il aime", enGriego: "il.ᴇm")
+                  ],
+                  pronuciacion: "-aime",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos
+                              """,
+                  imagenFonema: "ᴇm",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "faim", enGriego: "fɛ̃")
+                  ],
+                  pronuciacion: "-aim",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_05",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "mai", enGriego: "mᴇ"),
+                        Palabra(palabra: "mais", enGriego: "mᴇ")
+                  ],
+                  pronuciacion: "ai",
+                  explicacion: """
+                                  Al final de una palabra o
+                                  seguidas de una consonante
+                                  (excepto l, m, n), transcriben el sonido
                               """,
                   imagenFonema: "E",
+                  imagenConsejo: nil
+              ),
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_06",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "travail", enGriego: "tʀa.vaj "),
+                        Palabra(palabra: "elle travaille", enGriego: "ᴇl.tʀa.vaj"),
+                        Palabra(palabra: "deuil", enGriego: "dɶj"),
+                        Palabra(palabra: "feuille ", enGriego: "fɶj")
+                  ],
+                  pronuciacion: "il o ill",
+                  explicacion: """
+                                  Después de a, e, u transcriben el sonido
+                              """,
+                  imagenFonema: "j",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "fille", enGriego: "fij")
+                  ],
+                  pronuciacion: "ill",
+                  explicacion: """
+                                  Después de una consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "ij",
+                  imagenConsejo: nil
+              ),
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_07",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "neige", enGriego: "nᴇʒ")
+                  ],
+                  pronuciacion: "ei",
+                  explicacion: """
+                                  Seguidas de una consonante (excepto l, n) transcriben el sonido
+                              """,
+                  imagenFonema: "ᴇ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "réveillon", enGriego: "ʀᴇ.vᴇ.jõ"),
+                        Palabra(palabra: "merveille", enGriego: "mᴇʀ.vᴇj"),
+                  ],
+                  pronuciacion: "eil o eill",
+                  explicacion: """
+                                  Transcriben los sonidos
+                              """,
+                  imagenFonema: "ᴇj",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "accueil", enGriego: "a.kɶj")
+                  ],
+                  pronuciacion: "cueil o cueill",
+                  explicacion: """
+                                  Transcriben los sonidos
+                              """,
+                  imagenFonema: "kɶj",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "orgueilleuse", enGriego: "oʀ.gɶ.jɶz")
+                  ],
+                  pronuciacion: "gueil o gueill",
+                  explicacion: """
+                                  Transcriben los sonidos
+                              """,
+                  imagenFonema: "gɶj",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_08",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "veinard", enGriego: "vᴇ.naʀ"),
+                  ],
+                  pronuciacion: "ein",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue. Seguidas de una vocal (exepto e al final de una palabra), ei transcriben el sonido
+                              """,
+                  imagenFonema: "ᴇ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "plein", enGriego: "plɛ̃"),
+                  ],
+                  pronuciacion: "-ein",
+                  explicacion: """
+                                  Al final de una palabra, transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "baleine", enGriego: "ba.lᴇn"),
+                  ],
+                  pronuciacion: "-eine",
+                  explicacion: """
+                                  Al final de una palabra, transcriben los sonidos
+                              """,
+                  imagenFonema: "ᴇn",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_09",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "moi", enGriego: "mwa"),
+                        Palabra(palabra: "mois", enGriego: "mwa"),
+                  ],
+                  pronuciacion: "oi",
+                  explicacion: """
+                                  Al final de una palabra o
+                                  seguidas de una consonante, excepto en los grupos:
+                                       -oin al final de una palabra
+                                        oin + consonante,
+                                  Transcriben los sonidos
+                              """,
+                  imagenFonema: "wa",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_10",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "loin", enGriego: "lwɛ̃"),
+                        Palabra(palabra: "joindre", enGriego: "ʒwɛ̃dʀ"),
+                  ],
+                  pronuciacion: "oin",
+                  explicacion: """
+                                  Al final de una palabra o
+                                  seguidas de una consonante, transcriben los sonidos
+                              """,
+                  imagenFonema: "wɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "moineau", enGriego: "mwa.no")
+                  ],
+                  pronuciacion: "oin",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue. Seguidas de una vocal (excepto e al final de una palabra), oi transcriben los sonidos
+                              """,
+                  imagenFonema: "wa",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "avoine", enGriego: "a.vwan")
+                  ],
+                  pronuciacion: "-oine",
+                  explicacion: """
+                                  Al final de una palabra, transcriben los sonidos
+                              """,
+                  imagenFonema: "wan",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_11",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "important", enGriego: "ɛ̃.poʀ.tɑ̃"),
+                  ],
+                  pronuciacion: "im",
+                  explicacion: """
+                                  Seguidas de una consonante
+                                  (excepto m), transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "immoral", enGriego: "i.mo.ʀal"),
+                  ],
+                  pronuciacion: "im",
+                  explicacion: """
+                                  La m forma parte de la sílaba que sigue. Seguidas de m, i transcribe el sonido
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "piment", enGriego: "pi.mɑ̃"),
+                  ],
+                  pronuciacion: "im",
+                  explicacion: """
+                                  La m forma parte de la sílaba que sigue. Seguidas de una vocal (excepto e al final de una palabra), i transcribe el sonido
+
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "piment", enGriego: "pi.mɑ̃"),
+                  ],
+                  pronuciacion: "-ime",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos
+
+                              """,
+                  imagenFonema: "im",
+                  imagenConsejo: nil
+              ),
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_12",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "vin", enGriego: "vɛ̃"),
+                        Palabra(palabra: "vingt", enGriego: "vɛ̃"),
+                  ],
+                  pronuciacion: "in",
+                  explicacion: """
+                                  Al final de una palabra o
+                                  seguidas de una consonante (excepto n), transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "inné", enGriego: "i.nᴇ"),
+                  ],
+                  pronuciacion: "in",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue. Seguidas de n, i transcribe el sonido
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "inutile", enGriego: "i.ny.til"),
+                  ],
+                  pronuciacion: "im",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue. Seguidas de una vocal (excepto e al final de una palabra), i transcribe el sonido
+
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "colline", enGriego: "ko.lin"),
+                  ],
+                  pronuciacion: "-ime",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos
+
+                              """,
+                  imagenFonema: "in",
+                  imagenConsejo: nil
+              ),
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_i_13",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "camping", enGriego: "kɑ̃.piŋ"),
+                  ],
+                  pronuciacion: "-ing",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos
+                              """,
+                  imagenFonema: "iŋ",
                   imagenConsejo: nil
               )
           ],
@@ -744,128 +1513,474 @@ struct tarjetas {
         )
     ]
     
+    
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    O      --------------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
+    
+    
     static let tarjetasO:[Tarjeta] = [
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_o_o1",
                 silabas: [
-                    
-                   Silaba(palabras: [
-                        Palabra(palabra: "pain", enGriego: "pɛ̃"),
-                        Palabra(palabra: "ainsi", enGriego: "ɛ̃.si")
-                    ],
-                      pronuciacion: "ain",
-                      explicacion: "Al final de una palabra o seguida de una consonante (excepto m o n), ai transcriben el sonido",
-                      imagenFonema: "ɛ̃",
-                      imagenConsejo: nil
-                   ),
-                   
-                   Silaba(palabras: [
-                       Palabra(palabra: "ainé", enGriego: "ᴇ.nᴇ")
-                    ],
-                     pronuciacion: "ain",
-                     explicacion: "La n forma parte de la sílaba que sigue. Seguidas de una vocal (excepto e al final de una palabra), \n ai transcriben el sonido",
-                     imagenFonema: "E",
-                     imagenConsejo: "buho"
-                   ),
-                   
-                   Silaba(palabras: [
-                       Palabra(palabra: "saine", enGriego: "sᴇn")
-                    ],
-                     pronuciacion: "-aine",
-                     explicacion: "Al final de una palabra, transcriben los sonidos",
-                     imagenFonema: "ᴇn",
-                     imagenConsejo: nil
-                   )
-                   
+               Silaba(palabras: [
+                    Palabra(palabra: "tome", enGriego: "tom"),
+                    Palabra(palabra: "loto", enGriego: "lo.to")
                 ],
-                excepciones: nil)
+                  pronuciacion: "o",
+                  explicacion: "Seguida de una consonante y una vocal o al final de una palabra transcribe el sonido",
+                  imagenFonema: "o",
+                  imagenConsejo: nil
+               ),
+            ],
+            excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o2",
+                silabas: [
+               Silaba(palabras: [
+                    Palabra(palabra: "opprimée", enGriego: "o.pri.mᴇ"),
+                    Palabra(palabra: "connu", enGriego: "co.ny"),
+                    Palabra(palabra: "pomme", enGriego: "pom"),
+                ],
+                  pronuciacion: "o",
+                  explicacion: "Seguida de dos consonantes idénticas transcribe el sonido",
+                  imagenFonema: "o",
+                  imagenConsejo: nil
+               ),
+            ],
+            excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o3",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "optique", enGriego: "op.tik"),
+                  ],
+                  pronuciacion: "o",
+                  explicacion: """
+                                  Seguida de dos consonantes diferentes (excepto m y n) transcribe el sonido
+                              """,
+                  imagenFonema: "o",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "sombre", enGriego: "sõbr"),
+                        Palabra(palabra: "conséquence", enGriego: "kõ.sᴇ.kɑ̃s")
+                  ],
+                  pronuciacion: "o",
+                  explicacion: """
+                                  Seguida de dos consonantes diferentes
+                                  -    si la primera de ellas es m o n, om, on transcriben el sonido
+                              """,
+                  imagenFonema: "õ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "insomnie", enGriego: "ɛ̃.som.ni")
+                  ],
+                  pronuciacion: "omn",
+                  explicacion: """
+                                  om transcriben los sonidos
+                              """,
+                  imagenFonema: "om",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o4",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "coopérer", enGriego: "co.o.pᴇ.ʀᴇ")
+                  ],
+                  pronuciacion: "coo-",
+                  explicacion: """
+                                  Al inicio de una palabra, oo transcriben los sonidos
+                              """,
+                  imagenFonema: "o.o",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "foot", enGriego: "fut")
+                  ],
+                  pronuciacion: "oo",
+                  explicacion: """
+                                  Excepto en el grupo coo- transcriben el sonido
+                              """,
+                  imagenFonema: "u",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o5",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "joyeux", enGriego: "ʒwa.jɶ"),
+                        Palabra(palabra: "voyage", enGriego: "vwa.jaʒ")
+                  ],
+                  pronuciacion: "-oy-",
+                  explicacion: """
+                                  transcriben los sonidos
+                              """,
+                  imagenFonema: "waj",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o6",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "moi", enGriego: "mwa"),
+                        Palabra(palabra: "mois", enGriego: "mwa")
+                  ],
+                  pronuciacion: "oi",
+                  explicacion: """
+                                  Al final de una palabra o seguidas de una consonante, excepto en los grupos:
+                                  -oin al final de una palabra
+                                   oin + consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "wa",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o7",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "loin", enGriego: "lwɛ̃"),
+                        Palabra(palabra: "joindre", enGriego: "ʒwɛ̃dʀ")
+                  ],
+                  pronuciacion: "oin",
+                  explicacion: """
+                                  Al final de una palabra o
+                                  seguidas de una consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "wɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "moineau", enGriego: "mwa.no")
+                  ],
+                  pronuciacion: "oin",
+                  explicacion: """
+                                  La n forma parte de la sílaba que sigue.
+                                  Seguidas de una vocal (excepto e al final de una palabra), oi transcriben los sonidos
+                              """,
+                  imagenFonema: "wa",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "avoine", enGriego: "a.vwan")
+                  ],
+                  pronuciacion: "-oine",
+                  explicacion: """
+                                  Al final de una palabra transcriben los sonidos wan
+                              """,
+                  imagenFonema: "wa",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o8",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "coercitif", enGriego: "ko.ᴇʀ.si.tif"),
+                  ],
+                  pronuciacion: "oe",
+                  explicacion: """
+                                  Seguidas de una consonante o una vocal
+                                  (excepto u), o e transcriben los sonidos
+                              """,
+                  imagenFonema: "o.ᴇ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "sœur", enGriego: "sɶʀ"),
+                  ],
+                  pronuciacion: "œu",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "ɶ",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_o9",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "mon", enGriego: "mõ"),
+                        Palabra(palabra: "on", enGriego: "õ")
+                  ],
+                  pronuciacion: "-on",
+                  explicacion: """
+                                  Al final de una palabra
+                                  y en el caso de la palabra on transcriben el sonido
+                              """,
+                  imagenFonema: "õ",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "pont", enGriego: "põ"),
+                        Palabra(palabra: "ont", enGriego: "õ")
+                  ],
+                  pronuciacion: "-ont",
+                  explicacion: """
+                                  Al final de una palabra
+                                  y en el caso de la palabra ont transcriben el sonido
+                              """,
+                  imagenFonema: "õ",
+                  imagenConsejo: "e_retro_varias-letras_n2"
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_o_10",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ou", enGriego: "u"),
+                        Palabra(palabra: "nous", enGriego: "nu")
+                  ],
+                  pronuciacion: "ou",
+                  explicacion: """
+                                  Al final de una palabra
+                                  o seguidas de una consonante transcriben el sonido
+                              """,
+                  imagenFonema: "u",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "où", enGriego: "u")
+                  ],
+                  pronuciacion: "où",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "u",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ou", enGriego: "u")
+                  ],
+                  pronuciacion: "où",
+                  explicacion: """
+                                  Seguidas de una vocal,
+                                  precedidas de dos consonantes que se pronuncian transcriben el sonido
+                              """,
+                  imagenFonema: "u",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "trouer", enGriego: "tʀu.ᴇ")
+                  ],
+                  pronuciacion: "ou",
+                  explicacion: """
+                                  Seguidas de una vocal,
+                                  precedidas de dos consonantes que se pronuncian transcriben el sonido
+                              """,
+                  imagenFonema: "u",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ouest", enGriego: "wᴇst"),
+                        Palabra(palabra: "douane", enGriego: "dwan")
+                  ],
+                  pronuciacion: "ou",
+                  explicacion: """
+                                  Seguidas de una vocal,
+                                  -    al principio de una palabra
+                                  -    o precedidas de una sola consonante
+                                    transcriben el sonido
+                              """,
+                  imagenFonema: "w",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        )
+        
     ]
+    
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    U    -----------------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
     
     static let tarjetasU:[Tarjeta] = [
-    
+        Tarjeta(audio: "pb_u_01",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "tu", enGriego: "ty"),
+                        Palabra(palabra: "utile", enGriego: "y.til")
+                  ],
+                  pronuciacion: "u",
+                  explicacion: """
+                                 Al final de una palabra o seguida de una consonante (excepto en los grupos -un y -um seguidos de una consonante) transcribe el sonido
+                              """,
+                  imagenFonema: "y",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_02",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "un", enGriego: "ɛ̃"),
+                        Palabra(palabra: "aucun", enGriego: "o.kɛ̃"),
+                        Palabra(palabra: "lundi", enGriego: "lɛ̃.di")
+                  ],
+                  pronuciacion: "un",
+                  explicacion: """
+                                 Al final de una palabra o seguidas de una consonante (exepto n) transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "unir", enGriego: "y.niʀ"),
+                        Palabra(palabra: "tunnel", enGriego: "ty.nᴇl")
+                  ],
+                  pronuciacion: "un",
+                  explicacion: """
+                                 La n forma parte de la sílaba que sigue. Seguidas de una vocal (exepto e al final de una palabra) o de n,
+                              """,
+                  imagenFonema: "y",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "lune", enGriego: "lyn")
+                  ],
+                  pronuciacion: "-une",
+                  explicacion: """
+                                 Al final de una palabra y precedidas de una consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "yn",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_03",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "humble", enGriego: "ɛ̃bl")
+                  ],
+                  pronuciacion: "-um-",
+                  explicacion: """
+                                 Seguidas de una consonante transcriben el sonido
+                              """,
+                  imagenFonema: "ɛ̃",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "humain", enGriego: "y.mɛ̃")
+                  ],
+                  pronuciacion: "-um-",
+                  explicacion: """
+                                 La m forma parte de la sílaba que sigue. Seguidas de una vocal
+                                 (exepto e al final de una palabra), u transcribe el sonido
+                              """,
+                  imagenFonema: "y",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "plume", enGriego: "plym")
+                  ],
+                  pronuciacion: "-ume",
+                  explicacion: """
+                                 Al final de una palabra y precedidas de una consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "yn",
+                  imagenConsejo: nil
+              ),
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "forum", enGriego: "fo.ʀom")
+                  ],
+                  pronuciacion: "-une",
+                  explicacion: """
+                                 Al final de una palabra y precedidas de una consonante transcriben los sonidos
+                              """,
+                  imagenFonema: "yn",
+                  imagenConsejo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
     ]
+    
+    /*
+    Tarjeta(audio: "192",
+      silabas: [
+          Silaba(
+              palabras: [
+                    Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
+              ],
+              pronuciacion: "es",
+              explicacion: """
+                              En la forma conjugada del verbo être, transcriben el sonido
+                          """,
+              imagenFonema: "E",
+              imagenConsejo: nil
+          )
+      ],
+      excepciones: nil
+    )
+    */
+    
+    
+    /// ---------------------------------------------------------------------------------
+    /// ----------------------------------      T A R J E T A S    Y   -----------------------------------------------------------------------------------
+    /// ---------------------------------------------------------------------------------
+    
     
     static let tarjetasY:[Tarjeta] = [
     
     ]
     
-    static let tarjetasB:[Tarjeta] = [
     
-    ]
-    
-    static let tarjetasC:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasD:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasF:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasG:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasH:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasJ:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasK:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasL:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasM:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasN:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasP:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasQ:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasR:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasS:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasT:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasV:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasW:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasX:[Tarjeta] = [
-    
-    ]
-    
-    static let tarjetasZ:[Tarjeta] = [
-    
-    ]
     
 }

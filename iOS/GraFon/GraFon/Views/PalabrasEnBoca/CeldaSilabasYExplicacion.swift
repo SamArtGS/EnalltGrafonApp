@@ -40,7 +40,11 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
             }
             
             if let imagenConsejo = destapado.imagenConsejo{
-                pilaViews.addArrangedSubview(imagenPajaro(UIImage(named: imagenConsejo)))
+                let imagenPajaroAgregada: UIImageView = imagenPajaro(UIImage(named: imagenConsejo))
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mostrarExplicacion(tapGestureRecognizer:)))
+                imagenPajaroAgregada.addGestureRecognizer(tapGestureRecognizer)
+                pilaViews.addArrangedSubview(imagenPajaroAgregada)
+                
             }
         }
         willSet{
@@ -154,8 +158,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mostrarExplicacion(tapGestureRecognizer:)))
-        imageView.addGestureRecognizer(tapGestureRecognizer)
         return imageView
     }
     
@@ -217,6 +219,9 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     }
     
     func configurarConstraints(){
+        
+        
+        
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(fondo)

@@ -26,17 +26,20 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     var tarjetaSeleccionada: Tarjeta? {
         didSet {
             guard let destapado = tarjetaSeleccionada else { return }
-            
+            var contadorPalabras = 0
             for cuenta in 0...destapado.silabas.count - 1{
                 let bloqueSilaba = previstaSilaba(destapado.silabas[cuenta], UIColor.fondosSilabaPalabrasEnBoca[cuenta])
                 pilaViews.addArrangedSubview(bloqueSilaba)
+                contadorPalabras += destapado.silabas[cuenta].palabras.count
                 NSLayoutConstraint.activate([
+                    
                     bloqueSilaba.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 15),
                     bloqueSilaba.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -15)
                 ])
             }
-            pilaViews.heightAnchor.constraint(equalToConstant: CGFloat(50*destapado.silabas.count)).isActive = true
+            pilaViews.heightAnchor.constraint(equalToConstant: CGFloat(contadorPalabras*30)).isActive = true
         }
+        
         willSet{
             pilaViews.subviews.forEach { (view) in
                 view.removeFromSuperview()

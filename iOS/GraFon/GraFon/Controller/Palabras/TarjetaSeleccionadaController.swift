@@ -101,7 +101,10 @@ extension TarjetaSeleccionadaController{
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          if indexPath.item == 0 {
-            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((tarjeta?.silabas.count ?? 1) * 50  + 200))
+            var cuenta: Int = 0
+            tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
+            print(cuenta)
+            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
          } else {
             let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30)
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{

@@ -82,7 +82,7 @@ extension TabBarSimbolosySonidos{
                 self.title = "A divertirse"
                 break
             case 2:
-                self.title = "Palabras en boca"
+                self.title = "Palabras en la boca"
                 
                 let teoria = crearNavegacion(titulo: "Palabras en la boca",
                                              imagenIcono: "icon-study",

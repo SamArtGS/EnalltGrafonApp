@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+extension tarjetas{
+    
+    static let tarjetasH:[Tarjeta] = [
+    
+    ]
+    
+    static let tarjetasJ:[Tarjeta] = [
+    
+    ]
+    
+    static let tarjetasK:[Tarjeta] = [
+    
+    ]
+    
+    static let tarjetasL:[Tarjeta] = [
+    
+    ]
+    
+    static let tarjetasM:[Tarjeta] = [
+    
+    ]
+    
+}

@@ -15,7 +15,6 @@ class SimboloPaginaCelda: UICollectionViewCell {
     private var imagenFonAntes:String = ""
     private var imageFonDespues:String = ""
     
-    
     var fonema: Fonema? {
         didSet {
             guard let destapado = fonema else { return }
@@ -63,11 +62,13 @@ class SimboloPaginaCelda: UICollectionViewCell {
     func distribucionConstraints(){
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
-        imagenesApiladas.backgroundColor = . green
+        
         imagenesApiladas.addArrangedSubview(imagenFonemaAntes)
         imagenesApiladas.addArrangedSubview(imagenObjeto)
         
         addSubview(imagenesApiladas)
+        
+        
             
     NSLayoutConstraint.activate([
         imagenesApiladas.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),

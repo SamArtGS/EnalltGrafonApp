@@ -82,17 +82,15 @@ extension PalabrasEnBocaVC: SeleccionarTarjetaDelegate{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CeldaColeccionDeColecciones
         cell.delegate = self
-        cell.indice = indexPath.item
+        cell.indice = indexPath.item + 1
+        cell.coleccionView.reloadData()
         return cell
     }
     
     override func viewDidLayoutSubviews() {
-        
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        
-        
         let filtrado = Data.letras.filter{letra in letra.identificador != 0}
         indice = filtrado[indexPath.item].identificador
         items[0].title = "\(filtrado[indexPath.item].letra)"
@@ -106,21 +104,18 @@ extension PalabrasEnBocaVC: SeleccionarTarjetaDelegate{
 extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Data.letras.filter{letra in letra.identificador != 0}[indice ?? 0].tarjetas?.count ?? 0
+        return Data.letras.filter{letra in letra.identificador == indice}.first?.tarjetas?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = coleccionView.dequeueReusableCell(withReuseIdentifier: "Tarjeta", for: indexPath) as! CeldaPalabras
-        cell.palabrasEnTarjeta = Data.letras.filter{letra in letra.identificador != 0}[indice ?? 0].tarjetas?[indexPath.item]
+        cell.palabrasEnTarjeta = Data.letras.filter{letra in letra.identificador == indice}.first?.tarjetas?[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.mostrarTarjeta(seleccionado: indexPath.item)
     }
-    
-    
-    
 }
 
 
@@ -142,7 +137,6 @@ extension PalabrasEnBocaVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
     
     override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         collectionView.reloadData()
