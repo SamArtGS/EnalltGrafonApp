@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         nav1.viewControllers = [PagePuertasCV(collectionViewLayout: scrollLayout)]
         window?.rootViewController = nav1
+        window?.backgroundColor = .white
         window?.makeKeyAndVisible()
     }
 

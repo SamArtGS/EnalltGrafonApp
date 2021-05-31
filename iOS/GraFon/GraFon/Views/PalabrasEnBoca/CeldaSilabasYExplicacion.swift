@@ -39,6 +39,10 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
                 pilaViews.addArrangedSubview(pronunciacion(destapado.imagenFonema))
             }
             
+            if destapado.textodeAbajo != nil{
+                pilaViews.addArrangedSubview(textoDeAbajo(destapado.textodeAbajo))
+            }
+            
             if let imagenConsejo = destapado.imagenConsejo{
                 let imagenPajaroAgregada: UIImageView = imagenPajaro(UIImage(named: imagenConsejo))
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mostrarExplicacion(tapGestureRecognizer:)))
@@ -153,12 +157,24 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return etiqueta
     }
     
-    private var imagenPajaro: (UIImage?) -> UIImageView = { imagen in
+    private var imagenPajaro: ( UIImage? ) -> UIImageView = { imagen in
         let imageView = UIImageView(image: UIImage(named: "retro_n2"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
         return imageView
+    }
+    
+    private var textoDeAbajo: ( String? ) -> UILabel = { texto in
+        let etiqueta = UILabel()
+        etiqueta.lineBreakMode = .byWordWrapping
+        etiqueta.numberOfLines = 0
+        etiqueta.text = texto
+        etiqueta.font = .Lato(.bold, size: 16)
+        etiqueta.translatesAutoresizingMaskIntoConstraints = false
+        etiqueta.textAlignment = .center
+        etiqueta.contentMode = .scaleAspectFit
+        return etiqueta
     }
     
     private var labio: (UIImage?) -> UIImageView = {imagen in

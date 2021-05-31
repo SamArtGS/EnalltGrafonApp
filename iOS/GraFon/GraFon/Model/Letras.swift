@@ -27,6 +27,7 @@ struct Silaba: Codable, Hashable, Equatable{
     let explicacion: String
     let imagenFonema: String //Sonido
     let imagenConsejo: String?
+    let textodeAbajo: String?
 }
 
 struct Palabra: Codable, Hashable, Equatable{

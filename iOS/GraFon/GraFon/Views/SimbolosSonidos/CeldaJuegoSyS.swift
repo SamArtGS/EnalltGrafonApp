@@ -37,7 +37,7 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         return boton
     }()
     
-    private let imagenFonema: UIImageView = {
+     let imagenFonema: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "n1_jgo1_pant_01mdpi")
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +46,7 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         return imageView
     }()
     
-    private let imagenPajaroMal: UIImageView = {
+     private let imagenPajaroMal: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "n1_jgo_NoCorresponde_mdpi")
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -55,10 +55,10 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         return imageView
     }()
     
-    private let imagenPajaroBien: UIImageView = {
+     private let imagenPajaroBien: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "n1_jgo_SiCorresponde_mdpi")
-        
+        imageView.backgroundColor = .clear
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
@@ -147,7 +147,34 @@ extension JuegoSySCelda: UIDragInteractionDelegate {
         guard let image = imagenFonema.image else { return [] }
         let item = UIDragItem(itemProvider: NSItemProvider(object: image))
         item.localObject = image
+        sonarAudio()
         return [item]
+    }
+    
+    func dragInteraction(_ interaction: UIDragInteraction, previewForLifting item: UIDragItem, session: UIDragSession) -> UITargetedDragPreview? {
+        guard let image = item.localObject as? UIImage else { return nil }
+
+        // Scale the preview image view frame to the image's size.
+        let frame: CGRect
+        if image.size.width > image.size.height {
+            let multiplier = imagenFonema.frame.width / image.size.width
+            frame = CGRect(x: 0, y: 0, width: imagenFonema.frame.width, height: image.size.height * multiplier)
+        } else {
+            let multiplier = imagenFonema.frame.height / image.size.height
+            frame = CGRect(x: 0, y: 0, width: image.size.width * multiplier, height: imagenFonema.frame.height)
+        }
+
+        let previewImageView = UIImageView(image: image)
+        previewImageView.contentMode = .scaleAspectFit
+        previewImageView.frame = frame
+        previewImageView.backgroundColor = .clear
+        let center = CGPoint(x: imagenFonema.bounds.midX, y: imagenFonema.bounds.midY)
+        let target = UIDragPreviewTarget(container: imagenFonema, center: center)
+        
+        let previewParameters = UIDragPreviewParameters()
+        previewParameters.backgroundColor = .clear
+        
+        return UITargetedDragPreview(view: previewImageView, parameters: previewParameters, target: target)
     }
 }
 

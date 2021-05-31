@@ -10,7 +10,9 @@ import UIKit
 
 class MenuMoldeVC: UICollectionViewController{
     
-    private let reuseIdentifier = "Cell"
+    private let reuseIdentifier:String = "Cell"
+    
+    
     private var puertaInt: Int?
     
     deinit {

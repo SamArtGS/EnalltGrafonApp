@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SeleccionarTarjetaDelegate: class {
+protocol SeleccionarTarjetaDelegate: AnyObject {
     func mostrarTarjeta(seleccionado:Int)
 }
 
@@ -29,7 +29,13 @@ class PalabrasEnBocaVC: UICollectionViewController, UIToolbarDelegate{
         collectionView.isPagingEnabled = true
         self.title = "Palabras en la boca"
         self.collectionView!.register(CeldaColeccionDeColecciones.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        configuracionToolBar()
+    }
+    
+    func configuracionToolBar(){
+        self.navigationController?.toolbar.isTranslucent = false
+        self.navigationController?.toolbar.barTintColor = .colorTabBarPalabrasEnBoca
+        self.navigationController?.toolbar.tintColor = .white
     }
     
     init(collectionViewLayout layout: UICollectionViewLayout, indiceSeleccionado: Int) {

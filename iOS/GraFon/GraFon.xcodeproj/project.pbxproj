@@ -215,6 +215,7 @@
 		54A0F88E262751C200A6D308 /* Letras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88D262751C200A6D308 /* Letras.swift */; };
 		54A0F8902627562400A6D308 /* PalabrasEnBocaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F88F2627562400A6D308 /* PalabrasEnBocaVC.swift */; };
 		54A0F8922627984D00A6D308 /* Alertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F8912627984D00A6D308 /* Alertas.swift */; };
+		54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF002665968300E07A0B /* PantallaCreditos.swift */; };
 		54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */; };
 		54DC9F682636046B003D4F68 /* SeleccionarNivelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */; };
 		54DC9FDC26364CAE003D4F68 /* 140.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54DC9F6C26364CAE003D4F68 /* 140.mp3 */; };
@@ -568,6 +569,7 @@
 		54A0F88D262751C200A6D308 /* Letras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letras.swift; sourceTree = "<group>"; };
 		54A0F88F2627562400A6D308 /* PalabrasEnBocaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalabrasEnBocaVC.swift; sourceTree = "<group>"; };
 		54A0F8912627984D00A6D308 /* Alertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertas.swift; sourceTree = "<group>"; };
+		54BDCF002665968300E07A0B /* PantallaCreditos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaCreditos.swift; sourceTree = "<group>"; };
 		54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuMoldeVC.swift; sourceTree = "<group>"; };
 		54DC9F672636046B003D4F68 /* SeleccionarNivelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarNivelController.swift; sourceTree = "<group>"; };
 		54DC9F6C26364CAE003D4F68 /* 140.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 140.mp3; sourceTree = "<group>"; };
@@ -885,6 +887,7 @@
 			isa = PBXGroup;
 			children = (
 				546B139025DB262400CF2ED5 /* LaunchScreen.storyboard */,
+				54BDCF002665968300E07A0B /* PantallaCreditos.swift */,
 				546B139425DB379D00CF2ED5 /* PuertaCelda.swift */,
 				5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */,
 				54A0F886262676BD00A6D308 /* SimbolosSonidos */,
@@ -1251,7 +1254,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = SamArtGS;
 				TargetAttributes = {
 					546B135925DAFACD00CF2ED5 = {
@@ -1269,6 +1272,7 @@
 			knownRegions = (
 				en,
 				"es-419",
+				Base,
 			);
 			mainGroup = 546B135125DAFACD00CF2ED5;
 			productRefGroup = 546B135B25DAFACD00CF2ED5 /* Products */;
@@ -1638,6 +1642,7 @@
 				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
 				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
 				546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */,
+				54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1664,6 +1669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1686,6 +1692,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1710,7 +1717,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1724,6 +1731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1746,6 +1754,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1764,7 +1773,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1779,14 +1788,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				DEVELOPMENT_TEAM = 9DD36VF5BZ;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SamArt.GraFon;
+				PRODUCT_BUNDLE_IDENTIFIER = SamArt.GraFon1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1797,16 +1806,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				DEVELOPMENT_TEAM = 9DD36VF5BZ;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SamArt.GraFon;
+				PRODUCT_BUNDLE_IDENTIFIER = SamArt.GraFon1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

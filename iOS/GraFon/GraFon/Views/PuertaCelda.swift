@@ -19,30 +19,8 @@ class PuertaCell: UICollectionViewCell {
         }
     }
     
-    deinit {
-        print("Espacio de puerta reclamado")
-    }
+    // MARK: Elementos de UI
     
-    
-    func iniciarAnimacion(){
-        imagenPuerta.animationDuration = 1.3
-        imagenPuerta.startAnimating()
-        
-    }
-    func detenerAnimacion(){
-        imagenPuerta.stopAnimating()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        print("Vista de puerta creada")
-        distribucionConstraints()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("funcion init no implementada")
-    }
-    
-    //Elementos UI
     private var imagenPuerta: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,5 +39,35 @@ class PuertaCell: UICollectionViewCell {
             imagenPuerta.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    // MARK: Constructores y deinit
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        print("Vista de puerta creada")
+        distribucionConstraints()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("funcion init no implementada")
+    }
+    
+    deinit {
+        print("Espacio de puerta reclamado")
+    }
+    
 }
  
+// MARK: Funciones animadoras de la celda
+
+extension PuertaCell{
+    
+    func iniciarAnimacion(){
+        imagenPuerta.animationDuration = 1.3
+        imagenPuerta.startAnimating()
+        
+    }
+    func detenerAnimacion(){
+        imagenPuerta.stopAnimating()
+    }
+    
+}

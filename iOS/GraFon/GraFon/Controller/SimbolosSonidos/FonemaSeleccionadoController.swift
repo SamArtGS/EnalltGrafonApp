@@ -36,12 +36,20 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         self.collectionView!.register(SimboloPaginaCelda.self,
                                       forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.toolbarItems = items
+        
+        configuracionToolBar()
         DispatchQueue.main.async {
             guard let indice = self.indiceSeleccionado else { return }
             self.collectionView.scrollToItem(at: IndexPath(item: indice - 1, section: 0), at: .centeredHorizontally, animated: false)
         }
         
+    }
+    
+    func configuracionToolBar(){
+        self.toolbarItems = items
+        self.navigationController?.toolbar.isTranslucent = false
+        self.navigationController?.toolbar.barTintColor = .colorTabBarSonidoSimbolo
+        self.navigationController?.toolbar.tintColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,7 +125,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         
         let sonido = Bundle.main.path(forResource: filtrado[indexPath.item].audio, ofType: "mp3")
         do {
-            reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "a_s1_1e"))
+            reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "pb_a_01"))
             reproductorAudio.play()
         }catch{
             print("Error al reproducir el audio")

@@ -27,7 +27,8 @@ struct tarjetas {
                     pronuciacion: "é",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
@@ -44,7 +45,8 @@ struct tarjetas {
                     pronuciacion: "è",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: "buho"
+                    imagenConsejo: "buho",
+                    textodeAbajo: nil
                 )
             ],
             excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
@@ -62,7 +64,8 @@ struct tarjetas {
                     pronuciacion: "ê",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: "buho"
+                    imagenConsejo: "buho",
+                    textodeAbajo: nil
                 )
             ],
             excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
@@ -88,7 +91,8 @@ struct tarjetas {
                     pronuciacion: "a",
                     explicacion: "Al final de una palabra o seguida de una consonante (excepto m o n) \n Transcribe el sonido",
                     imagenFonema: "a",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -97,7 +101,8 @@ struct tarjetas {
                     pronuciacion: "a",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "a",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -106,7 +111,8 @@ struct tarjetas {
                     pronuciacion: "-e",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "a",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
@@ -124,7 +130,8 @@ struct tarjetas {
                     pronuciacion: "ain",
                     explicacion: "Al final de una palabra o seguida de una consonante. \n Transcribe el sonido",
                     imagenFonema: "ɛ̃",
-                    imagenConsejo: "i_retro_3Cb_n2"
+                    imagenConsejo: "i_retro_3Cb_n2",
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -133,7 +140,8 @@ struct tarjetas {
                     pronuciacion: "ain",
                     explicacion: "Seguidas de una vocal (excepto e al final de una palabra). \n La n forma parte de la sílaba que sigue. \n ai transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -142,7 +150,8 @@ struct tarjetas {
                     pronuciacion: "-aine",
                     explicacion: "Al final de una palabra, transcribe los sonidos",
                     imagenFonema: "En",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
@@ -159,7 +168,8 @@ struct tarjetas {
                     pronuciacion: "ain",
                     explicacion: "Seguidas de una voval (excepto e al final de una palabra). \n La m forma parte de la sílaba que sigue. \n ai transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -168,7 +178,8 @@ struct tarjetas {
                     pronuciacion: "ain",
                     explicacion: "Transcribe los sonidos",
                     imagenFonema: "Em",
-                    imagenConsejo: "nil"
+                    imagenConsejo: "nil",
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -177,7 +188,8 @@ struct tarjetas {
                     pronuciacion: "-aine",
                     explicacion: "Al inal de una palabra, transcribe los sonidos",
                     imagenFonema: "ɛ̃",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -192,7 +204,8 @@ struct tarjetas {
                     pronuciacion: "au",
                     explicacion: "Transcriben el sonido",
                     imagenFonema: "o",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -201,7 +214,8 @@ struct tarjetas {
                     pronuciacion: "eau",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "o",
-                    imagenConsejo: "e_retro_varias-letras_n2"
+                    imagenConsejo: "e_retro_varias-letras_n2",
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -217,7 +231,8 @@ struct tarjetas {
                     pronuciacion: "-ail",
                     explicacion: "Transcriben los sonidos",
                     imagenFonema: "aj",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -226,7 +241,8 @@ struct tarjetas {
                     pronuciacion: "aill",
                     explicacion: "Transcribe los sonidos",
                     imagenFonema: "aj",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -241,7 +257,8 @@ struct tarjetas {
                     pronuciacion: "am",
                     explicacion: "Seguidas de una consonante (excepto m y n), transcriben el sonido",
                     imagenFonema: "ɑ̃",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -251,7 +268,8 @@ struct tarjetas {
                     pronuciacion: "am",
                     explicacion: "Seguidas de otra m o de una vocal (excepto e al final de una palabra), la m forma parte de la sílaba que sigue. La a transcribe el sonido",
                     imagenFonema: "a",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -260,7 +278,8 @@ struct tarjetas {
                     pronuciacion: "-ame",
                     explicacion: "Al final de una palabra, transcriben los sonidos",
                     imagenFonema: "am",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -269,7 +288,8 @@ struct tarjetas {
                     pronuciacion: "am",
                     explicacion: "La n forma parte de la sílaba que sigue. Seguidas de una n, am transcriben los sonidos",
                     imagenFonema: "am",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )],
             excepciones: nil
         ),
@@ -284,7 +304,8 @@ struct tarjetas {
                     pronuciacion: "-ail",
                     explicacion: "Al final de una palabra o seguidas de una consonante (excepto l, m, n), transcribe el sonido",
                     imagenFonema: "ᴇ",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
             ],
             excepciones: nil
@@ -301,7 +322,8 @@ struct tarjetas {
                     pronuciacion: "an",
                     explicacion: "Al final de una palabra o seguidas de una consonante (excepto n), transcribe el sonido",
                     imagenFonema: "ɑ̃",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -311,7 +333,8 @@ struct tarjetas {
                     pronuciacion: "an",
                     explicacion: "La n forma parte de la sílaba que sigue. Seguidas de otra n o de una vocal (excepto e al final de una palabra), a transcribe el sonido",
                     imagenFonema: "a",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -320,7 +343,8 @@ struct tarjetas {
                     pronuciacion: "-ane",
                     explicacion: "Al final de una palabra, transcribe los sonidos",
                     imagenFonema: "an",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -336,7 +360,8 @@ struct tarjetas {
                     pronuciacion: "a",
                     explicacion: "Seguida de y, transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -359,7 +384,8 @@ struct tarjetas {
                    pronuciacion: "-e",
                    explicacion: "Al final de una palabra de más de dos letras no trascribe ningún sonido",
                    imagenFonema: sinSonido,
-                   imagenConsejo: nil
+                   imagenConsejo: nil,
+                   textodeAbajo: nil
                ),
                Silaba(
                    palabras: [
@@ -369,7 +395,8 @@ struct tarjetas {
                    pronuciacion: "-e",
                    explicacion: "Al final de una palabra de 2 letras transcribe el sonido que le corresponde a cada uno de los elemenos",
                    imagenFonema: "Y",
-                   imagenConsejo: nil // // // -> LENGUA, SE ELIMINÓ
+                   imagenConsejo: nil, // // // -> LENGUA, SE ELIMINÓ,
+                   textodeAbajo: nil
                   )
                 ],
             excepciones: nil
@@ -389,7 +416,8 @@ struct tarjetas {
                                        vocal transcribe el sonido
                                    """,
                        imagenFonema: "ɶ",
-                       imagenConsejo: nil
+                       imagenConsejo: nil,
+                       textodeAbajo: nil
                    ),
                    Silaba(
                        palabras: [
@@ -398,7 +426,8 @@ struct tarjetas {
                        pronuciacion: "e",
                        explicacion: "Seguida de x transcribe el sonido",
                        imagenFonema: "ᴇ",
-                       imagenConsejo: nil
+                       imagenConsejo: nil,
+                       textodeAbajo: nil
                    )
                    ],
                    excepciones: nil
@@ -418,7 +447,8 @@ struct tarjetas {
                                        -le sigue una sola consonante que transcribe un sonido (excepto en los  grupos: li, ri, mi, ni)
                                    """,
                        imagenFonema: sinSonido,
-                       imagenConsejo: "e_retro_3Cb_n2"
+                       imagenConsejo: "e_retro_3Cb_n2",
+                       textodeAbajo: nil
                    )
                    ],
                    excepciones: nil
@@ -440,7 +470,8 @@ struct tarjetas {
                                         transcribe el sonido
                                    """,
                        imagenFonema: "ɶ",
-                       imagenConsejo: nil
+                       imagenConsejo: nil,
+                       textodeAbajo: nil
                    )
                    ],
                    excepciones: nil
@@ -457,7 +488,8 @@ struct tarjetas {
                                        Al final de una palabra de más de tres letras no transcriben ningún sonido.
                                    """,
                        imagenFonema: sinSonido,
-                       imagenConsejo: "e_retro_3Eb_n2"
+                       imagenConsejo: "e_retro_3Eb_n2",
+                       textodeAbajo: nil
                    ),
                    Silaba(
                    palabras: [
@@ -468,7 +500,9 @@ struct tarjetas {
                                    Al final de una palabra de tres letras (por ejemplo, un determinante plural: les, mes, tes, etc.), transcriben el sonido
                                """,
                    imagenFonema: "ᴇ",
-                   imagenConsejo: nil),
+                   imagenConsejo: nil,
+                   textodeAbajo: nil
+                   ),
                    Silaba(
                        palabras: [
                              Palabra(palabra: "tu es", enGriego: "ty.ᴇ")
@@ -478,7 +512,8 @@ struct tarjetas {
                                        En la forma conjugada del verbo être, transcriben el sonido
                                    """,
                        imagenFonema: "ᴇ",
-                       imagenConsejo: nil
+                       imagenConsejo: nil,
+                       textodeAbajo: nil
                    )
                 ],
                excepciones: nil
@@ -498,7 +533,8 @@ struct tarjetas {
                                       Al final de un verbo conjugado en la tercera persona del plural, no transcriben ningún sonido
                                   """,
                       imagenFonema: sinSonido,
-                      imagenConsejo: "e_retro_3Fb_n2"
+                      imagenConsejo: "e_retro_3Fb_n2",
+                      textodeAbajo: nil
                   ),
                   
                   Silaba(
@@ -510,7 +546,8 @@ struct tarjetas {
                                       Al final de un verbo conjugado en la tercera persona del singular, transcriben el sonido
                                   """,
                       imagenFonema: "ɛ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   
                   Silaba(
@@ -524,7 +561,8 @@ struct tarjetas {
                                       Al final de un sustantivo, un adjetivo o un adverbio, transcriben el sonido
                                   """,
                       imagenFonema: "ɑ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
               ],
               excepciones: nil
@@ -541,7 +579,8 @@ struct tarjetas {
                                       Al final de una palabra transcriben el sonido
                                   """,
                       imagenFonema: "ɛ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -552,7 +591,8 @@ struct tarjetas {
                                       Al final de una palabra transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇ.ɛ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -563,7 +603,8 @@ struct tarjetas {
                                       Al final de una palabra transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇ.ᴇn",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -581,7 +622,8 @@ struct tarjetas {
                                       Seguidas de una consonante (excepto n), transcriben el sonido
                                   """,
                       imagenFonema: "ɑ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -592,7 +634,8 @@ struct tarjetas {
                                       Seguidas de una vocal (excepto al inicio de una palabra), transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇn",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -603,7 +646,8 @@ struct tarjetas {
                                       Al inicio de una palabra y seguidas de una vocal, transcriben los sonidos
                                   """,
                       imagenFonema: "ɑ̃.n",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -621,7 +665,8 @@ struct tarjetas {
                                       Al inicio de una palabra y seguida de dos consonantes (excepto n, m), transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -632,7 +677,8 @@ struct tarjetas {
                                       Al inicio de una palabra y seguida de x, transcribe el sonido
                                     """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -650,7 +696,8 @@ struct tarjetas {
                                       seguidas de una consonante transcriben el sonido
                                   """,
                       imagenFonema: "ɑ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -662,7 +709,8 @@ struct tarjetas {
                                       seguidas de m, transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -681,7 +729,8 @@ struct tarjetas {
                                       Seguida de dos consonantes idénticas (excepto n, m) y a excepción del caso de ress al inicio de una palabra, transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -694,7 +743,8 @@ struct tarjetas {
                                       Al inicio de una palabra, e transcribe el sonido
                                   """,
                       imagenFonema: "ɶ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
               ],
               excepciones: nil
@@ -718,7 +768,8 @@ struct tarjetas {
                                     Seguida de dos consonantes diferentes  (excepto n, m). Si la primera o las dos consonantes forman parte de la misma sílaba que la e, transcribe el sonido
                                 """,
                     imagenFonema: "E",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 ),
                 Silaba(
                     palabras: [
@@ -734,7 +785,8 @@ struct tarjetas {
                                     Seguida de dos consonantes diferentes (excepto n, m) que no forman parte de la misma sílaba que la e, transcribe el sonido
                                 """,
                     imagenFonema: "ɶ",
-                    imagenConsejo: nil
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
                 )
             ],
             excepciones: nil
@@ -753,7 +805,8 @@ struct tarjetas {
                                       En el grupo, e transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -771,7 +824,8 @@ struct tarjetas {
                                       Al final de una palabra, transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -789,7 +843,8 @@ struct tarjetas {
                                       Al final de una palabra, transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: "e_retro_3Ob_n2"
+                      imagenConsejo: "e_retro_3Ob_n2",
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -807,7 +862,8 @@ struct tarjetas {
                                       Al final de una palabra, transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -818,7 +874,8 @@ struct tarjetas {
                                       Como conjunción copulativa, transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: "e_retro_3Pb_n2"
+                      imagenConsejo: "e_retro_3Pb_n2",
+                      textodeAbajo: nil
                   ),
               ],
               excepciones: nil
@@ -836,7 +893,8 @@ struct tarjetas {
                                       Al final de una palabra y precedidas de p, transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -848,7 +906,8 @@ struct tarjetas {
                                       Al final de una palabra y precedidas de una consonante (excepto p), transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇkt",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -868,7 +927,8 @@ struct tarjetas {
                                     La e no transcribe ningún sonido
                                   """,
                       imagenFonema: sinSonido,
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -886,7 +946,8 @@ struct tarjetas {
                                      Transcribe el sonido
                                   """,
                       imagenFonema: "ɶ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -904,7 +965,8 @@ struct tarjetas {
                                      Transcribe el sonido
                                   """,
                       imagenFonema: "o",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -921,7 +983,8 @@ struct tarjetas {
                                      Seguidas de una consonante (excepto l, n), transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -933,7 +996,8 @@ struct tarjetas {
                                      Transcribe los sonidos
                                   """,
                       imagenFonema: "ᴇj",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -950,7 +1014,8 @@ struct tarjetas {
                                       Seguidas de una consonante, transcriben el sonido
                                   """,
                       imagenFonema: "ɛ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -962,7 +1027,8 @@ struct tarjetas {
                                       (excepto e al final de una palabra) transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇn",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -973,7 +1039,8 @@ struct tarjetas {
                                       Al final de una palabra, transcriben el sonido
                                   """,
                       imagenFonema: "ɛ̃",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -984,7 +1051,8 @@ struct tarjetas {
                                       Al final de una palabra, transcriben el sonido
                                   """,
                       imagenFonema: "ᴇn",
-                      imagenConsejo: "e_retro_3Vb_n2"
+                      imagenConsejo: "e_retro_3Vb_n2",
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -1001,7 +1069,8 @@ struct tarjetas {
                                       Transcriben los sonidos
                                   """,
                       imagenFonema: "kɶj",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
@@ -1012,7 +1081,8 @@ struct tarjetas {
                                       Transcriben los sonidos
                                   """,
                       imagenFonema: "gɶj",
-                      imagenConsejo: nil
+                      imagenConsejo: nil,
+                      textodeAbajo: nil
                   )
               ],
               excepciones: nil
@@ -1041,7 +1111,8 @@ struct tarjetas {
                                  in al final de una palabra, transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1052,7 +1123,8 @@ struct tarjetas {
                                   Al final de una palabra, siempre y cuando la i no esté precedida de otra vocal, transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1070,7 +1142,8 @@ struct tarjetas {
                                  Antes de una vocal, excepto e al final de una palabra, transcribe el sonido
                               """,
                   imagenFonema: "j",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1083,7 +1156,8 @@ struct tarjetas {
                                   consonante + r o l, transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               
               Silaba(
@@ -1095,7 +1169,8 @@ struct tarjetas {
                                   Antes de e al final de una palabra, transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1113,7 +1188,8 @@ struct tarjetas {
                                  Al final de una palabra o seguidas de una consonante, transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1125,7 +1201,8 @@ struct tarjetas {
                                   Seguidas de una vocal (exepto e al final de una palabra), ai transcriben el sonido
                               """,
                   imagenFonema: "ᴇ",
-                  imagenConsejo: "i_retro_3Cb_n2"
+                  imagenConsejo: "i_retro_3Cb_n2",
+                  textodeAbajo: nil
               ),
               
               Silaba(
@@ -1137,7 +1214,8 @@ struct tarjetas {
                                   Al final de una palabra, transcriben los sonidos
                               """,
                   imagenFonema: "ᴇn",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1156,7 +1234,8 @@ struct tarjetas {
                                 (excepto e al final de una palabra), ai transcriben el sonido
                               """,
                   imagenFonema: "ᴇ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1167,7 +1246,8 @@ struct tarjetas {
                                   Al final de una palabra transcriben los sonidos
                               """,
                   imagenFonema: "ᴇm",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1178,7 +1258,8 @@ struct tarjetas {
                                   Al final de una palabra transcriben los sonidos
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1198,7 +1279,8 @@ struct tarjetas {
                                   (excepto l, m, n), transcriben el sonido
                               """,
                   imagenFonema: "E",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
           ],
           excepciones: nil
@@ -1218,7 +1300,8 @@ struct tarjetas {
                                   Después de a, e, u transcriben el sonido
                               """,
                   imagenFonema: "j",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1229,7 +1312,8 @@ struct tarjetas {
                                   Después de una consonante transcriben los sonidos
                               """,
                   imagenFonema: "ij",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
           ],
           excepciones: nil
@@ -1246,7 +1330,8 @@ struct tarjetas {
                                   Seguidas de una consonante (excepto l, n) transcriben el sonido
                               """,
                   imagenFonema: "ᴇ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1258,7 +1343,8 @@ struct tarjetas {
                                   Transcriben los sonidos
                               """,
                   imagenFonema: "ᴇj",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1269,7 +1355,8 @@ struct tarjetas {
                                   Transcriben los sonidos
                               """,
                   imagenFonema: "kɶj",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1280,7 +1367,8 @@ struct tarjetas {
                                   Transcriben los sonidos
                               """,
                   imagenFonema: "gɶj",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1297,7 +1385,8 @@ struct tarjetas {
                                   La n forma parte de la sílaba que sigue. Seguidas de una vocal (exepto e al final de una palabra), ei transcriben el sonido
                               """,
                   imagenFonema: "ᴇ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1308,7 +1397,8 @@ struct tarjetas {
                                   Al final de una palabra, transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1319,7 +1409,8 @@ struct tarjetas {
                                   Al final de una palabra, transcriben los sonidos
                               """,
                   imagenFonema: "ᴇn",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1341,7 +1432,8 @@ struct tarjetas {
                                   Transcriben los sonidos
                               """,
                   imagenFonema: "wa",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1360,7 +1452,8 @@ struct tarjetas {
                                   seguidas de una consonante, transcriben los sonidos
                               """,
                   imagenFonema: "wɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1371,7 +1464,8 @@ struct tarjetas {
                                   La n forma parte de la sílaba que sigue. Seguidas de una vocal (excepto e al final de una palabra), oi transcriben los sonidos
                               """,
                   imagenFonema: "wa",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1382,7 +1476,8 @@ struct tarjetas {
                                   Al final de una palabra, transcriben los sonidos
                               """,
                   imagenFonema: "wan",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1400,7 +1495,8 @@ struct tarjetas {
                                   (excepto m), transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1411,7 +1507,8 @@ struct tarjetas {
                                   La m forma parte de la sílaba que sigue. Seguidas de m, i transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1423,7 +1520,8 @@ struct tarjetas {
 
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1435,7 +1533,8 @@ struct tarjetas {
 
                               """,
                   imagenFonema: "im",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
           ],
           excepciones: nil
@@ -1454,7 +1553,8 @@ struct tarjetas {
                                   seguidas de una consonante (excepto n), transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1465,7 +1565,8 @@ struct tarjetas {
                                   La n forma parte de la sílaba que sigue. Seguidas de n, i transcribe el sonido
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1477,7 +1578,8 @@ struct tarjetas {
 
                               """,
                   imagenFonema: "i",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1489,7 +1591,8 @@ struct tarjetas {
 
                               """,
                   imagenFonema: "in",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
           ],
           excepciones: nil
@@ -1506,7 +1609,8 @@ struct tarjetas {
                                   Al final de una palabra transcriben los sonidos
                               """,
                   imagenFonema: "iŋ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1530,7 +1634,8 @@ struct tarjetas {
                   pronuciacion: "o",
                   explicacion: "Seguida de una consonante y una vocal o al final de una palabra transcribe el sonido",
                   imagenFonema: "o",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
                ),
             ],
             excepciones: nil
@@ -1546,7 +1651,8 @@ struct tarjetas {
                   pronuciacion: "o",
                   explicacion: "Seguida de dos consonantes idénticas transcribe el sonido",
                   imagenFonema: "o",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
                ),
             ],
             excepciones: nil
@@ -1563,7 +1669,8 @@ struct tarjetas {
                                   Seguida de dos consonantes diferentes (excepto m y n) transcribe el sonido
                               """,
                   imagenFonema: "o",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1576,7 +1683,8 @@ struct tarjetas {
                                   -    si la primera de ellas es m o n, om, on transcriben el sonido
                               """,
                   imagenFonema: "õ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1587,7 +1695,8 @@ struct tarjetas {
                                   om transcriben los sonidos
                               """,
                   imagenFonema: "om",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1604,7 +1713,8 @@ struct tarjetas {
                                   Al inicio de una palabra, oo transcriben los sonidos
                               """,
                   imagenFonema: "o.o",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1615,7 +1725,8 @@ struct tarjetas {
                                   Excepto en el grupo coo- transcriben el sonido
                               """,
                   imagenFonema: "u",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1633,7 +1744,8 @@ struct tarjetas {
                                   transcriben los sonidos
                               """,
                   imagenFonema: "waj",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1653,7 +1765,8 @@ struct tarjetas {
                                    oin + consonante transcriben los sonidos
                               """,
                   imagenFonema: "wa",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1672,7 +1785,8 @@ struct tarjetas {
                                   seguidas de una consonante transcriben los sonidos
                               """,
                   imagenFonema: "wɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1684,7 +1798,8 @@ struct tarjetas {
                                   Seguidas de una vocal (excepto e al final de una palabra), oi transcriben los sonidos
                               """,
                   imagenFonema: "wa",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1695,7 +1810,8 @@ struct tarjetas {
                                   Al final de una palabra transcriben los sonidos wan
                               """,
                   imagenFonema: "wa",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1713,7 +1829,8 @@ struct tarjetas {
                                   (excepto u), o e transcriben los sonidos
                               """,
                   imagenFonema: "o.ᴇ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1724,7 +1841,8 @@ struct tarjetas {
                                   transcriben el sonido
                               """,
                   imagenFonema: "ɶ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1743,7 +1861,8 @@ struct tarjetas {
                                   y en el caso de la palabra on transcriben el sonido
                               """,
                   imagenFonema: "õ",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1756,7 +1875,8 @@ struct tarjetas {
                                   y en el caso de la palabra ont transcriben el sonido
                               """,
                   imagenFonema: "õ",
-                  imagenConsejo: "e_retro_varias-letras_n2"
+                  imagenConsejo: "e_retro_varias-letras_n2",
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1775,7 +1895,8 @@ struct tarjetas {
                                   o seguidas de una consonante transcriben el sonido
                               """,
                   imagenFonema: "u",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1786,7 +1907,8 @@ struct tarjetas {
                                   transcriben el sonido
                               """,
                   imagenFonema: "u",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1798,7 +1920,8 @@ struct tarjetas {
                                   precedidas de dos consonantes que se pronuncian transcriben el sonido
                               """,
                   imagenFonema: "u",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1810,7 +1933,8 @@ struct tarjetas {
                                   precedidas de dos consonantes que se pronuncian transcriben el sonido
                               """,
                   imagenFonema: "u",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1825,7 +1949,8 @@ struct tarjetas {
                                     transcriben el sonido
                               """,
                   imagenFonema: "w",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1851,7 +1976,8 @@ struct tarjetas {
                                  Al final de una palabra o seguida de una consonante (excepto en los grupos -un y -um seguidos de una consonante) transcribe el sonido
                               """,
                   imagenFonema: "y",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1870,7 +1996,8 @@ struct tarjetas {
                                  Al final de una palabra o seguidas de una consonante (exepto n) transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1879,10 +2006,11 @@ struct tarjetas {
                   ],
                   pronuciacion: "un",
                   explicacion: """
-                                 La n forma parte de la sílaba que sigue. Seguidas de una vocal (exepto e al final de una palabra) o de n,
+                                 Seguidas de una vocal (exepto e al final de una palabra) o de n,
                               """,
                   imagenFonema: "y",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: "La n forma parte de la sílaba que sigue."
               ),
               Silaba(
                   palabras: [
@@ -1893,7 +2021,8 @@ struct tarjetas {
                                  Al final de una palabra y precedidas de una consonante transcriben los sonidos
                               """,
                   imagenFonema: "yn",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
@@ -1910,7 +2039,8 @@ struct tarjetas {
                                  Seguidas de una consonante transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1922,7 +2052,8 @@ struct tarjetas {
                                  (exepto e al final de una palabra), u transcribe el sonido
                               """,
                   imagenFonema: "y",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
@@ -1933,22 +2064,252 @@ struct tarjetas {
                                  Al final de una palabra y precedidas de una consonante transcriben los sonidos
                               """,
                   imagenFonema: "yn",
-                  imagenConsejo: nil
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
                         Palabra(palabra: "forum", enGriego: "fo.ʀom")
                   ],
-                  pronuciacion: "-une",
+                  pronuciacion: "-um",
                   explicacion: """
                                  Al final de una palabra y precedidas de una consonante transcriben los sonidos
                               """,
-                  imagenFonema: "yn",
-                  imagenConsejo: nil
+                  imagenFonema: "om",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
               )
           ],
           excepciones: nil
         ),
+        
+        Tarjeta(audio: "pb_u_04",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "au", enGriego: "o"),
+                        Palabra(palabra: "saut", enGriego: "so")
+                  ],
+                  pronuciacion: "au",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "o",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_05",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ou", enGriego: "u"),
+                        Palabra(palabra: "nous", enGriego: "nu")
+                  ],
+                  pronuciacion: "ou",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "o",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              ),
+            
+            Silaba(
+                palabras: [
+                      Palabra(palabra: "où", enGriego: "u")
+                ],
+                pronuciacion: "où",
+                explicacion: """
+                                transcribe el sonido
+                            """,
+                imagenFonema: "u",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            ),
+            
+            Silaba(
+                palabras: [
+                      Palabra(palabra: "trouer", enGriego: "tʀu.ᴇ")
+                ],
+                pronuciacion: "ou + vocal",
+                explicacion: """
+                                Después de dos consonantes que se pronuncian transcriben el sonido
+                            """,
+                imagenFonema: "u",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            ),
+            
+            Silaba(
+                palabras: [
+                      Palabra(palabra: "ouest", enGriego: "wᴇst"),
+                      Palabra(palabra: "douane", enGriego: "dwan")
+                ],
+                pronuciacion: "ou+ vocal",
+                explicacion: """
+                                Al principio de una palabra o después de una sola consonante transcriben el sonido
+                            """,
+                imagenFonema: "w",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_06",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "peu", enGriego: "pɶ"),
+                        Palabra(palabra: "euro", enGriego: "ɶ.ʀo")
+                  ],
+                  pronuciacion: "eu",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "ɶ",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_u_07",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "reliure", enGriego: "ʀɶ.ljyʀ"),
+                        Palabra(palabra: "striure", enGriego: "stʀi.jyʀ")
+                  ],
+                  pronuciacion: "u",
+                  explicacion: """
+                                  Después de una i transcribe el sonido
+                              """,
+                  imagenFonema: "y",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_08",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "fatiguant", enGriego: "fa.ti.gɑ̃"),
+                        Palabra(palabra: "guerre", enGriego: "gᴇʀ"),
+                        Palabra(palabra: "guide", enGriego: "gid")
+                  ],
+                  pronuciacion: "gu",
+                  explicacion: """
+                                  transcribe el sonido
+                              """,
+                  imagenFonema: "g",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_09",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "quand", enGriego: "kɑ̃"),
+                        Palabra(palabra: "qui", enGriego: "ki"),
+                        Palabra(palabra: "que", enGriego: "kɶ")
+                  ],
+                  pronuciacion: "qu",
+                  explicacion: """
+                                  transcriben el sonido
+                              """,
+                  imagenFonema: "k",
+                  imagenConsejo: "u_retro_3Ib _n2",
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_10",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "accueil", enGriego: "a.kɶj"),
+                        Palabra(palabra: "cueillir", enGriego: "kɶ.jiʀ")
+                  ],
+                  pronuciacion: "cuei",
+                  explicacion: """
+                                  u no transcribe ningún sonido
+                              """,
+                  imagenFonema: sinSonido,
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_u_11",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "lui", enGriego: "lɥi"),
+                        
+                  ],
+                  pronuciacion: "u",
+                  explicacion: """
+                                  Precedida de una sola consonante
+                                  y seguida de una vocal transcribe el sonido
+                              """,
+                  imagenFonema: "ɥ",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              ),
+            Silaba(
+                palabras: [
+                        Palabra(palabra: "cruel", enGriego: "kʀy.ᴇl")
+                ],
+                pronuciacion: "u ",
+                explicacion: """
+                                Precedida de dos consonantes que se pronuncian y seguida de una vocal transcribe el sonido
+                            """,
+                imagenFonema: "y",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_u_12",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ennuyeux", enGriego: "ɑ̃.nɥi.jɶ"),
+                        Palabra(palabra: "bruyante", enGriego: "bʀɥi.jɑ̃t")
+                  ],
+                  pronuciacion: "uy",
+                  explicacion: """
+                                  Seguidas de una vocal, u transcribe el sonido
+                              """,
+                  imagenFonema: "ɥ",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        )
         
     ]
     
@@ -1964,7 +2325,8 @@ struct tarjetas {
                               En la forma conjugada del verbo être, transcriben el sonido
                           """,
               imagenFonema: "E",
-              imagenConsejo: nil
+              imagenConsejo: nil,
+              textodeAbajo: nil
           )
       ],
       excepciones: nil

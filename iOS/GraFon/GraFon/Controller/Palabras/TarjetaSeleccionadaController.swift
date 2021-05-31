@@ -15,9 +15,6 @@ class TarjetaSeleccionadaController: UICollectionViewController {
     private var tarjeta: Tarjeta?
 
     override func viewDidLoad() {
-        let logo = UIImage(named: "a_n2_mdpi")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
         super.viewDidLoad()
         self.collectionView!.register(CeldaSonidoYSilabas.self, forCellWithReuseIdentifier: identificadorCeldaInicio)
         self.collectionView!.register(CeldaSilabasYExplicacion.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
@@ -95,6 +92,11 @@ extension TarjetaSeleccionadaController{
 
 extension TarjetaSeleccionadaController{
     func configuracionVisual(){
+        
+        let logo = UIImage(named: "a_n2_mdpi")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
     }
 }
