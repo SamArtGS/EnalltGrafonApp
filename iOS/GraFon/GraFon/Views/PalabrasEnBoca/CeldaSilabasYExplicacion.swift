@@ -90,7 +90,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         
         labelIzq.font = .Lato(.bold, size: 16)
         labelIzq.textAlignment = .right
-        labelDer.textColor = .systemGray
+        labelIzq.textColor = .black
         labelIzq.contentMode = .scaleAspectFit
         
         labelDer.font = .Lato(.bold, size: 16)
@@ -129,6 +129,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private var posicionLetraLabel: UILabel = {
         let etiqueta = UILabel()
         etiqueta.font = .Lato(.bold, size: 20)
+        etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
@@ -140,6 +141,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
         etiqueta.font = .Lato(.bold, size: 16)
+        etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit

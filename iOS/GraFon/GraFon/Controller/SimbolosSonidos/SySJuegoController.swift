@@ -79,12 +79,12 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
-        puntaje.title = "\(indexPath.item + 1 )|\(tarjetas?.count ?? 1)"
+        puntaje.title = "\(indexPath.item + 1 ) | \(tarjetas?.count ?? 1)"
         barraProgreso.progress = Float(indexPath.item + 1 )/Float(tarjetas?.count ?? 1)
     }
     
     private var puntaje: UIBarButtonItem = {
-        return UIBarButtonItem(title: "0|20",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "0 | 20",style: .plain, target: nil, action: nil)
     }()
     
 
@@ -92,7 +92,9 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         let barraprog = UIProgressView(progressViewStyle: .default)
         barraprog.isUserInteractionEnabled = true
         barraprog.translatesAutoresizingMaskIntoConstraints = false
-        barraprog.progressTintColor = .colorLineaBarraSuperiorSyS
+        barraprog.progressTintColor = .white
+        barraprog.isOpaque = true
+        barraprog.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         return barraprog
     }()
 }
@@ -100,13 +102,12 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
 extension SySJuego1VC{
     func configurar(){
         self.title = "Juego \(nivelFonema!)"
-        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
-        let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
-        self.toolbarItems = items
-        self.navigationController?.setToolbarHidden(false, animated: true)
+       
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = false
         collectionView?.isScrollEnabled = false
+        
+        configuracionToolBar()
         
         
         /// Configuración del botón de ayuda
@@ -114,6 +115,16 @@ extension SySJuego1VC{
         action: #selector(instrucciones),
         imageName: "icons8-query")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+    }
+    
+    func configuracionToolBar(){
+        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
+        let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
+        self.toolbarItems = items
+        self.navigationController?.setToolbarHidden(false, animated: true)
+        self.navigationController?.toolbar.isTranslucent = false
+        self.navigationController?.toolbar.barTintColor = .colorBarraSuperiorSyS
+        self.navigationController?.toolbar.tintColor = .white
     }
     
     func collectionView(_ collectionView: UICollectionView,

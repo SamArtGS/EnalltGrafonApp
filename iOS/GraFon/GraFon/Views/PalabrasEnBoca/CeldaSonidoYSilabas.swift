@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CeldaSonidoYSilabas: UICollectionViewCell {
     
+    private var sonido: String?
+    private var reproductorAudio: AVAudioPlayer = AVAudioPlayer()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         configurarConstraints()
     }
     
@@ -27,12 +32,12 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         didSet {
             guard let destapado = tarjetaSeleccionada else { return }
             var contadorPalabras = 0
+            sonido = destapado.audio
             for cuenta in 0...destapado.silabas.count - 1{
                 let bloqueSilaba = previstaSilaba(destapado.silabas[cuenta], UIColor.fondosSilabaPalabrasEnBoca[cuenta])
                 pilaViews.addArrangedSubview(bloqueSilaba)
                 contadorPalabras += destapado.silabas[cuenta].palabras.count
                 NSLayoutConstraint.activate([
-                    
                     bloqueSilaba.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 15),
                     bloqueSilaba.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -15)
                 ])
@@ -82,6 +87,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let labelDer:UILabel = UILabel()
         
         labelIzq.font = .Lato(.bold, size: 16)
+        labelIzq.textColor = .black
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelIzq.textAlignment = .right
         labelIzq.contentMode = .scaleAspectFill
@@ -89,6 +95,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         labelDer.font = .Lato(.bold, size: 16)
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         labelDer.textAlignment = .left
+        labelDer.textColor = .black
         labelDer.textColor = .systemPink
         labelDer.contentMode = .scaleAspectFill
         
@@ -121,6 +128,16 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         labelDer.text = textoDerecho
         
         return vista
+    }
+    
+    @objc func sonarAudio(){
+        let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")
+        do {
+            reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+            reproductorAudio.play()
+        }catch{
+            print("Error al reproducir el audio: \(error.localizedDescription)")
+        }
     }
 
     func configurarConstraints(){

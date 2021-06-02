@@ -27,15 +27,15 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         }
     }
     
-    private let botonSonido: UIButton = {
-        let boton = UIButton(type: .custom)
-        boton.translatesAutoresizingMaskIntoConstraints = false
-        boton.setImage(UIImage(named: "n1_jgo_play_mdpi"), for: .normal)
-        boton.setImage(UIImage(named: "n1_jgo_playing_mdpi"), for: .highlighted)
-        boton.contentMode = .scaleAspectFit
-        boton.isUserInteractionEnabled = true
-        return boton
-    }()
+//    private let botonSonido: UIButton = {
+//        let boton = UIButton(type: .custom)
+//        boton.translatesAutoresizingMaskIntoConstraints = false
+//        boton.setImage(UIImage(named: "n1_jgo_play_mdpi"), for: .normal)
+//        boton.setImage(UIImage(named: "n1_jgo_playing_mdpi"), for: .highlighted)
+//        boton.contentMode = .scaleAspectFit
+//        boton.isUserInteractionEnabled = true
+//        return boton
+//    }()
     
      let imagenFonema: UIImageView = {
         let imageView = UIImageView()
@@ -99,7 +99,7 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
         addSubview(pilaElementos)
-        pilaElementos.addArrangedSubview(botonSonido)
+        //pilaElementos.addArrangedSubview(botonSonido)
         pilaElementos.addArrangedSubview(imagenFonema)
         pilaElementos.addArrangedSubview(pilaPajaros)
         pilaPajaros.addArrangedSubview(imagenPajaroMal)
@@ -127,7 +127,7 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
+        //botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         configurarConstraints()
         arrastre()
     }

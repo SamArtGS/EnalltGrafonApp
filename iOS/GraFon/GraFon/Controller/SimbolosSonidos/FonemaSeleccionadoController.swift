@@ -52,6 +52,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         self.navigationController?.toolbar.tintColor = .white
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false

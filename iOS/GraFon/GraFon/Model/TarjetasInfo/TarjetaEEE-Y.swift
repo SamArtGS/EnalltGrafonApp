@@ -2313,26 +2313,6 @@ struct tarjetas {
         
     ]
     
-    /*
-    Tarjeta(audio: "192",
-      silabas: [
-          Silaba(
-              palabras: [
-                    Palabra(palabra: "tu es", enGriego: "ty.ᴇ"),
-              ],
-              pronuciacion: "es",
-              explicacion: """
-                              En la forma conjugada del verbo être, transcriben el sonido
-                          """,
-              imagenFonema: "E",
-              imagenConsejo: nil,
-              textodeAbajo: nil
-          )
-      ],
-      excepciones: nil
-    )
-    */
-    
     
     /// ---------------------------------------------------------------------------------
     /// ----------------------------------      T A R J E T A S    Y   -----------------------------------------------------------------------------------
@@ -2341,8 +2321,203 @@ struct tarjetas {
     
     static let tarjetasY:[Tarjeta] = [
     
+        Tarjeta(audio: "pb_y_01",
+          silabas: [
+                Silaba(
+                    palabras: [
+                          Palabra(palabra: "yaourt", enGriego: "ja.uʀt")
+                    ],
+                    pronuciacion: "y-",
+                    explicacion: """
+                                    Al principio de una palabra y
+                                    seguida de una vocal transcribe el sonido
+                                """,
+                    imagenFonema: "j",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(
+                    palabras: [
+                          Palabra(palabra: "Yves", enGriego: "iv")
+                    ],
+                    pronuciacion: "y-",
+                    explicacion: """
+                                    Al principio de una palabra y
+                                    seguida de una consonante transcribe el sonido
+                                """,
+                    imagenFonema: "i",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(
+                    palabras: [
+                          Palabra(palabra: "jury", enGriego: "ʒy.ʀi"),
+                    ],
+                    pronuciacion: "-y",
+                    explicacion: """
+                                    Al final de una palabra, después de una consonante transcribe el sonido
+                                """,
+                    imagenFonema: "i",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_y_02",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "cyclisme", enGriego: "si.klism"),
+                        Palabra(palabra: "synonyme", enGriego: "si.no.nim")
+                  ],
+                  pronuciacion: "-y-",
+                  explicacion: """
+                                  Entre dos consonantes
+                                  (excepto si la segunda es n o m seguida de una consonante) transcribe el sonido
+                              """,
+                  imagenFonema: "i",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              ),
+             Silaba(
+                    palabras: [
+                          Palabra(palabra: "syntaxe", enGriego: "sɛ̃.taks"),
+                          Palabra(palabra: "symbole", enGriego: "sɛ̃.bol")
+                    ],
+                    pronuciacion: "-yn- o -ym-",
+                    explicacion: """
+                                    Entre consonantes transcriben el sonido
+                                """,
+                    imagenFonema: "ɛ̃",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+            ),
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_y_03",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "myope", enGriego: "mjop"),
+                        Palabra(palabra: "lyophiliser", enGriego: "ljo.fi.li.zᴇ"),
+                  ],
+                  pronuciacion: "-y-",
+                  explicacion: """
+                                  Entre una consonante y una vocal transcribe el sonido
+                              """,
+                  imagenFonema: "j",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_y_04",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "joyeux", enGriego: "ʒwa.jɶ"),
+                        Palabra(palabra: "voyage", enGriego: "vwa.jaʒ"),
+                  ],
+                  pronuciacion: "-oy-",
+                  explicacion: """
+                                  Seguidas de una vocal transcriben los sonidos
+                              """,
+                  imagenFonema: "wa.j",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_y_05",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "crayon", enGriego: "kʀᴇ.jõ"),
+                    Palabra(palabra: "elles payaient", enGriego: "ᴇl.pᴇ.jᴇ"),
+                    Palabra(palabra: "rayure", enGriego: "ʀᴇ.jyʀ")
+              ],
+              pronuciacion: "ay",
+              explicacion: """
+                              Seguidas de una vocal transcriben los sonidos
+                          """,
+              imagenFonema: "ᴇj",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            Silaba(
+                palabras: [
+                      Palabra(palabra: "il paye", enGriego: "il.pᴇj")
+                ],
+                pronuciacion: "-aye",
+                explicacion: """
+                                Al final de una palabra transcriben los sonidos
+                            """,
+                imagenFonema: "ᴇj",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            ),
+            Silaba(
+                palabras: [
+                      Palabra(palabra: "elles payent", enGriego: "ᴇl.pᴇj")
+                ],
+                pronuciacion: "-ayent",
+                explicacion: """
+                                Al final de una palabra transcriben los sonidos
+                            """,
+                imagenFonema: "ᴇj",
+                imagenConsejo: nil,
+                textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_y_06",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "pays", enGriego: "pᴇ.i"),
+                        Palabra(palabra: "paysane", enGriego: "pᴇ.i.zan")
+                  ],
+                  pronuciacion: "ay",
+                  explicacion: """
+                                  Seguidas de s transcriben los sonidos
+                              """,
+                  imagenFonema: "ᴇ.i",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_y_07",
+          silabas: [
+              Silaba(
+                  palabras: [
+                        Palabra(palabra: "ennuyeux", enGriego: "ɑ̃.nɥi.jɶ"),
+                        Palabra(palabra: "bruyante", enGriego: "bʀɥi.jɑ̃t")
+                  ],
+                  pronuciacion: "uy",
+                  explicacion: """
+                                  Seguidas de una vocal transcriben los sonidos
+                              """,
+                  imagenFonema: "ɥij",
+                  imagenConsejo: nil,
+                  textodeAbajo: nil
+              )
+          ],
+          excepciones: nil
+        )
+        
     ]
-    
-    
-    
 }
