@@ -64,8 +64,8 @@ extension PuertaCell{
     func iniciarAnimacion(){
         imagenPuerta.animationDuration = 1.3
         imagenPuerta.startAnimating()
-        
     }
+    
     func detenerAnimacion(){
         imagenPuerta.stopAnimating()
     }

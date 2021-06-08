@@ -88,7 +88,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        labelIzq.font = .Lato(.bold, size: 16)
+        labelIzq.font = .Lato(.regular, size: 16)
         labelIzq.textAlignment = .right
         labelIzq.textColor = .black
         labelIzq.contentMode = .scaleAspectFit
@@ -136,11 +136,11 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return etiqueta
     }()
     
-    private var explicacion: UILabel = {
-        let etiqueta = UILabel()
+    private var explicacion: UILabelPersonalizado = {
+        let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Lato(.bold, size: 16)
+        etiqueta.font = .Lato(.regular, size: 16)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center

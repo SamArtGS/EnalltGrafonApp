@@ -317,7 +317,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "stop", enGriego: "stop")
               ],
-              pronuciacion: "-oup",
+              pronuciacion: "-p",
               explicacion: """
                               Al final de una palabra excepto en los grupos -oup o -amp transcribe el sonido
                           """,
@@ -329,12 +329,12 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "beaucoup", enGriego: "bo.ku")
               ],
-              pronuciacion: "-amp",
+              pronuciacion: "-oup",
               explicacion: """
                               Al final de una palabra, p no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
-              imagenConsejo: nil,
+              imagenConsejo: "e_retro_3Eb_n2",
               textodeAbajo: nil
             ),
             Silaba(
@@ -346,44 +346,373 @@ extension tarjetas{
                               Al final de una palabra, p no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_p_o3",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "temps", enGriego: "tɑ̃"),
+                    Palabra(palabra: "corps", enGriego: "koʀ"),
+                    Palabra(palabra: "tu romps", enGriego: "ty.ʀõ")
+              ],
+              pronuciacion: "-ps",
+              explicacion: """
+                              Al final de una palabra \n no transcribe ningún sonido.
+                          """,
+              imagenFonema: sinSonido,
               imagenConsejo: "e_retro_3Eb_n2",
               textodeAbajo: nil
             )
           ],
           excepciones: nil
-        )
+        ),
+        Tarjeta(audio: "pb_p_o4",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "il corrompt", enGriego: "il.ko.ʀõ")
+              ],
+              pronuciacion: "-pt",
+              explicacion: """
+                              Al final de un verbo conjugado no transcribe ningún sonido.
+                          """,
+              imagenFonema: sinSonido,
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        Tarjeta(audio: "pb_p_o5",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "appliquer", enGriego: "a.pli.kᴇ")
+              ],
+              pronuciacion: "-pp-",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "p",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
     ]
 
     static let tarjetasQ:[Tarjeta] = [
-
+        Tarjeta(audio: "pb_q_01",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "quatre", enGriego: "katʀ"),
+                    Palabra(palabra: "équipe", enGriego: "ᴇ.kip"),
+                    Palabra(palabra: "phonétique", enGriego: "fo.nᴇ.tik"),
+              ],
+              pronuciacion: "qu",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "k",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_q_02",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "acquérir", enGriego: "a.kᴇ.ʀiʀ"),
+                    Palabra(palabra: "grecque", enGriego: "gʀᴇk")
+              ],
+              pronuciacion: "-cqu-",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "k",
+              imagenConsejo: "e_retro_varias-letras_n2",
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
     ]
 
     static let tarjetasR:[Tarjeta] = [
-
+        Tarjeta(audio: "pb_r_01",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "rire", enGriego: "ʀiʀ"),
+                    Palabra(palabra: "bar", enGriego: "baʀ")
+              ],
+              pronuciacion: "r",
+              explicacion: """
+                              (Excepto en el caso del grupo -er al final de una palabra) \n transcribe el sonido
+                          """,
+              imagenFonema: "ʀ",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "aimer", enGriego: "ᴇ.mᴇ"),
+                    Palabra(palabra: "infirmier", enGriego: "ɛ̃.fir.mjᴇ")
+              ],
+              pronuciacion: "-er",
+              explicacion: """
+                              Al final de una palabra \n transcriben el sonido
+                          """,
+              imagenFonema: "ᴇ",
+              imagenConsejo: "e_retro_3Ob_n2",
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_r_02",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "terre", enGriego: "tᴇʀ"),
+                    Palabra(palabra: "arrivé", enGriego: "a.ʀi.vᴇ")
+              ],
+              pronuciacion: "-rr-",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "ʀ",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
     ]
 
     static let tarjetasS:[Tarjeta] = [
-
+        Tarjeta(audio: "pb_s_o1",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "sa", enGriego: "sa"),
+                    Palabra(palabra: "stupide", enGriego: "sty.pid")
+              ],
+              pronuciacion: "s-",
+              explicacion: """
+                              Al inicio de una palabra (excepto en el grupo sch-) \n transcribe el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "schéma", enGriego: "ʃᴇ.ma")
+              ],
+              pronuciacion: "sch-",
+              explicacion: """
+                              Al inicio de una palabra \n \n transcriben el sonido
+                          """,
+              imagenFonema: "ʃ",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_s_o2",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "base", enGriego: "baz"),
+                    Palabra(palabra: "cousine", enGriego: "ku.zin")
+              ],
+              pronuciacion: "-s-",
+              explicacion: """
+                              Entre dos vocales
+                              (excepto en el grupo res- al inicio de una palabra seguido de una vocal) \n\n transcribe el sonido
+                          """,
+              imagenFonema: "z",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "resalir", enGriego: "ʀɶ.sa.liʀ"),
+                    Palabra(palabra: "resituer", enGriego: "ʀɶ.si.tɥᴇ")
+              ],
+              pronuciacion: "res-",
+              explicacion: """
+                              Al inicio de una palabra y seguidas de una vocal, \n \n s transcribe el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_s_o3",
+          silabas: [
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "dispute", enGriego: "dis.pyt")
+              ],
+              pronuciacion: "s",
+              explicacion: """
+                              Antes de una consonante \n \n transcribe el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "éclipse", enGriego: "ᴇ.klips"),
+                    Palabra(palabra: "danse", enGriego: "dɑ̃s"),
+              ],
+              pronuciacion: "-s-",
+              explicacion: """
+                              Después de una consonante
+                              (excepto en el grupo trans- seguido de una vocal) \n \n transcribe el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "transitif", enGriego: "tʀɑ̃.zi.tif")
+              ],
+              pronuciacion: "trans-",
+              explicacion: """
+                              Seguido de una vocal, \n \n s transcribe el sonido
+                          """,
+              imagenFonema: "z",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_s_o4",
+          silabas: [
+            Silaba(
+              palabras: [
+                Palabra(palabra: "gros", enGriego: "gʀo"),
+                Palabra(palabra: "bas", enGriego: "ba"),
+                Palabra(palabra: "amis", enGriego: "a.mi"),
+                Palabra(palabra: "tu parles", enGriego: "ty.paʀl"),
+              ],
+              pronuciacion: "-s",
+              explicacion: """
+                              Al final de una palabra \n \n no transcribe ningún sonido.
+                          """,
+              imagenFonema: sinSonido,
+              imagenConsejo: "e_retro_3Eb_n2",
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_s_o5",
+          silabas: [
+            Silaba(
+              palabras: [
+                Palabra(palabra: "tasse", enGriego: "tas"),
+                Palabra(palabra: "stress", enGriego: "stʀᴇs"),
+              ],
+              pronuciacion: "ss",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        Tarjeta(audio: "pb_s_o6",
+          silabas: [
+            Silaba(
+              palabras: [
+                Palabra(palabra: "fascicule", enGriego: "fa.si.kyl"),
+                Palabra(palabra: "descendre", enGriego: "dᴇ.sɑ̃.dʀ"),
+                Palabra(palabra: "scyphozoaire", enGriego: "si.fo.zo.ᴇʀ")
+              ],
+              pronuciacion: "sc",
+              explicacion: """
+                              Seguidas de e, i, y \n \n transcriben el sonido
+                          """,
+              imagenFonema: "s",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            ),
+            
+            Silaba(
+              palabras: [
+                    Palabra(palabra: "scandale", enGriego: "skɑ̃.dal"),
+                    Palabra(palabra: "horoscope", enGriego: "o.ʀo.skop"),
+                    Palabra(palabra: "sculpture", enGriego: "skyl.tyʀ")
+              ],
+              pronuciacion: "sc",
+              explicacion: """
+                              Seguidas de a, o, u \n \n transcriben los sonidos
+                          """,
+              imagenFonema: "sk",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        
+        Tarjeta(audio: "pb_s_o7",
+          silabas: [
+            Silaba(
+              palabras: [
+                Palabra(palabra: "schéma", enGriego: "ʃᴇ.ma"),
+                Palabra(palabra: "haschich", enGriego: "a.ʃiʃ"),
+                Palabra(palabra: "goulasch", enGriego: "gu.laʃ")
+              ],
+              pronuciacion: "sch",
+              explicacion: """
+                              transcriben el sonido
+                          """,
+              imagenFonema: "ʃ",
+              imagenConsejo: nil,
+              textodeAbajo: nil
+            )
+          ],
+          excepciones: nil
+        ),
+        
+        
     ]
     
 }
 
-/*
- Tarjeta(audio: "pb_d_01",
-   silabas: [
-     Silaba(
-       palabras: [
-             Palabra(palabra: "cacao", enGriego: "ka.ka.o")
-       ],
-       pronuciacion: "c",
-       explicacion: """
-                       Seguida de a, o, u transcribe el sonido
-                   """,
-       imagenFonema: "k",
-       imagenConsejo: nil,
-       textodeAbajo: nil
-     )
-   ],
-   excepciones: nil
- ),
-*/

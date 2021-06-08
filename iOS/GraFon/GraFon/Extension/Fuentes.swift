@@ -19,6 +19,7 @@ extension UIFont {
         case lightItalic = "Light-Italic"
         case light = "-Light"
         case italic = "-Italic"
+        case black = "-Black"
         case extraBold = "-Extrabold"
         case boldItalic = "-BoldItalic"
         case bold = "-Bold"

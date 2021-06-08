@@ -35,7 +35,7 @@ extension UIColor {
     static var fondosSilabaPalabrasEnBoca: [UIColor] = [
         UIColor(red: 249/255, green: 232/255, blue: 226/255, alpha: 1.0),
         UIColor(red: 244/255, green: 218/255, blue: 209/255, alpha: 1.0),
-        UIColor(red: 224/255, green: 206/255, blue: 194/255, alpha: 1.0),
+        UIColor(red: 241/255, green: 206/255, blue: 194/255, alpha: 1.0),
         UIColor(red: 238/255, green: 194/255, blue: 180/255, alpha: 1.0),
         UIColor(red: 235/255, green: 180/255, blue: 162/255, alpha: 1.0),
         UIColor(red: 230/255, green: 167/255, blue: 148/255, alpha: 1.0),

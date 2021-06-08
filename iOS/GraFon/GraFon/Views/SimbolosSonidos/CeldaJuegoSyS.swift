@@ -199,8 +199,9 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
         if vista.isEqual(self.imagenPajaroMal){
             self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_sel_mdpi")
         }
-        
     }
+    
+    
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidExit session: UIDropSession) {
         guard let vista = interaction.view else{
             return
@@ -212,6 +213,7 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
             self.imagenPajaroMal.image = UIImage(named: "n1_jgo_NoCorresponde_mdpi")
         }
     }
+    
     func finalizado(){
         imagenFonema.isUserInteractionEnabled = false
     }
@@ -231,8 +233,6 @@ extension JuegoSySCelda: UIDropInteractionDelegate {
                     }catch{
                         print("Error al reproducir el audio")
                     }
-                    
-                    
                     self.delegate?.recolectarPuntaje()
                 }else{
                     self.imagenPajaroBien.image = UIImage(named: "n1_jgo_error_mdpi")

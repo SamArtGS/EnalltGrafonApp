@@ -17,7 +17,6 @@ class Carcasa: UIViewController{
         view.backgroundColor = .white
         vista.contentMode = .scaleAspectFit
         vista.clipsToBounds = true
-        //vista.delegate = self
         
         NSLayoutConstraint.activate([
             vista.topAnchor.constraint(equalTo: view.topAnchor),

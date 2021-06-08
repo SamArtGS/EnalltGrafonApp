@@ -25,7 +25,7 @@ struct tarjetas {
                         Palabra(palabra: "européen", enGriego: "Œ.RO.pE.ɛ̃")
                     ],
                     pronuciacion: "é",
-                    explicacion: "Transcribe el sonido",
+                    explicacion: "Transc*ri+be+ *el sonido* desde el principio de los tiempos +dond+e se tenía, hágase la luz y que comience la vida",
                     imagenFonema: "E",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -128,9 +128,9 @@ struct tarjetas {
                         Palabra(palabra: "ainsi", enGriego: "ɛ̃.si")
                     ],
                     pronuciacion: "ain",
-                    explicacion: "Al final de una palabra o seguida de una consonante. \n Transcribe el sonido",
+                    explicacion: "Al final de una palabra o seguida de una consonante \n\n transcribe el sonido",
                     imagenFonema: "ɛ̃",
-                    imagenConsejo: "i_retro_3Cb_n2",
+                    imagenConsejo: nil,
                     textodeAbajo: nil
                 ),
                 Silaba(
@@ -138,18 +138,18 @@ struct tarjetas {
                           Palabra(palabra: "ainé", enGriego: "ᴇ.nᴇ")
                     ],
                     pronuciacion: "ain",
-                    explicacion: "Seguidas de una vocal (excepto e al final de una palabra). \n La n forma parte de la sílaba que sigue. \n ai transcribe el sonido",
-                    imagenFonema: "E",
+                    explicacion: "Seguidas de una vocal (excepto e al final de una palabra)  \n\n ai transcribe el sonido",
+                    imagenFonema: "ᴇ",
                     imagenConsejo: nil,
-                    textodeAbajo: nil
+                    textodeAbajo: "La n forma parte de la sílaba que sigue."
                 ),
                 Silaba(
                     palabras: [
                           Palabra(palabra: "saine", enGriego: "sᴇn")
                     ],
                     pronuciacion: "-aine",
-                    explicacion: "Al final de una palabra, transcribe los sonidos",
-                    imagenFonema: "En",
+                    explicacion: "Al final de una palabra \n \n transcribe los sonidos",
+                    imagenFonema: "ᴇn",
                     imagenConsejo: nil,
                     textodeAbajo: nil
                 )

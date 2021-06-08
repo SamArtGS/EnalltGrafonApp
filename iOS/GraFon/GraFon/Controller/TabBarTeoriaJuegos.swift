@@ -114,6 +114,7 @@ extension TabBarSimbolosySonidos{
                                                imagenIcono: "icon-play",
                                                controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                 )
+                
                 viewControllers = [teoría,practica]
                 
                 colorearTabBar(colorFondo:          .colorTabBarSonidoSimbolo,

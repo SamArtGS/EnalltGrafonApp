@@ -36,7 +36,7 @@ class SimboloPaginaCelda: UICollectionViewCell {
     private var imagenFonemaAntes: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isUserInteractionEnabled = true
+        imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
