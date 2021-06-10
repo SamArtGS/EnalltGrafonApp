@@ -299,8 +299,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "zone", enGriego: "zon"),
-                    Palabra(palabra: "bronzer", enGriego: "bʀõ.zᴇ")
+                    Palabra(palabra: "*z*one", enGriego: "zon"),
+                    Palabra(palabra: "bron*z*er", enGriego: "bʀõ.zᴇ")
               ],
               pronuciacion: "z",
               explicacion: """
@@ -318,11 +318,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "raz", enGriego: "ʀa")
+                    Palabra(palabra: "ra*z*", enGriego: "ʀa")
               ],
               pronuciacion: "-z",
               explicacion: """
-                              Al final de una palabra (excepto precedida de t) \n \n no transcribe ningún sonido.
+                              Al final de una palabra (excepto precedida de ~t~) \n \n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: nil,
@@ -330,8 +330,8 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "chez", enGriego: "ʃᴇ"),
-                    Palabra(palabra: "vous parlez", enGriego: "vu.paʀ.lᴇ")
+                    Palabra(palabra: "ch*ez*", enGriego: "ʃᴇ"),
+                    Palabra(palabra: "vous parl*ez*", enGriego: "vu.paʀ.lᴇ")
               ],
               pronuciacion: "-ez",
               explicacion: """
@@ -343,7 +343,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "quartz", enGriego: "kwaʀts")
+                    Palabra(palabra: "quar*tz*", enGriego: "kwaʀts")
               ],
               pronuciacion: "-tz",
               explicacion: """
@@ -362,8 +362,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                Palabra(palabra: "pizza", enGriego: "pi.dza"),
-                Palabra(palabra: "paparazzi", enGriego: "pa.pa.ʀa.dzi")
+                Palabra(palabra: "pi*zz*a", enGriego: "pi.dza"),
+                Palabra(palabra: "papara*zz*i", enGriego: "pa.pa.ʀa.dzi")
               ],
               pronuciacion: "-zz-",
               explicacion: """

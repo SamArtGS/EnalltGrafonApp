@@ -21,11 +21,11 @@ struct tarjetas {
             silabas: [
                 Silaba(
                     palabras: [
-                        Palabra(palabra: "étude", enGriego: "E.tyd"),
-                        Palabra(palabra: "européen", enGriego: "Œ.RO.pE.ɛ̃")
+                        Palabra(palabra: "*é*tude", enGriego: "E.tyd"),
+                        Palabra(palabra: "europ*é*en", enGriego: "Œ.RO.pE.ɛ̃")
                     ],
                     pronuciacion: "é",
-                    explicacion: "Transc*ri+be+ *el sonido* desde el principio de los tiempos +dond+e se tenía, hágase la luz y que comience la vida",
+                    explicacion: "Tr*ansc*ri+be+ *el sonido* desde el principio de los tiempos +dond+e se tenía, $hagase$ la luz y que *comience* la vida",
                     imagenFonema: "E",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -39,13 +39,13 @@ struct tarjetas {
             silabas: [
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "mère", enGriego: "mER"),
-                          Palabra(palabra: "brève", enGriego: "bREv")
+                          Palabra(palabra: "m*è*re", enGriego: "mER"),
+                          Palabra(palabra: "br*è*ve", enGriego: "bREv")
                     ],
                     pronuciacion: "è",
                     explicacion: "Transcribe el sonido",
                     imagenFonema: "E",
-                    imagenConsejo: "buho",
+                    imagenConsejo: "e_retro_3Pb_n2",
                     textodeAbajo: nil
                 )
             ],

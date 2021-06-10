@@ -34,9 +34,9 @@ class CeldaPalabras: UICollectionViewCell {
         return imageView
     }()
     
-    private let palabrerio: UILabel = {
-        let etiqueta = UILabel()
-        etiqueta.font = .Lato(.regular, size: 12)
+    private let palabrerio: UILabelPersonalizado = {
+        let etiqueta = UILabelPersonalizado()
+        etiqueta.font = .Lato(.regular, size: 15)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.numberOfLines = 10

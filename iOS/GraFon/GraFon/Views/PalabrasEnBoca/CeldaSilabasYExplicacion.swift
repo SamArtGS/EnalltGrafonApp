@@ -81,16 +81,16 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
         let vista = UIStackView()
-        let labelIzq:UILabel = UILabel()
+        let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabel()
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        labelIzq.font = .Lato(.regular, size: 16)
+        //labelIzq.font = .Lato(.regular, size: 16)
         labelIzq.textAlignment = .right
-        labelIzq.textColor = .black
+        //labelIzq.textColor = .black
         labelIzq.contentMode = .scaleAspectFit
         
         labelDer.font = .Lato(.bold, size: 16)

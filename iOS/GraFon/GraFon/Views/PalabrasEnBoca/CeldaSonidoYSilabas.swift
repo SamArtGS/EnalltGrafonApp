@@ -83,10 +83,10 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     
     private let previstaSilaba: (Silaba,UIColor) -> (UIStackView) = { silaba,color in
         let vista = UIStackView()
-        let labelIzq:UILabel = UILabel()
+        let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabel()
         
-        labelIzq.font = .Lato(.bold, size: 16)
+        labelIzq.font = .Lato(.regular, size: 16)
         labelIzq.textColor = .black
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelIzq.textAlignment = .right

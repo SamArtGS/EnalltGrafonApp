@@ -96,8 +96,8 @@ extension TarjetaSeleccionadaController{
         let logo = UIImage(named: "a_n2_mdpi")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
-        
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+        
     }
 }
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{

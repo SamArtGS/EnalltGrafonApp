@@ -16,22 +16,27 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z0-9_ ]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ ]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }
+}
+
+struct PosicionRegexColor {
+    let formato: Formato
+    let localizacion: Int
+    let longitud: Int
 }
 
 class UILabelPersonalizado: UILabel{
     
     let formatos: [Formato] = [
         Formato(simbolo: "*", color: .black, fuente: .Lato(.black, size: 16)),  // Con * se pone las Negrita Negro
-        Formato(simbolo: "~", color: .blue, fuente: .Lato(.bold, size: 16)),    // Con ~ se pone las Negrita Azul
+        Formato(simbolo: "$", color: .blue, fuente: .Lato(.bold, size: 16)),    // Con ~ se pone las Negrita Azul
         Formato(simbolo: "+", color: .green, fuente: .Lato(.bold, size: 16)),   // Con + se pone las Negrita Verde
     ]
     
     var banderin = false
-    
     
     override var text: String? {
         didSet{
@@ -57,7 +62,9 @@ class UILabelPersonalizado: UILabel{
             textoSinSimbolos = textoSinSimbolos.replacingOccurrences(of: "\\\(formato.simbolo)", with: "", options: .regularExpression)
         }
         
-        let textoFinal = NSMutableAttributedString(string: texto)
+        let textoFinal = NSMutableAttributedString(string: textoSinSimbolos)
+        
+        var posicionesColor:[PosicionRegexColor] = []
         
         for formato in formatos{
             let regex = try? NSRegularExpression(pattern: formato.regex, options: [])
@@ -65,17 +72,24 @@ class UILabelPersonalizado: UILabel{
             let matches = regex!.matches(in: texto, options: [], range: range)
             let ranges = matches.map {$0.range}
             
-            for iterador in 0..<ranges.count{
-                textoFinal.addAttribute(.foregroundColor, value: formato.color,
-                                        range: NSRange(location: ranges[iterador].location-(iterador*2),
-                                                       length: ranges[iterador].length-2
-                                        ))
-                textoFinal.addAttribute(.font, value: formato.fuente,
-                                        range: NSRange(location: ranges[iterador].location-(iterador*2),
-                                                       length: ranges[iterador].length-2
-                                        ))
+            for rango in ranges {
+                posicionesColor.append(PosicionRegexColor(formato: formato, localizacion: rango.location, longitud: rango.length))
             }
         }
+        
+        posicionesColor.sort(by: {$0.localizacion < $1.localizacion})
+        
+        for num in 0..<posicionesColor.count{
+            textoFinal.addAttribute(.foregroundColor, value: posicionesColor[num].formato.color,
+                                    range: NSRange(location: posicionesColor[num].localizacion-(num*2),
+                                                   length: posicionesColor[num].longitud-2
+                                        ))
+            textoFinal.addAttribute(.font, value: posicionesColor[num].formato.fuente,
+                                        range: NSRange(location: posicionesColor[num].localizacion-(num*2),
+                                                       length: posicionesColor[num].longitud-2
+                                        ))
+        }
+        
         
         attributedText = textoFinal
         banderin = true
