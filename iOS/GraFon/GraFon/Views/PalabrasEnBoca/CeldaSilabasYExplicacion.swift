@@ -227,13 +227,22 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
     func esTarjetaFinal(){
+        adornito.isHidden = true
         fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
     }
+    
     func esTarjetaNormal(){
         fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    func esTarjetaUnica(){
+        adornito.isHidden = true
+        fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
     }
     
     func configurarConstraints(){

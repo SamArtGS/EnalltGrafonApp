@@ -25,15 +25,13 @@ struct tarjetas {
                         Palabra(palabra: "europ*é*en", enGriego: "Œ.RO.pE.ɛ̃")
                     ],
                     pronuciacion: "é",
-                    explicacion: "Tr*ansc*ri+be+ *el sonido* desde el principio de los tiempos +dond+e se tenía, $hagase$ la luz y que *comience* la vida",
-                    imagenFonema: "E",
+                    explicacion: "Transcribe el sondio",
+                    imagenFonema: "ᴇ",
                     imagenConsejo: nil,
                     textodeAbajo: nil
                 )
             ],
-            excepciones: [Palabra(palabra: "coach", enGriego: "kot∫"),
-                          Palabra(palabra: "goal", enGriego: "gol"),
-                          Palabra(palabra: "toast", enGriego: "tost")]
+            excepciones: nil
         ),
         Tarjeta(audio: "192",
             silabas: [

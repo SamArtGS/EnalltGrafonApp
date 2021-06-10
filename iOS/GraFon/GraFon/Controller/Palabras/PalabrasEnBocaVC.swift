@@ -78,6 +78,7 @@ extension PalabrasEnBocaVC: SeleccionarTarjetaDelegate{
         let vcs = TarjetaSeleccionadaController(collectionViewLayout:scrollLayout,
                                                 tarjeta: Data.letras.filter{letra in
                                                     letra.identificador != 0}[(indice ?? 0)-1].tarjetas?[seleccionado])
+        vcs.letraTitulo = items[0].title
         self.navigationController?.pushViewController(vcs, animated: true)
     }
     

@@ -13,6 +13,13 @@ class TarjetaSeleccionadaController: UICollectionViewController {
     private let identificadorCeldaInicio:String = "CeldaInicio"
     private let identificadorCeldaSilabas: String = "CeldaSilaba"
     private var tarjeta: Tarjeta?
+    
+    var letraTitulo: String? {
+        didSet{
+            guard let titulo = letraTitulo else { return }
+            self.title = titulo
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +77,15 @@ extension TarjetaSeleccionadaController{
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
-                cell.esTarjetaInicio()
+                
+                if tarjeta?.silabas.count == 1 {
+                    cell.esTarjetaUnica()
+                }else{
+                    cell.esTarjetaInicio()
+                }
+                
                 return cell
-            case (tarjeta?.silabas.count ?? 1) - 1:
+            case (tarjeta?.silabas.count ?? 1):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
@@ -92,10 +105,6 @@ extension TarjetaSeleccionadaController{
 
 extension TarjetaSeleccionadaController{
     func configuracionVisual(){
-        
-        let logo = UIImage(named: "a_n2_mdpi")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         
     }

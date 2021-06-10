@@ -56,7 +56,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let boton = UIButton(type: .custom)
         boton.translatesAutoresizingMaskIntoConstraints = false
         boton.setImage(UIImage(named: "jgo_playing_n2"), for: .normal)
-        boton.setImage(UIImage(named: "jgo_play_n2"), for: .highlighted)
+        boton.setImage(UIImage(named: "jgo_play_n2"), for: .selected)
         boton.contentMode = .scaleAspectFit
         boton.isUserInteractionEnabled = true
         return boton
@@ -134,13 +134,17 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")
         do {
             reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+            reproductorAudio.delegate = self
             reproductorAudio.play()
+            botonSonido.isSelected = true
+            self.isHighlighted = true
         }catch{
             print("Error al reproducir el audio: \(error.localizedDescription)")
         }
     }
 
     func configurarConstraints(){
+        
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(imagenFondo)
@@ -162,5 +166,13 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
             pilaViews.leadingAnchor.constraint(equalTo: imagenFondo.leadingAnchor),
             pilaViews.trailingAnchor.constraint(equalTo: imagenFondo.trailingAnchor),
         ])
+    }
+}
+
+extension CeldaSonidoYSilabas: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if flag {
+            botonSonido.isSelected = false
+        }
     }
 }
