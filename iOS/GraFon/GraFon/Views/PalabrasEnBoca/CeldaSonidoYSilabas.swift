@@ -86,13 +86,13 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabel()
         
-        labelIzq.font = .Lato(.regular, size: 16)
-        labelIzq.textColor = .black
+        labelIzq.font = .Lato(.italic, size: 15)
+        labelIzq.textColor = .colorLetras
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelIzq.textAlignment = .right
         labelIzq.contentMode = .scaleAspectFill
         
-        labelDer.font = .Lato(.bold, size: 16)
+        labelDer.font = .Lato(.bold, size: 15)
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         labelDer.textAlignment = .left
         labelDer.textColor = .black

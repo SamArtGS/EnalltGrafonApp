@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarSimbolosySonidos: UITabBarController{
+class TabBarTeoriaJuegos: UITabBarController{
     
     deinit {
         print("Se ha reciclado la página de tabBar")
@@ -63,7 +63,7 @@ class TabBarSimbolosySonidos: UITabBarController{
 
 
 
-extension TabBarSimbolosySonidos{
+extension TabBarTeoriaJuegos{
     
     /// Extensión dedicada a personalizar la Pantalla de TabBar Home dependiendo de la puerta seleccionada
     /// - Parameter puerta: puerta que ha sido seleccionada, basada en su índice desde 0 a 3
@@ -133,7 +133,7 @@ extension TabBarSimbolosySonidos{
 }
 
 
-extension TabBarSimbolosySonidos: UITabBarControllerDelegate{
+extension TabBarTeoriaJuegos: UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let selectedIndex = tabBarController.viewControllers?.firstIndex(of: viewController)!
         if selectedIndex == 0 {

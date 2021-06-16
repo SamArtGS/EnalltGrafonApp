@@ -12,6 +12,8 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private var imagenConsejo: String?
     
+    var delegate:MostrarExcepcionesDelegate?
+    
     var silaba: Silaba? {
         didSet {
             guard let destapado = silaba else { return }
@@ -75,6 +77,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private let fondo: UIView = {
         let view = UIView()
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -88,12 +91,12 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        //labelIzq.font = .Lato(.regular, size: 16)
+        labelIzq.font = .Lato(.italic, size: 15)
         labelIzq.textAlignment = .right
-        //labelIzq.textColor = .black
+        labelIzq.textColor = .colorLetras
         labelIzq.contentMode = .scaleAspectFit
         
-        labelDer.font = .Lato(.bold, size: 16)
+        labelDer.font = .Lato(.bold, size: 15)
         labelDer.textColor = .systemPink
         labelDer.textAlignment = .left
         labelDer.contentMode = .scaleAspectFit
@@ -167,15 +170,16 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return imageView
     }
     
-    private var textoDeAbajo: ( String? ) -> UILabel = { texto in
-        let etiqueta = UILabel()
+    private var textoDeAbajo: ( String? ) -> UILabelPersonalizado = { texto in
+        let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.text = texto
-        etiqueta.font = .Lato(.bold, size: 16)
+        etiqueta.font = .Lato(.regular, size: 16)
+        etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
+        etiqueta.text = texto
         return etiqueta
     }
     
@@ -199,8 +203,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     @objc func mostrarExplicacion(tapGestureRecognizer: UITapGestureRecognizer){
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
-        print("Si se hizo xd")
-        
         guard let destapado = imagenConsejo else { return }
         tappedImage.image = UIImage(named: destapado)
         
@@ -208,6 +210,8 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
             tappedImage.image = UIImage(named: "retro_n2")
         })
     }
+    
+    
     
     
     override init(frame: CGRect) {
@@ -223,6 +227,15 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         print("Se reclamado la sílaba de la primera posición")
     }
     
+    private let imagenVuelta: UIButton = {
+        let boton = UIButton(type: .custom)
+        boton.isUserInteractionEnabled = true
+        boton.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
+        boton.contentMode = .scaleAspectFit
+        
+        return boton
+    }()
+    
     func esTarjetaInicio(){
         fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -231,7 +244,17 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     func esTarjetaFinal(){
         adornito.isHidden = true
         fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        
+        imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
+            imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
+        ])
     }
     
     func esTarjetaNormal(){
@@ -246,28 +269,33 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     }
     
     func configurarConstraints(){
-        
-        
-        
         translatesAutoresizingMaskIntoConstraints = false
+        imagenVuelta.addTarget(self, action: #selector(voltear), for: .touchUpInside)
         
         addSubview(fondo)
         addSubview(pilaViews)
         fondo.addSubview(adornito)
+        addSubview(imagenVuelta)
         
         NSLayoutConstraint.activate([
             fondo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             fondo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             pilaViews.topAnchor.constraint(equalTo: fondo.topAnchor),
-            pilaViews.leadingAnchor.constraint(equalTo: leadingAnchor),
-            pilaViews.trailingAnchor.constraint(equalTo: trailingAnchor),
+            pilaViews.leadingAnchor.constraint(equalTo: fondo.leadingAnchor),
+            pilaViews.trailingAnchor.constraint(equalTo: fondo.trailingAnchor),
             pilaViews.bottomAnchor.constraint(equalTo: adornito.topAnchor),
             
             adornito.leadingAnchor.constraint(equalTo: fondo.leadingAnchor),
             adornito.trailingAnchor.constraint(equalTo: fondo.trailingAnchor),
-            adornito.bottomAnchor.constraint(equalTo: bottomAnchor),
+            adornito.bottomAnchor.constraint(equalTo: fondo.bottomAnchor),
             adornito.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
+}
+
+extension CeldaSilabasYExplicacion{
+    @objc func voltear(){
+        delegate?.mostrarExcepciones()
+    }
 }

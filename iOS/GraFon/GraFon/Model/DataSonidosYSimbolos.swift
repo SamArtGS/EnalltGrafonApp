@@ -9,24 +9,30 @@ import UIKit
 
 struct Data{
     
-    static let puertas = [Puerta(
-           nombreImagenPuertaCerrada: "PuertaJuegoPalabras",
-           nombreImagenPuertaMedio: "PuertaJuegoPalabras",
-           nombreImagenPuertaAbierta: "PuertaJuegoPalabras",
-           pantallaReferenciada: "PuertaJuegoPalabras"),
-    Puerta(nombreImagenPuertaCerrada: "PuertaJuegos",
-           nombreImagenPuertaMedio: "PuertaJuegos",
-           nombreImagenPuertaAbierta: "PuertaJuegos",
-           pantallaReferenciada: "PuertaJuegos"),
-    Puerta(nombreImagenPuertaCerrada: "PuertaPalabrasCerrada",
-           nombreImagenPuertaMedio: "PuertaPalabrasMedio",
-           nombreImagenPuertaAbierta: "PuertaPalabrasAbierta",
-           pantallaReferenciada: "PuertaPalabras"),
-    Puerta(
-           nombreImagenPuertaCerrada: "PuertaSonidosSimbolosCerrada",
-           nombreImagenPuertaMedio: "PuertaSonidosSimbolosMedio",
-           nombreImagenPuertaAbierta: "PuertaSonidosSimbolosAbierta",
-           pantallaReferenciada: "PuertaSonidosSimbolos")]
+    static let puertas = [
+        Puerta(
+               nombreImagenPuertaCerrada: "PuertaSonidosSimbolosCerrada",
+               nombreImagenPuertaMedio: "PuertaSonidosSimbolosMedio",
+               nombreImagenPuertaAbierta: "PuertaSonidosSimbolosAbierta",
+               pantallaReferenciada: "PuertaSonidosSimbolos")
+        
+        ,
+        Puerta(nombreImagenPuertaCerrada: "PuertaPalabrasCerrada",
+               nombreImagenPuertaMedio: "PuertaPalabrasMedio",
+               nombreImagenPuertaAbierta: "PuertaPalabrasAbierta",
+               pantallaReferenciada: "PuertaPalabras"),
+        
+        Puerta(
+               nombreImagenPuertaCerrada: "PuertaJuegoPalabras",
+               nombreImagenPuertaMedio: "PuertaJuegoPalabras",
+               nombreImagenPuertaAbierta: "PuertaJuegoPalabras",
+               pantallaReferenciada: "PuertaJuegoPalabras"),
+        Puerta(nombreImagenPuertaCerrada: "PuertaJuegos",
+               nombreImagenPuertaMedio: "PuertaJuegos",
+               nombreImagenPuertaAbierta: "PuertaJuegos",
+               pantallaReferenciada: "PuertaJuegos"),
+    
+    ]
     
     static let fonemas:[Fonema] = [
         //Renglón 1

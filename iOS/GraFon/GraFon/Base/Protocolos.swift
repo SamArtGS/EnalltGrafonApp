@@ -18,3 +18,7 @@ protocol juegoSimbolosySonidosDelegate: AnyObject{
 protocol collectionViewDentro: UICollectionViewDelegate, UICollectionViewDataSource{
     func colocarDelegados()
 }
+
+protocol MostrarExcepcionesDelegate : AnyObject{
+    func mostrarExcepciones()
+}

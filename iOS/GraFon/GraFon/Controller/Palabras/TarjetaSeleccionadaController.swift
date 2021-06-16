@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TarjetaSeleccionadaController: UICollectionViewController {
+class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcionesDelegate{
     
     private let identificadorCeldaInicio:String = "CeldaInicio"
     private let identificadorCeldaSilabas: String = "CeldaSilaba"
@@ -31,6 +31,7 @@ class TarjetaSeleccionadaController: UICollectionViewController {
     init(collectionViewLayout layout: UICollectionViewLayout, tarjeta: Tarjeta?) {
         super.init(collectionViewLayout: layout)
         self.tarjeta = tarjeta
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +51,7 @@ class TarjetaSeleccionadaController: UICollectionViewController {
         print("Se reclama la memoria de las tarjetas")
     }
     
+    // MARK: BOTON VUELTA
 }
 
 
@@ -87,10 +89,14 @@ extension TarjetaSeleccionadaController{
                 return cell
             case (tarjeta?.silabas.count ?? 1):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
+                
+                cell.delegate = self
+                cell.isUserInteractionEnabled = true
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
                 cell.esTarjetaFinal()
+                
                 return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
@@ -106,7 +112,6 @@ extension TarjetaSeleccionadaController{
 extension TarjetaSeleccionadaController{
     func configuracionVisual(){
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
-        
     }
 }
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
@@ -117,7 +122,7 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
             print(cuenta)
             return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
          } else {
-            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30)
+            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 20) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 0.5
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 250 + palabrasCount)
             } else {
@@ -127,7 +132,7 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -136,4 +141,17 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    
+    
+}
+
+extension TarjetaSeleccionadaController{
+    func mostrarExcepciones(){
+        //PUSH
+        let secondVC = ExcepcionesController()
+        self.navigationController?.pushViewController(secondVC, animated: false)
+        UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
+    }
+    
 }

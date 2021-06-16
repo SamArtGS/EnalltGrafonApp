@@ -33,6 +33,8 @@
 		<string>Lato-Regular.ttf</string>
 		<string>Lato-BlackItalic.ttf</string>
 		<string>Lato-Light.ttf</string>
+		<string>Roboto-BoldItalic.ttf</string>
+		<string>Roboto-Italic.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -36,11 +36,13 @@ class CeldaPalabras: UICollectionViewCell {
     
     private let palabrerio: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
-        etiqueta.font = .Lato(.regular, size: 15)
-        etiqueta.textColor = .black
+        etiqueta.font = .Lato(.italic, size: 15)
+        etiqueta.textColor = .colorLetras
+        
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
-        etiqueta.numberOfLines = 10
-        etiqueta.textAlignment = .center
+        etiqueta.numberOfLines = 0
+        etiqueta.textAlignment = .left
+        etiqueta.sizeToFit()
         etiqueta.contentMode = .scaleAspectFit
         return etiqueta
     }()
@@ -57,7 +59,7 @@ class CeldaPalabras: UICollectionViewCell {
             imagenPergamino.trailingAnchor.constraint(equalTo: trailingAnchor),
             imagenPergamino.bottomAnchor.constraint(equalTo: bottomAnchor),
             palabrerio.topAnchor.constraint(equalTo: imagenPergamino.topAnchor),
-            palabrerio.leadingAnchor.constraint(equalTo: imagenPergamino.leadingAnchor),
+            palabrerio.leadingAnchor.constraint(equalTo: imagenPergamino.leadingAnchor, constant: 10),
             palabrerio.trailingAnchor.constraint(equalTo: imagenPergamino.trailingAnchor),
             palabrerio.bottomAnchor.constraint(equalTo: imagenPergamino.bottomAnchor),
         ])

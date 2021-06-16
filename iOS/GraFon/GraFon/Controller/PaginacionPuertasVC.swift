@@ -52,20 +52,22 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                 UIApplication.shared.endIgnoringInteractionEvents()
                 switch indexPath.item {
                     case 0:
+                        
+                        let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 3)
+                        self.navigationController?.pushViewController(viewTable, animated: true)
+                        
+                        break
     //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 0)
     //                    self.navigationController?.pushViewController(viewTable, animated: true)
-                        break
                     case 1:
+                        let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 2)
+                        self.navigationController?.pushViewController(viewTable, animated: true)
+                        break
     //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
     //                    self.navigationController?.pushViewController(viewTable, animated: true)
-                        break
                     case 2:
-                        let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 2)
-                        self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     case 3:
-                        let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 3)
-                        self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     default:
                         break

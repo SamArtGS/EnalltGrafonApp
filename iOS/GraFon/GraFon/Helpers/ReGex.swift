@@ -16,7 +16,7 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ ]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒ-]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }
@@ -31,9 +31,9 @@ struct PosicionRegexColor {
 class UILabelPersonalizado: UILabel{
     
     let formatos: [Formato] = [
-        Formato(simbolo: "*", color: .black, fuente: .Lato(.black, size: 16)),  // Con * se pone las Negrita Negro
-        Formato(simbolo: "$", color: .blue, fuente: .Lato(.bold, size: 16)),    // Con ~ se pone las Negrita Azul
-        Formato(simbolo: "+", color: .green, fuente: .Lato(.bold, size: 16)),   // Con + se pone las Negrita Verde
+        Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: 15)),  // Con * se pone las Negrita Negro
+        Formato(simbolo: "$", color: .blue, fuente: .Roboto(.regular, size: 15)),    // Con ~ se pone las Negrita Azul
+        Formato(simbolo: "+", color: .colorLetraVerde, fuente: .Roboto(.bold, size: 20)),   // Con + se pone las Negrita Verde
     ]
     
     var banderin = false
@@ -41,9 +41,9 @@ class UILabelPersonalizado: UILabel{
     override var text: String? {
         didSet{
             guard let textoDestapado = text else { return }
-            if !banderin{
+            //if !banderin{
                 colocarFormatosConRegex(texto: textoDestapado)
-            }
+            //}
         }
     }
 
