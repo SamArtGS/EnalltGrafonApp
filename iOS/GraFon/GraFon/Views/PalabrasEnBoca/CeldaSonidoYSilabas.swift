@@ -86,13 +86,13 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabel()
         
-        labelIzq.font = .Lato(.italic, size: 15)
+        labelIzq.font = .Roboto(.italic, size: 25)
         labelIzq.textColor = .colorLetras
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelIzq.textAlignment = .right
         labelIzq.contentMode = .scaleAspectFill
         
-        labelDer.font = .Lato(.bold, size: 15)
+        labelDer.font = .Roboto(.regular, size: 21)
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         labelDer.textAlignment = .left
         labelDer.textColor = .colorLetraRosa
@@ -123,8 +123,6 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         textoIzquierdo.removeLast()
         textoDerecho.removeLast()
         
-        labelIzq.font = labelIzq.font.withSize(25)
-        labelDer.font = labelIzq.font.withSize(25)
         
         labelIzq.text = textoIzquierdo
         labelDer.text = textoDerecho

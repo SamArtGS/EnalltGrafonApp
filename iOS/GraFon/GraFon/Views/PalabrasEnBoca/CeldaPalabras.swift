@@ -37,9 +37,8 @@ class CeldaPalabras: UICollectionViewCell {
     
     private let palabrerio: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
-        etiqueta.font = .Lato(.italic, size: 15)
+        etiqueta.font = .Roboto(.italic, size: 15)
         etiqueta.textColor = .colorLetras
-        
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.numberOfLines = 0
         etiqueta.textAlignment = .left

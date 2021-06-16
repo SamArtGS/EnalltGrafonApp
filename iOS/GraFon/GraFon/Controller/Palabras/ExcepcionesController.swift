@@ -13,7 +13,7 @@ class ExcepcionesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Retourner", style: .plain, target: self, action: #selector(self.back))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Retour", style: .plain, target: self, action: #selector(self.back))
 
         // Do any additional setup after loading the view.
     }
