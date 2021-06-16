@@ -91,13 +91,13 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        labelIzq.font = .Lato(.italic, size: 15)
+        labelIzq.font = .Roboto(.italic, size: 15)
         labelIzq.textAlignment = .right
         labelIzq.textColor = .colorLetras
         labelIzq.contentMode = .scaleAspectFit
         
-        labelDer.font = .Lato(.bold, size: 15)
-        labelDer.textColor = .systemPink
+        labelDer.font = .Roboto(.bold, size: 15)
+        labelDer.textColor = .colorLetraRosa
         labelDer.textAlignment = .left
         labelDer.contentMode = .scaleAspectFit
         
@@ -131,8 +131,8 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private var posicionLetraLabel: UILabel = {
         let etiqueta = UILabel()
-        etiqueta.font = .Lato(.bold, size: 20)
-        etiqueta.textColor = .black
+        etiqueta.font = .Roboto(.bold, size: 25)
+        etiqueta.textColor = .colorBarraSuperiorPalabras
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
@@ -143,7 +143,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Lato(.regular, size: 16)
+        etiqueta.font = .Roboto(.regular, size: 16)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -154,8 +154,8 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private var pronunciacion: (String) -> UILabel = { texto in
         let etiqueta = UILabel()
         etiqueta.text = texto
-        etiqueta.font = .Lato(.bold, size: 20)
-        etiqueta.textColor = .systemPink
+        etiqueta.font = .Roboto(.bold, size: 25)
+        etiqueta.textColor = .colorLetraRosa
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
@@ -174,7 +174,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Lato(.regular, size: 16)
+        etiqueta.font = .Roboto(.regular, size: 16)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center

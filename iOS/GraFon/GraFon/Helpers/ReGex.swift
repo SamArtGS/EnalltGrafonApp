@@ -32,7 +32,7 @@ class UILabelPersonalizado: UILabel{
     
     let formatos: [Formato] = [
         Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: 15)),  // Con * se pone las Negrita Negro
-        Formato(simbolo: "$", color: .blue, fuente: .Roboto(.regular, size: 15)),    // Con ~ se pone las Negrita Azul
+        Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.regular, size: 15)),    // Con ~ se pone las Negrita Azul
         Formato(simbolo: "+", color: .colorLetraVerde, fuente: .Roboto(.bold, size: 20)),   // Con + se pone las Negrita Verde
     ]
     

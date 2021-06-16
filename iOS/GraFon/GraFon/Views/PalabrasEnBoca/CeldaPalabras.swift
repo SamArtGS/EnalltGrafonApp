@@ -23,6 +23,7 @@ class CeldaPalabras: UICollectionViewCell {
                 }
             }
             palabrerio.text = texto
+            
         }
     }
     
