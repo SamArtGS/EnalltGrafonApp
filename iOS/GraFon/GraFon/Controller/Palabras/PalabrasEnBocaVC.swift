@@ -156,9 +156,9 @@ extension CeldaColeccionDeColecciones: UICollectionViewDelegateFlowLayout{
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if UIDevice().userInterfaceIdiom == .phone {
-            return CGSize(width: (safeAreaLayoutGuide.layoutFrame.width/3.2), height: (safeAreaLayoutGuide.layoutFrame.width/2.8))
+            return CGSize(width: (safeAreaLayoutGuide.layoutFrame.width/3.2), height: (safeAreaLayoutGuide.layoutFrame.width/2.5))
         }else{
-            return CGSize(width: 150, height: 300)
+            return CGSize(width: 150, height: 200)
         }
     }
     
@@ -168,20 +168,24 @@ extension CeldaColeccionDeColecciones: UICollectionViewDelegateFlowLayout{
         //top, left, bottom, right
         
         if UIDevice().userInterfaceIdiom == .phone {
-            return UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
+            return UIEdgeInsets(top: 10, left: 5, bottom: 20, right: 5)
         }else{
             return UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
         }
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        if UIDevice().userInterfaceIdiom == .phone {
+            return 5
+        }else{
+            return 10
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if UIDevice().userInterfaceIdiom == .phone {
             return 10
         }else{
-            return 0
+            return 10
         }
     }
 }

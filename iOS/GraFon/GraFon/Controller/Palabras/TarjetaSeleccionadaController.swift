@@ -36,7 +36,6 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Retour"
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -81,6 +80,7 @@ extension TarjetaSeleccionadaController{
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
                 
                 if tarjeta?.silabas.count == 1 {
+                    cell.delegate = self
                     cell.esTarjetaUnica()
                 }else{
                     cell.esTarjetaInicio()
@@ -91,7 +91,6 @@ extension TarjetaSeleccionadaController{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
                 
                 cell.delegate = self
-                cell.isUserInteractionEnabled = true
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
@@ -119,14 +118,13 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
          if indexPath.item == 0 {
             var cuenta: Int = 0
             tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
-            print(cuenta)
             return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
          } else {
-            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 20) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 0.5
+            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 20) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 250 + palabrasCount)
             } else {
-               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 350 + palabrasCount)
+               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 400 + palabrasCount)
             }
          }
     }
@@ -148,8 +146,8 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
 
 extension TarjetaSeleccionadaController{
     func mostrarExcepciones(){
-        //PUSH
         let secondVC = ExcepcionesController()
+        secondVC.title = title
         self.navigationController?.pushViewController(secondVC, animated: false)
         UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
     }

@@ -14,7 +14,6 @@ class ExcepcionesController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Retour", style: .plain, target: self, action: #selector(self.back))
-
         // Do any additional setup after loading the view.
     }
     
@@ -22,7 +21,8 @@ class ExcepcionesController: UIViewController {
         let firstVC = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count ?? 2) - 2] as? TarjetaSeleccionadaController
         if let firstView = firstVC?.view{
             self.navigationController?.popViewController(animated: false)
-            UIView.transition(from: self.view, to: firstView, duration: 0.85, options: [.transitionFlipFromRight])
+            UIView.transition(from: self.view, to: firstView, duration: 0.85, options: [.transitionFlipFromLeft])
+            firstVC?.title = title
         } else {
             self.navigationController?.popViewController(animated: true)
         }

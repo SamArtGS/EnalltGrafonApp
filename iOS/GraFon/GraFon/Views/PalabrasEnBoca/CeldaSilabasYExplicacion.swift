@@ -91,12 +91,12 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        labelIzq.font = .Roboto(.italic, size: 15)
+        labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques)
         labelIzq.textAlignment = .right
         labelIzq.textColor = .colorLetras
         labelIzq.contentMode = .scaleAspectFit
         
-        labelDer.font = .Roboto(.bold, size: 15)
+        labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques)
         labelDer.textColor = .colorLetraRosa
         labelDer.textAlignment = .left
         labelDer.contentMode = .scaleAspectFit
@@ -131,7 +131,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private var posicionLetraLabel: UILabel = {
         let etiqueta = UILabel()
-        etiqueta.font = .Roboto(.bold, size: 25)
+        etiqueta.font = .Roboto(.bold, size: Tamanio.letraPosicionBloque)
         etiqueta.textColor = .colorBarraSuperiorPalabras
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -143,7 +143,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Roboto(.regular, size: 16)
+        etiqueta.font = .Roboto(.regular, size: Tamanio.letraExplicacion)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -154,7 +154,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private var pronunciacion: (String) -> UILabel = { texto in
         let etiqueta = UILabel()
         etiqueta.text = texto
-        etiqueta.font = .Roboto(.bold, size: 25)
+        etiqueta.font = .Roboto(.bold, size: Tamanio.letraFonema)
         etiqueta.textColor = .colorLetraRosa
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -174,7 +174,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Roboto(.regular, size: 16)
+        etiqueta.font = .Roboto(.regular, size: Tamanio.letraExplicacion)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -211,9 +211,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         })
     }
     
-    
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configurarConstraints()
@@ -232,7 +229,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         boton.isUserInteractionEnabled = true
         boton.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
         boton.contentMode = .scaleAspectFit
-        
         return boton
     }()
     
@@ -265,7 +261,17 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     func esTarjetaUnica(){
         adornito.isHidden = true
         fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        
+        imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
+            imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
+        ])
     }
     
     func configurarConstraints(){

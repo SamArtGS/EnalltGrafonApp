@@ -15,13 +15,13 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "bleu", enGriego: "blɶ"),
-                    Palabra(palabra: "table", enGriego: "tabl"),
-                    Palabra(palabra: "club", enGriego: "klɶb"),
+                    Palabra(palabra: "*b*leu", enGriego: "blɶ"),
+                    Palabra(palabra: "ta*b*le", enGriego: "tabl"),
+                    Palabra(palabra: "clu*b*", enGriego: "klɶb"),
               ],
               pronuciacion: "b",
               explicacion: """
-                              (Excepto antes de s o t) transcribe el sonido
+                              (Excepto antes de $s$ o $t$) \n\n transcribe el sonido
                           """,
               imagenFonema: "b",
               imagenConsejo: nil,
@@ -35,26 +35,26 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "absent", enGriego: "blɶ")
+                    Palabra(palabra: "a*bs*ent", enGriego: "blɶ")
               ],
               pronuciacion: "-bs-",
               explicacion: """
                               transcriben los sonidos
                           """,
               imagenFonema: "ps",
-              imagenConsejo: nil,
+              imagenConsejo: "b_retro_3Bb_n2",
               textodeAbajo: nil
             ),
             Silaba(
                 palabras: [
-                      Palabra(palabra: "obtenir", enGriego: "o.ptɶ.niʀ")
+                      Palabra(palabra: "o*bt*enir", enGriego: "o.ptɶ.niʀ")
                 ],
                 pronuciacion: "-bt-",
                 explicacion: """
                                 transcriben los sonidos
                             """,
                 imagenFonema: "pt",
-                imagenConsejo: "b_retro_3Bb_n2",
+                imagenConsejo: nil,
                 textodeAbajo: nil
             )
           ],
@@ -65,7 +65,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "sabbatique", enGriego: "sa.ba.tik")
+                    Palabra(palabra: "sa*bb*atique", enGriego: "sa.ba.tik")
               ],
               pronuciacion: "-bb-",
               explicacion: """
@@ -86,11 +86,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "cacao", enGriego: "ka.ka.o")
+                    Palabra(palabra: "*caca*o", enGriego: "ka.ka.o")
               ],
               pronuciacion: "c",
               explicacion: """
-                              Seguida de a, o, u transcribe el sonido
+                              Seguida de $a$, $o$, $u$ \n\n transcribe el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -98,11 +98,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "ceci", enGriego: "sɶ.si")
+                    Palabra(palabra: "*ceci*", enGriego: "sɶ.si")
               ],
               pronuciacion: "c",
               explicacion: """
-                              Seguida de e, i, y, transcribe el sonido
+                              Seguida de $e$, $i$, $y$, \n\n transcribe el sonido
                           """,
               imagenFonema: "s",
               imagenConsejo: nil,
@@ -110,11 +110,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "octobre", enGriego: "ok.tobʀ")
+                    Palabra(palabra: "o*ct*obre", enGriego: "ok.tobʀ")
               ],
               pronuciacion: "c",
               explicacion: """
-                              Seguida de una consonante transcribe el sonido
+                              Seguida de una consonante \n\n transcribe el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -122,11 +122,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "sac", enGriego: "sak")
+                    Palabra(palabra: "sa*c*", enGriego: "sak")
               ],
               pronuciacion: "-c",
               explicacion: """
-                              Al final de una palabra transcribe el sonido
+                              Al final de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -140,11 +140,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "accord", enGriego: "a.koʀ")
+                    Palabra(palabra: "a*cco*rd", enGriego: "a.koʀ")
               ],
               pronuciacion: "-cc-",
               explicacion: """
-                              Seguidas de a, o, u transcriben el sonido
+                              Seguidas de $a$, $o$, $u$ \n\n transcriben el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -152,11 +152,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "accident", enGriego: "a.ksi.dɑ̃")
+                    Palabra(palabra: "a*cci*dent", enGriego: "a.ksi.dɑ̃")
               ],
               pronuciacion: "-cc-",
               explicacion: """
-                              Seguidas de e, i, y transcriben los sonidos
+                              Seguidas de $e$, $i$, $y$ \n\n transcriben los sonidos
                           """,
               imagenFonema: "ks",
               imagenConsejo: nil,
@@ -170,11 +170,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "scène", enGriego: "sᴇn")
+                    Palabra(palabra: "*scè*ne", enGriego: "sᴇn")
               ],
               pronuciacion: "sc",
               explicacion: """
-                              Seguidas de e, i, y transcriben el sonido
+                              Seguidas de $e$, $i$, $y$ \n\n transcriben el sonido
                           """,
               imagenFonema: "s",
               imagenConsejo: nil,
@@ -182,11 +182,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "escalier", enGriego: "ᴇ.ska.ljᴇ")
+                    Palabra(palabra: "e*sca*lier", enGriego: "ᴇ.ska.ljᴇ")
               ],
               pronuciacion: "sc",
               explicacion: """
-                             Seguidas de a, o, u transcriben los sonidos
+                             Seguidas de $a$, $o$, $u$ \n\n transcriben los sonidos
                           """,
               imagenFonema: "sk",
               imagenConsejo: nil,
@@ -200,11 +200,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "chat", enGriego: "ʃa")
+                    Palabra(palabra: "*cha*t", enGriego: "ʃa")
               ],
               pronuciacion: "ch",
               explicacion: """
-                              Seguidas de una vocal transcriben el sonido
+                              Seguidas de una vocal \n\n transcriben el sonido
                           """,
               imagenFonema: "ʃ",
               imagenConsejo: nil,
@@ -212,11 +212,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "technologie", enGriego: "tᴇ.kno.lo.ʒi")
+                    Palabra(palabra: "te*chn*ologie", enGriego: "tᴇ.kno.lo.ʒi")
               ],
               pronuciacion: "-ch-",
               explicacion: """
-                             Seguidas de una consonante transcriben el sonido
+                             Seguidas de una consonante \n\n transcriben el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -224,11 +224,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "psychologie", enGriego: "psi.ko.lo.ʒi")
+                    Palabra(palabra: "*psych*ologie", enGriego: "psi.ko.lo.ʒi")
               ],
               pronuciacion: "-ch-",
               explicacion: """
-                            Precedidas de psy transcriben el sonido
+                            Precedidas de $psy$ \n\n transcriben el sonido
                           """,
               imagenFonema: "k",
               imagenConsejo: nil,
@@ -242,8 +242,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "ticket", enGriego: "ti.kᴇ"),
-                    Palabra(palabra: "rock", enGriego: "ʀok")
+                    Palabra(palabra: "ti*ck*et", enGriego: "ti.kᴇ"),
+                    Palabra(palabra: "ro*ck*", enGriego: "ʀok")
               ],
               pronuciacion: "ck",
               explicacion: """
@@ -261,9 +261,9 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "schéma", enGriego: "ʃᴇ.ma"),
-                    Palabra(palabra: "haschich", enGriego: "a.ʃiʃ"),
-                    Palabra(palabra: "goulasch", enGriego: "gu.laʃ")
+                    Palabra(palabra: "*sch*éma", enGriego: "ʃᴇ.ma"),
+                    Palabra(palabra: "ha*sch*ich", enGriego: "a.ʃiʃ"),
+                    Palabra(palabra: "goula*sch*", enGriego: "gu.laʃ")
               ],
               pronuciacion: "sch",
               explicacion: """
@@ -281,8 +281,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "acquérir", enGriego: "a.kᴇ.ʀiʀ"),
-                    Palabra(palabra: "grecque", enGriego: "gʀᴇk")
+                    Palabra(palabra: "a*cqu*érir", enGriego: "a.kᴇ.ʀiʀ"),
+                    Palabra(palabra: "gre*cqu*e", enGriego: "gʀᴇk")
               ],
               pronuciacion: "-cqu-",
               explicacion: """
@@ -300,12 +300,12 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "aspect", enGriego: "as.pᴇ"),
-                    Palabra(palabra: "respect", enGriego: "ʀᴇs.pᴇ")
+                    Palabra(palabra: "as*pect*", enGriego: "as.pᴇ"),
+                    Palabra(palabra: "res*pect*", enGriego: "ʀᴇs.pᴇ")
               ],
               pronuciacion: "-ect",
               explicacion: """
-                              Al final de una palabra y precedidas de p transcriben el sonido
+                              Al final de una palabra y precedidas de $p$ \n\n transcriben el sonido
                           """,
               imagenFonema: "ᴇ",
               imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
@@ -313,12 +313,12 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "direct", enGriego: "di.ʀᴇkt"),
-                    Palabra(palabra: "correct", enGriego: "ko.ʀᴇkt")
+                    Palabra(palabra: "dir*ect*", enGriego: "di.ʀᴇkt"),
+                    Palabra(palabra: "cor*rect*", enGriego: "ko.ʀᴇkt")
               ],
               pronuciacion: "-ect",
               explicacion: """
-                              Al final de una palabra y precedidas de una consonante (excepto p) transcriben los sonidos
+                              Al final de una palabra y precedidas de una consonante (excepto $p$) \n\n transcriben los sonidos
                           """,
               imagenFonema: "ᴇkt",
               imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
@@ -326,14 +326,14 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "contact", enGriego: "kõ.takt")
+                    Palabra(palabra: "cont*act*", enGriego: "kõ.takt")
               ],
               pronuciacion: "act",
               explicacion: """
                               transcriben los sonidos
                           """,
               imagenFonema: "akt",
-              imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
+              imagenConsejo: nil,
               textodeAbajo: nil
             )
           ],
@@ -344,40 +344,15 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "ça", enGriego: "sa"),
-                    Palabra(palabra: "garçon", enGriego: "gaʀ.sõ"),
-                    Palabra(palabra: "reçu", enGriego: "ʀɶ.sy")
+                    Palabra(palabra: "*ç*a", enGriego: "sa"),
+                    Palabra(palabra: "gar*ç*on", enGriego: "gaʀ.sõ"),
+                    Palabra(palabra: "re*ç*u", enGriego: "ʀɶ.sy")
               ],
               pronuciacion: "ç",
               explicacion: """
                               transcribe el sonido
                           """,
               imagenFonema: "s",
-              imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
-              textodeAbajo: nil
-            ),
-            Silaba(
-              palabras: [
-                    Palabra(palabra: "direct", enGriego: "di.ʀᴇkt"),
-                    Palabra(palabra: "correct", enGriego: "ko.ʀᴇkt")
-              ],
-              pronuciacion: "-ect",
-              explicacion: """
-                              Al final de una palabra y precedidas de una consonante (excepto p) transcriben los sonidos
-                          """,
-              imagenFonema: "ᴇkt",
-              imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
-              textodeAbajo: nil
-            ),
-            Silaba(
-              palabras: [
-                    Palabra(palabra: "contact", enGriego: "kõ.takt")
-              ],
-              pronuciacion: "act",
-              explicacion: """
-                              transcriben los sonidos
-                          """,
-              imagenFonema: "akt",
               imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN 3X1
               textodeAbajo: nil
             )
@@ -391,12 +366,12 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "date", enGriego: "dat"),
-                    Palabra(palabra: "étude", enGriego: "ᴇ.tyd")
+                    Palabra(palabra: "*d*ate", enGriego: "dat"),
+                    Palabra(palabra: "étu*d*e", enGriego: "ᴇ.tyd")
               ],
               pronuciacion: "d",
               explicacion: """
-                              Excepto al final de una palabra transcribe el sonido
+                              Excepto al final de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "d",
               imagenConsejo: nil,
@@ -404,11 +379,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "nord", enGriego: "noʀ")
+                    Palabra(palabra: "nor*d*", enGriego: "noʀ")
               ],
               pronuciacion: "-d",
               explicacion: """
-                              Al final de una palabra no transcribe ningún sonido.
+                              Al final de una palabra \n\n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: nil, //ME FALTÓ LA DE NI SIQUIERA LO INTENTES
@@ -423,7 +398,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "addition", enGriego: "a.di.sjõ")
+                    Palabra(palabra: "a*dd*ition", enGriego: "a.di.sjõ")
               ],
               pronuciacion: "-dd-",
               explicacion: """
@@ -441,11 +416,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "poids", enGriego: "pwa")
+                    Palabra(palabra: "poi*ds*", enGriego: "pwa")
               ],
               pronuciacion: "-ds",
               explicacion: """
-                              Al final de una palabra no transcriben ningún sonido.
+                              Al final de una palabra \n\n no transcriben ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: "e_retro_3Eb_n2", //PARECE QUE NO HAY "MEME" DE LISA
@@ -453,25 +428,7 @@ extension tarjetas{
             )
           ],
           excepciones: nil
-        ),
-        
-        Tarjeta(audio: "pb_d_01",
-          silabas: [
-            Silaba(
-              palabras: [
-                    Palabra(palabra: "cacao", enGriego: "ka.ka.o")
-              ],
-              pronuciacion: "c",
-              explicacion: """
-                              Seguida de a, o, u transcribe el sonido
-                          """,
-              imagenFonema: "k",
-              imagenConsejo: nil,
-              textodeAbajo: nil
-            )
-          ],
-          excepciones: nil
-        ),
+        )
     ]
     
     
@@ -480,8 +437,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "femme", enGriego: "fam"),
-                Palabra(palabra: "chef", enGriego: "ʃᴇf")
+                    Palabra(palabra: "*f*emme", enGriego: "fam"),
+                Palabra(palabra: "che*f*", enGriego: "ʃᴇf")
               ],
               pronuciacion: "f",
               explicacion: """
@@ -499,8 +456,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "offrir", enGriego: "o.fʀiʀ"),
-                    Palabra(palabra: "bluff", enGriego: "blɶf")
+                    Palabra(palabra: "o*ff*rir", enGriego: "o.fʀiʀ"),
+                    Palabra(palabra: "blu*ff*", enGriego: "blɶf")
               ],
               pronuciacion: "ff",
               explicacion: """
@@ -522,16 +479,16 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "gare", enGriego: "gaʀ"),
-                    Palabra(palabra: "gaʀ", enGriego: "gu"),
-                    Palabra(palabra: "aigu", enGriego: "ᴇ.gy"),
-                    Palabra(palabra: "aigüe", enGriego: "ᴇ.gy"),
-                    Palabra(palabra: "église", enGriego: "ᴇ.gliz")
+                    Palabra(palabra: "*ga*re", enGriego: "gaʀ"),
+                    Palabra(palabra: "*go*ut", enGriego: "gu"),
+                    Palabra(palabra: "ai*gu*", enGriego: "ᴇ.gy"),
+                    Palabra(palabra: "ai*gü*e", enGriego: "ᴇ.gy"),
+                    Palabra(palabra: "é*gl*ise", enGriego: "ᴇ.gliz")
               ],
               pronuciacion: "g",
               explicacion: """
-                              Seguida de a, o, u, ü
-                              o de una consonante (excepto n) transcribe el sonido
+                              Seguida de $a$, $o$, $u$, $ü$
+                              o de una consonante (excepto $n$) \n\n transcribe el sonido
                           """,
               imagenFonema: "g",
               imagenConsejo: nil,
@@ -545,13 +502,13 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "cage", enGriego: "kaʒ"),
-                    Palabra(palabra: "girafe", enGriego: "ʒi.ʀaf"),
-                    Palabra(palabra: "gym", enGriego: "ʒim")
+                    Palabra(palabra: "ca*ge*", enGriego: "kaʒ"),
+                    Palabra(palabra: "*gi*rafe", enGriego: "ʒi.ʀaf"),
+                    Palabra(palabra: "*gy*m", enGriego: "ʒim")
               ],
               pronuciacion: "g",
               explicacion: """
-                              Seguida de  e, i, y transcribe el sonido
+                              Seguida de  $e$, $i$, $y$ \n\n transcribe el sonido
                           """,
               imagenFonema: "ʒ",
               imagenConsejo: nil, //NO VEO IMAGEN DE RASURADORA :c
@@ -566,8 +523,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "aggravé", enGriego: "a.gʀa.vᴇ"),
-                    Palabra(palabra: "jogging", enGriego: "dʒo.giŋ")
+                    Palabra(palabra: "a*gg*ravé", enGriego: "a.gʀa.vᴇ"),
+                    Palabra(palabra: "jo*gg*ing", enGriego: "dʒo.giŋ")
               ],
               pronuciacion: "-gg-",
               explicacion: """
@@ -585,7 +542,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "montagne", enGriego: "mõ.tanj")
+                    Palabra(palabra: "monta*gn*e", enGriego: "mõ.tanj")
               ],
               pronuciacion: "gn",
               explicacion: """
@@ -603,11 +560,11 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "hotdog", enGriego: "ot.dog")
+                    Palabra(palabra: "hotdo*g*", enGriego: "ot.dog")
               ],
               pronuciacion: "-g",
               explicacion: """
-                              Al final de una palabra transcribe el sonido
+                              Al final de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "g",
               imagenConsejo: nil,
@@ -615,11 +572,11 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "camping", enGriego: "kɑ̃.piŋ")
+                    Palabra(palabra: "camp*ing*", enGriego: "kɑ̃.piŋ")
               ],
               pronuciacion: "-ing",
               explicacion: """
-                              Al final de una palabra transcriben los sonidos
+                              Al final de una palabra \n\n transcriben los sonidos
                           """,
               imagenFonema: "iŋ",
               imagenConsejo: nil,

@@ -30,12 +30,6 @@ struct PosicionRegexColor {
 
 class UILabelPersonalizado: UILabel{
     
-    let formatos: [Formato] = [
-        Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: 15)),  // Con * se pone las Negrita Negro
-        Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.regular, size: 15)),    // Con ~ se pone las Negrita Azul
-        Formato(simbolo: "+", color: .colorLetraVerde, fuente: .Roboto(.bold, size: 20)),   // Con + se pone las Negrita Verde
-    ]
-    
     var banderin = false
     
     override var text: String? {
@@ -56,6 +50,13 @@ class UILabelPersonalizado: UILabel{
     }
     
     func colocarFormatosConRegex(texto: String){
+        
+        let formatos: [Formato] = [
+            Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
+            Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.regular, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
+            Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema))
+        ]
+        
         var textoSinSimbolos: String = texto
         
         for formato in formatos{

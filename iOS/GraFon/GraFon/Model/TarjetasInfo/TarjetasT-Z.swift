@@ -15,7 +15,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "table", enGriego: "tabl")
+                    Palabra(palabra: "*t*able", enGriego: "tabl")
               ],
               pronuciacion: "t-",
               explicacion: """
@@ -33,15 +33,15 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "invité", enGriego: "ɛ̃.vi.tᴇ"),
-                    Palabra(palabra: "sortie", enGriego: "soʀ.ti"),
-                    Palabra(palabra: "nous visitions", enGriego: "nu.vi.si.tjõ")
+                    Palabra(palabra: "invi*té*", enGriego: "ɛ̃.vi.tᴇ"),
+                    Palabra(palabra: "sor*ti*e", enGriego: "soʀ.ti"),
+                    Palabra(palabra: "nous visi*ti*ons", enGriego: "nu.vi.si.tjõ")
               ],
               pronuciacion: "-t-",
               explicacion: """
-                              Seguida de una vocal
-                              - excepto en el grupo -tion- en sustantivo y adjetivo
-                              - excepto en los grupos -tieu-, -tiel-, -tia- \n \n transcribe el sonido
+                              Seguida de una vocal \n
+                              - excepto en el grupo $-tion-$ en sustantivo y adjetivo.\n
+                              - excepto en los grupos -tieu-, -tiel-, -tia- \n\n transcribe el sonido
                           """,
               imagenFonema: "t",
               imagenConsejo: nil,
@@ -49,15 +49,15 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "station", enGriego: "sta.sjõ"),
-                    Palabra(palabra: "national", enGriego: "na.sjo.nal"),
-                    Palabra(palabra: "superstitieuse", enGriego: "sy.pᴇʀ.sti.sjɶz"),
-                    Palabra(palabra: "confidentiel", enGriego: "kõ.fi.dɑ̃.sjᴇl"),
-                    Palabra(palabra: "initiative", enGriego: "i.ni.sja.tiv")
+                    Palabra(palabra: "sta*tion*", enGriego: "sta.sjõ"),
+                    Palabra(palabra: "na*tion*al", enGriego: "na.sjo.nal"),
+                    Palabra(palabra: "supersti*tieu*se", enGriego: "sy.pᴇʀ.sti.sjɶz"),
+                    Palabra(palabra: "confiden*tiel*", enGriego: "kõ.fi.dɑ̃.sjᴇl"),
+                    Palabra(palabra: "ini*tia*tive", enGriego: "i.ni.sja.tiv")
               ],
-              pronuciacion: "t-",
+              pronuciacion: "-tion-",
               explicacion: """
-                              -tion- en sustantivo y adjetivo, -tieu-, -tiel-, -tia-, \n\n t transcribe el sonido
+                            en sustantivo y adjetivo, \n#-tieu-#, \n#-tiel-#, \n#-tia-#, \n\n $t$ transcribe el sonido
                           """,
               imagenFonema: "s",
               imagenConsejo: nil,
@@ -71,12 +71,12 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "elles vont", enGriego: "ᴇl.võ"),
-                    Palabra(palabra: "petit", enGriego: "pɶ.ti")
+                    Palabra(palabra: "elles von*t*", enGriego: "ᴇl.võ"),
+                    Palabra(palabra: "peti*t*", enGriego: "pɶ.ti")
               ],
               pronuciacion: "-t",
               explicacion: """
-                              Al final de una palabra no transcribe ningún sonido
+                              Al final de una palabra \n\n no transcribe ningún sonido
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: nil,
@@ -84,12 +84,12 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "sorbet", enGriego: "soʀ.bᴇ"),
-                    Palabra(palabra: "elle permet", enGriego: "ᴇl.pᴇʀ.mᴇ")
+                    Palabra(palabra: "sorb*et*", enGriego: "soʀ.bᴇ"),
+                    Palabra(palabra: "elle perm*et*", enGriego: "ᴇl.pᴇʀ.mᴇ")
               ],
               pronuciacion: "-et",
               explicacion: """
-                              Al final de una palabra transcriben el sonido
+                              Al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "ᴇ",
               imagenConsejo: nil,
@@ -103,8 +103,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "aspect", enGriego: "as.pᴇ"),
-                    Palabra(palabra: "respect", enGriego: "ʀᴇs.pᴇ")
+                    Palabra(palabra: "asp*ect*", enGriego: "as.pᴇ"),
+                    Palabra(palabra: "resp*ect*", enGriego: "ʀᴇs.pᴇ")
               ],
               pronuciacion: "-ect",
               explicacion: """
@@ -116,12 +116,12 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "direct", enGriego: "di.ʀᴇkt"),
-                    Palabra(palabra: "correct", enGriego: "ko.ʀᴇkt")
+                    Palabra(palabra: "dir*ect*", enGriego: "di.ʀᴇkt"),
+                    Palabra(palabra: "corr*ect*", enGriego: "ko.ʀᴇkt")
               ],
               pronuciacion: "-ect",
               explicacion: """
-                              Al final de una palabra y precedidas de una consonante (excepto p) transcriben los sonidos
+                              Al final de una palabra y precedidas de una consonante (excepto $p$) \n\n transcriben los sonidos
                           """,
               imagenFonema: "ᴇkt",
               imagenConsejo: nil,
@@ -135,8 +135,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "lunettes", enGriego: "ly.nᴇt"),
-                    Palabra(palabra: "watt", enGriego: "wat")
+                    Palabra(palabra: "lune*tt*es", enGriego: "ly.nᴇt"),
+                    Palabra(palabra: "wa*tt*", enGriego: "wat")
               ],
               pronuciacion: "tt",
               explicacion: """
@@ -156,9 +156,9 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "vêtement", enGriego: "vᴇt.mɑ̃"),
-                    Palabra(palabra: "univers", enGriego: "y.ni.vᴇʀ"),
-                    Palabra(palabra: "aveugle", enGriego: "a.vɶgl")
+                    Palabra(palabra: "*v*êtement", enGriego: "vᴇt.mɑ̃"),
+                    Palabra(palabra: "uni*v*ers", enGriego: "y.ni.vᴇʀ"),
+                    Palabra(palabra: "a*v*eugle", enGriego: "a.vɶgl")
               ],
               pronuciacion: "v",
               explicacion: """
@@ -178,8 +178,8 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "weekend", enGriego: "wi.kᴇnd"),
-                    Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwitʃ")
+                    Palabra(palabra: "*w*eekend", enGriego: "wi.kᴇnd"),
+                    Palabra(palabra: "sand*w*ich", enGriego: "sɑ̃.dwitʃ")
               ],
               pronuciacion: "w",
               explicacion: """
@@ -191,7 +191,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "interview", enGriego: "ɛ̃.tᴇʀ.vju")
+                    Palabra(palabra: "intervi*ew*", enGriego: "ɛ̃.tᴇʀ.vju")
               ],
               pronuciacion: "-ew",
               explicacion: """
@@ -203,7 +203,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "bungalow", enGriego: "bɛ̃.ga.lo")
+                    Palabra(palabra: "bungal*ow*", enGriego: "bɛ̃.ga.lo")
               ],
               pronuciacion: "-ow",
               explicacion: """
@@ -224,7 +224,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "xénophobe", enGriego: "ksᴇ.no.fob")
+                    Palabra(palabra: "*x*énophobe", enGriego: "ksᴇ.no.fob")
               ],
               pronuciacion: "x",
               explicacion: """
@@ -236,16 +236,16 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                Palabra(palabra: "paix", enGriego: "pᴇ"),
-                Palabra(palabra: "bateaux", enGriego: "ba.to"),
-                Palabra(palabra: "je veux", enGriego: "ʒɶ.vɶ")
+                Palabra(palabra: "pai*x*", enGriego: "pᴇ"),
+                Palabra(palabra: "bateau*x*", enGriego: "ba.to"),
+                Palabra(palabra: "je veu*x*", enGriego: "ʒɶ.vɶ")
               ],
               pronuciacion: "-x",
               explicacion: """
                               Al inicio de una palabra \n\n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
-              imagenConsejo: "e_retro_3Eb_n2",
+              imagenConsejo: "e_retro_3Eb_n2", //NO hay no existe
               textodeAbajo: nil
             )
           ],
@@ -256,10 +256,10 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                Palabra(palabra: "taxi", enGriego: "ta.ksi"),
-                Palabra(palabra: "mexicaine", enGriego: "mᴇ.ksi.kᴇn"),
-                Palabra(palabra: "texte", enGriego: "tᴇkst"),
-                Palabra(palabra: "exposé", enGriego: "ᴇ.kspo.zᴇ")
+                Palabra(palabra: "ta*x*i", enGriego: "ta.ksi"),
+                Palabra(palabra: "me*x*icaine", enGriego: "mᴇ.ksi.kᴇn"),
+                Palabra(palabra: "te*x*te", enGriego: "tᴇkst"),
+                Palabra(palabra: "e*x*posé", enGriego: "ᴇ.kspo.zᴇ")
               ],
               pronuciacion: "-x-",
               explicacion: """
@@ -274,14 +274,14 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                Palabra(palabra: "examen", enGriego: "ᴇ.gza.mɛ̃"),
-                Palabra(palabra: "exhaustif", enGriego: "ᴇ.gzos.tif")
+                Palabra(palabra: "*exa*men", enGriego: "ᴇ.gza.mɛ̃"),
+                Palabra(palabra: "*exh*austif", enGriego: "ᴇ.gzos.tif")
               ],
               pronuciacion: "-x-",
               explicacion: """
                               En los grupos:
-                              ex - + vocal al inicio de una palabra
-                              exh- al inicio de una palabra \n\n no transcribe los sonidos
+                              \n$ex-$ + vocal al inicio de una palabra
+                              \n$exh-$ al inicio de una palabra \n\n transcribe los sonidos
                           """,
               imagenFonema: "gz",
               imagenConsejo: nil,
@@ -322,7 +322,7 @@ extension tarjetas{
               ],
               pronuciacion: "-z",
               explicacion: """
-                              Al final de una palabra (excepto precedida de ~t~) \n \n no transcribe ningún sonido.
+                              Al final de una palabra (excepto precedida de $t$) \n\n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: nil,
@@ -335,7 +335,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ez",
               explicacion: """
-                              Al final de una palabra \n \n no transcriben el sonido
+                              Al final de una palabra \n\n no transcriben el sonido
                           """,
               imagenFonema: "ᴇ",
               imagenConsejo: "z_retro_3Bb_n2",

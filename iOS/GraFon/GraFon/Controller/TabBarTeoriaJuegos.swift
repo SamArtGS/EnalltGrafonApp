@@ -23,12 +23,6 @@ class TabBarTeoriaJuegos: UITabBarController{
         view.backgroundColor = .white
         view.contentMode = .scaleAspectFit
         colocarElementosDependiendoPuerta(puerta: puertaSeleccionada)
-        let botonAtras = UIBarButtonItem()
-        botonAtras.title = "Atrás"
-        botonAtras.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
-        ], for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -104,7 +98,7 @@ extension TabBarTeoriaJuegos{
                 )
                 break
             case 3:
-                self.title = "Símbolos y sonidos"
+                self.title = "Símbolos y Sonidos"
                 
                 let teoría = crearNavegacion(titulo: "Símbolos y Sonidos",
                                              imagenIcono: "icon-study",

@@ -55,6 +55,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        super.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(false, animated: false)
     }

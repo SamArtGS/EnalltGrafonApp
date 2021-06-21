@@ -76,7 +76,6 @@ extension MenuMoldeVC{
             case 2:
                 if  Data.letras[indexPath.item].identificador != 0{
                      scrollLayout.scrollDirection = .horizontal
-                    //mostrarAlerta(title: "En proceso", message: "Sección en proceso de desarrollo, 🤠")
                     let vcs = PalabrasEnBocaVC(collectionViewLayout:scrollLayout, indiceSeleccionado: Data.letras[indexPath.item].identificador)
                     self.navigationController?.pushViewController(vcs, animated: true)
                 }

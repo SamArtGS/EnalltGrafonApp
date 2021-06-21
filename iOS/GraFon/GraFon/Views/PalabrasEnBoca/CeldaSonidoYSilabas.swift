@@ -86,13 +86,13 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabel()
         
-        labelIzq.font = .Roboto(.italic, size: 25)
+        labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBocina)
         labelIzq.textColor = .colorLetras
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelIzq.textAlignment = .right
         labelIzq.contentMode = .scaleAspectFill
         
-        labelDer.font = .Roboto(.regular, size: 21)
+        labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosaBocina)
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         labelDer.textAlignment = .left
         labelDer.textColor = .colorLetraRosa
@@ -129,6 +129,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         
         return vista
     }
+    
     
     @objc func sonarAudio(){
         let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")

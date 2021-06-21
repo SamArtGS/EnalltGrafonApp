@@ -30,14 +30,14 @@ class CeldaPalabras: UICollectionViewCell {
     private let imagenPergamino: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "icons8-paper")
         return imageView
     }()
     
     private let palabrerio: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
-        etiqueta.font = .Roboto(.italic, size: 15)
+        etiqueta.font = .Roboto(.italic, size: Tamanio.letraCafeTarjetasMenu)
         etiqueta.textColor = .colorLetras
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.numberOfLines = 0
