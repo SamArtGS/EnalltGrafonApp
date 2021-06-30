@@ -15,9 +15,9 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*b*leu", enGriego: "blɶ"),
+                    Palabra(palabra: "*b*leu", enGriego: "bl&Œ&"),
                     Palabra(palabra: "ta*b*le", enGriego: "tabl"),
-                    Palabra(palabra: "clu*b*", enGriego: "klɶb"),
+                    Palabra(palabra: "clu*b*", enGriego: "kl&Œ&b"),
               ],
               pronuciacion: "b",
               explicacion: """
@@ -35,7 +35,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "a*bs*ent", enGriego: "blɶ")
+                    Palabra(palabra: "a*bs*ent", enGriego: "bl&Œ&")
               ],
               pronuciacion: "-bs-",
               explicacion: """
@@ -47,7 +47,7 @@ extension tarjetas{
             ),
             Silaba(
                 palabras: [
-                      Palabra(palabra: "o*bt*enir", enGriego: "o.ptɶ.niʀ")
+                      Palabra(palabra: "o*bt*enir", enGriego: "o.pt&Œ&.niʀ")
                 ],
                 pronuciacion: "-bt-",
                 explicacion: """
@@ -98,7 +98,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "*ceci*", enGriego: "sɶ.si")
+                    Palabra(palabra: "*ceci*", enGriego: "s&Œ&.si")
               ],
               pronuciacion: "c",
               explicacion: """
@@ -346,7 +346,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "*ç*a", enGriego: "sa"),
                     Palabra(palabra: "gar*ç*on", enGriego: "gaʀ.sõ"),
-                    Palabra(palabra: "re*ç*u", enGriego: "ʀɶ.sy")
+                    Palabra(palabra: "re*ç*u", enGriego: "ʀ&Œ&.sy")
               ],
               pronuciacion: "ç",
               explicacion: """
@@ -457,7 +457,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "o*ff*rir", enGriego: "o.fʀiʀ"),
-                    Palabra(palabra: "blu*ff*", enGriego: "blɶf")
+                    Palabra(palabra: "blu*ff*", enGriego: "bl&Œ&f")
               ],
               pronuciacion: "ff",
               explicacion: """

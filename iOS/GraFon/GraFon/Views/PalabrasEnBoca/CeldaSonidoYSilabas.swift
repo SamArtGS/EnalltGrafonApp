@@ -84,7 +84,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     private let previstaSilaba: (Silaba,UIColor) -> (UIStackView) = { silaba,color in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
-        let labelDer:UILabel = UILabel()
+        let labelDer:UILabel = UILabelPersonalizado()
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBocina)
         labelIzq.textColor = .colorLetras
@@ -143,6 +143,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
             print("Error al reproducir el audio: \(error.localizedDescription)")
         }
     }
+    
 
     func configurarConstraints(){
         

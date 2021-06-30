@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SeleccionarNivelController: UICollectionViewController, UINavigationControllerDelegate{
+class SeleccionarNivelController: UICollectionViewController, UINavigationControllerDelegate, UITabBarControllerDelegate{
     
     private let reuseIdentifier:String = "Cell"
     private var puertaInt: Int?
@@ -22,6 +22,7 @@ class SeleccionarNivelController: UICollectionViewController, UINavigationContro
         navigationController?.delegate = self
         self.collectionView!.register(CeldaMolde.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.backgroundColor = .white
+        tabBarController?.delegate = self
         collectionView.clipsToBounds = true
         collectionView.backgroundColor = .clear
         colocarFondo(imagen: "bck_n1_juegos_v2")

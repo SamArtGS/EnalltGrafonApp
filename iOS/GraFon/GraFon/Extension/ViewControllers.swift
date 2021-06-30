@@ -46,6 +46,24 @@ extension UIViewController{
         view.sendSubviewToBack(imageView)
     }
     
+    func colocarFondoCompleto(imagen: String){
+        let imageView: UIImageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .scaleToFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        view.addSubview(imageView)
+        
+        imageView.image = UIImage(named: imagen)
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        view.sendSubviewToBack(imageView)
+    }
+    
     func colocarFondoEstirado(imagen: String){
         let imageView: UIImageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleAspectFill

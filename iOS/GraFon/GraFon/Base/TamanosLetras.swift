@@ -9,7 +9,6 @@
 import UIKit
 
 struct Tamanio {
-    
     static let letraCafeTarjetasMenu: CGFloat = 14
     static let letrasCafeBocina:CGFloat = 22
     static let letrasRosaBocina:CGFloat = 20
@@ -18,92 +17,59 @@ struct Tamanio {
     static let letraPosicionBloque: CGFloat = 25
     static let letraExplicacion:CGFloat = 16
     static let letraFonema:CGFloat = 25
-    
+
 }
 
-
-/*
- 
- iPhone 5-5s-SE:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- 
- iPhone 6-6s-7-8:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPhone 6P-6sP-7P-8P:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPhone X-Xs-11Pro:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPhone XsMax-11ProMax-12ProMax:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPhone 11-12-12Pro:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPhone 12mini:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- 
- iPad:
-    static let letraCafeTarjetasMenu: CGFloat = 15
-    static let letrasCafeBocina:CGFloat = 23
-    static let letrasRosaBocina:CGFloat = 19
-    static let letrasCafeBloques: CGFloat = 19
-    static let letrasRosasBloques: CGFloat = 15
-    static let letraPosicionBloque: CGFloat = 27
-    static let letraExplicacion:CGFloat = 18
-    static let letraFonema:CGFloat = 27
- */
+enum TamanioDispositivo: String{
+    
+    case iPhoneMuyGrande
+    case iPhone12Mini
+    case iPhoneGrande
+    case iPhoneMediano
+    case iPhonePequeño
+    
+    public init?(rawValue: String) {
+        switch rawValue {
+        case "iPhone Xs Max":
+            self = .iPhoneMuyGrande
+        case "iPhone 6":
+            self = .iPhoneMediano
+        case "iPhone 5s":
+            self = .iPhonePequeño
+        case "iPhone 12 mini":
+            self = .iPhone12Mini
+        case "iPhone 12":
+            self = .iPhoneGrande
+        default:
+            self = .iPhoneMediano
+        }
+    }
+    
+//    func establecer() -> [CGFloat]{
+//        var letraCafeTarjetasMenu: CGFloat = 14
+//        var letrasCafeBocina:CGFloat = 22
+//        var letrasRosaBocina:CGFloat = 20
+//        var letrasCafeBloques: CGFloat = 20
+//        var letrasRosasBloques: CGFloat = 20
+//        var letraPosicionBloque: CGFloat = 25
+//        var letraExplicacion:CGFloat = 16
+//        var letraFonema:CGFloat = 25
+//        switch self {
+//        case .iPhonePequeño:
+//            <#code#>
+//        case .iPhone12Mini:
+//            <#code#>
+//        case .iPhoneMediano:
+//            <#code#>
+//        case .iPhoneGrande:
+//            <#code#>
+//        case .iPhoneMuyGrande:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//    }
+    
+}
 
 //SKU: 20210623

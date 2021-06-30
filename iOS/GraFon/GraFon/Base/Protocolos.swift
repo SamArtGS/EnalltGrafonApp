@@ -22,3 +22,9 @@ protocol collectionViewDentro: UICollectionViewDelegate, UICollectionViewDataSou
 protocol MostrarExcepcionesDelegate : AnyObject{
     func mostrarExcepciones()
 }
+
+protocol pantallaResultadosDelegate: AnyObject{
+    func irOtroJuego()
+    func irPantallaPajaros()
+    func irAPuertas()
+}

@@ -51,7 +51,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "sta*tion*", enGriego: "sta.sjõ"),
                     Palabra(palabra: "na*tion*al", enGriego: "na.sjo.nal"),
-                    Palabra(palabra: "supersti*tieu*se", enGriego: "sy.pᴇʀ.sti.sjɶz"),
+                    Palabra(palabra: "supersti*tieu*se", enGriego: "sy.pᴇʀ.sti.sj&Œ&z"),
                     Palabra(palabra: "confiden*tiel*", enGriego: "kõ.fi.dɑ̃.sjᴇl"),
                     Palabra(palabra: "ini*tia*tive", enGriego: "i.ni.sja.tiv")
               ],
@@ -72,7 +72,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "elles von*t*", enGriego: "ᴇl.võ"),
-                    Palabra(palabra: "peti*t*", enGriego: "pɶ.ti")
+                    Palabra(palabra: "peti*t*", enGriego: "p&Œ&.ti")
               ],
               pronuciacion: "-t",
               explicacion: """
@@ -158,7 +158,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "*v*êtement", enGriego: "vᴇt.mɑ̃"),
                     Palabra(palabra: "uni*v*ers", enGriego: "y.ni.vᴇʀ"),
-                    Palabra(palabra: "a*v*eugle", enGriego: "a.vɶgl")
+                    Palabra(palabra: "a*v*eugle", enGriego: "a.v&Œ&gl")
               ],
               pronuciacion: "v",
               explicacion: """
@@ -238,7 +238,7 @@ extension tarjetas{
               palabras: [
                 Palabra(palabra: "pai*x*", enGriego: "pᴇ"),
                 Palabra(palabra: "bateau*x*", enGriego: "ba.to"),
-                Palabra(palabra: "je veu*x*", enGriego: "ʒɶ.vɶ")
+                Palabra(palabra: "je veu*x*", enGriego: "ʒ&Œ&.v&Œ&")
               ],
               pronuciacion: "-x",
               explicacion: """

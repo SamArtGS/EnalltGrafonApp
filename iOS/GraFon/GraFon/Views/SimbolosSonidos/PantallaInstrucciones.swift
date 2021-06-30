@@ -49,13 +49,9 @@ class PantallaJuegoSyS: UIView{
         botonInicio.translatesAutoresizingMaskIntoConstraints = false
         botonInicio.setImage(UIImage(named: "n1_jgo_iniciar_mdpi"), for: .normal)
         botonInicio.contentMode = .scaleAspectFit
-        botonInicio.addTarget(self, action: #selector(guardarInformacion), for: .touchUpInside)
+        botonInicio.addTarget(self, action: #selector(iniciar), for: .touchUpInside)
         return botonInicio
     }()
-    
-    func agregarAcciones(accion: Selector){
-        botonInicioJuego.addTarget(self, action: accion, for: .touchUpInside)
-    }
     
     
     
@@ -75,7 +71,7 @@ class PantallaJuegoSyS: UIView{
     }
 }
 extension PantallaJuegoSyS{
-    @objc func guardarInformacion(){
+    @objc func iniciar(){
         delegate?.iniciarJuego()
     }
 }

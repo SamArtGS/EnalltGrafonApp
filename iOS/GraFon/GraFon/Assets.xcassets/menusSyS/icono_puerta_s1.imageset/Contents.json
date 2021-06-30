@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "demo_n1_jgo.png",
+      "filename" : "icono_puerta_s1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "demo_n1_jgo@2x.png",
+      "filename" : "icono_puerta_s1@x2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "demo_n1_jgo@3x.png",
+      "filename" : "icono_puerta_s1@x3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

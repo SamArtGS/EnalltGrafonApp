@@ -461,7 +461,7 @@ struct Data{
             nivel: 1,
                 imagen: "n1_jgo1_pant_13mdpi",
                 sonido: "42",
-                correcto: false
+                correcto: false //DEBERÍA SER TRUE?
         ),
         ParejaSonido(
             nivel: 1,
@@ -524,7 +524,7 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_03mdpi",
                 sonido: "166",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 2,
@@ -542,7 +542,7 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_06mdpi",
                 sonido: "53",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 2,
@@ -560,19 +560,19 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_09mdpi",
                 sonido: "92",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
                 imagen: "n1_jgo2_pant_10mdpi",
                 sonido: "169",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
                 imagen: "n1_jgo2_pant_11mdpi",
                 sonido: "45",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
@@ -584,13 +584,13 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_13mdpi",
                 sonido: "83",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
                 imagen: "n1_jgo2_pant_14mdpi",
                 sonido: "161",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
@@ -602,7 +602,7 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_16mdpi",
                 sonido: "33",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
@@ -620,7 +620,7 @@ struct Data{
             nivel: 2,
                 imagen: "n1_jgo2_pant_19mdpi",
                 sonido: "28",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 2,
@@ -637,13 +637,13 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_01mdpi",
                 sonido: "140",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 3,
                 imagen: "n1_jgo3_pant_02mdpi",
                 sonido: "151",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
@@ -667,7 +667,7 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_06mdpi",
                 sonido: "125",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 3,
@@ -679,7 +679,7 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_08mdpi",
                 sonido: "215",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
@@ -691,13 +691,13 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_10mdpi",
                 sonido: "113",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
                 imagen: "n1_jgo3_pant_11mdpi",
                 sonido: "32",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
@@ -709,7 +709,7 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_13mdpi",
                 sonido: "99",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
@@ -721,13 +721,13 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_15mdpi",
                 sonido: "216",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
                 imagen: "n1_jgo3_pant_16mdpi",
                 sonido: "214",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 3,
@@ -751,7 +751,7 @@ struct Data{
             nivel: 3,
                 imagen: "n1_jgo3_pant_20mdpi",
                 sonido: "12",
-                correcto: true
+                correcto: false
         ),
         
         // :--------------------------:
@@ -762,19 +762,19 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_01mdpi",
                 sonido: "161",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 4,
                 imagen: "n1_jgo4_pant_02mdpi",
                 sonido: "50",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
                 imagen: "n1_jgo4_pant_03mdpi",
                 sonido: "51",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 4,
@@ -792,13 +792,13 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_06mdpi",
                 sonido: "52",
-                correcto: false
+                correcto: true
         ),
         ParejaSonido(
             nivel: 4,
                 imagen: "n1_jgo4_pant_07mdpi",
                 sonido: "34",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
@@ -810,19 +810,19 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_09mdpi",
                 sonido: "115",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
                 imagen: "n1_jgo4_pant_10mdpi",
                 sonido: "155",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
                 imagen: "n1_jgo4_pant_11mdpi",
                 sonido: "132",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
@@ -846,7 +846,7 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_15mdpi",
                 sonido: "94",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
@@ -858,7 +858,7 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_17mdpi",
                 sonido: "71",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
@@ -870,7 +870,7 @@ struct Data{
             nivel: 4,
                 imagen: "n1_jgo4_pant_19mdpi",
                 sonido: "117",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,

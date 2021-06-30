@@ -8,9 +8,15 @@
 
 import UIKit
 
+enum RangoPuntaje {
+    case buenIntento
+    case muyBien
+    case felicidades
+}
+
 class PantallaResultados: UIView {
     
-    weak var delegate: pantallaInstruccionesDelegate?
+    weak var delegate: pantallaResultadosDelegate?
     
     var puntaje: Int? {
         didSet {
@@ -22,22 +28,46 @@ class PantallaResultados: UIView {
             case 0...9:
                 retroalimentacion.text = "¡Buen Intento!"
                 consolacion.text = "Aún puedes mejorar.\nDate otra vuelta por la sección"
+                configurarBotonRegreso(resultado: .buenIntento)
                 break
                 
                 /// Ir al menú de pájaros, al igual que el anterior
             case 10...15:
                 retroalimentacion.text = "¡Muy bien!"
                 consolacion.text = "Ya reconoces varios símbolos. \n Si tienes dudas, \n regresa a ver la sección"
+                configurarBotonRegreso(resultado: .muyBien)
                 break
                 /// Ir a las puerta, la de palabras en la boca
             case 16...20:
                 retroalimentacion.text = "¡Felicidades!"
                 consolacion.text = "Reconoces símbolos con destreza.\n ¿Por qué no exploras \n las demás puertas?"
+                configurarBotonRegreso(resultado: .felicidades)
                 break
             default:
                 break
             }
             
+        }
+    }
+    
+    func configurarBotonRegreso(resultado: RangoPuntaje) {
+        pilaElementos.addArrangedSubview(botonInicioJuego)
+        
+        NSLayoutConstraint.activate([
+            botonInicioJuego.widthAnchor.constraint(equalToConstant: 80),
+            botonInicioJuego.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        switch resultado {
+        case .buenIntento:
+            botonInicioJuego.setImage(UIImage(named: "icono_puerta_s1"), for: .normal)
+            botonInicioJuego.addTarget(nil, action: #selector(irPantallaJuegos), for: .touchUpInside)
+        case .muyBien:
+            botonInicioJuego.setImage(UIImage(named: "icono_puerta_s1"), for: .normal)
+            botonInicioJuego.addTarget(nil, action: #selector(irPajaros), for: .touchUpInside)
+        case .felicidades:
+            botonInicioJuego.setImage(UIImage(named: "icono_puertas_color"), for: .normal)
+            botonInicioJuego.addTarget(botonInicioJuego, action: #selector(irPuertas), for: .touchUpInside)
         }
     }
         
@@ -58,6 +88,7 @@ class PantallaResultados: UIView {
     private let imagenPresentacion:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "retro_n1_jgo"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -77,6 +108,7 @@ class PantallaResultados: UIView {
         etiqueta.font = UIFont.HelveticaNeue(.bold, size: 30)
         return etiqueta
     }()
+    
     private let retroalimentacion: UILabel = {
         let etiqueta = UILabel()
         etiqueta.text = "Qué descepcionante xd"
@@ -99,9 +131,7 @@ class PantallaResultados: UIView {
     private let botonInicioJuego:UIButton = {
         let botonInicio = UIButton(type: .custom)
         botonInicio.translatesAutoresizingMaskIntoConstraints = false
-        botonInicio.setImage(UIImage(named: ""), for: .normal)
         botonInicio.contentMode = .scaleAspectFit
-        //botonInicio.addTarget(self, action: #selector(guardarInformacion), for: .touchUpInside)
         return botonInicio
     }()
     
@@ -139,6 +169,19 @@ class PantallaResultados: UIView {
             pilaElementos.widthAnchor.constraint(equalTo: imagenPresentacion.widthAnchor)
         ])
         
+    }
+}
+
+extension PantallaResultados{
+    @objc func irPantallaJuegos(){
+        print("Si realiza la acción")
+        delegate?.irOtroJuego()
+    }
+    @objc func irPajaros(){
+        delegate?.irPantallaPajaros()
+    }
+    @objc func irPuertas(){
+        delegate?.irAPuertas()
     }
 }
 

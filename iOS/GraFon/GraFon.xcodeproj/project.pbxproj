@@ -340,6 +340,7 @@
 		54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */; };
 		54DCA05826367AE2003D4F68 /* HalfModalPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */; };
 		54E22FD826508C8A006B9E82 /* ZoomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */; };
+		54E613F3268AAC7800C1848C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E613F2268AAC7800C1848C /* DeviceInfo.swift */; };
 		54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */; };
 		54E70BE1264C1ADF00DA062F /* CeldaSonidoYSilabas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BE0264C1ADF00DA062F /* CeldaSonidoYSilabas.swift */; };
 		54E70BE3264C1AF100DA062F /* CeldaSilabasYExplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */; };
@@ -697,6 +698,7 @@
 		54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionDelegate.swift; sourceTree = "<group>"; };
 		54DCA05426367AE2003D4F68 /* HalfModalPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalPresentation.swift; sourceTree = "<group>"; };
 		54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionDelegate.swift; sourceTree = "<group>"; };
+		54E613F2268AAC7800C1848C /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetaSeleccionadaController.swift; sourceTree = "<group>"; };
 		54E70BE0264C1ADF00DA062F /* CeldaSonidoYSilabas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaSonidoYSilabas.swift; sourceTree = "<group>"; };
 		54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaSilabasYExplicacion.swift; sourceTree = "<group>"; };
@@ -908,8 +910,8 @@
 			children = (
 				54F6993125F09ECC008F22DF /* CeldaFonemaPagina.swift */,
 				54A0F88A2627337700A6D308 /* CeldaJuegoSyS.swift */,
-				54DCA04C26365AFA003D4F68 /* PantallaResultados.swift */,
 				54A0F884262676B300A6D308 /* PantallaInstrucciones.swift */,
+				54DCA04C26365AFA003D4F68 /* PantallaResultados.swift */,
 			);
 			path = SimbolosSonidos;
 			sourceTree = "<group>";
@@ -1214,6 +1216,7 @@
 				54DCA05326367AE1003D4F68 /* HalfModalTransitionDelegate.swift */,
 				54E22FD726508C8A006B9E82 /* ZoomTransitionDelegate.swift */,
 				54BDCF022665F28E00E07A0B /* ReGex.swift */,
+				54E613F2268AAC7800C1848C /* DeviceInfo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1655,6 +1658,7 @@
 				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
 				546B136025DAFACD00CF2ED5 /* SceneDelegate.swift in Sources */,
 				54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */,
+				54E613F3268AAC7800C1848C /* DeviceInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

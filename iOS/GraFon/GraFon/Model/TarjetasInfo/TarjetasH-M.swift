@@ -228,7 +228,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "*l*it", enGriego: "li"),
                     Palabra(palabra: "b*l*é", enGriego: "blᴇ"),
-                    Palabra(palabra: "seu*l*", enGriego: "sɶl"),
+                    Palabra(palabra: "seu*l*", enGriego: "s&Œ&l"),
                     Palabra(palabra: "avri*l*", enGriego: "a.vʀil"),
               ],
               pronuciacion: "l",
@@ -243,7 +243,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "trav*ail*", enGriego: "tʀa.vaj "),
                     Palabra(palabra: "rév*eil*", enGriego: "ʀᴇ.vᴇj"),
-                    Palabra(palabra: "d*euil*", enGriego: "dɶj")
+                    Palabra(palabra: "d*euil*", enGriego: "d&Œ&j")
               ],
               pronuciacion: "-ail, -eil, -euil",
               explicacion: """
@@ -287,7 +287,7 @@ extension tarjetas{
               palabras: [
                     Palabra(palabra: "elle trav*aill*e", enGriego: "ᴇl.tʀa.vaj"),
                     Palabra(palabra: "rév*eill*on", enGriego: "ʀᴇ.vᴇ.jõ"),
-                    Palabra(palabra: "fe*uill*e", enGriego: "fɶj"),
+                    Palabra(palabra: "fe*uill*e", enGriego: "f&Œ&j"),
               ],
               pronuciacion: "-ill-",
               explicacion: """

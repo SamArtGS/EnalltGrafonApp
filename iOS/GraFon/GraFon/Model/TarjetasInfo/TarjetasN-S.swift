@@ -80,7 +80,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "*enn*uyeux", enGriego: "ɑ̃.nɥi.jɶ"),
+                    Palabra(palabra: "*enn*uyeux", enGriego: "ɑ̃.nɥi.j&Œ&"),
                     Palabra(palabra: "*enn*ui", enGriego: "ɑ̃.nɥi")
               ],
               pronuciacion: "enn-",
@@ -175,7 +175,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "*ent*re", enGriego: "ɑ̃tʀ"),
-                    Palabra(palabra: "je *pens*e", enGriego: "jɶ.pɑ̃s"),
+                    Palabra(palabra: "je *pens*e", enGriego: "j&Œ&.pɑ̃s"),
               ],
               pronuciacion: "en",
               explicacion: """
@@ -553,8 +553,8 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "*resa*lir", enGriego: "ʀɶ.sa.liʀ"),
-                    Palabra(palabra: "*resi*tuer", enGriego: "ʀɶ.si.tɥᴇ")
+                    Palabra(palabra: "*resa*lir", enGriego: "ʀ&Œ&.sa.liʀ"),
+                    Palabra(palabra: "*resi*tuer", enGriego: "ʀ&Œ&.si.tɥᴇ")
               ],
               pronuciacion: "res-",
               explicacion: """

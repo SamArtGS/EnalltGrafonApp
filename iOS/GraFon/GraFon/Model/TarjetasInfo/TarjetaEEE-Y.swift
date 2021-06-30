@@ -22,7 +22,7 @@ struct tarjetas {
                 Silaba(
                     palabras: [
                         Palabra(palabra: "*é*tude", enGriego: "E.tyd"),
-                        Palabra(palabra: "europ*é*en", enGriego: "Œ.RO.pE.ɛ̃")
+                        Palabra(palabra: "europ*é*en", enGriego: "&Œ&.RO.pE.ɛ̃")
                     ],
                     pronuciacion: "é",
                     explicacion: "transcribe el sondio",
@@ -226,7 +226,7 @@ struct tarjetas {
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "*aill*eurs", enGriego: "a.jŒʀ")
+                          Palabra(palabra: "*aill*eurs", enGriego: "a.j&Œ&ʀ")
                     ],
                     pronuciacion: "aill",
                     explicacion: "transcribe los sonidos",
@@ -379,12 +379,12 @@ struct tarjetas {
                ),
                Silaba(
                    palabras: [
-                         Palabra(palabra: "j*e*", enGriego: "ʒŒ"),
-                         Palabra(palabra: "l*e*", enGriego: "IŒ")
+                         Palabra(palabra: "j*e*", enGriego: "ʒ&Œ&"),
+                         Palabra(palabra: "l*e*", enGriego: "I&Œ&")
                    ],
                    pronuciacion: "-e",
                    explicacion: "Al final de una palabra de dos letras \n\n transcribe el sonido",
-                   imagenFonema: "Œ",
+                   imagenFonema: "&Œ&",
                    imagenConsejo: nil, // // // -> LENGUA, SE ELIMINÓ,
                    textodeAbajo: nil
                   )
@@ -396,7 +396,7 @@ struct tarjetas {
                silabas: [
                    Silaba(
                        palabras: [
-                             Palabra(palabra: "d*evo*ir", enGriego: "dɶ.vwaʀ")
+                             Palabra(palabra: "d*evo*ir", enGriego: "d&Œ&.vwaʀ")
                        ],
                        pronuciacion: "-e-",
                        explicacion: """
@@ -404,7 +404,7 @@ struct tarjetas {
                                        - está en la primera sílaba de una palabra y
                                        - le sigue una sola constante (excepto $x$) más una vocal \n\n transcribe el sonido
                                    """,
-                       imagenFonema: "Œ",
+                       imagenFonema: "&Œ&",
                        imagenConsejo: nil,
                        textodeAbajo: nil
                    ),
@@ -458,7 +458,7 @@ struct tarjetas {
                                        -le sigue una sola consonante que transcribe un sonido
                                         transcribe el sonido
                                    """,
-                       imagenFonema: "Œ",
+                       imagenFonema: "&Œ&",
                        imagenConsejo: nil,
                        textodeAbajo: nil
                    )
@@ -573,7 +573,7 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "européen", enGriego: "Œ.ʀo.pᴇ.ɛ̃"),
+                            Palabra(palabra: "européen", enGriego: "&Œ&.ʀo.pᴇ.ɛ̃"),
                       ],
                       pronuciacion: "-éen",
                       explicacion: """
@@ -585,7 +585,7 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "europ*éenne*", enGriego: "Œ.ʀo.pᴇ.ᴇn"),
+                            Palabra(palabra: "europ*éenne*", enGriego: "&Œ&.ʀo.pᴇ.ᴇn"),
                       ],
                       pronuciacion: "-éenne",
                       explicacion: """
@@ -628,7 +628,7 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "*ennu*yeux", enGriego: "ɑ̃.nɥi.jŒ")
+                            Palabra(palabra: "*ennu*yeux", enGriego: "ɑ̃.nɥi.j&Œ&")
                       ],
                       pronuciacion: "enn-",
                       explicacion: """
@@ -647,7 +647,7 @@ struct tarjetas {
                   Silaba(
                       palabras: [
                             Palabra(palabra: "*esp*rit", enGriego: "ᴇs.pʀi"),
-                            Palabra(palabra: "*err*eur", enGriego: "ᴇ.ʀŒʀ")
+                            Palabra(palabra: "*err*eur", enGriego: "ᴇ.ʀ&Œ&ʀ")
                       ],
                       pronuciacion: "e-",
                       explicacion: """
@@ -723,15 +723,15 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "*ress*ource", enGriego: "ʀŒ.suʀs"),
-                            Palabra(palabra: "*ress*embler", enGriego: "ʀŒ.sɑ̃.blᴇ"),
-                            Palabra(palabra: "*ress*entir", enGriego: "ʀŒ.sɑ̃.tiʀ")
+                            Palabra(palabra: "*ress*ource", enGriego: "ʀ&Œ&.suʀs"),
+                            Palabra(palabra: "*ress*embler", enGriego: "ʀ&Œ&.sɑ̃.blᴇ"),
+                            Palabra(palabra: "*ress*entir", enGriego: "ʀ&Œ&.sɑ̃.tiʀ")
                       ],
                       pronuciacion: "ress-",
                       explicacion: """
                                       Al inicio de una palabra \n\n $e$ transcribe el sonido
                                   """,
-                      imagenFonema: "Œ",
+                      imagenFonema: "&Œ&",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   ),
@@ -762,18 +762,18 @@ struct tarjetas {
                 ),
                 Silaba(
                     palabras: [
-                          Palabra(palabra: "d*egr*é", enGriego: "dŒ.gʀᴇ"),
-                          Palabra(palabra: "r*egr*et", enGriego: "ʀŒ.gʀᴇ"),
-                          Palabra(palabra: "s*ecr*et", enGriego: "sŒ.kʀᴇ"),
-                          Palabra(palabra: "r*efl*et", enGriego: "ʀŒ.flᴇ"),
-                          Palabra(palabra: "r*ecr*uter", enGriego: "ʀŒ.kʀy.tᴇ"),
-                          Palabra(palabra: "r*epr*endre", enGriego: "ʀŒ.pʀɑ̃dʀ")
+                          Palabra(palabra: "d*egr*é", enGriego: "d&Œ&.gʀᴇ"),
+                          Palabra(palabra: "r*egr*et", enGriego: "ʀ&Œ&.gʀᴇ"),
+                          Palabra(palabra: "s*ecr*et", enGriego: "s&Œ&.kʀᴇ"),
+                          Palabra(palabra: "r*efl*et", enGriego: "ʀ&Œ&.flᴇ"),
+                          Palabra(palabra: "r*ecr*uter", enGriego: "ʀ&Œ&.kʀy.tᴇ"),
+                          Palabra(palabra: "r*epr*endre", enGriego: "ʀ&Œ&.pʀɑ̃dʀ")
                     ],
                     pronuciacion: "-e-",
                     explicacion: """
                                     Seguida de dos consonantes diferentes (excepto $n$, $m$) que no forman parte de la misma sílaba que la $e$, \n\n $e$ transcribe el sonido
                                 """,
-                    imagenFonema: "Œ",
+                    imagenFonema: "&Œ&",
                     imagenConsejo: nil,
                     textodeAbajo: nil
                 )
@@ -927,14 +927,14 @@ struct tarjetas {
               silabas: [
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "p*eu*", enGriego: "pŒ"),
-                            Palabra(palabra: "*eu*ro", enGriego: "Œ.ʀo")
+                            Palabra(palabra: "p*eu*", enGriego: "p&Œ&"),
+                            Palabra(palabra: "*eu*ro", enGriego: "&Œ&.ʀo")
                       ],
                       pronuciacion: "eu",
                       explicacion: """
                                      transcribe el sonido
                                   """,
-                      imagenFonema: "Œ",
+                      imagenFonema: "&Œ&",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   )
@@ -1051,25 +1051,25 @@ struct tarjetas {
               silabas: [
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "ac*cuei*l", enGriego: "a.kŒj"),
+                            Palabra(palabra: "ac*cuei*l", enGriego: "a.k&Œ&j"),
                       ],
                       pronuciacion: "cueil o cueill",
                       explicacion: """
                                       transcriben los sonidos
                                   """,
-                      imagenFonema: "kŒj",
+                      imagenFonema: "k%Œ%j",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "org*ueill*euse", enGriego: "oʀ.gŒ.jŒz"),
+                            Palabra(palabra: "org*ueill*euse", enGriego: "oʀ.g&Œ&.j&Œ&z"),
                       ],
                       pronuciacion: "gueil o gueill",
                       explicacion: """
                                       transcriben los sonidos
                                   """,
-                      imagenFonema: "gŒj",
+                      imagenFonema: "g%Œ%j",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   )
@@ -1280,8 +1280,8 @@ struct tarjetas {
                   palabras: [
                         Palabra(palabra: "trav*ail*", enGriego: "tʀa.vaj "),
                         Palabra(palabra: "elle trav*aill*e", enGriego: "ᴇl.tʀa.vaj"),
-                        Palabra(palabra: "d*euil*", enGriego: "dŒj"),
-                        Palabra(palabra: "fe*uill*e ", enGriego: "fŒj")
+                        Palabra(palabra: "d*euil*", enGriego: "d&Œ&j"),
+                        Palabra(palabra: "fe*uill*e ", enGriego: "f&Œ&j")
                   ],
                   pronuciacion: "il o ill",
                   explicacion: """
@@ -1336,25 +1336,25 @@ struct tarjetas {
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "ac*cueil*", enGriego: "a.kŒj")
+                        Palabra(palabra: "ac*cueil*", enGriego: "a.k&Œ&j")
                   ],
                   pronuciacion: "cueil o cueill",
                   explicacion: """
                                   transcriben los sonidos
                               """,
-                  imagenFonema: "kŒj",
+                  imagenFonema: "k%Œ%j",
                   imagenConsejo: nil,
                   textodeAbajo: nil
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "or*gueill*euse", enGriego: "oʀ.gŒ.jŒz")
+                        Palabra(palabra: "or*gueill*euse", enGriego: "oʀ.g&Œ&.j&Œ&z")
                   ],
                   pronuciacion: "gueil o gueill",
                   explicacion: """
                                   transcriben los sonidos
                               """,
-                  imagenFonema: "gŒj",
+                  imagenFonema: "g%Œ%j",
                   imagenConsejo: nil,
                   textodeAbajo: nil
               )
@@ -1724,7 +1724,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "j*oye*ux", enGriego: "ʒwa.jŒ"),
+                        Palabra(palabra: "j*oye*ux", enGriego: "ʒwa.j&Œ&"),
                         Palabra(palabra: "v*oya*ge", enGriego: "vwa.jaʒ")
                   ],
                   pronuciacion: "-oy-",
@@ -1821,13 +1821,13 @@ struct tarjetas {
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "s*œu*r", enGriego: "sŒʀ"),
+                        Palabra(palabra: "s*&œ&u*r", enGriego: "s&Œ&ʀ"),
                   ],
-                  pronuciacion: "œu",
+                  pronuciacion: "&œ&u",
                   explicacion: """
                                   transcriben el sonido
                               """,
-                  imagenFonema: "Œ",
+                  imagenFonema: "&Œ&",
                   imagenConsejo: nil,
                   textodeAbajo: nil
               )
@@ -2151,14 +2151,14 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "p*eu*", enGriego: "pŒ"),
-                        Palabra(palabra: "*eu*ro", enGriego: "Œ.ʀo")
+                        Palabra(palabra: "p*eu*", enGriego: "p&Œ&"),
+                        Palabra(palabra: "*eu*ro", enGriego: "&Œ&.ʀo")
                   ],
                   pronuciacion: "eu",
                   explicacion: """
                                   transcriben el sonido
                               """,
-                  imagenFonema: "Œ",
+                  imagenFonema: "&Œ&",
                   imagenConsejo: nil,
                   textodeAbajo: nil
               )
@@ -2171,7 +2171,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "rel*iu*re", enGriego: "ʀŒ.ljyʀ"),
+                        Palabra(palabra: "rel*iu*re", enGriego: "ʀ&Œ&.ljyʀ"),
                         Palabra(palabra: "str*iu*re", enGriego: "stʀi.jyʀ")
                   ],
                   pronuciacion: "u",
@@ -2212,7 +2212,7 @@ struct tarjetas {
                   palabras: [
                         Palabra(palabra: "*qu*and", enGriego: "kɑ̃"),
                         Palabra(palabra: "*qu*i", enGriego: "ki"),
-                        Palabra(palabra: "*qu*e", enGriego: "kŒ")
+                        Palabra(palabra: "*qu*e", enGriego: "k&Œ&")
                   ],
                   pronuciacion: "qu",
                   explicacion: """
@@ -2230,8 +2230,8 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "ac*cuei*l", enGriego: "a.kŒj"),
-                        Palabra(palabra: "*cuei*llir", enGriego: "kŒ.jiʀ")
+                        Palabra(palabra: "ac*cuei*l", enGriego: "a.k&Œ&j"),
+                        Palabra(palabra: "*cuei*llir", enGriego: "k&Œ&.jiʀ")
                   ],
                   pronuciacion: "cuei",
                   explicacion: """
@@ -2282,7 +2282,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "enn*uye*ux", enGriego: "ɑ̃.nɥi.jŒ"),
+                        Palabra(palabra: "enn*uye*ux", enGriego: "ɑ̃.nɥi.j&Œ&"),
                         Palabra(palabra: "br*uya*nte", enGriego: "bʀɥi.jɑ̃t")
                   ],
                   pronuciacion: "uy",
@@ -2408,7 +2408,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "j*oye*ux", enGriego: "ʒwa.jŒ"),
+                        Palabra(palabra: "j*oye*ux", enGriego: "ʒwa.j&Œ&"),
                         Palabra(palabra: "v*oya*ge", enGriego: "vwa.jaʒ"),
                   ],
                   pronuciacion: "-oy-",
@@ -2490,7 +2490,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "enn*uye*ux", enGriego: "ɑ̃.nɥi.jŒ"),
+                        Palabra(palabra: "enn*uye*ux", enGriego: "ɑ̃.nɥi.j&Œ&"),
                         Palabra(palabra: "br*uya*nte", enGriego: "bʀɥi.jɑ̃t")
                   ],
                   pronuciacion: "uy",

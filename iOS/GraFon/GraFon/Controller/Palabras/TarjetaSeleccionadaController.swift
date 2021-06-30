@@ -120,9 +120,9 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
             tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
             return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
          } else {
-            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 20) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
+            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
-               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 250 + palabrasCount)
+               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 150 + palabrasCount)
             } else {
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 400 + palabrasCount)
             }

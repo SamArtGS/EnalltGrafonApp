@@ -16,7 +16,7 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒ-]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒŒ -]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }
@@ -53,8 +53,12 @@ class UILabelPersonalizado: UILabel{
         
         let formatos: [Formato] = [
             Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
-            Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.regular, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
-            Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema))
+            Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
+            Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema)),
+            
+            Formato(simbolo: "&", color: .colorLetraRosa, fuente: .Roboto(.bold, size: (Tamanio.letrasRosaBocina - 6))),
+            Formato(simbolo: "%", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema - 6))
+            
         ]
         
         var textoSinSimbolos: String = texto

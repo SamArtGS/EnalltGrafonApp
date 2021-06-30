@@ -20,6 +20,8 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
+    
+    
     @objc func instrucciones(){
         presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
     }
@@ -44,7 +46,9 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         configurar()
         self.collectionView!.register(JuegoSySCelda.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         collectionView.backgroundColor = .clear
+        
         colocarFondo(imagen: "bck_n1_juegos_v2")
     }
     
@@ -161,12 +165,39 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
         }
     }
     
+    
+    
     func recolectarPuntaje() {
         puntos+=1
     }
     
     
     func finalizar() {
-        presentacionModal(viewController: PuntuacionJuegoSyS(puntaje: puntos), halfTransition: &halfModalTransitioningDelegate)
+        let vc = PuntuacionJuegoSyS(puntaje: puntos)
+        vc.pantalla.delegate = self
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.present(vc, animated: true, completion: nil)
+        
+    }
+    
+}
+
+
+extension SySJuego1VC: pantallaResultadosDelegate{
+    func irOtroJuego() {
+        navigationController?.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func irPantallaPajaros() {
+        navigationController?.dismiss(animated: true)
+        let vc = (navigationController?.viewControllers[1]) as? TabBarTeoriaJuegos
+        vc?.selectedIndex = 0
+        navigationController?.popToViewController(vc!, animated: true)
+    }
+    
+    func irAPuertas() {
+        navigationController?.dismiss(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

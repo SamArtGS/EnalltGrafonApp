@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlowLayout{
+class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlowLayout, UITabBarControllerDelegate{
     
     private let reuseIdentifier:String = "celdaFonema"
     var indiceSeleccionado:Int?
@@ -33,6 +33,7 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         self.title = "Símbolos y Sonidos"
         collectionView.backgroundColor = .white
         collectionView?.isPagingEnabled = true
+        tabBarController?.delegate = self
         self.collectionView!.register(SimboloPaginaCelda.self,
                                       forCellWithReuseIdentifier: reuseIdentifier)
         

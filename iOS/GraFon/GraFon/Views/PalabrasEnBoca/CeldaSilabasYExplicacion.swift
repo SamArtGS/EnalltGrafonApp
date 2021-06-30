@@ -85,7 +85,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
-        let labelDer:UILabel = UILabel()
+        let labelDer:UILabel = UILabelPersonalizado()
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         vista.translatesAutoresizingMaskIntoConstraints = false
@@ -152,10 +152,11 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     }()
     
     private var pronunciacion: (String) -> UILabel = { texto in
-        let etiqueta = UILabel()
-        etiqueta.text = texto
+        let etiqueta = UILabelPersonalizado()
+        
         etiqueta.font = .Roboto(.bold, size: Tamanio.letraFonema)
         etiqueta.textColor = .colorLetraRosa
+        etiqueta.text = texto
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
@@ -241,6 +242,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         adornito.isHidden = true
         fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        
         
         imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
         
