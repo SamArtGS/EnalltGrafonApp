@@ -9,38 +9,26 @@ import UIKit
 
 
 extension UIColor {
-    //
-    // COLORES SONIDOS Y SÍMBOLOS
-    //
+    
+    //MARK: SONIDOS Y SÍMBOLOS
+    
     static let colorBarraSuperiorSyS: UIColor = UIColor(red: 82/255, green: 145/255, blue: 179/255, alpha: 1)
     static let colorLineaBarraSuperiorSyS: UIColor = UIColor(red: 68/255, green: 89/255, blue: 115/255, alpha: 1)
     static let colorToolBarSyS: UIColor = UIColor(red: 213/255, green: 224/255, blue: 224/255, alpha: 1)
     static let textoBarSyS: UIColor = UIColor(red: 213/255, green: 224/255, blue: 224/255, alpha: 1)
-    
-    
-    
     static let colorNoSeleccionadoTabBarSonidoSimbolo: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
     static let colorTabBarSonidoSimbolo: UIColor = UIColor(red: 82/255, green: 145/255, blue: 179/255, alpha: 1)
     
     
-    //
-    // COLORES PALABRAS EN LA BOCA
-    //
+    //MARK: PALABRAS
     
     static let colorBarraSuperiorPalabras: UIColor = UIColor(red: 137/255, green: 55/255, blue: 26/255, alpha: 1)
-    
     static let colorLineaBarraSuperiorPalabras: UIColor = UIColor(red: 209/255, green: 95/255, blue: 59/255, alpha: 1)
-    
     static let colorSeleccionadoTabBarSonidoSimbolo: UIColor = .white
-
     static let colorSeleccionadoTabBarPalabrasEnBoca: UIColor = .white
-    
     static let colorNoSeleccionadoTabBarPalabrasEnBoca: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
-    
     static let colorTabBarPalabrasEnBoca: UIColor = .colorBarraSuperiorPalabras
-    
     static let colorFondoTarjetasPalabrasEnBoca: UIColor = UIColor(red: 254/255, green: 244/255, blue: 235/255, alpha: 1.0)
-    
     static let fondosSilabaPalabrasEnBoca: [UIColor] = [
         UIColor(red: 249/255, green: 232/255, blue: 226/255, alpha: 1.0),
         UIColor(red: 244/255, green: 218/255, blue: 209/255, alpha: 1.0),
@@ -50,10 +38,31 @@ extension UIColor {
         UIColor(red: 230/255, green: 167/255, blue: 148/255, alpha: 1.0),
         UIColor(red: 225/255, green: 151/255, blue: 128/255, alpha: 1.0)
     ]
-    
     static let colorLetras:UIColor = .colorBarraSuperiorPalabras
     static let colorLetraRosa:UIColor = UIColor(red: 214/255, green: 0/255, blue: 130/255, alpha: 1.0)
     static let colorLetraVerde:UIColor = .colorBarraSuperiorPalabras
+    
+    
+    
+    //MARK: GRUPOS DE PALABRAS
+    
+    static let colorNavigationBarGruposPalabras: UIColor = UIColor(red: 53/255, green: 103/255, blue: 37/255, alpha: 1.0)
+    static let colorLineaBarraSuperiorGruposPalabras: UIColor = UIColor(red: 68/255, green: 148/255, blue: 42/255, alpha: 1)
+    static let colorTabBarGruposPalabras:UIColor = colorNavigationBarGruposPalabras
+    static let colorSeleccionadoTabBarGruposPalabras: UIColor = .white
+    static let colorNoSeleccionadoTabBarGruposPalabras: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
+    
+    static let colorFondoTarjetasGrupoDePalabras: UIColor = UIColor(red: 244/255, green: 253/255, blue: 248/255, alpha: 1.0)
+    
+    static let fondosSilabaGrupoPalabras: [UIColor] = [
+        UIColor(red: 249/255, green: 232/255, blue: 226/255, alpha: 1.0),
+        UIColor(red: 244/255, green: 218/255, blue: 209/255, alpha: 1.0),
+        UIColor(red: 241/255, green: 206/255, blue: 194/255, alpha: 1.0),
+        UIColor(red: 238/255, green: 194/255, blue: 180/255, alpha: 1.0),
+        UIColor(red: 235/255, green: 180/255, blue: 162/255, alpha: 1.0),
+        UIColor(red: 230/255, green: 167/255, blue: 148/255, alpha: 1.0),
+        UIColor(red: 225/255, green: 151/255, blue: 128/255, alpha: 1.0)
+    ]
     
 }
 

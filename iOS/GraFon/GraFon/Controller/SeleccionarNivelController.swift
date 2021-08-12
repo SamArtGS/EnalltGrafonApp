@@ -13,8 +13,13 @@ class SeleccionarNivelController: UICollectionViewController, UINavigationContro
     private let reuseIdentifier:String = "Cell"
     private var puertaInt: Int?
     
-    let nombreImagenesNiveles1:[String] = ["n1_jgo1_01_mdpi","n1_jgo2_01_mdpi","n1_jgo3_01_mdpi","n1_jgo4_01_mdpi","n1_jgo5_01_mdpi"]
-    let nombreImagenesNiveles2:[String] = ["n2_jgo_btn_intr_mdpi", "n2_jgo_btn_memo01_mdpi","n2_jgo_btn_memo02_mdpi","n2_jgo_btn_triv_mdpi"]
+    let nombreImagenesNiveles1:[String] = ["n1_jgo1_01_mdpi","n1_jgo2_01_mdpi",
+                                           "n1_jgo3_01_mdpi","n1_jgo4_01_mdpi",
+                                           "n1_jgo5_01_mdpi"]
+    let nombreImagenesNiveles2:[String] = ["n2_jgo_btn_intr_mdpi",
+                                           "n2_jgo_btn_memo01_mdpi",
+                                           "n2_jgo_btn_memo02_mdpi",
+                                           "n2_jgo_btn_triv_mdpi"]
     
     
     override func viewDidLoad() {

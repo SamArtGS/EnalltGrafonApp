@@ -220,10 +220,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    deinit {
-        print("Se reclamado la sílaba de la primera posición")
-    }
+
     
     private let imagenVuelta: UIButton = {
         let boton = UIButton(type: .custom)
@@ -238,21 +235,22 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    func esTarjetaFinal(){
+    func esTarjetaFinal(hayExcepciones: Bool){
         adornito.isHidden = true
         fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        if hayExcepciones{
+            imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
+            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+            NSLayoutConstraint.activate([
+                imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+                imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+                imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
+                imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
+            ])
+        }else{
+            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        }
         
-        
-        imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        NSLayoutConstraint.activate([
-            imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
-            imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
-        ])
     }
     
     func esTarjetaNormal(){
@@ -260,20 +258,24 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    func esTarjetaUnica(){
+    func esTarjetaUnica(hayExcepciones: Bool){
         adornito.isHidden = true
-        fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        if hayExcepciones{
+            fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+            imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+                imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+                imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
+                imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
+            ])
+        }else{
+            fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        }
         
-        imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        NSLayoutConstraint.activate([
-            imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
-            imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
-        ])
     }
     
     func configurarConstraints(){
@@ -283,6 +285,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         addSubview(fondo)
         addSubview(pilaViews)
         fondo.addSubview(adornito)
+        
         addSubview(imagenVuelta)
         
         NSLayoutConstraint.activate([

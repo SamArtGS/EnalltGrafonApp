@@ -196,8 +196,10 @@ extension SySJuego1VC: pantallaResultadosDelegate{
         navigationController?.popToViewController(vc!, animated: true)
     }
     
-    func irAPuertas() {
+    func irAPuertas() { //Pendiente -> Regresar a las puertas del menú
         navigationController?.dismiss(animated: true)
-        navigationController?.popToRootViewController(animated: true)
+        let vc = (navigationController?.viewControllers[1]) as? TabBarTeoriaJuegos
+        vc?.selectedIndex = 0
+        navigationController?.popToViewController(vc!, animated: true)
     }
 }

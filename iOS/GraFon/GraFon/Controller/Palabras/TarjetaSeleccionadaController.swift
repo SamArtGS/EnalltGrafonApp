@@ -81,8 +81,13 @@ extension TarjetaSeleccionadaController{
                 
                 if tarjeta?.silabas.count == 1 {
                     cell.delegate = self
-                    cell.esTarjetaUnica()
+                    
+                    
+                    cell.esTarjetaUnica(hayExcepciones: tarjeta?.excepciones != nil)
+                    
+                    
                 }else{
+                    
                     cell.esTarjetaInicio()
                 }
                 
@@ -94,8 +99,9 @@ extension TarjetaSeleccionadaController{
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
-                cell.esTarjetaFinal()
                 
+                
+                cell.esTarjetaFinal(hayExcepciones: tarjeta?.excepciones != nil)
                 return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
@@ -105,6 +111,8 @@ extension TarjetaSeleccionadaController{
                 cell.esTarjetaNormal()
                 return cell
             }
+        
+        
     }
 }
 
@@ -146,9 +154,10 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
 
 extension TarjetaSeleccionadaController{
     func mostrarExcepciones(){
-        let secondVC = ExcepcionesController()
+        let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones)
         secondVC.title = title
         self.navigationController?.pushViewController(secondVC, animated: false)
+        secondVC.excepciones = tarjeta?.excepciones
         UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
     }
     

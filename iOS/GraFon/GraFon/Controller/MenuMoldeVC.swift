@@ -11,17 +11,38 @@ import UIKit
 class MenuMoldeVC: UICollectionViewController{
     
     private let reuseIdentifier:String = "Cell"
-    
-    
     private var puertaInt: Int?
     
-    deinit {
-        print("Se reclama la memoria del molde de pajaros")
-    }
+    private let pilaGrupoPalabrasVertical: UIStackView = {
+       let elementosApilados:UIStackView = UIStackView()
+        elementosApilados.axis = .vertical
+        elementosApilados.distribution = .fillProportionally
+        elementosApilados.alignment = .center
+        elementosApilados.spacing = 0
+        elementosApilados.isUserInteractionEnabled = true
+        elementosApilados.translatesAutoresizingMaskIntoConstraints = false
+        return elementosApilados
+    }()
+    
+    private let pilaGrupoPalabrasHorizontal: UIStackView = {
+       let elementosApilados:UIStackView = UIStackView()
+        elementosApilados.axis = .horizontal
+        elementosApilados.distribution = .fillProportionally
+        elementosApilados.alignment = .center
+        elementosApilados.spacing = 0
+        elementosApilados.isUserInteractionEnabled = true
+        elementosApilados.translatesAutoresizingMaskIntoConstraints = false
+        return elementosApilados
+    }()
+    
     
     init(collectionViewLayout layout: UICollectionViewLayout, puertaSeleccionada: Int) {
         super.init(collectionViewLayout: layout)
         puertaInt = puertaSeleccionada
+        
+        if puertaInt == 0{
+            dibujarStackGrupoPalabras()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -32,6 +53,7 @@ class MenuMoldeVC: UICollectionViewController{
         super.viewDidLoad()
         view.backgroundColor = .clear
         self.collectionView!.register(CeldaMolde.self,forCellWithReuseIdentifier: reuseIdentifier)
+        
         configurarEntorno()
     }
 
@@ -76,7 +98,8 @@ extension MenuMoldeVC{
             case 2:
                 if  Data.letras[indexPath.item].identificador != 0{
                      scrollLayout.scrollDirection = .horizontal
-                    let vcs = PalabrasEnBocaVC(collectionViewLayout:scrollLayout, indiceSeleccionado: Data.letras[indexPath.item].identificador)
+                    let vcs = MenuTarjetas(collectionViewLayout:scrollLayout,puertaSeleccionada: 2,
+                                           indiceSeleccionado: Data.letras[indexPath.item].identificador)
                     self.navigationController?.pushViewController(vcs, animated: true)
                 }
             case 3:
@@ -99,7 +122,7 @@ extension MenuMoldeVC{
                                                       for: indexPath) as! CeldaMolde
         switch puertaInt {
             case 0:
-                print("Hola")
+                break
             case 1:
                 print("Hola")
             case 2:
@@ -116,7 +139,7 @@ extension MenuMoldeVC{
         collectionView.backgroundColor = .clear
         switch puertaInt {
             case 0:
-                print("Hola")
+                colocarFondo(imagen: "Back-menu_ipad_N3")
             case 1:
                 print("Hola")
             case 2:
@@ -200,3 +223,60 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
 }
 
 
+extension MenuMoldeVC{
+    func dibujarStackGrupoPalabras(){
+        
+        let imagen1 = UIImageView(image: UIImage(named: Data.grupoPalabras[0].imagenGrupo))
+        let imagen2 = UIImageView(image: UIImage(named: Data.grupoPalabras[1].imagenGrupo))
+        let imagen3 = UIImageView(image: UIImage(named: Data.grupoPalabras[2].imagenGrupo))
+        
+        imagen1.contentMode = .scaleAspectFit
+        imagen2.contentMode = .scaleAspectFit
+        imagen3.contentMode = .scaleAspectFit
+        
+        imagen1.isUserInteractionEnabled = true
+        imagen2.isUserInteractionEnabled = true
+        imagen3.isUserInteractionEnabled = true
+        
+        imagen1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(irTarjeta1)))
+        imagen2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(irTarjeta2)))
+        imagen3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(irTarjeta3)))
+        
+        
+        view.addSubview(pilaGrupoPalabrasVertical)
+        pilaGrupoPalabrasHorizontal.addArrangedSubview(imagen2)
+        pilaGrupoPalabrasHorizontal.addArrangedSubview(imagen3)
+        pilaGrupoPalabrasVertical.addArrangedSubview(imagen1)
+        pilaGrupoPalabrasVertical.addArrangedSubview(pilaGrupoPalabrasHorizontal)
+        
+        
+        NSLayoutConstraint.activate([
+            pilaGrupoPalabrasVertical.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pilaGrupoPalabrasVertical.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            pilaGrupoPalabrasVertical.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pilaGrupoPalabrasVertical.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            
+        ])
+    }
+    
+    @objc func irTarjeta1(){
+        let scrollLayout = UICollectionViewFlowLayout()
+       scrollLayout.scrollDirection = .horizontal
+       let vcs = MenuTarjetas(collectionViewLayout:scrollLayout,puertaSeleccionada: 0, indiceSeleccionado: 1)
+       self.navigationController?.pushViewController(vcs, animated: true)
+    }
+    
+    @objc func irTarjeta2(){
+        let scrollLayout = UICollectionViewFlowLayout()
+       scrollLayout.scrollDirection = .horizontal
+       let vcs = MenuTarjetas(collectionViewLayout:scrollLayout,puertaSeleccionada: 0, indiceSeleccionado: 2)
+       self.navigationController?.pushViewController(vcs, animated: true)
+    }
+    @objc func irTarjeta3(){
+        let scrollLayout = UICollectionViewFlowLayout()
+       scrollLayout.scrollDirection = .horizontal
+       let vcs = MenuTarjetas(collectionViewLayout:scrollLayout,puertaSeleccionada: 0, indiceSeleccionado: 3)
+       self.navigationController?.pushViewController(vcs, animated: true)
+    }
+    
+}

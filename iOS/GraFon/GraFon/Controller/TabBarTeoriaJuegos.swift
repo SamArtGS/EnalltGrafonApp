@@ -71,6 +71,27 @@ extension TabBarTeoriaJuegos{
         
         switch puerta {
             case 0:
+                self.title = "Grupos de palabras"
+                
+                let teoria = crearNavegacion(titulo: "Grupos de palabras",
+                                             imagenIcono: "icon-study",
+                                             controller: MenuMoldeVC(collectionViewLayout: scrollLayout,
+                                                                     puertaSeleccionada: puerta)
+                                             )
+                let practica = crearNavegacion(titulo: "Juegos",
+                                               imagenIcono: "icon-play",
+                                               controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
+                                             )
+                viewControllers = [teoria,practica]
+                
+                colorearTabBar(colorFondo:          .colorTabBarGruposPalabras,
+                               colorSeleccionado:   .colorSeleccionadoTabBarGruposPalabras,
+                               colorNoSeleccionado: .colorNoSeleccionadoTabBarGruposPalabras
+                )
+                colorearNavigationBar(colorFondo: .colorNavigationBarGruposPalabras,
+                                      colorLineaAdorno: .colorLineaBarraSuperiorGruposPalabras,
+                                      colorLetras: .white
+                )
                 break
             case 1:
                 self.title = "A divertirse"

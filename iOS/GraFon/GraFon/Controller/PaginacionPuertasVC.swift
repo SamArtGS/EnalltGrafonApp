@@ -57,8 +57,6 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                         self.navigationController?.pushViewController(viewTable, animated: true)
                         
                         break
-    //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 0)
-    //                    self.navigationController?.pushViewController(viewTable, animated: true)
                     case 1:
                         let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 2)
                         self.navigationController?.pushViewController(viewTable, animated: true)
@@ -66,6 +64,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
     //                    self.navigationController?.pushViewController(viewTable, animated: true)
                     case 2:
+                        let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 0)
+                        self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     case 3:
                         break
