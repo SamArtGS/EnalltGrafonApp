@@ -53,7 +53,7 @@ extension tarjetas{
                               Al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "t",
-                imagenConsejo: nil, //Esto pasa muy seguido en francés: varias letras, un solo sonido.
+                imagenConsejo: "e_retro_varias-letras_n2", //Esto pasa muy seguido en francés: varias letras, un solo sonido.
               textodeAbajo: nil
             )
           ],
@@ -99,7 +99,25 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "chaos", enGriego: "ka.o"),
+            Palabra(palabra: "charisme", enGriego: "ka.ʀism"),
+            Palabra(palabra: "choléra", enGriego: "ko.lᴇ.ʀa"),
+            Palabra(palabra: "chorale", enGriego: "ko.ʀal"),
+            
+            Palabra(palabra: "archaïque", enGriego: "aʀ.ka.ik"),
+            Palabra(palabra: "archéologie", enGriego: "aʀ.kᴇ.o.lo.ʒi"),
+            Palabra(palabra: "orchestre", enGriego: "oʀ.kᴇstʀ "),
+            Palabra(palabra: "orchidée", enGriego: "oʀ.ki.dᴇ"),
+            
+            Palabra(palabra: "écho", enGriego: "ᴇ.ko"),
+            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwiʃ"),
+            Palabra(palabra: "scotch", enGriego: "skotʃ"),
+            Palabra(palabra: "psychique", enGriego: "psi.ʃik"),
+            
+            Palabra(palabra: "psychisme", enGriego: "psi.ʃism"),
+            Palabra(palabra: "psyché", enGriego: "psi.ʃᴇ")
+          ]
         ),
         
         Tarjeta(audio: "pb_h_04",
@@ -151,7 +169,7 @@ extension tarjetas{
                               transcriben el sonido
                           """,
               imagenFonema: "ʃ",
-              imagenConsejo: nil, // ¡No te espantes! Eso pasa muy seguido en francés: varias letras, un solo sonido.
+              imagenConsejo: "e_retro_varias-letras_n2", // ¡No te espantes! Eso pasa muy seguido en francés: varias letras, un solo sonido.
               textodeAbajo: nil
             )
           ],
@@ -164,7 +182,7 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*j*oli", enGriego: "ka.ka.o"),
+                    Palabra(palabra: "*j*oli", enGriego: "ʒo.li"),
                     Palabra(palabra: "a*j*outer", enGriego: "a.ʒu.tᴇ")
               ],
               pronuciacion: "j",
@@ -176,7 +194,10 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "jogging", enGriego: "dʒo.giŋ"),
+            Palabra(palabra: "job", enGriego: "dʒob")
+          ]
         ),
     ]
     
@@ -233,7 +254,7 @@ extension tarjetas{
               ],
               pronuciacion: "l",
               explicacion: """
-                              Excepto en los grupos $-ail$, $-eil$, $-euil$ al final de una palabra \n\n transcribe el sonido
+                              Excepto en los grupos $-ail$¿,¿ $-eil$¿,¿ $-euil$ al final de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "l",
               imagenConsejo: nil,
@@ -254,7 +275,14 @@ extension tarjetas{
               textodeAbajo: nil
             ),
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "fusil", enGriego: "fy.zi"),
+            Palabra(palabra: "gentil", enGriego: "ʒɑ̃.ti"),
+            Palabra(palabra: "outil", enGriego: "u.ti"),
+            Palabra(palabra: "fils", enGriego: "fis"),
+            Palabra(palabra: "soul", enGriego: "su"),
+            Palabra(palabra: "cul", enGriego: "cy")
+          ]
         ),
         
         Tarjeta(audio: "pb_l_02",
@@ -298,7 +326,15 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "villa", enGriego: "vi.la"),
+            Palabra(palabra: "village", enGriego: "vi.laʒ"),
+            Palabra(palabra: "ville", enGriego: "vil"),
+            Palabra(palabra: "tranquille", enGriego: "tʀɑ̃.kil"),
+            Palabra(palabra: "mille", enGriego: "mil"),
+            Palabra(palabra: "million", enGriego: "mi.ljõ"),
+            Palabra(palabra: "milliard", enGriego: "mi.ljaʀ")
+          ]
         )
     ]
     
@@ -339,7 +375,10 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "immangeable", enGriego: "ɛ̃.mɑ̃.ʒabl"),
+            Palabra(palabra: "immanquable", enGriego: "ɛ̃.mɑ̃.kabl")
+          ]
         ),
         
         Tarjeta(audio: "pb_m_03",
@@ -350,7 +389,7 @@ extension tarjetas{
               ],
               pronuciacion: "emm",
               explicacion: """
-                              Al inicio de una palabra y seguidas de una vocal (exepto $e$ sin acento) \n\n $em$ transcriben el sonido
+                              Al inicio de una palabra y seguidas de una vocal (exepto $e$ sin acento) \n $em$ transcriben el sonido
                           """,
               imagenFonema: "ɑ̃",
               imagenConsejo: nil,
@@ -381,7 +420,16 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "femme", enGriego: "fam"),
+            Palabra(palabra: "emmenthal", enGriego: "ᴇ.mɑ̃.tal"),
+            Palabra(palabra: "évidemment", enGriego: "ᴇ.vi.da.mɑ̃"),
+            Palabra(palabra: "apparemment", enGriego: "a.pa.ʀa.mɑ̃"),
+            Palabra(palabra: "consciemment", enGriego: "kõ.sja.mɑ̃"),
+            Palabra(palabra: "différemment", enGriego: "di.fᴇ.ʀa.mɑ̃"),
+            Palabra(palabra: "fréquemment", enGriego: "fʀᴇ.ka.mɑ̃"),
+            Palabra(palabra: "intelligemment", enGriego: "ɛ̃.tᴇ.li.ʒa.mɑ̃")
+          ]
         ),
         
         Tarjeta(audio: "pb_m_04",
@@ -402,7 +450,13 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "automne", enGriego: "o.ton"),
+            Palabra(palabra: "condamner", enGriego: "kõ.da.nᴇ"),
+            Palabra(palabra: "il condamne", enGriego: "il.kõ.dan"),
+            Palabra(palabra: "condamnation", enGriego: "kõ.da.na.sjõ"),
+            Palabra(palabra: "damner", enGriego: "da.nᴇ")
+          ]
         ),
         
         Tarjeta(audio: "pb_m_05",
@@ -412,7 +466,7 @@ extension tarjetas{
                     Palabra(palabra: "j*amb*e", enGriego: "ʒɑ̃b"),
                     Palabra(palabra: "t*emp*s", enGriego: "tɑ̃")
               ],
-              pronuciacion: "am o em",
+              pronuciacion: "am ¿o¿ em",
               explicacion: """
                               Seguidas de una consonante (excepto $m$ o $n$) \n\n transcriben el sonido
                           """,
@@ -426,7 +480,8 @@ extension tarjetas{
                     Palabra(palabra: "h*umb*le", enGriego: "ɛ̃bl"),
                     Palabra(palabra: "s*ymp*honie", enGriego: "sɛ̃.fo.ni")
               ],
-              pronuciacion: "im, um o ym",
+                // MARK: La coma no se quita, checar
+              pronuciacion: "im, um ¿o¿ ym",
               explicacion: """
                               Seguidas de una consonante (excepto $m$ o $n$) \n\n transcriben el sonido
                           """,
@@ -467,7 +522,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "nom", enGriego: "nõ"),
+            Palabra(palabra: "prénom", enGriego: "pʀᴇ.nõ"),
+            Palabra(palabra: "pronom", enGriego: "pʀo.nõ"),
+            Palabra(palabra: "faim", enGriego: "fɛ̃"),
+            Palabra(palabra: "thym", enGriego: "tɛ̃"),
+            Palabra(palabra: "parfum", enGriego: "paʀ.fɛ̃")
+          ]
         )
     ]
 }

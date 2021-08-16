@@ -34,6 +34,11 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -41,6 +46,11 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.topItem?.title = "Palabras en la boca"
         self.navigationController?.navigationBar.backItem?.title = "Palabras en la boca"
+        
+        let celp = collectionView.cellForItem(at: IndexPath(item: 0, section: 0)) as? CeldaSonidoYSilabas
+        
+        celp?.reproductorAudio?.stop()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -160,5 +170,6 @@ extension TarjetaSeleccionadaController{
         secondVC.excepciones = tarjeta?.excepciones
         UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
     }
+    
     
 }

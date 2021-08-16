@@ -29,10 +29,10 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
             pilaViews.addArrangedSubview(explicacion)
             
             NSLayoutConstraint.activate([
-                explicacion.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 30),
-                explicacion.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -30),
-                silabaGenerada.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 15),
-                silabaGenerada.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -15)
+                explicacion.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
+                explicacion.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10),
+                silabaGenerada.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
+                silabaGenerada.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10)
             ])
             
             if destapado.imagenFonema == "ico_sin-sonido_n2"{

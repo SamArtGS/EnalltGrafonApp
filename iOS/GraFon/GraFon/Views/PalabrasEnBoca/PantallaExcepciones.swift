@@ -50,8 +50,9 @@ class PantallaExcepciones: UIView {
     
     private let previstaPar: (Palabra) -> (UIStackView) = { palabra in
         let vista = UIStackView()
-        let labelIzq:UILabel = UILabelPersonalizado()
-        let labelDer:UILabel = UILabelPersonalizado()
+        let labelIzq:UILabelPersonalizado = UILabelPersonalizado()
+        
+        let labelDer:UILabelPersonalizado = UILabelPersonalizado()
         
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelDer.translatesAutoresizingMaskIntoConstraints = false

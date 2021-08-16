@@ -28,14 +28,16 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "plomb", enGriego: "plõ")
+          ]
         ),
         
         Tarjeta(audio: "pb_b_02",
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "a*bs*ent", enGriego: "bl&Œ&")
+                    Palabra(palabra: "a*bs*ent", enGriego: "a.psɑ̃")
               ],
               pronuciacion: "-bs-",
               explicacion: """
@@ -72,7 +74,7 @@ extension tarjetas{
                               transcriben el sonido
                           """,
               imagenFonema: "b",
-              imagenConsejo: nil, // ME FALTA LA IMAGEN DE LAS OFERTAS :S
+              imagenConsejo: nil, // ME FALTA LA IMAGEN DE LAS OFERTA 2X1
               textodeAbajo: nil
             )
           ],
@@ -133,7 +135,21 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "second", enGriego: "s&Œ&.gõ"),
+            Palabra(palabra: "seconde", enGriego: "sɶ.gõd"),
+            Palabra(palabra: "tabac", enGriego: "ta.ba"),
+            Palabra(palabra: "estomac", enGriego: "ᴇs.to.ma"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "caoutchouc", enGriego: "kau.tʃu"),
+            Palabra(palabra: "croc", enGriego: "kʀo"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "blanc", enGriego: "blɑ̃"),
+            Palabra(palabra: "franc", enGriego: "fʀɑ̃"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "tronc", enGriego: "tʀõ"),
+            Palabra(palabra: "porc", enGriego: "poʀ"),
+          ]
         ),
         
         Tarjeta(audio: "pb_c_02",
@@ -235,7 +251,24 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+          
+            Palabra(palabra: "chaos", enGriego: "ka.o"),
+            Palabra(palabra: "charisme", enGriego: "ka.ʀism"),
+            Palabra(palabra: "choléra", enGriego: "ko.lᴇ.ʀa"),
+            Palabra(palabra: "chorale", enGriego: "ko.ʀal"),
+            Palabra(palabra: "archaïque", enGriego: "aʀ.ka.ik"),
+            Palabra(palabra: "archéologie", enGriego: "aʀ.kᴇo.lo.ʒi"),
+            Palabra(palabra: "orchestre", enGriego: "oʀ.kᴇstʀ"),
+            Palabra(palabra: "orchidée", enGriego: "oʀ.ki.dᴇ"),
+            Palabra(palabra: "écho", enGriego: "ᴇ.ko"),
+            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwiʃ"),
+            Palabra(palabra: "scotch", enGriego: "skotʃ"),
+            Palabra(palabra: "psychique", enGriego: "psi.ʃik"),
+            Palabra(palabra: "psychisme", enGriego: "psi.ʃism"),
+            Palabra(palabra: "psyché", enGriego: "psi.ʃᴇ")
+          
+          ]
         ),
         
         Tarjeta(audio: "pb_c_05",
@@ -390,7 +423,10 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "stand", enGriego: "stɑ̃d"),
+            Palabra(palabra: "sud", enGriego: "syd")
+          ]
         ),
         
         
@@ -449,7 +485,17 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "clef", enGriego: "klᴇ"),
+            Palabra(palabra: "nerf", enGriego: "nᴇʀ"),
+            Palabra(palabra: "serf", enGriego: "sᴇʀ"),
+            Palabra(palabra: "cerf", enGriego: "sᴇʀ"),
+            Palabra(palabra: "chef-d’œuvre", enGriego: "ʃᴇ.d&Œ&vʀ"),
+            
+            Palabra(palabra: "", enGriego: ""),
+            Palabra(palabra: "œufs", enGriego: "&Œ&"),
+            Palabra(palabra: "bœufs", enGriego: "b&Œ&")
+          ]
         ),
         
         Tarjeta(audio: "pb_f_02",
@@ -461,7 +507,7 @@ extension tarjetas{
               ],
               pronuciacion: "ff",
               explicacion: """
-                              transcribe el sonido
+                              transcriben el sonido
                           """,
               imagenFonema: "f",
               imagenConsejo: nil,
@@ -487,7 +533,7 @@ extension tarjetas{
               ],
               pronuciacion: "g",
               explicacion: """
-                              Seguida de $a$, $o$, $u$, $ü$
+                              Seguida de $a$, $o$, $u$, $ü$\n
                               o de una consonante (excepto $n$) \n\n transcribe el sonido
                           """,
               imagenFonema: "g",
@@ -515,7 +561,13 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "geisha", enGriego: "gᴇi.ʃa"),
+            Palabra(palabra: "gestalt", enGriego: "gᴇʃ.talt"),
+            Palabra(palabra: "yogi", enGriego: "jo.gi"),
+            Palabra(palabra: "gin", enGriego: "dʒin"),
+            Palabra(palabra: "ginseng", enGriego: "dʒin.sᴇŋ")
+          ]
         ),
         
         
@@ -535,7 +587,11 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "suggérer", enGriego: "syg.ʒᴇ.ʀᴇ"),
+            Palabra(palabra: "suggestion", enGriego: "syg.ʒᴇs.tjõ"),
+            Palabra(palabra: "suggestif", enGriego: "syg.ʒᴇs.tif")
+          ]
         ),
         
         Tarjeta(audio: "pb_g_04",
@@ -553,7 +609,11 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "diagnostic", enGriego: "dja.gno.stik"),
+            Palabra(palabra: "gnome", enGriego: "gnom"),
+            Palabra(palabra: "stagner", enGriego: "sta.gnᴇ")
+          ]
         ),
         
         Tarjeta(audio: "pb_g_05",
@@ -583,7 +643,16 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "long", enGriego: "lõ"),
+            Palabra(palabra: "sang", enGriego: "lõ"),
+            Palabra(palabra: "étang", enGriego: "ᴇ.tɑ̃"),
+            
+            Palabra(palabra: "hareng", enGriego: "a.ʀɑ̃"),
+            Palabra(palabra: "joug", enGriego: "ʒu"),
+            Palabra(palabra: "orang-outan", enGriego: "o.ʀɑ̃.u.tɑ̃"),
+            Palabra(palabra: "poing", enGriego: "pwɛ̃")
+          ]
         )
     ]
 }

@@ -12,7 +12,7 @@ import AVFoundation
 class CeldaSonidoYSilabas: UICollectionViewCell {
     
     private var sonido: String?
-    private var reproductorAudio: AVAudioPlayer = AVAudioPlayer()
+    var reproductorAudio: AVAudioPlayer?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +25,7 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     }
     
     deinit {
+        reproductorAudio?.stop()
         print("Se reclamado la sílaba de la primera posición")
     }
     
@@ -133,16 +134,19 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     
     
     @objc func sonarAudio(){
+    
         let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")
-        do {
-            reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
-            reproductorAudio.delegate = self
-            reproductorAudio.play()
-            botonSonido.isSelected = true
-            self.isHighlighted = true
-        }catch{
-            print("Error al reproducir el audio: \(error.localizedDescription)")
+        reproductorAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+        reproductorAudio?.delegate = self
+        if (reproductorAudio?.isPlaying ?? false) {
+            reproductorAudio?.stop()
         }
+        else {
+            reproductorAudio?.play()
+        }
+        botonSonido.isSelected = true
+        self.isHighlighted = true
+        
     }
     
 
