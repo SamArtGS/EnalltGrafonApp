@@ -85,7 +85,11 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
+        
+        
         let labelDer:UILabel = UILabelPersonalizado()
+        
+        
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         vista.translatesAutoresizingMaskIntoConstraints = false
@@ -123,14 +127,16 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         textoIzquierdo.removeLast()
         textoDerecho.removeLast()
         
+        
+        
         labelIzq.text = textoIzquierdo
         labelDer.text = textoDerecho
         
         return vista
     }
     
-    private var posicionLetraLabel: UILabel = {
-        let etiqueta = UILabel()
+    private var posicionLetraLabel: UILabelPersonalizado = {
+        let etiqueta = UILabelPersonalizado()
         etiqueta.font = .Roboto(.bold, size: Tamanio.letraPosicionBloque)
         etiqueta.textColor = .colorBarraSuperiorPalabras
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
@@ -225,7 +231,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private let imagenVuelta: UIButton = {
         let boton = UIButton(type: .custom)
         boton.isUserInteractionEnabled = true
-        boton.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
+        boton.setImage(UIImage(named: "ico_ir-frente_n2"), for: .normal)
         boton.contentMode = .scaleAspectFit
         return boton
     }()

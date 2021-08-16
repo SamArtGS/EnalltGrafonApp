@@ -33,6 +33,7 @@ class ExcepcionesController: UIViewController {
     
     private let cuadritoBlanco: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -43,18 +44,16 @@ class ExcepcionesController: UIViewController {
        etiqueta.numberOfLines = 10
        etiqueta.font = .Roboto(.regular, size: 20)
         etiqueta.textColor = .black
-       etiqueta.text = "Excepciones más frecuentes"
+       etiqueta.text = "   Excepciones más frecuentes"
        etiqueta.translatesAutoresizingMaskIntoConstraints = false
        etiqueta.textAlignment = .left
        etiqueta.contentMode = .scaleAspectFit
        return etiqueta
    }()
     
-    
-    
-    
     private let pilaVerticalExcepciones: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
+        elementosApilados.backgroundColor = .none
         elementosApilados.axis = .vertical
         elementosApilados.distribution = .fillEqually
         elementosApilados.alignment = .leading
@@ -94,6 +93,15 @@ class ExcepcionesController: UIViewController {
         return vista
     }
     
+    private let imagenVuelta: UIButton = {
+        let boton = UIButton(type: .custom)
+        boton.isUserInteractionEnabled = true
+        boton.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
+        boton.contentMode = .scaleAspectFit
+        boton.translatesAutoresizingMaskIntoConstraints = false
+        return boton
+    }()
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -101,8 +109,12 @@ class ExcepcionesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.back))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
         configurarConstraints()
+        imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+    }
+    @objc func any(){
+        
     }
     
     @objc func back(){
@@ -117,25 +129,28 @@ class ExcepcionesController: UIViewController {
     }
     
     func configurarConstraints(){
-        
-        
-        cuadritoBlanco.translatesAutoresizingMaskIntoConstraints = true
-        cuadritoBlanco.backgroundColor = .black
-        
+
+        cuadritoBlanco.backgroundColor = .white
         
         view.addSubview(cuadritoBlanco)
         cuadritoBlanco.addSubview(pilaVerticalExcepciones)
+        cuadritoBlanco.addSubview(imagenVuelta)
         
         NSLayoutConstraint.activate([
-            cuadritoBlanco.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            cuadritoBlanco.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            cuadritoBlanco.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            cuadritoBlanco.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             
+            cuadritoBlanco.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            cuadritoBlanco.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            cuadritoBlanco.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            cuadritoBlanco.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -15),
             
-            pilaVerticalExcepciones.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            pilaVerticalExcepciones.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            pilaVerticalExcepciones.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+            pilaVerticalExcepciones.topAnchor.constraint(equalTo: cuadritoBlanco.topAnchor, constant: 30),
+            pilaVerticalExcepciones.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
+            pilaVerticalExcepciones.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
+            
+            imagenVuelta.bottomAnchor.constraint(equalTo: cuadritoBlanco.bottomAnchor,constant: -10),
+            imagenVuelta.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor,constant: -10),
+            imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
+            imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
            
         ])
     }

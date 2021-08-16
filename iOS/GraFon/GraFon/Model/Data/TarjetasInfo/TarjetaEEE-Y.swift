@@ -459,7 +459,7 @@ struct tarjetas {
                                        -le sigue una sola consonante que transcribe un sonido (excepto en los  grupos: $li$, $ri$, $mi$, $ni$) \n\n no transcribe ningún sonido.
                                    """,
                        imagenFonema: sinSonido,
-                       imagenConsejo: nil,
+                       imagenConsejo: "e_retro_3Cb_n2",
                        textodeAbajo: nil
                    )
                    ],
@@ -483,8 +483,8 @@ struct tarjetas {
                                        Cuando la $e$ está:\n
                                        -de la segunda sílaba escrita en adelante,\n
                                        -precedida de dos consonantes que transcriben un sonido y\n
-                                       -le sigue una sola consonante que transcribe un sonido \n\n
-                                        transcribe el sonido
+                                       -le sigue una sola consonante que transcribe un sonido \n
+                                        transcribe el sonido.
                                    """,
                        imagenFonema: "&Œ&",
                        imagenConsejo: nil,
@@ -514,7 +514,7 @@ struct tarjetas {
                    ],
                    pronuciacion: "-es",
                    explicacion: """
-                                   Al final de una palabra de tres letras (por ejemplo, un determinante plural: les, mes, tes, etc.), \n\n transcriben el sonido
+                                   Al final de una palabra de tres letras (por ejemplo, un determinante plural: les, mes, tes, etc.) \n\n transcriben el sonido
                                """,
                    imagenFonema: "ᴇ",
                    imagenConsejo: nil,
@@ -624,7 +624,15 @@ struct tarjetas {
                       textodeAbajo: nil
                   )
               ],
-              excepciones: nil
+              excepciones: [
+                    Palabra(palabra: "abdomen", enGriego: "ab.do.mᴇn"),
+                    Palabra(palabra: "hymen", enGriego: "i.mᴇn"),
+                    Palabra(palabra: "larsen", enGriego: "laʀ.sᴇn"),
+                    Palabra(palabra: "spécimen", enGriego: "spᴇ.si.mᴇn"),
+                    Palabra(palabra: "pollen", enGriego: "po.lᴇn"),
+                    Palabra(palabra: "éden", enGriego: "ᴇ.dᴇn"),
+                    Palabra(palabra: "gluten", enGriego: "gly.tᴇn")
+              ]
             ),
             
             Tarjeta(audio: "pb_e_08",
@@ -648,7 +656,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "-enn-",
                       explicacion: """
-                                      Seguidas de una vocal (excepto al inicio de una palabra) \n\n transcriben los sonidos
+                                      Seguidas de una vocal (excepto al inicio de una palabra), \n\n transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇn",
                       imagenConsejo: nil,
@@ -660,14 +668,23 @@ struct tarjetas {
                       ],
                       pronuciacion: "enn-",
                       explicacion: """
-                                      Al inicio de una palabra y seguidas de una vocal \n\n transcriben los sonidos
+                                      Al inicio de una palabra y seguidas de una vocal, \n\n transcriben los sonidos
                                   """,
                       imagenFonema: "ɑ̃.n",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   )
               ],
-              excepciones: nil
+              excepciones: [
+                Palabra(palabra: "agenda", enGriego: "a.ʒɛ̃.da"),
+                Palabra(palabra: "appendice", enGriego: "a.pɛ̃.dis"),
+                Palabra(palabra: "placenta", enGriego: "pla.sɛ̃.ta"),
+                Palabra(palabra: "referendum", enGriego: "ʀᴇ.fᴇ.ʀɛ̃.dom"),
+                Palabra(palabra: "suspense", enGriego: "sys.pᴇns"),
+                Palabra(palabra: "ginseng", enGriego: "ʒin.sᴇŋg"),
+                Palabra(palabra: "weekend", enGriego: "wi.kᴇnd"),
+                Palabra(palabra: "ennemi", enGriego: "ᴇn.mi")
+              ]
             ),
             
             Tarjeta(audio: "pb_e_09",
@@ -723,14 +740,23 @@ struct tarjetas {
                       pronuciacion: "-em-",
                       explicacion: """
                                       Después de una consonante y
-                                      seguidas de $m$ \n\n transcribe el sonido
+                                      seguidas de $m$ \n\n transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   )
               ],
-              excepciones: nil
+              excepciones: [
+                Palabra(palabra: "femme", enGriego: "fam"),
+                Palabra(palabra: "emmenthal", enGriego: "ᴇ.mɛ̃.tal"),
+                Palabra(palabra: "évidemment", enGriego: "ᴇ.vi.da.mɑ̃"),
+                Palabra(palabra: "apparemment", enGriego: "a.pa.ʀa.mɑ̃"),
+                Palabra(palabra: "consciemment", enGriego: "kõ.sja.mɑ̃"),
+                Palabra(palabra: "différemment", enGriego: "di.fᴇ.ʀa.mɑ̃"),
+                Palabra(palabra: "fréquemment", enGriego: "fʀᴇ.ka.mɑ̃"),
+                Palabra(palabra: "intelligemment", enGriego: "ɛ̃.tᴇ.li.ʒa.mɑ̃")
+              ]
             ),
             
             Tarjeta(audio: "pb_e_11",
@@ -757,14 +783,19 @@ struct tarjetas {
                       ],
                       pronuciacion: "ress-",
                       explicacion: """
-                                      Al inicio de una palabra \n\n $e$ transcribe el sonido
+                                      Al inicio de una palabra, \n\n $e$ transcribe el sonido
                                   """,
                       imagenFonema: "&Œ&",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   ),
               ],
-              excepciones: nil
+              excepciones: [
+                  Palabra(palabra: "dessus", enGriego: "d&Œ&.sy"),
+                  Palabra(palabra: "dessous", enGriego: "d&Œ&.su"),
+                  Palabra(palabra: "ressayer", enGriego: "ʀᴇ.sᴇ.jᴇ"),
+                  Palabra(palabra: "ressusciter", enGriego: "ʀᴇ.sy.si.tᴇ")
+                ]
             ),
             
             Tarjeta(audio: "pb_e_12",
@@ -797,7 +828,7 @@ struct tarjetas {
                           Palabra(palabra: "r*ecr*uter", enGriego: "ʀ&Œ&.kʀy.tᴇ"),
                           Palabra(palabra: "r*epr*endre", enGriego: "ʀ&Œ&.pʀɑ̃dʀ")
                     ],
-                    pronuciacion: "-e-",
+                    pronuciacion: "-e-",// Se pondrá bien checha con el underline?
                     explicacion: """
                                     Seguida de dos consonantes diferentes (excepto $n$, $m$) que no forman parte de la misma sílaba que la $e$, \n\n $e$ transcribe el sonido
                                 """,
@@ -819,7 +850,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "esc",
                       explicacion: """
-                                      En el grupo esc $e$ transcribe el sonido
+                                      En el grupo $esc$ \n\n $e$ transcribe el sonido
                                   """,
                       imagenFonema: "ᴇ",
                       imagenConsejo: nil,
@@ -857,14 +888,57 @@ struct tarjetas {
                       ],
                       pronuciacion: "-er",
                       explicacion: """
-                                      Al final de una palabra \n\n transcribe el sonido
+                                      Al final de una palabra \n\n transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
                       imagenConsejo: "e_retro_3Ob_n2",
                       textodeAbajo: nil
                   )
               ],
-              excepciones: nil
+              excepciones: [ //TODO: RELLENAR EL MADRAL DE EXCEPCIONES
+                Palabra(palabra: "alzheim*er*", enGriego: "al.zaj.mᴇʀ"),
+                Palabra(palabra: "am*er*", enGriego: "a.mᴇʀ"),
+                Palabra(palabra: "canc*er*", enGriego: "kɑ̃.sᴇʀ"),
+                Palabra(palabra: "ch*er*", enGriego: "ʃᴇʀ"),
+                Palabra(palabra: "f*er*", enGriego: "fᴇʀ"),
+                Palabra(palabra: "fi*er*", enGriego: "fjᴇʀ"),
+                Palabra(palabra: "hamst*er*", enGriego: "ams.tᴇʀ"),
+                Palabra(palabra: "hi*er*", enGriego: "jᴇʀ"),
+                Palabra(palabra: "hiv*er*", enGriego: "i.vᴇʀ"),
+                Palabra(palabra: "hyp*er*", enGriego: "i.pᴇʀ"),
+                Palabra(palabra: "kash*er*", enGriego: "ka.ʃᴇʀ"),
+                Palabra(palabra: "m*er*", enGriego: "mᴇʀ"),
+                
+                Palabra(palabra: "polyest*er*", enGriego: "po.ljᴇs.tᴇʀ"),
+                Palabra(palabra: "sup*er*", enGriego: "sy.pᴇʀ"),
+                Palabra(palabra: "v*er*", enGriego: "vᴇʀ"),
+                Palabra(palabra: "bestsell*er*", enGriego: "bᴇst.sᴇ.lᴇʀ"),
+                Palabra(palabra: "bulldoz*er*", enGriego: "byl.do.zᴇʀ"),
+                Palabra(palabra: "chart*er*", enGriego: "ʃaʀ.tᴇʀ"),
+                Palabra(palabra: "clust*er*", enGriego: "klɶs.tɶʀ"),
+                Palabra(palabra: "corn*er*", enGriego: "koʀ.nᴇʀ"),
+                Palabra(palabra: "croon*er*", enGriego: "kʀu.nɶʀ"),
+                Palabra(palabra: "cutt*er*", enGriego: "kɶ.tɶʀ"),
+                Palabra(palabra: "design*er*", enGriego: "di.zaj.nɶʀ"),
+                Palabra(palabra: "dock*er*", enGriego: "do.kᴇʀ"),
+                
+                Palabra(palabra: "gangst*er*", enGriego: "gɑ̃g.stᴇʀ"),
+                Palabra(palabra: "gey*er*", enGriego: "ʒᴇ.zᴇʀ"),
+                Palabra(palabra: "globe-trott*er*", enGriego: "glob.tʀo.tɶʀ"),
+                Palabra(palabra: "hamburg*er*", enGriego: "ɑ̃.bɶʀ.gɶʀ"),
+                Palabra(palabra: "jok*er*", enGriego: "dʒo.kᴇʀ"),
+                Palabra(palabra: "mast*er*", enGriego: "mas.tᴇʀ"),
+                
+                Palabra(palabra: "pok*er*", enGriego: "po.kᴇʀ"),
+                Palabra(palabra: "revolv*er*", enGriego: "ʀᴇ.vol.vᴇʀ"),
+                Palabra(palabra: "rock*er*", enGriego: "ʀo.kɶʀ"),
+                Palabra(palabra: "roll*er*", enGriego: "ʀo.lɶʀ"),
+                
+                Palabra(palabra: "scoot*er*", enGriego: "sku.tɶʀ"),
+                Palabra(palabra: "sweat*er*", enGriego: "swᴇ.tɶʀ"),
+                Palabra(palabra: "ton*er*", enGriego: "to.nᴇʀ"),
+                Palabra(palabra: "wat*er*", enGriego: "wa.tᴇʀ"),
+              ]
             ),
             
             Tarjeta(audio: "pb_e_16",
@@ -876,7 +950,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "-et",
                       explicacion: """
-                                      Al final de una palabra \n\n transcribe el sonido
+                                      Al final de una palabra \n\n transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
                       imagenConsejo: nil,
@@ -888,14 +962,18 @@ struct tarjetas {
                       ],
                       pronuciacion: "et",
                       explicacion: """
-                                      Como conjunción copulativa, transcriben el sonido
+                                      Como conjunción copulativa \n\n transcriben el sonido
                                   """,
                       imagenFonema: "ᴇ",
                       imagenConsejo: "e_retro_3Pb_n2",
                       textodeAbajo: nil
                   ),
               ],
-              excepciones: nil
+              excepciones: [
+                Palabra(palabra: "net", enGriego: "nᴇt"),
+                Palabra(palabra: "set", enGriego: "sᴇt"),
+                Palabra(palabra: "internet", enGriego: "ɛ̃.tᴇʀ.nᴇt")
+              ]
             ),
             
             Tarjeta(audio: "pb_e_17",
@@ -940,7 +1018,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "-ge-",
                       explicacion: """
-                                     Seguidas de $a$, $o$ \n\n $g$ transcribe el sonido \n\n +ʒ+ \n
+                                     Seguidas de $a$, $o$, \n\n $g$ transcribe el sonido \n\n%ʒ% \n
                                     La $e$ no transcribe ningún sonido
                                   """,
                       imagenFonema: sinSonido,
@@ -960,14 +1038,19 @@ struct tarjetas {
                       ],
                       pronuciacion: "eu",
                       explicacion: """
-                                     transcribe el sonido
+                                     transcriben el sonido
                                   """,
                       imagenFonema: "&Œ&",
                       imagenConsejo: nil,
                       textodeAbajo: nil
                   )
               ],
-              excepciones: nil
+              excepciones: [
+                Palabra(palabra: "j’ai eu", enGriego: "ʒᴇ.y"),
+                Palabra(palabra: "nous l’avons eue", enGriego: "nu.la.võ.y"),
+                Palabra(palabra: "nous eûmes", enGriego: "nu.zym"),
+                Palabra(palabra: "ils eurent", enGriego: "il.zyʀ"),
+              ]
             ),
             
             Tarjeta(audio: "pb_e_20",
@@ -1008,9 +1091,10 @@ struct tarjetas {
                             Palabra(palabra: "rév*eil*", enGriego: "ʀᴇ.vᴇj"),
                             Palabra(palabra: "merv*eill*e", enGriego: "mᴇʀ.vᴇj")
                       ],
-                      pronuciacion: "eil o eill",
+                    //TODO: Cambiar tamaño de O
+                      pronuciacion: "eil ¿o¿ eill",
                       explicacion: """
-                                     transcribe los sonidos
+                                     transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇj",
                       imagenConsejo: nil,
@@ -1040,7 +1124,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "ein",
                       explicacion: """
-                                      Seguidas de una vocal
+                                      Seguidas de una vocal \n
                                       (excepto $e$ al final de una palabra) \n\n transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇn",
@@ -1065,7 +1149,7 @@ struct tarjetas {
                       ],
                       pronuciacion: "-eine",
                       explicacion: """
-                                      Al final de una palabra \n\n transcriben el sonido
+                                      Al final de una palabra \n\n transcriben los sonidos
                                   """,
                       imagenFonema: "ᴇn",
                       imagenConsejo: "e_retro_3Vb_n2",
@@ -1081,7 +1165,8 @@ struct tarjetas {
                       palabras: [
                             Palabra(palabra: "ac*cuei*l", enGriego: "a.k&Œ&j"),
                       ],
-                      pronuciacion: "cueil o cueill",
+                      //TODO: Cambiar la o
+                      pronuciacion: "cueil ¿o¿ cueill",
                       explicacion: """
                                       transcriben los sonidos
                                   """,
@@ -1093,7 +1178,8 @@ struct tarjetas {
                       palabras: [
                             Palabra(palabra: "org*ueill*euse", enGriego: "oʀ.g&Œ&.j&Œ&z"),
                       ],
-                      pronuciacion: "gueil o gueill",
+                      //TODO: Cambiar la o
+                      pronuciacion: "gueil ¿o¿ gueill",
                       explicacion: """
                                       transcriben los sonidos
                                   """,
@@ -1122,7 +1208,7 @@ struct tarjetas {
                   ],
                   pronuciacion: "i",
                   explicacion: """
-                                 Al inicio de una palabra o entre consonantes excepto en los grupos:
+                                 Al inicio de una palabra o entre consonantes excepto en los grupos:\n
                                  $im$ consonante que no sea $m$ \n
                                  $in$ consonante que no sea $n$ \n
                                  $in$ al final de una palabra \n\n transcribe el sonido
@@ -1170,7 +1256,7 @@ struct tarjetas {
                   pronuciacion: "i",
                   explicacion: """
                                   Antes de una vocal y precedida de
-                                  consonante más $r$ o $l$ \n\n transcribe el sonido
+                                  consonante + $r$ o $l$ \n\n transcribe el sonido
                               """,
                   imagenFonema: "i",
                   imagenConsejo: nil,

@@ -84,7 +84,8 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     private let previstaSilaba: (Silaba,UIColor) -> (UIStackView) = { silaba,color in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
-        let labelDer:UILabel = UILabelPersonalizado()
+        let labelDer:UILabelPersonalizado = UILabelPersonalizado()
+        labelDer.banderin = true
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBocina)
         labelIzq.textColor = .colorLetras

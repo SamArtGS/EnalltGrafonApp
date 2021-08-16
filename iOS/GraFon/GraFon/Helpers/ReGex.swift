@@ -16,7 +16,7 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒŒ -]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒŒ¿ -]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }
@@ -35,9 +35,12 @@ class UILabelPersonalizado: UILabel{
     override var text: String? {
         didSet{
             guard let textoDestapado = text else { return }
-            //if !banderin{
+            if banderin{
+                colocarFormatosConRegex(texto: textoDestapado, interlineado: 2.5)
+            }else{
                 colocarFormatosConRegex(texto: textoDestapado)
-            //}
+            }
+            
         }
     }
 
@@ -49,10 +52,11 @@ class UILabelPersonalizado: UILabel{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func colocarFormatosConRegex(texto: String){
+    func colocarFormatosConRegex(texto: String, interlineado:Float = 0){
         
         let formatos: [Formato] = [
             Formato(simbolo: "*", color: .colorLetras, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
+            Formato(simbolo: "¿", color: .black, fuente: .Roboto(.bold, size: font.pointSize-7)),  // Con * se pone las Negrita Negro,
             Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
             Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema)),
             
@@ -94,6 +98,11 @@ class UILabelPersonalizado: UILabel{
                                                        length: posicionesColor[num].longitud-2
                                         ))
         }
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = CGFloat(interlineado)
+        style.alignment = self.textAlignment
+
+        textoFinal.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: textoSinSimbolos.count))
         
         
         attributedText = textoFinal

@@ -12,6 +12,7 @@ struct Tamanio {
     static let letraCafeTarjetasMenu: CGFloat = 14
     static let letrasCafeBocina:CGFloat = 22
     static let letrasRosaBocina:CGFloat = 20
+    
     static let letrasCafeBloques: CGFloat = 20
     static let letrasRosasBloques: CGFloat = 20
     static let letraPosicionBloque: CGFloat = 25
