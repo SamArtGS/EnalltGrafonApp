@@ -1824,6 +1824,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1831,7 +1832,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alexorbe.grafon2;
+				PRODUCT_BUNDLE_IDENTIFIER = alexorbe.grafon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1844,6 +1845,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1851,7 +1853,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alexorbe.grafon2;
+				PRODUCT_BUNDLE_IDENTIFIER = alexorbe.grafon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

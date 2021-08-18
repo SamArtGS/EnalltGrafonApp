@@ -51,6 +51,14 @@ class ExcepcionesController: UIViewController {
        return etiqueta
    }()
     
+    private let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.isScrollEnabled = true
+        scroll.isUserInteractionEnabled = true
+        return scroll
+    }()
+    
     private let pilaVerticalExcepciones: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.backgroundColor = .none
@@ -133,7 +141,8 @@ class ExcepcionesController: UIViewController {
         cuadritoBlanco.backgroundColor = .white
         
         view.addSubview(cuadritoBlanco)
-        cuadritoBlanco.addSubview(pilaVerticalExcepciones)
+        cuadritoBlanco.addSubview(scrollView)
+        scrollView.addSubview(pilaVerticalExcepciones)
         cuadritoBlanco.addSubview(imagenVuelta)
         
         NSLayoutConstraint.activate([
@@ -143,9 +152,18 @@ class ExcepcionesController: UIViewController {
             cuadritoBlanco.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             cuadritoBlanco.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -15),
             
-            pilaVerticalExcepciones.topAnchor.constraint(equalTo: cuadritoBlanco.topAnchor, constant: 30),
-            pilaVerticalExcepciones.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
-            pilaVerticalExcepciones.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
+            
+            
+            scrollView.topAnchor.constraint(equalTo: cuadritoBlanco.topAnchor, constant: 30),
+            scrollView.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
+            scrollView.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
+            scrollView.bottomAnchor.constraint(equalTo: cuadritoBlanco.bottomAnchor, constant: -10),
+            
+            
+            pilaVerticalExcepciones.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
+            pilaVerticalExcepciones.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),
+            pilaVerticalExcepciones.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0),
+            pilaVerticalExcepciones.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
             imagenVuelta.bottomAnchor.constraint(equalTo: cuadritoBlanco.bottomAnchor,constant: -10),
             imagenVuelta.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor,constant: -10),

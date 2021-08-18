@@ -11,7 +11,7 @@ import Foundation
 extension tarjetas{
     
     static let tarjetasT:[Tarjeta] = [
-        Tarjeta(audio: "Pb_T_01",
+        Tarjeta(audio: "pb_T_01",
           silabas: [
             Silaba(
               palabras: [
@@ -19,17 +19,19 @@ extension tarjetas{
               ],
               pronuciacion: "t-",
               explicacion: """
-                              Al inicio de una palabra transcribe el sonido
+                              Al inicio de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "t",
               imagenConsejo: nil,
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+          
+          ]
         ),
         
-        Tarjeta(audio: "Pb_T_02",
+        Tarjeta(audio: "pb_T_02",
           silabas: [
             Silaba(
               palabras: [
@@ -40,8 +42,8 @@ extension tarjetas{
               pronuciacion: "-t-",
               explicacion: """
                               Seguida de una vocal \n
-                              - excepto en el grupo $-tion-$ en sustantivo y adjetivo.\n
-                              - excepto en los grupos -tieu-, -tiel-, -tia- \n\n transcribe el sonido
+                              - excepto en el grupo $-tion-$ en sustantivo y adjetivo\n
+                              - excepto en los grupos $-tieu-$, $-tiel-$, $-tia-$ \n\n transcribe el sonido
                           """,
               imagenFonema: "t",
               imagenConsejo: nil,
@@ -64,10 +66,30 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "acrobatie", enGriego: "a.kʀo.ba.si"),
+            Palabra(palabra: "aristocratie", enGriego: "a.ʀi.sto.kʀa.si"),
+            Palabra(palabra: "bureaucratie", enGriego: "by.ʀo.kʀa.si"),
+            Palabra(palabra: "démocratie", enGriego: "dᴇ.mo.kʀa.si"),
+            Palabra(palabra: "diplomatie", enGriego: "di.plo.ma.si"),
+          
+            
+            Palabra(palabra: "idiotie", enGriego: "i.djo.si"),
+            Palabra(palabra: "ineptie", enGriego: "i.nᴇ.psi"),
+            Palabra(palabra: "minutie", enGriego: "mi.ny.si"),
+            Palabra(palabra: "péripétie", enGriego: "pᴇ.ʀi.pᴇ.si"),
+            Palabra(palabra: "prophétie", enGriego: "pʀo.fᴇ.si"),
+            
+            
+            Palabra(palabra: "suprématie", enGriego: "sy.pʀᴇ.ma.si"),
+            Palabra(palabra: "technocratie", enGriego: "tᴇ.kno.kʀa.si"),
+            Palabra(palabra: "balbutier", enGriego: "bal.by.sjᴇ"),
+            Palabra(palabra: "initier", enGriego: "i.ni.sjᴇ"),
+            Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃")
+          ]
         ),
         
-        Tarjeta(audio: "Pb_T_03",
+        Tarjeta(audio: "pb_T_03",
           silabas: [
             Silaba(
               palabras: [
@@ -96,10 +118,22 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+          Palabra(palabra: "mat", enGriego: "mat"),
+          Palabra(palabra: "sept", enGriego: "sᴇt"),
+          Palabra(palabra: "net", enGriego: "nᴇt"),
+          Palabra(palabra: "dot", enGriego: "dot"),
+          Palabra(palabra: "aout ", enGriego: "ut"),
+        
+          
+          Palabra(palabra: "but", enGriego: "byt"),
+          Palabra(palabra: "brut", enGriego: "bʀyt"),
+          Palabra(palabra: "chut", enGriego: "ʃyt"),
+          Palabra(palabra: "zut", enGriego: "zyt")
+        ]
         ),
         
-        Tarjeta(audio: "Pb_T_04",
+        Tarjeta(audio: "pb_T_04",
           silabas: [
             Silaba(
               palabras: [
@@ -108,7 +142,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ect",
               explicacion: """
-                              Al final de una palabra y precedidas de p transcriben el sonido
+                              Al final de una palabra y precedidas de $p$\n\n transcriben el sonido
                           """,
               imagenFonema: "ᴇ",
               imagenConsejo: nil,
@@ -131,7 +165,7 @@ extension tarjetas{
           excepciones: nil
         ),
         
-        Tarjeta(audio: "Pb_T_04",
+        Tarjeta(audio: "pb_T_04",
           silabas: [
             Silaba(
               palabras: [
@@ -152,7 +186,7 @@ extension tarjetas{
     ]
 
     static let tarjetasV:[Tarjeta] = [
-        Tarjeta(audio: "pb_u_01",
+        Tarjeta(audio: "pb_v_01",
           silabas: [
             Silaba(
               palabras: [
@@ -174,7 +208,7 @@ extension tarjetas{
     ]
     
     static let tarjetasW:[Tarjeta] = [
-        Tarjeta(audio: "pb_w_o1",
+        Tarjeta(audio: "pb_w_01",
           silabas: [
             Silaba(
               palabras: [
@@ -183,7 +217,7 @@ extension tarjetas{
               ],
               pronuciacion: "w",
               explicacion: """
-                              Excepto al final de una palabra \n\n transcribe el sonido
+                              Excepto al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "w",
               imagenConsejo: nil,
@@ -214,7 +248,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "wagon", enGriego: "va.gõ"),
+            Palabra(palabra: "crawl", enGriego: "kʀol"),
+            Palabra(palabra: "bowling", enGriego: "bu.liŋ"),
+            Palabra(palabra: "clown", enGriego: "klun"),
+            Palabra(palabra: "interviewer", enGriego: "ɛ̃.tᴇʀ.vju.vᴇ"),
+            Palabra(palabra: "rickshaw", enGriego: "ʀi.kʃo")
+          ]
         ),
     ]
     
@@ -242,14 +283,37 @@ extension tarjetas{
               ],
               pronuciacion: "-x",
               explicacion: """
-                              Al inicio de una palabra \n\n no transcribe ningún sonido.
+                              Al final de una palabra \n\n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: "e_retro_3Eb_n2", //NO hay no existe
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "six", enGriego: "sis"),
+            Palabra(palabra: "dix", enGriego: "dis"),
+            Palabra(palabra: "coccyx", enGriego: "ko.ksis"),
+            Palabra(palabra: "max", enGriego: "maks"),
+            Palabra(palabra: "inox", enGriego: "inoks"),
+            Palabra(palabra: "silex", enGriego: "si.lᴇks"),
+            
+            Palabra(palabra: "onyx", enGriego: "oniks"),
+            Palabra(palabra: "latex", enGriego: "la.tᴇks"),
+            Palabra(palabra: "pharynx", enGriego: "fa.ʀɛ̃ks"),
+            Palabra(palabra: "cortex", enGriego: "koʀ.tᴇks"),
+            Palabra(palabra: "larynx", enGriego: "la.ʀɛ̃ks"),
+            Palabra(palabra: "thorax", enGriego: "to.ʀaks"),
+            
+            
+            Palabra(palabra: "index", enGriego: "ɛ̃.dᴇks"),
+            Palabra(palabra: "furax", enGriego: "fy.ʀaks"),
+            Palabra(palabra: "codex", enGriego: "ko.dᴇks"),
+            Palabra(palabra: "relax", enGriego: "ʀᴇ.laks"),
+            Palabra(palabra: "reflex", enGriego: "ʀᴇ.flᴇks"),
+            Palabra(palabra: "duplex", enGriego: "dy.plᴇks"),
+            Palabra(palabra: "climax", enGriego: "kli.maks")
+          ]
         ),
         
         Tarjeta(audio: "pb_X_02",
@@ -263,9 +327,9 @@ extension tarjetas{
               ],
               pronuciacion: "-x-",
               explicacion: """
-                              Excepto en los grupos:
-                              ex - + vocal al inicio de una palabra
-                              exh- al inicio de una palabra
+                              Excepto en los grupos:\n
+                              $ex-$ + vocal al inicio de una palabra\n
+                              $exh-$ al inicio de una palabra
                           \n\n transcribe los sonidos
                           """,
               imagenFonema: "ks",
@@ -288,7 +352,15 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "soixante", enGriego: "swa.sɑ̃t"),
+            Palabra(palabra: "deuxième", enGriego: "d&Œ&.zjᴇm"),
+            Palabra(palabra: "sixième", enGriego: "si.zjᴇm"),
+            Palabra(palabra: "dixième", enGriego: "di.zjᴇm"),
+            Palabra(palabra: "dix-huit", enGriego: "di.zyit"),
+            Palabra(palabra: "dix-neuf", enGriego: "di.znɶf"),
+            Palabra(palabra: "hexagone", enGriego: "ᴇ.gza.gon")
+          ]
         )
     ]
     
@@ -354,7 +426,9 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "gaz", enGriego: "gaz")
+          ]
         ),
         
         
@@ -374,7 +448,11 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "jazz", enGriego: "dʒaz"),
+            Palabra(palabra: "jacuzzi", enGriego: "ʒa.ky.zi"),
+            Palabra(palabra: "puzzle", enGriego: "p&Œ&zl")
+          ]
         ),
         
         

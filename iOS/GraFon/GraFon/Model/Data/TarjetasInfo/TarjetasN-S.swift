@@ -105,7 +105,9 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "ennemi", enGriego: "ᴇn.mi")
+          ]
         ),
         
         
@@ -129,7 +131,7 @@ extension tarjetas{
                     Palabra(palabra: "t*on*", enGriego: "tõ"),
                     Palabra(palabra: "p*ont*", enGriego: "põ")
               ],
-              pronuciacion: "an",
+              pronuciacion: "on",
               explicacion: """
                               Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben el sonido
                           """,
@@ -145,7 +147,7 @@ extension tarjetas{
                     Palabra(palabra: "*un*", enGriego: "ɛ̃"),
                     Palabra(palabra: "*synt*axe", enGriego: "sɛ̃.taks")
               ],
-              pronuciacion: "ain, ein, in, un o yn",
+              pronuciacion: "ain, ein, in, un ¿o¿ yn",
               explicacion: """
                               Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben el sonido
                           """,
@@ -167,7 +169,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "fan", enGriego: "fan"),
+            Palabra(palabra: "monsieur", enGriego: "m&Œ&.sj&Œ&"),
+            Palabra(palabra: "in", enGriego: "in"),
+            Palabra(palabra: "gin", enGriego: "dʒin"),
+            Palabra(palabra: "fun", enGriego: "f&Œ&n"),
+            Palabra(palabra: "acupuncture", enGriego: "a.ky.põ.ktyʀ")
+          ]
         ),
         
         Tarjeta(audio: "pb_n_05",
@@ -199,7 +208,27 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "agenda", enGriego: "a.ʒɛ̃.da"),
+            Palabra(palabra: "appendicite", enGriego: "a.pɛ̃.di.sit"),
+            Palabra(palabra: "benjamin", enGriego: "bɛ̃.ja.mɛ̃"),
+            Palabra(palabra: "bienvenu", enGriego: "bjɛ̃.v&Œ&.ny"),
+            Palabra(palabra: "ginseng", enGriego: "ʒin.sᴇŋg"),
+            Palabra(palabra: "pentagone", enGriego: "pɛ̃.ta.gon"),
+            Palabra(palabra: "placenta", enGriego: "pla.sɛ̃.ta"),
+            Palabra(palabra: "referendum", enGriego: "ʀᴇ.fᴇ.ʀɛ̃.dom"),
+            Palabra(palabra: "suspense", enGriego: "sys.pᴇns"),
+            Palabra(palabra: "weekend", enGriego: "wi.kᴇnd"),
+            Palabra(palabra: "abdomen", enGriego: "ab.do.mᴇn"),
+            Palabra(palabra: "amen", enGriego: "a.mᴇn"),
+            Palabra(palabra: "éden", enGriego: "ᴇ.dᴇn"),
+            Palabra(palabra: "gluten", enGriego: "gly.tᴇn"),
+            Palabra(palabra: "hymen", enGriego: "i.mᴇn"),
+            Palabra(palabra: "larsen", enGriego: "laʀ.sᴇn"),
+            Palabra(palabra: "open", enGriego: "o.pᴇn"),
+            Palabra(palabra: "pollen", enGriego: "po.lᴇn"),
+            Palabra(palabra: "spécimen", enGriego: "spᴇ.si.mᴇn")
+          ]
         ),
         
         Tarjeta(audio: "pb_n_06",
@@ -269,7 +298,7 @@ extension tarjetas{
 
     static let tarjetasP:[Tarjeta] = [
         
-        Tarjeta(audio: "pb_p_o1",
+        Tarjeta(audio: "pb_p_01",
           silabas: [
             Silaba(
               palabras: [
@@ -308,10 +337,18 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "compte", enGriego: "kõt"),
+            Palabra(palabra: "comptable", enGriego: "kõ.tabl"),
+            Palabra(palabra: "sept", enGriego: "sᴇt"),
+            Palabra(palabra: "baptiser ", enGriego: "ba.ti.zᴇ"),
+            Palabra(palabra: "baptême", enGriego: "ba.tᴇm"),
+            Palabra(palabra: "sculpter", enGriego: "skyl.tᴇ"),
+            Palabra(palabra: "sculpteur", enGriego: "skyl.t&Œ&ʀ"),
+          ]
         ),
         
-        Tarjeta(audio: "pb_p_o2",
+        Tarjeta(audio: "pb_p_02",
           silabas: [
             Silaba(
               palabras: [
@@ -350,10 +387,16 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "drap", enGriego: "dʀa"),
+            Palabra(palabra: "trop", enGriego: "tʀo"),
+            Palabra(palabra: "sirop", enGriego: "si.ʀo"),
+            Palabra(palabra: "galop ", enGriego: "ga.lo"),
+            Palabra(palabra: "vamp", enGriego: "vɑ̃p")
+          ]
         ),
         
-        Tarjeta(audio: "pb_p_o3",
+        Tarjeta(audio: "pb_p_03",
           silabas: [
             Silaba(
               palabras: [
@@ -370,9 +413,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "chips", enGriego: "ʃips"),
+            Palabra(palabra: "laps", enGriego: "laps"),
+            Palabra(palabra: "clips", enGriego: "klips"),
+            Palabra(palabra: "forceps ", enGriego: "foʀ.seps")
+          ]
         ),
-        Tarjeta(audio: "pb_p_o4",
+        Tarjeta(audio: "pb_p_04",
           silabas: [
             Silaba(
               palabras: [
@@ -389,7 +437,7 @@ extension tarjetas{
           ],
           excepciones: nil
         ),
-        Tarjeta(audio: "pb_p_o5",
+        Tarjeta(audio: "pb_p_05",
           silabas: [
             Silaba(
               palabras: [
@@ -426,7 +474,16 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+              Palabra(palabra: "piqure", enGriego: "pi.kyʀ"),
+              Palabra(palabra: "craqure", enGriego: "kʀa.kyʀ"),
+              Palabra(palabra: "aquarelle", enGriego: "a.kwa.ʀᴇl"),
+              Palabra(palabra: "aquatique ", enGriego: "a.kwa.tik"),
+            Palabra(palabra: "aquarium", enGriego: "a.kwa.ʀjom"),
+            Palabra(palabra: "aquifère", enGriego: "a.kɥi.fᴇʀ"),
+            Palabra(palabra: "équilatéral", enGriego: "ᴇ.kɥi.la.tᴇ.ʀal"),
+            Palabra(palabra: "requiem ", enGriego: "ʀᴇ.kɥi.ᴇm"),
+          ]
         ),
         
         Tarjeta(audio: "pb_q_02",
@@ -479,7 +536,55 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "monsieur", enGriego: "m&Œ&.sj&Œ&"),
+            Palabra(palabra: "messieurs", enGriego: "mᴇ.sjɶ"),
+            Palabra(palabra: "alzheimer", enGriego: "al.zaj.mᴇʀ"),
+            Palabra(palabra: "amer", enGriego: "a.mᴇʀ"),
+            Palabra(palabra: "cancer", enGriego: "kɑ̃.sᴇʀ"),
+            Palabra(palabra: "cher", enGriego: "ʃᴇʀ"),
+            Palabra(palabra: "enfer", enGriego: "ɑ̃.fᴇʀ"),
+            Palabra(palabra: "fer", enGriego: "fᴇʀ"),
+            Palabra(palabra: "fier", enGriego: "fjᴇʀ"),
+            Palabra(palabra: "hamster", enGriego: "ams.tᴇʀ"),
+            Palabra(palabra: "hier", enGriego: "jᴇʀ"),
+            Palabra(palabra: "hiver", enGriego: "i.vᴇʀ"),
+            Palabra(palabra: "hyper", enGriego: "i.pᴇʀ"),
+          
+            Palabra(palabra: "kasher", enGriego: "ka.ʃᴇʀ"),
+            Palabra(palabra: "mer", enGriego: "mᴇʀ"),
+            Palabra(palabra: "polyester", enGriego: "po.ljᴇs.tᴇʀ"),
+            Palabra(palabra: "super", enGriego: "sy.pᴇʀ"),
+            Palabra(palabra: "ver", enGriego: "vᴇʀ"),
+            
+            Palabra(palabra: "bestseller", enGriego: "bᴇst.sᴇ.lᴇʀ"),
+            Palabra(palabra: "bulldozer", enGriego: "byl.do.zᴇʀ"),
+            Palabra(palabra: "charter", enGriego: "ʃaʀ.tᴇʀ"),
+            Palabra(palabra: "cluster", enGriego: "klɶs.tɶʀ"),
+            Palabra(palabra: "corner", enGriego: "koʀ.nᴇʀ"),
+            
+            Palabra(palabra: "crooner", enGriego: "kʀu.nɶʀ"),
+            Palabra(palabra: "cutter", enGriego: "kɶ.tɶʀ"),
+            Palabra(palabra: "designer", enGriego: "di.zaj.nɶʀ"),
+            
+            Palabra(palabra: "docker", enGriego: "do.kᴇʀ"),
+            Palabra(palabra: "gangster", enGriego: "gɑ̃g.stᴇʀ"),
+            Palabra(palabra: "geyser", enGriego: "ʒᴇ.zᴇʀ"),
+            Palabra(palabra: "globe-trotter", enGriego: "glob.tʀo.tɶʀ"),
+            Palabra(palabra: "hamburger", enGriego: "ɑ̃.bɶʀ.gɶʀ"),
+            Palabra(palabra: "joker", enGriego: "dʒo.kᴇʀ"),
+            Palabra(palabra: "master", enGriego: "mas.tᴇʀ"),
+            Palabra(palabra: "poker", enGriego: "po.kᴇʀ"),
+            
+            Palabra(palabra: "revolver", enGriego: "ʀᴇ.vol.vᴇʀ"),
+            Palabra(palabra: "rocker", enGriego: "ʀo.kɶʀ"),
+            Palabra(palabra: "roller", enGriego: "ʀo.lɶʀ"),
+            Palabra(palabra: "scooter", enGriego: "sku.tɶʀ"),
+            Palabra(palabra: "sweater", enGriego: "swᴇ.tɶʀ"),
+            Palabra(palabra: "toner", enGriego: "to.nᴇʀ"),
+            Palabra(palabra: "water", enGriego: "wa.tᴇʀ")
+          
+          ]
         ),
         
         Tarjeta(audio: "pb_r_02",
@@ -501,9 +606,11 @@ extension tarjetas{
           excepciones: nil
         ),
     ]
-
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    //HASTA AQUÍ
+    // --- - - - - - - - - - - - - - - - - - - - - - - - - - - -  --
     static let tarjetasS:[Tarjeta] = [
-        Tarjeta(audio: "pb_s_o1",
+        Tarjeta(audio: "pb_s_01",
           silabas: [
             Silaba(
               palabras: [
@@ -535,7 +642,7 @@ extension tarjetas{
         ),
         
         
-        Tarjeta(audio: "pb_s_o2",
+        Tarjeta(audio: "pb_s_02",
           silabas: [
             Silaba(
               palabras: [
@@ -565,10 +672,44 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "abasourdir", enGriego: "a.ba.suʀ.diʀ"),
+            Palabra(palabra: "aseptiser", enGriego: "a.sᴇp.ti.zᴇ "),
+            Palabra(palabra: "asexué", enGriego: "a.sᴇ.ksɥᴇ"),
+            
+            Palabra(palabra: "asocial", enGriego: "a.so.sjal"),
+            Palabra(palabra: "biosynthèse", enGriego: "bjo.sɛ̃.tᴇz"),
+            Palabra(palabra: "cosignataire", enGriego: "ko.si.nja.tᴇʀ "),
+            
+            Palabra(palabra: "carrousel", enGriego: "ka.ʀu.sᴇl"),
+            Palabra(palabra: "entresol", enGriego: "aɑ̃.tʀ&Œ&.sol"),
+            Palabra(palabra: "parasol", enGriego: "pa.ʀa.sol"),
+            
+            Palabra(palabra: "parasoleil", enGriego: "pa.ʀa.so.lᴇj"),
+            Palabra(palabra: "photosensible", enGriego: "fo.to.sɑ̃.sibl"),
+            Palabra(palabra: "préséance", enGriego: "pʀᴇ.sᴇ.ɑ̃s"),
+            
+            
+            Palabra(palabra: "présupposer", enGriego: "pʀᴇ.sy.po.zᴇ"),
+            Palabra(palabra: "presupposition", enGriego: "pʀᴇ.sy.po.zᴇ"),
+            Palabra(palabra: "vraisemblable", enGriego: "vʀᴇ.sɑ̃.blabl"),
+            
+            Palabra(palabra: "vraisemblance", enGriego: "vʀᴇ.sɑ̃.blɑ̃s"),
+            
+            
+            Palabra(palabra: "bisexué", enGriego: "bi.sᴇ.ksɥᴇ"),
+            Palabra(palabra: "hétérosexuel", enGriego: "ᴇ.tᴇ.ʀo.sᴇ.ksɥᴇl"),
+            
+            Palabra(palabra: "homosexuel", enGriego: "o.mo.sᴇ.ksɥᴇl"),
+            Palabra(palabra: "aérosol", enGriego: "a.ᴇ.ʀo.sol"),
+            
+            Palabra(palabra: "HASTA AQUÍ :(", enGriego: ""),
+            Palabra(palabra: "SON MUCHAS ", enGriego: "")
+            
+          ]
         ),
         
-        Tarjeta(audio: "pb_s_o3",
+        Tarjeta(audio: "pb_s_03",
           silabas: [
             Silaba(
               palabras: [
@@ -611,10 +752,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "alsacien", enGriego: "al.za.sjɛ̃"),
+            Palabra(palabra: "subsister", enGriego: "syb.zis.tᴇ"),
+            Palabra(palabra: "subsitance", enGriego: "syb.zis.tɑ̃s")
+          ]
         ),
         
-        Tarjeta(audio: "pb_s_o4",
+        Tarjeta(audio: "pb_s_04",
           silabas: [
             Silaba(
               palabras: [
@@ -632,11 +777,34 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "albatros", enGriego: "al.ba.tʀos"),
+            Palabra(palabra: "albinos", enGriego: "al.bi.nos"),
+            Palabra(palabra: "cosmos", enGriego: "kos.mos"),
+            
+            Palabra(palabra: "os", enGriego: "os"),
+            Palabra(palabra: "rhinocéros", enGriego: "ʀi.no.sᴇ.ʀos"),
+            Palabra(palabra: "thermos", enGriego: "tᴇʀ.mos"),
+            
+            Palabra(palabra: "alias", enGriego: "a.ljas"),
+            Palabra(palabra: "ananas", enGriego: "a.na.nas"),
+            Palabra(palabra: "as", enGriego: "as"),
+            Palabra(palabra: "atlas", enGriego: "a.tlas"),
+            Palabra(palabra: "anus", enGriego: "a.nys"),
+            Palabra(palabra: "autobus", enGriego: "o.to.bys"),
+            
+            Palabra(palabra: "blocus", enGriego: "blo.kys"),
+            Palabra(palabra: "bonus", enGriego: "bo.nys"),
+            Palabra(palabra: "cactus", enGriego: "kak.tys"),
+            Palabra(palabra: "campus", enGriego: "kɑ̃.pys"),
+            Palabra(palabra: "corpus", enGriego: "koʀ.pys"),
+            Palabra(palabra: "cursus", enGriego: "kyʀ.sys"),
+            
+          ]
         ),
         
         
-        Tarjeta(audio: "pb_s_o5",
+        Tarjeta(audio: "pb_s_05",
           silabas: [
             Silaba(
               palabras: [
@@ -655,7 +823,7 @@ extension tarjetas{
           excepciones: nil
         ),
         
-        Tarjeta(audio: "pb_s_o6",
+        Tarjeta(audio: "pb_s_06",
           silabas: [
             Silaba(
               palabras: [
@@ -687,11 +855,14 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: nil
+          excepciones: [
+            Palabra(palabra: "fasciste", enGriego: "fa.ʃist"),
+            Palabra(palabra: "fascisme", enGriego: "fa.ʃism"),
+          ]
         ),
         
         
-        Tarjeta(audio: "pb_s_o7",
+        Tarjeta(audio: "pb_s_07",
           silabas: [
             Silaba(
               palabras: [
@@ -709,7 +880,7 @@ extension tarjetas{
             )
           ],
           excepciones: nil
-        ),
+        )
         
         
     ]

@@ -17,7 +17,7 @@ struct tarjetas {
     /// ---------------------------------------------------------------------------------
     
     static let tarjetasEEE:[Tarjeta] = [
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_e_acento_01",
             silabas: [
                 Silaba(
                     palabras: [
@@ -33,7 +33,7 @@ struct tarjetas {
             ],
             excepciones: nil
         ),
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_e_acento_02",
             silabas: [
                 Silaba(
                     palabras: [
@@ -50,7 +50,7 @@ struct tarjetas {
             excepciones: nil
         ),
         
-        Tarjeta(audio: "192",
+        Tarjeta(audio: "pb_e_acento_03",
             silabas: [
                 Silaba(
                     palabras: [
