@@ -64,6 +64,8 @@ extension UIColor {
         UIColor(red: 225/255, green: 151/255, blue: 128/255, alpha: 1.0)
     ]
     
+    static let naranjaMemorama1: UIColor = UIColor(red: 237/255, green: 161/255, blue: 62/255, alpha: 1.0)
+    
 }
 
 

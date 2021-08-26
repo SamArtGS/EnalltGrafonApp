@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "n2_btn_jgo_si.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "n2_btn_jgo_si@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "n2_btn_jgo_si@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

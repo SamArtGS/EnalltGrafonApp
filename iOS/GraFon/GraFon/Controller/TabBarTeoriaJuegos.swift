@@ -17,8 +17,9 @@ class TabBarTeoriaJuegos: UITabBarController{
     /// Constructor: TabBar se comporta como un VC que contiene a los VC cuando se selecciona el tab bar correspondiente
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
-    
+    var puertaSeleccionada: Int
     init(puertaSeleccionada: Int) {
+        self.puertaSeleccionada = puertaSeleccionada
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
         view.contentMode = .scaleAspectFit
@@ -156,11 +157,24 @@ extension TabBarTeoriaJuegos: UITabBarControllerDelegate{
             self.navigationItem.rightBarButtonItem = nil
         }
         if selectedIndex == 1{
-            self.title = viewController.title
-            let BarButtonItemDerecho = menuButton(self,
-            action: #selector(instrucciones),
-            imageName: "icons8-query")
-            self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+            switch puertaSeleccionada {
+            case 0:
+                self.title = viewController.title
+                let BarButtonItemDerecho = menuButton(self,
+                action: #selector(instrucciones),
+                imageName: "icons8-query")
+                self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+            case 2:
+                self.title = viewController.title
+            default:
+                self.title = viewController.title
+                let BarButtonItemDerecho = menuButton(self,
+                action: #selector(instrucciones),
+                imageName: "icons8-query")
+                self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+            }
+            
+            
         }
     }
     @objc func instrucciones(){

@@ -83,7 +83,14 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
+        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            //layout.itemSize = CGSize(width:size.width, height:size.height)
+            self.collectionView.frame.size = size
+            layout.invalidateLayout()
+        }
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
