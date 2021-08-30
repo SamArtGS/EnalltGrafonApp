@@ -16,7 +16,7 @@ class MemoramaViewController: UICollectionViewController {
     private var segundosRestantes = 59
     private var score:Int = 0
     private let reuseIdentifier = "Cell"
-    
+    private var reproductorLetra: AVAudioPlayer?
     private var cartas:[String]?
     private var parejaCartas:[ParejaCartas]?
     
@@ -153,6 +153,15 @@ class MemoramaViewController: UICollectionViewController {
             if acierto{
                 score += 1
                 puntaje.title = "Pares: \(score)"
+                
+                let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
+                reproductorLetra?.volume = 0.1
+                reproductorLetra = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+                //reproductorLetra?.volume = 0.3
+                reproductorLetra?.play()
+                reproductorLetra?.volume = 1
+                reproductorLetra?.delegate = self
+                
                 if score % 4 == 0{
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self ] in
                         self?.generarTarjetas()

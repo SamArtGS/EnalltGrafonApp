@@ -137,6 +137,8 @@ extension MenuMoldeVC{
     
     func configurarEntorno(){
         collectionView.backgroundColor = .clear
+        collectionView.isScrollEnabled = false
+        collectionView.isPagingEnabled = false
         switch puertaInt {
             case 0:
                 colocarFondo(imagen: "Back-menu_ipad_N3")
@@ -162,9 +164,14 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0,
+        if UIDevice().userInterfaceIdiom == .phone {
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0,
                       height: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0)
+            
+        }else{
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/6.0,
+                      height: (view.safeAreaLayoutGuide.layoutFrame.width)/6.5)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

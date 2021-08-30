@@ -27,6 +27,22 @@ class Carcasa: UIViewController{
     }
 }
 
+
+class PresentacionCreditos: Carcasa {
+    lazy var pantalla = PantallaCreditos()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .clear
+        colocarFondoCompleto(imagen: "bck_n1_juegos_v2")
+        configure(vista: pantalla)
+        //pantalla.delegate = self
+    }
+    deinit {
+        print("\n\nSe reclama controller instrucciones\n\n")
+    }
+}
+
 class PresentacionJuegoSyS: Carcasa {
     lazy var pantalla = PantallaJuegoSyS()
     

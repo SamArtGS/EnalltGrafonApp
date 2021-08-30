@@ -22,9 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let scrollLayout = UICollectionViewFlowLayout()
         scrollLayout.scrollDirection = .horizontal
-        
         nav1.viewControllers = [PagePuertasCV(collectionViewLayout: scrollLayout)]
         window?.rootViewController = nav1
+        
+        
         window?.makeKeyAndVisible()
     }
 

@@ -196,7 +196,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
             reproductorLetra?.play()
             reproductorLetra?.delegate = self
         case 1:
-            let sonido = Bundle.main.path(forResource: "acierto", ofType: "wav")
+            let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
             reproductorLetra = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
             reproductorLetra?.play()
             reproductorLetra?.delegate = self

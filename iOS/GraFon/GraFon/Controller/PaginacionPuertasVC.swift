@@ -81,16 +81,10 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AppUtility.lockOrientation(.portrait)
         self.navigationController?.isNavigationBarHidden = true
     }
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-
-        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            //layout.itemSize = CGSize(width:size.width, height:size.height)
-            self.collectionView.frame.size = size
-            layout.invalidateLayout()
-        }
-    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -104,6 +98,9 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         collectionView?.isPagingEnabled = true
         collectionView?.register(PuertaCell.self,
                                  forCellWithReuseIdentifier: "cellid")
+        
+        
+        /*
         let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-query")
         view.addSubview(boton)
         NSLayoutConstraint.activate([
@@ -112,12 +109,14 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
             boton.widthAnchor.constraint(equalToConstant: 30),
             boton.heightAnchor.constraint(equalToConstant: 30)
         ])
+        
+        */
     }
     
     
     
     @objc func mostrarExtras(){
-        presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
+        presentacionModal(viewController: Carcasa(), halfTransition: &halfModalTransitioningDelegate)
     }
     
 }
