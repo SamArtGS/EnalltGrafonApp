@@ -51,6 +51,16 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    
+    private let zonaMuerta: UIView = {
+        let vista = UIView()
+        vista.backgroundColor = .colorLineaBarraSuperiorPalabras
+        vista.translatesAutoresizingMaskIntoConstraints = false
+        vista.alpha = 0.5
+        vista.isUserInteractionEnabled = false
+        return vista
+    }()
+    
     override func viewDidLoad() {
         self.title = "Encuentra al intruso"
         view.backgroundColor = .white
@@ -59,7 +69,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         
         audioFondo()
         
-        colocarFondo(imagen: "Back-menu_jgo_intruso")
+        
+        //colocarFondo(imagen: "Back-menu_jgo_intruso")
         
         configuracionToolBar()
         let BarButtonItemDerecho = menuButton(self,
@@ -117,10 +128,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                 score += 1
                 puntaje.title = "Puntos: \(score)"
             }else{
-                if score > 0{
-                    score -= 1
-                    puntaje.title = "Puntos: \(score)"
-                }
+                score -= 1
+                puntaje.title = "Puntos: \(score)"
             }
         }
     }
@@ -132,10 +141,12 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
+            self?.score = 0
             self?.reload()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
+            self?.score = 0
             self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
             self?.reload()
         }))
@@ -145,8 +156,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     
     func configurarConstraints(){
         view.addSubview(botonLetra)
-        
-        
+        view.addSubview(zonaMuerta)
+        view.bringSubviewToFront(zonaMuerta)
         botonLetra.setTitle(letraSonidoCurso?.letra, for: .normal)
         
         NSLayoutConstraint.activate([
@@ -154,6 +165,12 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
             botonLetra.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             botonLetra.widthAnchor.constraint(equalToConstant: 90),
             botonLetra.heightAnchor.constraint(equalToConstant: 50),
+            
+            
+            zonaMuerta.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            zonaMuerta.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            zonaMuerta.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            zonaMuerta.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -206,12 +223,6 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(false, animated: false)
-        
-        
-        
-        
-        
-        
         botonLetra.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         
         colocarFondo(imagen: "Back-menu_jgo_intruso")
@@ -219,8 +230,6 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         queueIntrusos =  Data.intrusos.filter { contenido in
             contenido.sonido == letraSonidoCurso?.tipo || contenido.sonido * -1 == letraSonidoCurso?.tipo
         }
-        
-    
         terminar = false
     }
     
@@ -276,24 +285,37 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                     
                     guard let viewtita = self else { return }
                     
-                    if posY < viewtita.view.frame.height + 50{
+                    if posY < viewtita.view.frame.height-100{
                         self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
                     }else{
-                        viewcita.removeFromSuperview()
-                        if viewcita.image == viewcita.imagenHoja?.imagenNormal &&  viewcita.contenidoHoja?.sonido == self?.letraSonidoCurso?.tipo {
-                            self?.darPuntaje(acierto: false)
+                        if posY < viewtita.view.frame.height-50{
+                            viewcita.isUserInteractionEnabled = false
+                            self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
+                            if viewcita.image == viewcita.imagenHoja?.imagenNormal &&  viewcita.contenidoHoja?.sonido == self?.letraSonidoCurso?.tipo {
+                                
+                                    viewcita.cambiarAMal()
+                            
+                                    viewcita.isUserInteractionEnabled = false
+                                    self?.darPuntaje(acierto: false)
+                                    self?.sonarAudio(2)
+                                }
+                        }else{
+                            viewcita.isUserInteractionEnabled = false
+                            self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
+                            //MARK: TODO - Arreglar eliminar hojas al caer
+//                            if posY >= viewtita.view.frame.height && posY < viewtita.view.frame.height + 51 {
+//                                print("hoja eliminada")
+//
+//                                viewcita.removeFromSuperview()
+//                            }
                         }
+                        
+                        
                     }
                     
                 }
         )
     }
-    
-    
-    
-    
-    
-    
     
     
     @objc func presionarHoja(_ sender: UITapGestureRecognizer){
@@ -350,7 +372,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @objc func preguntarCambioLetra(){
-        let alert = UIAlertController(title: "", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "¿Jugar con otro sonido?", message: nil, preferredStyle: .alert)
         let accion1 = UIAlertAction(title: "Sí", style: .default, handler: { [weak self] han in
             self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
             self?.reload()
@@ -358,9 +380,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         alert.addAction(accion1)
         let accion2 = UIAlertAction(title: "No", style: .default)
         alert.addAction(accion2)
-        alert.view.tintColor = .orange
-        alert.setValue(NSAttributedString(string: "¿Jugar con otro sonido?", attributes: [NSAttributedString.Key.font : UIFont.Roboto(.bold, size: 18),NSAttributedString.Key.foregroundColor : UIColor.orange]), forKey: "attributedTitle")
-        alert.view.subviews.last?.subviews.last?.backgroundColor = .orange
+        //alert.view.tintColor = .orange
+        //alert.setValue(NSAttributedString(string: "¿Jugar con otro sonido?", attributes: [NSAttributedString.Key.font : UIFont.Roboto(.bold, size: 18),NSAttributedString.Key.foregroundColor : UIColor.orange]), forKey: "attributedTitle")
+        //alert.view.subviews.last?.subviews.last?.backgroundColor = .orange
         
         self.present(alert, animated: true)
     }

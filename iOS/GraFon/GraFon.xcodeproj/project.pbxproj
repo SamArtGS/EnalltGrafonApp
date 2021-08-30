@@ -15,6 +15,8 @@
 		54071870265506CF00B664D6 /* TarjetasH-M.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407186F265506CF00B664D6 /* TarjetasH-M.swift */; };
 		54071872265506E200B664D6 /* TarjetasN-S.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54071871265506E200B664D6 /* TarjetasN-S.swift */; };
 		54071874265506EF00B664D6 /* TarjetasT-Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54071873265506EF00B664D6 /* TarjetasT-Z.swift */; };
+		54082E8826DC03920064902F /* buena.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54082E8726DC03920064902F /* buena.wav */; };
+		54082E8A26DC039B0064902F /* mala.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54082E8926DC039B0064902F /* mala.wav */; };
 		5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */; };
 		5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */; };
 		5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */; };
@@ -245,6 +247,9 @@
 		54B41BF826C419F40061A7C0 /* PantallaExcepciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */; };
 		54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF002665968300E07A0B /* PantallaCreditos.swift */; };
 		54BDCF032665F28F00E07A0B /* ReGex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF022665F28E00E07A0B /* ReGex.swift */; };
+		54BFA47226D9B67B0050FD61 /* CeldaTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA47126D9B67B0050FD61 /* CeldaTrivia.swift */; };
+		54BFA47426D9B6980050FD61 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA47326D9B6980050FD61 /* Trivia.swift */; };
+		54BFA47626D9B6C70050FD61 /* DataTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA47526D9B6C70050FD61 /* DataTrivia.swift */; };
 		54C3BB5F267A3DD60024AAD1 /* ExcepcionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3BB5E267A3DD60024AAD1 /* ExcepcionesController.swift */; };
 		54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */; };
 		54DC9F682636046B003D4F68 /* SeleccionarJuego-NivelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DC9F672636046B003D4F68 /* SeleccionarJuego-NivelVC.swift */; };
@@ -396,6 +401,8 @@
 		5407186F265506CF00B664D6 /* TarjetasH-M.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasH-M.swift"; sourceTree = "<group>"; };
 		54071871265506E200B664D6 /* TarjetasN-S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasN-S.swift"; sourceTree = "<group>"; };
 		54071873265506EF00B664D6 /* TarjetasT-Z.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetasT-Z.swift"; sourceTree = "<group>"; };
+		54082E8726DC03920064902F /* buena.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buena.wav; sourceTree = "<group>"; };
+		54082E8926DC039B0064902F /* mala.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mala.wav; sourceTree = "<group>"; };
 		5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetaEEE-Y.swift"; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSonidosYSimbolos.swift; sourceTree = "<group>"; };
 		5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coleccionDeColecciones.swift; sourceTree = "<group>"; };
@@ -630,6 +637,9 @@
 		54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaExcepciones.swift; sourceTree = "<group>"; };
 		54BDCF002665968300E07A0B /* PantallaCreditos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaCreditos.swift; sourceTree = "<group>"; };
 		54BDCF022665F28E00E07A0B /* ReGex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGex.swift; sourceTree = "<group>"; };
+		54BFA47126D9B67B0050FD61 /* CeldaTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaTrivia.swift; sourceTree = "<group>"; };
+		54BFA47326D9B6980050FD61 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		54BFA47526D9B6C70050FD61 /* DataTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTrivia.swift; sourceTree = "<group>"; };
 		54C3BB5E267A3DD60024AAD1 /* ExcepcionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcepcionesController.swift; sourceTree = "<group>"; };
 		54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuMoldeVC.swift; sourceTree = "<group>"; };
 		54DC9F672636046B003D4F68 /* SeleccionarJuego-NivelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeleccionarJuego-NivelVC.swift"; sourceTree = "<group>"; };
@@ -802,6 +812,7 @@
 				54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */,
 				5449C1E126D6296400AEBCA9 /* CeldaMemorama.swift */,
 				5449C1E726D7352C00AEBCA9 /* AlertaJuegosPalabras.swift */,
+				54BFA47126D9B67B0050FD61 /* CeldaTrivia.swift */,
 			);
 			path = PalabrasEnBoca;
 			sourceTree = "<group>";
@@ -923,6 +934,7 @@
 				54A2049526D5CBAB0000BB1B /* Intruso.swift */,
 				548FBA9226C0243300E8A109 /* GrupoPalabras.swift */,
 				5449C1E526D6FCF600AEBCA9 /* Memorama.swift */,
+				54BFA47326D9B6980050FD61 /* Trivia.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -973,6 +985,7 @@
 				548FBA9026C01AF500E8A109 /* DataGruposDePalabras.swift */,
 				54A2049726D5CBD50000BB1B /* DataIntruso.swift */,
 				5449C1E326D6FC8300AEBCA9 /* DataMemoramas.swift */,
+				54BFA47526D9B6C70050FD61 /* DataTrivia.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1030,6 +1043,8 @@
 		54DC9F6B26364CAE003D4F68 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				54082E8726DC03920064902F /* buena.wav */,
+				54082E8926DC039B0064902F /* mala.wav */,
 				5449C1DB26D5F31E00AEBCA9 /* acierto.wav */,
 				5449C1DD26D5F32500AEBCA9 /* fallido.wav */,
 				5449C1D926D5D89400AEBCA9 /* music_Instruso.mp3 */,
@@ -1439,6 +1454,7 @@
 				5450B3AC265D791800BB36BA /* pb_d_03.mp3 in Resources */,
 				5450B39D265D791800BB36BA /* pb_T_01.mp3 in Resources */,
 				5450B3C8265D791800BB36BA /* pb_e_12.mp3 in Resources */,
+				54082E8826DC03920064902F /* buena.wav in Resources */,
 				54DCA01326364CAE003D4F68 /* 30.mp3 in Resources */,
 				54DCA00E26364CAE003D4F68 /* 34.mp3 in Resources */,
 				5450B3A0265D791800BB36BA /* pb_u_04.mp3 in Resources */,
@@ -1456,6 +1472,7 @@
 				5450B388265D791800BB36BA /* pb_s_03.mp3 in Resources */,
 				54DCA02A26364CAE003D4F68 /* 174.mp3 in Resources */,
 				5450B3AA265D791800BB36BA /* pb_b_03.mp3 in Resources */,
+				54082E8A26DC039B0064902F /* mala.wav in Resources */,
 				5450B385265D791800BB36BA /* pb_a_06.mp3 in Resources */,
 				5450B3D8265D791800BB36BA /* pb_g_02.mp3 in Resources */,
 				5450B3A1265D791800BB36BA /* pb_z_03.mp3 in Resources */,
@@ -1743,6 +1760,7 @@
 				54A2047E26D48BB60000BB1B /* EncuentraIntrusoViewController.swift in Sources */,
 				5406E83D2640532D00EE25B3 /* ViewControllers.swift in Sources */,
 				54A0F8882627317900A6D308 /* SySJuegoController.swift in Sources */,
+				54BFA47626D9B6C70050FD61 /* DataTrivia.swift in Sources */,
 				54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */,
 				54A0F8902627562400A6D308 /* MenuTarjetas.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
@@ -1785,6 +1803,8 @@
 				5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */,
 				548FBA9326C0243300E8A109 /* GrupoPalabras.swift in Sources */,
 				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
+				54BFA47426D9B6980050FD61 /* Trivia.swift in Sources */,
+				54BFA47226D9B67B0050FD61 /* CeldaTrivia.swift in Sources */,
 				54A0F88B2627337700A6D308 /* CeldaJuegoSyS.swift in Sources */,
 				54DCA05726367AE2003D4F68 /* HalfModalTransitionDelegate.swift in Sources */,
 				54B41BF826C419F40061A7C0 /* PantallaExcepciones.swift in Sources */,

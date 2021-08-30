@@ -109,7 +109,6 @@ extension SeleccionarNivelController{
             let vcs = SySJuego1VC(collectionViewLayout:scrollLayout, nivelSelecionado: indexPath.item + 1)
             self.navigationController?.pushViewController(vcs, animated: true)
         case 1:
-            //seleccionarJuegoPalabrasEnBoca(opcion: indexPath.item)
             print("Hola")
         case 2:
             seleccionarJuegoPalabrasEnBoca(opcion: indexPath.item)

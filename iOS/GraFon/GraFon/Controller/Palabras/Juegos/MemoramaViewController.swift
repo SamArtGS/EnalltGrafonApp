@@ -16,24 +16,30 @@ class MemoramaViewController: UICollectionViewController {
     private var segundosRestantes = 59
     private var score:Int = 0
     private let reuseIdentifier = "Cell"
+    
     private var cartas:[String]?
+    private var parejaCartas:[ParejaCartas]?
+    
+    
     private var tipoMemorama: TipoMemorama
+    private var palabraSeleccionada: CeldaMemorama? = nil
     
     init(collectionFlow: UICollectionViewLayout, tipoMemorama: TipoMemorama) {
         self.tipoMemorama = tipoMemorama
-        
         super.init(collectionViewLayout: collectionFlow)
-        
-        
     }
     
     func generarTarjetas(){
+        palabraSeleccionada = nil
+        collectionView.isUserInteractionEnabled = true
         
         collectionView.visibleCells.forEach { cell in
             guard let cell = cell as? CeldaMemorama else { return }
             cell.backgroundColor = .clear
-            cell.acertado = false
-            cell.estaVolteado = true
+            cell.flipBack()
+            cell.isUserInteractionEnabled = true
+            cell.imagenFrente.layer.borderWidth = 0
+            cell.imagenFrente.layer.borderColor = UIColor.clear.cgColor
         }
         
         if tipoMemorama == .memoramaPalabras{
@@ -44,6 +50,7 @@ class MemoramaViewController: UICollectionViewController {
             cartas?.append(contentsOf: Data.parejaMemoramaPalabra[seleccionado*4...seleccionado*4+3].map({ pareja in
                 pareja.segundaPalabra
             }))
+            parejaCartas = Data.parejaMemoramaPalabra[seleccionado*4...(seleccionado*4)+3].shuffled()
             
         }else{
             let seleccionado:Int = Int.random(in: 0..<Data.parejaMemoramaFrases.count/4)
@@ -53,9 +60,9 @@ class MemoramaViewController: UICollectionViewController {
             cartas?.append(contentsOf: Data.parejaMemoramaFrases[seleccionado*4...seleccionado*4+3].map({ pareja in
                 pareja.segundaPalabra
             }))
+            parejaCartas = Data.parejaMemoramaFrases[seleccionado*4...(seleccionado*4)+3].shuffled()
         }
         cartas?.shuffle()
-        print(cartas ?? "")
     }
     
     required init?(coder: NSCoder) {
@@ -71,23 +78,16 @@ class MemoramaViewController: UICollectionViewController {
         audioFondo()
         configuracionToolBar()
         generarTarjetas()
-        
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
-        
         self.collectionView!.register(CeldaMemorama.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             self?.updateCounter()
         }
         collectionView.isScrollEnabled = false
-        
-        
-        /// Configuración del botón de ayuda
         let BarButtonItemDerecho = menuButton(self,
         action: #selector(mostrarInstrucciones),
         imageName: "icons8-query")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
-        
         let BarButtonItemIzquierdo = menuButton(self,
         action: #selector(salir),
         imageName: "n2_btn_jgo_cerrar")
@@ -118,7 +118,32 @@ class MemoramaViewController: UICollectionViewController {
     }
     
     func terminarJuego(){
-        
+        let alert = UIAlertController(title: "Parejas: \(score)", message: "¿Seguir jugando con la misma pareja?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
+            
+            self?.cartas?.shuffle()
+            
+            self?.segundosRestantes = 59
+            self?.palabraSeleccionada = nil
+            self?.collectionView.isUserInteractionEnabled = true
+            self?.collectionView.visibleCells.forEach { cell in
+                guard let cell = cell as? CeldaMemorama else { return }
+                cell.backgroundColor = .clear
+                cell.flipBack()
+                cell.isUserInteractionEnabled = true
+                cell.imagenFrente.layer.borderWidth = 0
+                cell.imagenFrente.layer.borderColor = UIColor.clear.cgColor
+            }
+            self?.collectionView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
+            self?.segundosRestantes = 120
+            self?.generarTarjetas()
+            self?.collectionView.reloadData()
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -129,8 +154,11 @@ class MemoramaViewController: UICollectionViewController {
                 score += 1
                 puntaje.title = "Pares: \(score)"
                 if score % 4 == 0{
-                    generarTarjetas()
-                    collectionView.reloadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self ] in
+                        self?.generarTarjetas()
+                        self?.collectionView.reloadData()
+                    })
+                    
                 }
             }else{
                 if score > 0{
@@ -151,13 +179,17 @@ class MemoramaViewController: UICollectionViewController {
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
             case 10..<60:
                 tiempo.title = "Tiempo: 0:\(segundosRestantes)"
+            case 60..<70:
+                tiempo.title = "Tiempo: 1:0\(segundosRestantes - 60)"
+            case 70..<120:
+                tiempo.title = "Tiempo: 1:\(segundosRestantes - 60)"
             default:
                 debugPrint("no time")
             }
             segundosRestantes -= 1
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -181,16 +213,32 @@ class MemoramaViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CeldaMemorama
+        
         cell.tipo = tipoMemorama
+        
         cell.palabra = cartas?[indexPath.item]
+        
+        cell.pareja = parejaCartas?.filter({ pareja in
+            pareja.primeraPalabra == cartas?[indexPath.item]
+        }).first?.segundaPalabra
+
+        if cell.pareja == nil {
+            cell.pareja = parejaCartas?.filter({ pareja in
+                pareja.segundaPalabra == cartas?[indexPath.item]
+            }).first?.primeraPalabra
+        }
+        
+        print("PAREJA.", cell.palabra ?? "", cell.pareja ?? "")
         cell.flip()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(indexPath.item*200)) {
             cell.flipBack()
         }
+        
         return cell
     }
     
-    private var palabraSeleccionada: CeldaMemorama?
+   
 
     
     private var puntaje: UIBarButtonItem = {
@@ -263,52 +311,48 @@ extension MemoramaViewController{
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! CeldaMemorama
-        if !cell.estaVolteado && !cell.acertado{
+        if cell.estaBocaAbajo {
             cell.flip()
-            if Data.parejaMemoramaPalabra.filter({ pareja in
-                pareja.primeraPalabra == palabraSeleccionada?.palabra
-            }).first?.segundaPalabra == cell.palabra{
+            
+            if cell.palabra == palabraSeleccionada?.pareja{
                 print("Pareja encontrada")
-                cell.acertado = true
-                palabraSeleccionada?.acertado = true
-                cell.backgroundColor = .systemGreen
-                palabraSeleccionada?.backgroundColor = .systemGreen
+                cell.isUserInteractionEnabled = false
+                palabraSeleccionada?.isUserInteractionEnabled = false
+                //cell.backgroundColor = .systemGreen
+                //palabraSeleccionada?.backgroundColor = .systemGreen
+                cell.imagenFrente.layer.borderWidth = 3
+                cell.imagenFrente.layer.borderColor = UIColor.orange.cgColor
+                palabraSeleccionada?.imagenFrente.layer.borderWidth = 3
+                palabraSeleccionada?.imagenFrente.layer.borderColor = UIColor.orange.cgColor
                 
                 darPuntaje(acierto: true)
-                
+                palabraSeleccionada = nil
             }else{
-                if Data.parejaMemoramaPalabra.filter({ pareja in
-                    pareja.segundaPalabra == palabraSeleccionada?.palabra
-                }).first?.primeraPalabra == cell.palabra{
-                    print("Pareja encontrada")
-                    
-                    cell.acertado = true
-                    palabraSeleccionada?.acertado = true
-                    
-                    cell.backgroundColor = .systemGreen
-                    palabraSeleccionada?.backgroundColor = .systemGreen
-                    darPuntaje(acierto: true)
-                    
+                if palabraSeleccionada == nil {
+                    cell.isUserInteractionEnabled = false
+                    palabraSeleccionada = cell
                 }else{
-                    //Primer toque
-                    if palabraSeleccionada == nil {
-                        palabraSeleccionada = cell
-                    }else{
-                        //Segundo toque erróneo
-                        palabraSeleccionada = nil
-                        collectionView.visibleCells.forEach { cell in
-                            guard let cell = cell as? CeldaMemorama else { return }
-                            if cell.estaVolteado  && !cell.acertado{
-                                cell.flipBack()
+                    palabraSeleccionada?.isUserInteractionEnabled = true
+                    
+                    collectionView.isUserInteractionEnabled = false
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self ] in
+                        self?.collectionView.visibleCells.forEach { cellita in
+                            guard let cellita = cellita as? CeldaMemorama else { return }
+                            if !cellita.estaBocaAbajo  && cellita.isUserInteractionEnabled{
+                                cellita.flipBack()
                             }
                         }
-                    }
+                        cell.flipBack()
+                        self?.collectionView.isUserInteractionEnabled = true
+                    })
+                    
+                    
+                    palabraSeleccionada = nil
                 }
-                
             }
         }else{
-            let cell = collectionView.cellForItem(at: indexPath) as! CeldaMemorama
-            if !cell.acertado{
+            if cell.isUserInteractionEnabled{
                 cell.flipBack()
             }
         }

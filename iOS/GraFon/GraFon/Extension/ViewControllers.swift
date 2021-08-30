@@ -14,8 +14,9 @@ extension UIViewController{
         let alert = UIAlertController(title: "SALIR", message: "¿Abandonar el juego?", preferredStyle: .alert)
         
         
-        alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {_ in
-            self.navigationController?.popViewController(animated: true)
+        alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self]_ in
+            self?.navigationController?.popViewController(animated: true)
+            self?.navigationController?.popViewController(animated: true)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default))
         

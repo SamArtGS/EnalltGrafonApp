@@ -10,7 +10,7 @@ import UIKit
 
 class CeldaMemorama: UICollectionViewCell {
     
-    var estaVolteado: Bool = true
+    var estaBocaAbajo: Bool = true
     var acertado:Bool = false
     
     var tipo: TipoMemorama?{
@@ -33,15 +33,16 @@ class CeldaMemorama: UICollectionViewCell {
             texto.text = palabra
         }
     }
+    var pareja: String?
     
     let imagenFrente: UIImageView = {
         let imagen = UIImageView()
         imagen.image = UIImage(named: "n2_tarjeta_memorama-blanca")
-        imagen.layer.cornerRadius = 5
-        //imagen.layer.borderWidth = 2
+        imagen.layer.cornerRadius = 10
+        
         imagen.isUserInteractionEnabled = true
         imagen.clipsToBounds = true
-        //imagen.layer.borderColor = UIColor.naranjaMemorama1.cgColor
+        
         imagen.translatesAutoresizingMaskIntoConstraints = false
         return imagen
     }()
@@ -101,13 +102,13 @@ class CeldaMemorama: UICollectionViewCell {
     func flip(){
         
         UIView.transition(from: imagenAtras, to: imagenFrente, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews]) {[weak self] bool in
-            self?.estaVolteado = true
+            self?.estaBocaAbajo = false
         }
     }
     
     func flipBack(){
         UIView.transition(from: imagenFrente, to: imagenAtras, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews]) { [weak self] bool in
-            self?.estaVolteado = false
+            self?.estaBocaAbajo = true
         }
     }
 }

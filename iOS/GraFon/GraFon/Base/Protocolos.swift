@@ -28,3 +28,7 @@ protocol pantallaResultadosDelegate: AnyObject{
     func irPantallaPajaros()
     func irAPuertas()
 }
+protocol juegoTriviaDelegate: AnyObject{
+    func recolectarPuntaje(correcto: Bool)
+    func sonarPunto(bool: Bool)
+}

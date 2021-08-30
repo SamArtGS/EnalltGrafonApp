@@ -18,9 +18,9 @@ enum JuegoLanzarPalabras {
         switch self {
         case .intruso:
             return "Intruso"
-        case .memoramaFrases:
-            return "Memorama Palabras"
         case .memoramaPalabras:
+            return "Memorama Palabras"
+        case .memoramaFrases:
             return "Memorama Frases"
         case .trivia:
             return "Trivia"
@@ -36,12 +36,15 @@ class InstruccionesVC: UIViewController {
         self.juegoLanzar = juegoLanzar
         super.init(nibName: nil, bundle: nil)
         
+        
         imagenPresentacion.image = UIImage(named: imagenInstruccion)
-        botonInicioJuego.setImage(UIImage(named: "n2_btn_jgo_conituar"), for: .normal)
+        
         
         if modal{
+            botonInicioJuego.setImage(UIImage(named: "n2_btn_jgo_conituar"), for: .normal)
             botonInicioJuego.addTarget(self, action: #selector(dismissA), for: .touchUpInside)
         }else{
+            botonInicioJuego.setImage(UIImage(named: "n2_jgo_btn_jugar_mdpi"), for: .normal)
             botonInicioJuego.addTarget(self, action: #selector(iniciar), for: .touchUpInside)
         }
     }
@@ -102,7 +105,7 @@ class InstruccionesVC: UIViewController {
             navigationController?.pushViewController(EncuentraIntrusoViewController(), animated: true)
         case .trivia:
             let collect = UICollectionViewFlowLayout()
-            collect.scrollDirection = .vertical
+            collect.scrollDirection = .horizontal
             let viewz = TriviaViewController(collection: collect)
             viewz.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(TriviaViewController(collection: collect), animated: true)
