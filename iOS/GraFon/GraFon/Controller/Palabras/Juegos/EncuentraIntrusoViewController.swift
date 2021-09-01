@@ -83,6 +83,11 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         imageName: "n2_btn_jgo_cerrar")
         self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
         
+        let botonPausa = menuButton(self,
+        action: #selector(pausaPlay),
+        imageName: "icons8-no_audio")
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
+        
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             self?.updateCounter()
         }
@@ -93,7 +98,16 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
     }
     
-    
+    @objc func pausaPlay(){
+        if (reproductorAudio?.isPlaying ?? false) {
+            reproductorAudio?.pause()
+            //booleano = false
+        }
+        else {
+            reproductorAudio?.play()
+            //booleano = true
+        }
+    }
     
     @objc
     func mostrarInstrucciones(){
@@ -301,13 +315,14 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                                 }
                         }else{
                             viewcita.isUserInteractionEnabled = false
-                            self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
                             //MARK: TODO - Arreglar eliminar hojas al caer
-//                            if posY >= viewtita.view.frame.height && posY < viewtita.view.frame.height + 51 {
-//                                print("hoja eliminada")
-//
-//                                viewcita.removeFromSuperview()
-//                            }
+                            if posY >= viewtita.view.frame.height + 50 {
+                                print("hoja eliminada")
+
+                               viewcita.removeFromSuperview()
+                            }else{
+                                self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
+                            }
                         }
                         
                         

@@ -15,8 +15,8 @@ extension UIViewController{
         
         
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self]_ in
-            self?.navigationController?.popViewController(animated: true)
-            self?.navigationController?.popViewController(animated: true)
+            guard let viewController = self?.navigationController?.viewControllers else { return }
+            self?.navigationController?.popToViewController(viewController[viewController.count - 3], animated: true)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default))
         

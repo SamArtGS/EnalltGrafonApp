@@ -45,7 +45,46 @@ extension Data{
         Letra(identificador: 2,
               letra: "a",
               imagenHoja: "2a_n2",
-              tarjetas: tarjetas.tarjetasA
+              tarjetas: tarjetas.tarjetasA,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "y*aou*rt", enGriego: "ja.uʀt")
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "transcriben los sonidos",
+                    imagenFonema: "a.u",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*aou*t", enGriego: "ut")
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "u",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "cr*awl*", enGriego: "kʀol")
+                    ],
+                    pronuciacion: "aw",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "o", imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "p*aon*", enGriego: "pɑ̃")
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "Al final de una palabra \n\n transcriben el sonido",
+                    imagenFonema: "ɑ̃",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              ]
         ),
         Letra(identificador: 3,
               letra: "e",

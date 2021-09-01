@@ -39,10 +39,7 @@ class TriviaViewController: UICollectionViewController {
         
         collectionView.register(TriviaCollectionViewCell.self, forCellWithReuseIdentifier: "celltrivia")
         
-        let BarButtonItemIzquierdo = menuButton(self,
-        action: #selector(salir),
-        imageName: "n2_btn_jgo_cerrar")
-        self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
+        
         audioFondo()
         
         let sonido = Bundle.main.path(forResource: dataShuffle[0].audio, ofType: "mp3")
@@ -56,11 +53,32 @@ class TriviaViewController: UICollectionViewController {
         action: #selector(mostrarInstrucciones),
         imageName: "icons8-query")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+        
+        let BarButtonItemIzquierdo = menuButton(self,
+        action: #selector(salir),
+        imageName: "n2_btn_jgo_cerrar")
+        
+        let botonPausa = menuButton(self,
+        action: #selector(pausaPlay),
+        imageName: "icons8-no_audio")
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
+        self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
+    }
+    
+    @objc func pausaPlay(){
+        if (reproductorAudio?.isPlaying ?? false) {
+            reproductorAudio?.pause()
+            //booleano = false
+        }
+        else {
+            reproductorAudio?.play()
+            //booleano = true
+        }
     }
     
     @objc
     func mostrarInstrucciones(){
-        present(InstruccionesVC(imagenInstruccion: "n2_jgo_tutorial_intruso", imagenBoton: "n2_jgo_btn_jugar_mdpi", juegoLanzar: .trivia, modal: true), animated: true)
+        present(InstruccionesVC(imagenInstruccion: "n2_jgo_tutorial_trivia_mdpi", imagenBoton: "n2_jgo_btn_jugar_mdpi", juegoLanzar: .trivia, modal: true), animated: true)
     }
     
     func terminarJuego(){

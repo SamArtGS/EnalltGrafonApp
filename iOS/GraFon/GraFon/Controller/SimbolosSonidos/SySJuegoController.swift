@@ -11,13 +11,9 @@ import UIKit
 class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate{
 
     private let reuseIdentifier = "Cell"
-    
     private var nivelFonema: Int?
-    
     private var puntos: Int = 0
-    
     private var tarjetas: [ParejaSonido]?
-    
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
     

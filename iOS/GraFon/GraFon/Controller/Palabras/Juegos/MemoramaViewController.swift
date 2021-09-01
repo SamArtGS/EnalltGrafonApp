@@ -13,20 +13,29 @@ class MemoramaViewController: UICollectionViewController {
     
     private let fondoSonido: String = "music_Instruso"
     private var reproductorAudio: AVAudioPlayer?
-    private var segundosRestantes = 59
+    private var segundosRestantes = 0
     private var score:Int = 0
     private let reuseIdentifier = "Cell"
     private var reproductorLetra: AVAudioPlayer?
     private var cartas:[String]?
     private var parejaCartas:[ParejaCartas]?
-    
-    
     private var tipoMemorama: TipoMemorama
     private var palabraSeleccionada: CeldaMemorama? = nil
+    private var booleano: Bool = false
+    
     
     init(collectionFlow: UICollectionViewLayout, tipoMemorama: TipoMemorama) {
         self.tipoMemorama = tipoMemorama
         super.init(collectionViewLayout: collectionFlow)
+        
+        
+        if tipoMemorama == .memoramaPalabras{
+            self.segundosRestantes = 59
+            self.tiempo.title = "Tiempo: 1:00"
+        }else{
+            self.segundosRestantes = 120
+            self.tiempo.title = "Tiempo: 2:00"
+        }
     }
     
     func generarTarjetas(){
@@ -84,14 +93,35 @@ class MemoramaViewController: UICollectionViewController {
             self?.updateCounter()
         }
         collectionView.isScrollEnabled = false
+        
         let BarButtonItemDerecho = menuButton(self,
         action: #selector(mostrarInstrucciones),
         imageName: "icons8-query")
-        self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+        
+        let botonPausa = menuButton(self,
+        action: #selector(pausaPlay),
+        imageName: "icons8-no_audio")
+        
+        
+        //self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
+        
+        
         let BarButtonItemIzquierdo = menuButton(self,
         action: #selector(salir),
         imageName: "n2_btn_jgo_cerrar")
         self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
+        
+    }
+    @objc func pausaPlay(){
+        if (reproductorAudio?.isPlaying ?? false) {
+            reproductorAudio?.pause()
+            booleano = false
+        }
+        else {
+            reproductorAudio?.play()
+            booleano = true
+        }
     }
     
     func audioFondo(){
@@ -123,8 +153,8 @@ class MemoramaViewController: UICollectionViewController {
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             
             self?.cartas?.shuffle()
-            
-            self?.segundosRestantes = 59
+            self?.score = 0
+            self?.puntaje.title = "Pares: 0"
             self?.palabraSeleccionada = nil
             self?.collectionView.isUserInteractionEnabled = true
             self?.collectionView.visibleCells.forEach { cell in
@@ -138,10 +168,17 @@ class MemoramaViewController: UICollectionViewController {
             self?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
-            self?.segundosRestantes = 120
+            self?.score = 0
+            self?.puntaje.title = "Pares: 0"
             self?.generarTarjetas()
             self?.collectionView.reloadData()
         }))
+        
+        if tipoMemorama == .memoramaPalabras{
+            self.segundosRestantes = 59
+        }else{
+            self.segundosRestantes = 120
+        }
 
         self.present(alert, animated: true, completion: nil)
     }
@@ -255,7 +292,7 @@ class MemoramaViewController: UICollectionViewController {
     }()
     
     private var tiempo: UIBarButtonItem = {
-        return UIBarButtonItem(title: "Tiempo: 1:00",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "Tiempo: ",style: .plain, target: nil, action: nil)
     }()
     private var flexibleSpace: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -370,7 +407,7 @@ extension MemoramaViewController{
 
 extension MemoramaViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag || player.isEqual(reproductorAudio) {
+        if flag || player.isEqual(reproductorAudio) || booleano{
             reproductorAudio?.play()
         }
     }

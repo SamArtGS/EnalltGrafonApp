@@ -1,40 +1,28 @@
 //
-//  CeldaSilabasYExplicacion.swift
+//  GrafiasPocoFrecuentesView.swift
 //  GraFon
 //
-//  Created by Samuel Arturo Garrido Sánchez on 2021-05-12.
+//  Created by Samuel Arturo Garrido Sánchez on 8/30/21.
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
 
 import UIKit
 
-class CeldaSilabasYExplicacion: UICollectionViewCell {
+class GrafiasPocoFrecuentesView: UICollectionViewCell {
     
-    private var imagenConsejo: String?
-    var esGrafiasPocoFrecuentes: Bool = false
     
-    var delegate:MostrarExcepcionesDelegate?
-    
-    var silaba: Silaba? {
+    var grafiasPocoFrecuentes: Silaba? {
         didSet {
-            guard let destapado = silaba else { return }
+            guard let destapado = grafiasPocoFrecuentes else { return }
             let silabaGenerada = previstaSilaba(destapado)
-            
+            configurarConstraints()
             posicionLetraLabel.text = destapado.pronuciacion
             explicacion.text = destapado.explicacion
             
-            imagenConsejo = destapado.imagenConsejo
             
-            pilaViews.addArrangedSubview(silabaGenerada)
             pilaViews.addArrangedSubview(posicionLetraLabel)
             pilaViews.addArrangedSubview(explicacion)
             
-            NSLayoutConstraint.activate([
-                explicacion.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
-                explicacion.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10),
-                silabaGenerada.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
-                silabaGenerada.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10)
-            ])
             
             if destapado.imagenFonema == "ico_sin-sonido_n2"{
                 pilaViews.addArrangedSubview(labio(UIImage(named: destapado.imagenFonema)))
@@ -42,18 +30,18 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
                 pilaViews.addArrangedSubview(pronunciacion(destapado.imagenFonema))
             }
             
-            if destapado.textodeAbajo != nil{
-                pilaViews.addArrangedSubview(textoDeAbajo(destapado.textodeAbajo))
-            }
+//            NSLayoutConstraint.activate([
+//                explicacion.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
+//                explicacion.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10),
+//                silabaGenerada.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
+//                silabaGenerada.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10)
+//            ])
             
-            if let imagenConsejo = destapado.imagenConsejo{
-                let imagenPajaroAgregada: UIImageView = imagenPajaro(UIImage(named: imagenConsejo))
-                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mostrarExplicacion(tapGestureRecognizer:)))
-                imagenPajaroAgregada.addGestureRecognizer(tapGestureRecognizer)
-                pilaViews.addArrangedSubview(imagenPajaroAgregada)
-                
-            }
+            pilaViews.addArrangedSubview(silabaGenerada)
+            
+            
         }
+        
         willSet{
             pilaViews.subviews.forEach { (view) in
                 view.removeFromSuperview()
@@ -61,9 +49,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         }
     }
     
-    func determinarFondo(color: UIColor){
-        fondo.backgroundColor = color
-    }
     
     private let pilaViews: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
@@ -86,15 +71,11 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
-        
-        
         let labelDer:UILabel = UILabelPersonalizado()
-        
         
         labelIzq.translatesAutoresizingMaskIntoConstraints = false
         labelDer.translatesAutoresizingMaskIntoConstraints = false
         vista.translatesAutoresizingMaskIntoConstraints = false
-        
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques)
         labelIzq.textAlignment = .right
@@ -127,9 +108,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         }
         textoIzquierdo.removeLast()
         textoDerecho.removeLast()
-        
-        
-        
         labelIzq.text = textoIzquierdo
         labelDer.text = textoDerecho
         
@@ -170,14 +148,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return etiqueta
     }
     
-    private var imagenPajaro: ( UIImage? ) -> UIImageView = { imagen in
-        let imageView = UIImageView(image: UIImage(named: "retro_n2"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.isUserInteractionEnabled = true
-        return imageView
-    }
-    
     private var textoDeAbajo: ( String? ) -> UILabelPersonalizado = { texto in
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
@@ -199,101 +169,21 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return imageView
     }
     
-    private var adornito: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "barra_n2_n2")
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
-    @objc func mostrarExplicacion(tapGestureRecognizer: UITapGestureRecognizer){
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-        
-        guard let destapado = imagenConsejo else { return }
-        tappedImage.image = UIImage(named: destapado)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-            tappedImage.image = UIImage(named: "retro_n2")
-        })
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configurarConstraints()
+        
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
-    private let imagenVuelta: UIButton = {
-        let boton = UIButton(type: .custom)
-        boton.isUserInteractionEnabled = true
-        boton.setImage(UIImage(named: "ico_ir-frente_n2"), for: .normal)
-        boton.contentMode = .scaleAspectFit
-        return boton
-    }()
-    
-    func esTarjetaInicio(){
-        fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-    }
-    
-    func esTarjetaFinal(hayExcepciones: Bool){
-        adornito.isHidden = true
-        fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        if hayExcepciones{
-            imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
-            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
-            NSLayoutConstraint.activate([
-                imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-                imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-                imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
-                imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
-            ])
-        }else{
-            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        }
-        
-    }
-    
-    func esTarjetaNormal(){
-        fondo.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        fondo.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-    }
-    
-    func esTarjetaUnica(hayExcepciones: Bool){
-        adornito.isHidden = true
-        if hayExcepciones{
-            fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
-            imagenVuelta.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imagenVuelta.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-                imagenVuelta.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-                imagenVuelta.heightAnchor.constraint(equalToConstant: 40),
-                imagenVuelta.widthAnchor.constraint(equalToConstant: 40)
-            ])
-        }else{
-            fondo.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-            fondo.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        }
-        
-        
-    }
     
     func configurarConstraints(){
-        translatesAutoresizingMaskIntoConstraints = false
-        imagenVuelta.addTarget(self, action: #selector(voltear), for: .touchUpInside)
         
         addSubview(fondo)
         addSubview(pilaViews)
-        fondo.addSubview(adornito)
-        
-        addSubview(imagenVuelta)
         
         NSLayoutConstraint.activate([
             fondo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
@@ -301,19 +191,8 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
             pilaViews.topAnchor.constraint(equalTo: fondo.topAnchor),
             pilaViews.leadingAnchor.constraint(equalTo: fondo.leadingAnchor),
             pilaViews.trailingAnchor.constraint(equalTo: fondo.trailingAnchor),
-            pilaViews.bottomAnchor.constraint(equalTo: adornito.topAnchor),
-            
-            adornito.leadingAnchor.constraint(equalTo: fondo.leadingAnchor),
-            adornito.trailingAnchor.constraint(equalTo: fondo.trailingAnchor),
-            adornito.bottomAnchor.constraint(equalTo: fondo.bottomAnchor),
-            adornito.heightAnchor.constraint(equalToConstant: 20)
+            pilaViews.bottomAnchor.constraint(equalTo: fondo.topAnchor),
         ])
     }
     
-}
-
-extension CeldaSilabasYExplicacion{
-    @objc func voltear(){
-        delegate?.mostrarExcepciones()
-    }
 }

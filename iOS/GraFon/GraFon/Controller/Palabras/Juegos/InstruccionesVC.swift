@@ -139,7 +139,7 @@ class InstruccionesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         setUpConstraints()
         self.title = juegoLanzar.retuTitle()
     }

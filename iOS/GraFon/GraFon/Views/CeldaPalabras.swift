@@ -12,6 +12,9 @@ class CeldaPalabras: UICollectionViewCell {
     
     lazy var texto: String = ""
     
+    
+    
+    
     var palabrasEnTarjeta: Tarjeta? {
         didSet {
             texto.removeAll()
@@ -35,7 +38,7 @@ class CeldaPalabras: UICollectionViewCell {
         return imageView
     }()
     
-    private let palabrerio: UILabelPersonalizado = {
+    let palabrerio: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
         etiqueta.font = .Roboto(.italic, size: Tamanio.letraCafeTarjetasMenu)
         etiqueta.textColor = .colorLetras

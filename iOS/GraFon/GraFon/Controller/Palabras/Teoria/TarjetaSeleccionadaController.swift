@@ -13,6 +13,8 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     private let identificadorCeldaInicio:String = "CeldaInicio"
     private let identificadorCeldaSilabas: String = "CeldaSilaba"
     private var tarjeta: Tarjeta?
+    private var silabas: [Silaba]?
+    private var bool: Bool = false
     
     var letraTitulo: String? {
         didSet{
@@ -23,15 +25,23 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.register(CeldaSonidoYSilabas.self, forCellWithReuseIdentifier: identificadorCeldaInicio)
-        self.collectionView!.register(CeldaSilabasYExplicacion.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
+        
         configuracionVisual()
     }
     
     init(collectionViewLayout layout: UICollectionViewLayout, tarjeta: Tarjeta?) {
         super.init(collectionViewLayout: layout)
+        self.collectionView!.register(CeldaSonidoYSilabas.self, forCellWithReuseIdentifier: identificadorCeldaInicio)
+        self.collectionView!.register(CeldaSilabasYExplicacion.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
+        bool = true
         self.tarjeta = tarjeta
-        
+    }
+    
+    init(collectionViewLayout layout: UICollectionViewLayout, silabas: [Silaba]?){
+        super.init(collectionViewLayout: layout)
+        bool = false
+        self.collectionView!.register(GrafiasPocoFrecuentesView.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
+        self.silabas = silabas
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -44,8 +54,6 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.topItem?.title = "Palabras en la boca"
-        self.navigationController?.navigationBar.backItem?.title = "Palabras en la boca"
         
         let celp = collectionView.cellForItem(at: IndexPath(item: 0, section: 0)) as? CeldaSonidoYSilabas
         
@@ -73,11 +81,17 @@ extension TarjetaSeleccionadaController{
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (tarjeta?.silabas.count ?? 1) + 1
+        if bool{
+            return (tarjeta?.silabas.count ?? 1) + 1
+        }else{
+            return silabas?.count ?? 0
+        }
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
+        
+        if bool{
         switch indexPath.item {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaInicio, for: indexPath) as! CeldaSonidoYSilabas
@@ -91,26 +105,17 @@ extension TarjetaSeleccionadaController{
                 
                 if tarjeta?.silabas.count == 1 {
                     cell.delegate = self
-                    
-                    
                     cell.esTarjetaUnica(hayExcepciones: tarjeta?.excepciones != nil)
-                    
-                    
                 }else{
-                    
                     cell.esTarjetaInicio()
                 }
-                
                 return cell
             case (tarjeta?.silabas.count ?? 1):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
-                
                 cell.delegate = self
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
                 cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
-                
-                
                 cell.esTarjetaFinal(hayExcepciones: tarjeta?.excepciones != nil)
                 return cell
             default:
@@ -121,8 +126,14 @@ extension TarjetaSeleccionadaController{
                 cell.esTarjetaNormal()
                 return cell
             }
-        
-        
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! GrafiasPocoFrecuentesView
+            
+            cell.grafiasPocoFrecuentes = silabas?[indexPath.item]
+            cell.backgroundColor = .white
+            //cell.determinarFondo(color: UIColor.white)
+            return cell
+        }
     }
 }
 
@@ -164,10 +175,12 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
 
 extension TarjetaSeleccionadaController{
     func mostrarExcepciones(){
-        let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones)
-        secondVC.title = title
+        let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones, titulo: letraTitulo ?? "")
+        
         self.navigationController?.pushViewController(secondVC, animated: false)
         secondVC.excepciones = tarjeta?.excepciones
+        secondVC.navigationController?.title = self.title
+        
         UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
     }
     

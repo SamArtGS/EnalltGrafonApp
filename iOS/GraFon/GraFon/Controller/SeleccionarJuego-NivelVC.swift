@@ -31,7 +31,24 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
         tabBarController?.delegate = self
         collectionView.clipsToBounds = true
         collectionView.backgroundColor = .clear
-        colocarFondo(imagen: "bck_n1_juegos_v2")
+        
+        switch puertaInt {
+        case 0: // Grupo de palabras
+            colocarFondo(imagen: "bck_n1_juegos_v2")
+            break
+        case 1: // Puerta amarilla
+            colocarFondo(imagen: "bck_n1_juegos_v2")
+            break
+        case 2: //Puerta palabras
+            collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+            break
+        case 3: // sonidos y simbolos
+            colocarFondo(imagen: "bck_n1_juegos_v2")
+            break
+        default:
+            break
+        }
+        
 
     }
     

@@ -199,6 +199,7 @@
 		5450B3E6265D791800BB36BA /* pb_i_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B350265D791800BB36BA /* pb_i_12.mp3 */; };
 		5450B3E7265D791800BB36BA /* pb_s_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B351265D791800BB36BA /* pb_s_02.mp3 */; };
 		5450B3E8265D791800BB36BA /* pb_s_07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B352265D791800BB36BA /* pb_s_07.mp3 */; };
+		545FE2FD26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FE2FC26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift */; };
 		546301F925FA025E00E005BC /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colores.swift */; };
 		5466CAB62642DC7600443B58 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */; };
 		5466CAB72642DC7600443B58 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAC2642DC7600443B58 /* Lato-LightItalic.ttf */; };
@@ -604,6 +605,7 @@
 		5450B350265D791800BB36BA /* pb_i_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_i_12.mp3; sourceTree = "<group>"; };
 		5450B351265D791800BB36BA /* pb_s_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_s_02.mp3; sourceTree = "<group>"; };
 		5450B352265D791800BB36BA /* pb_s_07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_s_07.mp3; sourceTree = "<group>"; };
+		545FE2FC26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrafiasPocoFrecuentesView.swift; sourceTree = "<group>"; };
 		546301F825FA025E00E005BC /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
 		5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5466CAAC2642DC7600443B58 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -849,8 +851,8 @@
 				54E70BE2264C1AF100DA062F /* CeldaSilabasYExplicacion.swift */,
 				54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */,
 				5449C1E126D6296400AEBCA9 /* CeldaMemorama.swift */,
-				5449C1E726D7352C00AEBCA9 /* AlertaJuegosPalabras.swift */,
 				54BFA47126D9B67B0050FD61 /* CeldaTrivia.swift */,
+				545FE2FC26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift */,
 			);
 			path = PalabrasEnBoca;
 			sourceTree = "<group>";
@@ -953,9 +955,8 @@
 			children = (
 				546B139825DB3DF400CF2ED5 /* PaginacionPuertasVC.swift */,
 				5400C2AE262E32E2008F2D4A /* TabBarTeoriaJuegos.swift */,
-				54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */,
 				54DC9F672636046B003D4F68 /* SeleccionarJuego-NivelVC.swift */,
-				54A0F88F2627562400A6D308 /* MenuTarjetas.swift */,
+				54CD4DE325E0D429002D0006 /* MenuMoldeVC.swift */,
 				54A0F8892627334900A6D308 /* SimbolosSonidos */,
 				54A0F88C26274D4A00A6D308 /* Palabras */,
 			);
@@ -1008,6 +1009,7 @@
 				5492F89C25EA1CAD0006A960 /* CeldaGenerica.swift */,
 				5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */,
 				5406E83A26403BE900EE25B3 /* CeldaPalabras.swift */,
+				5449C1E726D7352C00AEBCA9 /* AlertaJuegosPalabras.swift */,
 				54A0F886262676BD00A6D308 /* SimbolosSonidos */,
 				5406E83926403BAD00EE25B3 /* PalabrasEnBoca */,
 			);
@@ -1061,8 +1063,9 @@
 		54A2047926D48B7B0000BB1B /* Teoria */ = {
 			isa = PBXGroup;
 			children = (
-				54C3BB5E267A3DD60024AAD1 /* ExcepcionesController.swift */,
+				54A0F88F2627562400A6D308 /* MenuTarjetas.swift */,
 				54E70BDE264C1A8B00DA062F /* TarjetaSeleccionadaController.swift */,
+				54C3BB5E267A3DD60024AAD1 /* ExcepcionesController.swift */,
 			);
 			path = Teoria;
 			sourceTree = "<group>";
@@ -1839,6 +1842,7 @@
 				54BFA47626D9B6C70050FD61 /* DataTrivia.swift in Sources */,
 				54DCA05526367AE2003D4F68 /* HalfModalTransitionAnimator.swift in Sources */,
 				54A0F8902627562400A6D308 /* MenuTarjetas.swift in Sources */,
+				545FE2FD26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift in Sources */,
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
 				5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */,

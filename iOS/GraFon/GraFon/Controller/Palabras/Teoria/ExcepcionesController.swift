@@ -12,14 +12,17 @@ class ExcepcionesController: UIViewController {
     
     lazy var pantalla = PantallaExcepciones()
     var excepciones: [Palabra]?
+    var titulo: String?
     
-    init(excepciones: [Palabra]?) {
+    init(excepciones: [Palabra]?, titulo: String) {
+        self.titulo = titulo
         
         super.init(nibName: nil, bundle: nil)
         
         pilaVerticalExcepciones.addArrangedSubview(explicacion)
         
         guard let destapado = excepciones else { return }
+        self.title = titulo
         
         for palabra in destapado{
             let silabaGenerada = previstaPar(palabra)
@@ -116,6 +119,8 @@ class ExcepcionesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
         configurarConstraints()

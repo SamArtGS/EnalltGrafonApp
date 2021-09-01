@@ -13,6 +13,15 @@ struct Letra: Codable, Hashable, Equatable{
     let letra: String
     let imagenHoja: String
     let tarjetas: [Tarjeta]?
+    let grafiasPocoFrecuentes:[Silaba]?
+    
+    init(identificador:Int, letra: String, imagenHoja:String, tarjetas:[Tarjeta]?, grafiasPocoFrecuentes:[Silaba]? = nil){
+        self.identificador = identificador
+        self.letra = letra
+        self.imagenHoja = imagenHoja
+        self.tarjetas = tarjetas
+        self.grafiasPocoFrecuentes = grafiasPocoFrecuentes
+    }
 }
 
 struct Tarjeta: Codable, Hashable, Equatable{

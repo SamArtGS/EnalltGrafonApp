@@ -42,7 +42,7 @@ extension Data{
                                   Al final de una palabra seguida de un sustantivo que empieza con vocal o $h$ \n\n indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
-                  imagenConsejo: "nil",
+                  imagenConsejo: nil,
                   textodeAbajo: nil
                 )
               ],
@@ -94,21 +94,33 @@ extension Data{
               ],
               excepciones: nil
             ),
-            Tarjeta(audio: "pb_b_01",
+            Tarjeta(audio: "mp_g1_02",
               silabas: [
                 Silaba(
                   palabras: [
-                        Palabra(palabra: "*b*leu", enGriego: "bl&Œ&"),
-                        Palabra(palabra: "ta*b*le", enGriego: "tabl"),
-                        Palabra(palabra: "clu*b*", enGriego: "kl&Œ&b"),
+                        Palabra(palabra: "*un* doute", enGriego: "ɛ̃.dut"),
+                        Palabra(palabra: "*aucun* résultat", enGriego: "o.kɛ̃.ʀᴇ.zyl.ta")
                   ],
-                  pronuciacion: "b",
+                  pronuciacion: "un¿,¿ aucun",
                   explicacion: """
-                                  (Excepto antes de $s$ o $t$) \n\n transcribe el sonido
+                                  Antes de un sustantivo que empieza con consonante (excepto $h$) \n\n $un$ transcriben el sonido
                               """,
-                  imagenFonema: "b",
+                  imagenFonema: "ɛ̃",
                   imagenConsejo: nil,
                   textodeAbajo: nil
+                ),
+                Silaba(
+                  palabras: [
+                        Palabra(palabra: "*un* enfant", enGriego: "ɛ̃.nɑ̃.fɑ̃"),
+                        Palabra(palabra: "*aucun* effort", enGriego: "o.kɛ̃.nᴇ.foʀ")
+                  ],
+                  pronuciacion: "un¿,¿ aucun",
+                  explicacion: """
+                                  Antes de un sustantivo que empieza con vocal o $h$ $un$ transcriben el sonido
+                              """,
+                  imagenFonema: "",
+                  imagenConsejo: nil,
+                  textodeAbajo: "e indican la formación de una nueva sílaba que empieza con el sonido n"
                 )
               ],
               excepciones: nil
