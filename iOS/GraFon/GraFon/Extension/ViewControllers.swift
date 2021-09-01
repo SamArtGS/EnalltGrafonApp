@@ -17,6 +17,7 @@ extension UIViewController{
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self]_ in
             guard let viewController = self?.navigationController?.viewControllers else { return }
             self?.navigationController?.popToViewController(viewController[viewController.count - 3], animated: true)
+            self?.navigationController?.setToolbarHidden(true, animated: false)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default))
         

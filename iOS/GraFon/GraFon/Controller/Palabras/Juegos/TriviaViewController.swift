@@ -88,11 +88,13 @@ class TriviaViewController: UICollectionViewController {
             self?.segundosRestantes = 120
             self?.score = 0
             self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
+            
             self?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             guard let viewController = self?.navigationController?.viewControllers else { return }
             self?.navigationController?.popToViewController(viewController[viewController.count - 3], animated: true)
+            self?.navigationController?.setToolbarHidden(true, animated: false)
         }))
 
         self.present(alert, animated: true, completion: nil)
