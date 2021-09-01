@@ -407,7 +407,7 @@ extension MemoramaViewController{
 
 extension MemoramaViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag || player.isEqual(reproductorAudio) || booleano{
+        if flag || player.isEqual(reproductorAudio) || !booleano{
             reproductorAudio?.play()
         }
     }

@@ -91,14 +91,34 @@ class TriviaViewController: UICollectionViewController {
             self?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
-            self?.navigationController?.popViewController(animated: true)
+            guard let viewController = self?.navigationController?.viewControllers else { return }
+            self?.navigationController?.popToViewController(viewController[viewController.count - 3], animated: true)
         }))
 
         self.present(alert, animated: true, completion: nil)
     }
     
+    private var contadorA10: Int = 0
+    
     @objc func updateCounter() {
+        
+        contadorA10+=1
+        
+        if contadorA10 == 10{
+            score -= 1
+            puntaje.title = "Puntos: \(score)"
+            sonarPunto(bool: false)
+            guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
+                return
+            }
+            collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+            
+            if indexPath.item + 1 >= dataShuffle.count{
+                collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
+            }
+            contadorA10 = 0
+        }
+        
         if segundosRestantes >= 0 {
             switch segundosRestantes {
             case 0:
@@ -113,7 +133,7 @@ class TriviaViewController: UICollectionViewController {
             case 70..<120:
                 tiempo.title = "Tiempo: 1:\(segundosRestantes - 60)"
             default:
-                debugPrint("no time")
+                debugPrint("")
             }
             segundosRestantes -= 1
         }
@@ -137,7 +157,7 @@ class TriviaViewController: UICollectionViewController {
     }()
     
     private var tiempo: UIBarButtonItem = {
-        return UIBarButtonItem(title: "Tiempo: 1:00",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "Tiempo: 2:00",style: .plain, target: nil, action: nil)
     }()
     
     private var flexibleSpace: UIBarButtonItem = {
@@ -219,7 +239,7 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
             score -= 1
             puntaje.title = "Puntos: \(score)"
         }
-        
+        contadorA10 = 0
         guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
             return
         }
