@@ -52,6 +52,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+        
     }
 
     override func viewWillDisappear(_ animated: Bool) {

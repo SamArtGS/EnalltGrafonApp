@@ -63,6 +63,7 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setToolbarHidden(true, animated: true)
         self.navigationController?.isNavigationBarHidden = false
     }
 
