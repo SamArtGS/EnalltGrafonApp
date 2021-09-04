@@ -28,7 +28,12 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.height))
+        if UIDevice().userInterfaceIdiom == .phone {
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.height))
+        }else{
+            return CGSize(width: (view.frame.width)/2,
+                          height: (view.frame.height)/2.1)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -61,8 +66,6 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                         let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 2)
                         self.navigationController?.pushViewController(viewTable, animated: true)
                         break
-    //                    let viewTable = TabBarSimbolosySonidos(puertaSeleccionada: 1)
-    //                    self.navigationController?.pushViewController(viewTable, animated: true)
                     case 2:
                         let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 0)
                         self.navigationController?.pushViewController(viewTable, animated: true)

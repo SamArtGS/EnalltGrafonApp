@@ -16,7 +16,7 @@ class MenuMoldeVC: UICollectionViewController{
     private let pilaGrupoPalabrasVertical: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.axis = .vertical
-        elementosApilados.distribution = .fillProportionally
+        elementosApilados.distribution = .equalCentering
         elementosApilados.alignment = .center
         elementosApilados.spacing = 0
         elementosApilados.isUserInteractionEnabled = true
@@ -27,7 +27,7 @@ class MenuMoldeVC: UICollectionViewController{
     private let pilaGrupoPalabrasHorizontal: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.axis = .horizontal
-        elementosApilados.distribution = .fillProportionally
+        elementosApilados.distribution = .fillEqually
         elementosApilados.alignment = .center
         elementosApilados.spacing = 0
         elementosApilados.isUserInteractionEnabled = true
@@ -237,9 +237,13 @@ extension MenuMoldeVC{
         let imagen2 = UIImageView(image: UIImage(named: Data.grupoPalabras[1].imagenGrupo))
         let imagen3 = UIImageView(image: UIImage(named: Data.grupoPalabras[2].imagenGrupo))
         
-        imagen1.contentMode = .scaleAspectFit
-        imagen2.contentMode = .scaleAspectFit
-        imagen3.contentMode = .scaleAspectFit
+        imagen1.translatesAutoresizingMaskIntoConstraints = false
+        imagen2.translatesAutoresizingMaskIntoConstraints = false
+        imagen3.translatesAutoresizingMaskIntoConstraints = false
+        
+        imagen1.contentMode = .scaleToFill
+        imagen2.contentMode = .scaleToFill
+        imagen3.contentMode = .scaleToFill
         
         imagen1.isUserInteractionEnabled = true
         imagen2.isUserInteractionEnabled = true
@@ -260,9 +264,14 @@ extension MenuMoldeVC{
         NSLayoutConstraint.activate([
             pilaGrupoPalabrasVertical.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pilaGrupoPalabrasVertical.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            pilaGrupoPalabrasVertical.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pilaGrupoPalabrasVertical.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-            
+            pilaGrupoPalabrasHorizontal.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pilaGrupoPalabrasHorizontal.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imagen1.widthAnchor.constraint(equalTo: view.widthAnchor),
+            imagen1.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.49033816),
+            imagen2.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            imagen2.heightAnchor.constraint(equalTo: imagen2.widthAnchor, multiplier: 1.3236714976),
+            imagen3.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            imagen3.heightAnchor.constraint(equalTo: imagen3.widthAnchor, multiplier: 1.3236714976),
         ])
     }
     

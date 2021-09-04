@@ -105,7 +105,6 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                     {
                     let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.letras.filter({letra in
                         letra.identificador == indice}).first?.grafiasPocoFrecuentes)
-                        //vcs.letraTitulo = items[0].title
                         vcs.letraTitulo = "Palabras en la boca"
                         self.navigationController?.pushViewController(vcs, animated: true)
                     
