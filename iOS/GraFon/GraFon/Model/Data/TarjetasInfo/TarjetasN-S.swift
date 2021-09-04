@@ -21,7 +21,7 @@ extension tarjetas{
               ],
               pronuciacion: "n-",
               explicacion: """
-                              Al incio de una palabra \n\n transcribe el sonido
+                              Al inicio de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "n",
               imagenConsejo: nil,
@@ -550,23 +550,23 @@ extension tarjetas{
             Palabra(palabra: "hier", enGriego: "jᴇʀ"),
             Palabra(palabra: "hiver", enGriego: "i.vᴇʀ"),
             Palabra(palabra: "hyper", enGriego: "i.pᴇʀ"),
-          
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "kasher", enGriego: "ka.ʃᴇʀ"),
             Palabra(palabra: "mer", enGriego: "mᴇʀ"),
             Palabra(palabra: "polyester", enGriego: "po.ljᴇs.tᴇʀ"),
             Palabra(palabra: "super", enGriego: "sy.pᴇʀ"),
             Palabra(palabra: "ver", enGriego: "vᴇʀ"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "bestseller", enGriego: "bᴇst.sᴇ.lᴇʀ"),
             Palabra(palabra: "bulldozer", enGriego: "byl.do.zᴇʀ"),
             Palabra(palabra: "charter", enGriego: "ʃaʀ.tᴇʀ"),
             Palabra(palabra: "cluster", enGriego: "klɶs.tɶʀ"),
             Palabra(palabra: "corner", enGriego: "koʀ.nᴇʀ"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "crooner", enGriego: "kʀu.nɶʀ"),
             Palabra(palabra: "cutter", enGriego: "kɶ.tɶʀ"),
             Palabra(palabra: "designer", enGriego: "di.zaj.nɶʀ"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "docker", enGriego: "do.kᴇʀ"),
             Palabra(palabra: "gangster", enGriego: "gɑ̃g.stᴇʀ"),
             Palabra(palabra: "geyser", enGriego: "ʒᴇ.zᴇʀ"),
@@ -575,7 +575,7 @@ extension tarjetas{
             Palabra(palabra: "joker", enGriego: "dʒo.kᴇʀ"),
             Palabra(palabra: "master", enGriego: "mas.tᴇʀ"),
             Palabra(palabra: "poker", enGriego: "po.kᴇʀ"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "revolver", enGriego: "ʀᴇ.vol.vᴇʀ"),
             Palabra(palabra: "rocker", enGriego: "ʀo.kɶʀ"),
             Palabra(palabra: "roller", enGriego: "ʀo.lɶʀ"),
@@ -676,36 +676,74 @@ extension tarjetas{
             Palabra(palabra: "abasourdir", enGriego: "a.ba.suʀ.diʀ"),
             Palabra(palabra: "aseptiser", enGriego: "a.sᴇp.ti.zᴇ "),
             Palabra(palabra: "asexué", enGriego: "a.sᴇ.ksɥᴇ"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "asocial", enGriego: "a.so.sjal"),
             Palabra(palabra: "biosynthèse", enGriego: "bjo.sɛ̃.tᴇz"),
             Palabra(palabra: "cosignataire", enGriego: "ko.si.nja.tᴇʀ "),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "carrousel", enGriego: "ka.ʀu.sᴇl"),
             Palabra(palabra: "entresol", enGriego: "aɑ̃.tʀ&Œ&.sol"),
             Palabra(palabra: "parasol", enGriego: "pa.ʀa.sol"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "parasoleil", enGriego: "pa.ʀa.so.lᴇj"),
             Palabra(palabra: "photosensible", enGriego: "fo.to.sɑ̃.sibl"),
             Palabra(palabra: "préséance", enGriego: "pʀᴇ.sᴇ.ɑ̃s"),
-            
-            
             Palabra(palabra: "présupposer", enGriego: "pʀᴇ.sy.po.zᴇ"),
             Palabra(palabra: "presupposition", enGriego: "pʀᴇ.sy.po.zᴇ"),
             Palabra(palabra: "vraisemblable", enGriego: "vʀᴇ.sɑ̃.blabl"),
-            
             Palabra(palabra: "vraisemblance", enGriego: "vʀᴇ.sɑ̃.blɑ̃s"),
-            
+            Palabra(palabra: " ", enGriego: " "),
             
             Palabra(palabra: "bisexué", enGriego: "bi.sᴇ.ksɥᴇ"),
             Palabra(palabra: "hétérosexuel", enGriego: "ᴇ.tᴇ.ʀo.sᴇ.ksɥᴇl"),
-            
             Palabra(palabra: "homosexuel", enGriego: "o.mo.sᴇ.ksɥᴇl"),
+            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "aérosol", enGriego: "a.ᴇ.ʀo.sol"),
             
-            Palabra(palabra: "HASTA AQUÍ :(", enGriego: ""),
-            Palabra(palabra: "SON MUCHAS ", enGriego: "")
             
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "antisocial", enGriego: "ɑ̃.ti.so.sjal"),
+            Palabra(palabra: "antisémite", enGriego: "ɑ̃.ti.sᴇ.mit"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "asymétrie", enGriego: "a.si.mᴇ.tʀi"),
+            Palabra(palabra: "asynchrone", enGriego: "a.sɛ̃.kʀon"),
+            Palabra(palabra: "asyntaxique", enGriego: "a.sɛ̃.ta.ksik"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "contresens", enGriego: "kõ.tʀ&Œ&.sɑ̃s"),
+            Palabra(palabra: "contresigné", enGriego: "kõ.tʀ&Œ&.si.njᴇ"),
+            Palabra(palabra: "asyntaxique", enGriego: "a.sɛ̃.ta.ksik"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "extrascolaire", enGriego: "ᴇks.tʀa.sko.lᴇʀ"),
+            Palabra(palabra: "extrasensible", enGriego: "ᴇks.tʀa.sɑ̃.sibl"),
+            Palabra(palabra: "extrasensoriel", enGriego: "ᴇks.tʀa.sɑ̃.so.ʀjᴇl"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "microsystème", enGriego: "mi.kʀo.sis.tᴇm"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "multiservice", enGriego: "myl.ti.sᴇʀ.vis"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "polysémique", enGriego: "po.li.sᴇ.mik"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "suprasensible", enGriego: "sy.pʀa.sɑ̃.sibl"),
+            Palabra(palabra: "suprasegmental", enGriego: "sy.pʀa.sᴇg.mɑ̃.tal"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "ultrasensible", enGriego: "yl.tʀa.sɑ̃.sibl"),
+            Palabra(palabra: "ultrason", enGriego: "yl.tʀa.sõ"),
+            
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "bisyllabe", enGriego: "bi.si.lab"),
+            Palabra(palabra: "trisyllabe", enGriego: "tri.si.lab"),
+            Palabra(palabra: "tétrasyllabe", enGriego: "tᴇ.tra.si.lab"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: " ", enGriego: " "),
           ]
         ),
         
@@ -781,25 +819,74 @@ extension tarjetas{
             Palabra(palabra: "albatros", enGriego: "al.ba.tʀos"),
             Palabra(palabra: "albinos", enGriego: "al.bi.nos"),
             Palabra(palabra: "cosmos", enGriego: "kos.mos"),
-            
             Palabra(palabra: "os", enGriego: "os"),
             Palabra(palabra: "rhinocéros", enGriego: "ʀi.no.sᴇ.ʀos"),
             Palabra(palabra: "thermos", enGriego: "tᴇʀ.mos"),
+            Palabra(palabra: " ", enGriego: " "),
             
             Palabra(palabra: "alias", enGriego: "a.ljas"),
             Palabra(palabra: "ananas", enGriego: "a.na.nas"),
             Palabra(palabra: "as", enGriego: "as"),
             Palabra(palabra: "atlas", enGriego: "a.tlas"),
+            Palabra(palabra: " ", enGriego: " "),
+            
             Palabra(palabra: "anus", enGriego: "a.nys"),
             Palabra(palabra: "autobus", enGriego: "o.to.bys"),
-            
             Palabra(palabra: "blocus", enGriego: "blo.kys"),
             Palabra(palabra: "bonus", enGriego: "bo.nys"),
             Palabra(palabra: "cactus", enGriego: "kak.tys"),
             Palabra(palabra: "campus", enGriego: "kɑ̃.pys"),
             Palabra(palabra: "corpus", enGriego: "koʀ.pys"),
             Palabra(palabra: "cursus", enGriego: "kyʀ.sys"),
+            Palabra(palabra: " ", enGriego: " "),
             
+            Palabra(palabra: "eucalyptus", enGriego: "&Œ&.ka.lip.tys"),
+            Palabra(palabra: "fœtus", enGriego: "fᴇ.tys"),
+            Palabra(palabra: "infarctus", enGriego: "ɛ̃.faʀk.tys"),
+            Palabra(palabra: "lapsus", enGriego: "lap.sys"),
+            Palabra(palabra: "phallus", enGriego: "fa.lys"),
+            Palabra(palabra: "plus", enGriego: "plys"),
+            Palabra(palabra: "processus", enGriego: "pʀo.sᴇ.sys"),
+            Palabra(palabra: "prospectus", enGriego: "pʀo.spᴇk.tys"),
+            Palabra(palabra: "sinus", enGriego: "si.nys"),
+            Palabra(palabra: "stimulus", enGriego: "sti.my.lys"),
+            Palabra(palabra: "terminus", enGriego: "tᴇʀ.mi.nys"),
+            Palabra(palabra: "tonus", enGriego: "to.nys"),
+            Palabra(palabra: "uterus", enGriego: "y.tᴇ.ʀys"),
+            Palabra(palabra: "virus", enGriego: "vi.ʀys"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "bis", enGriego: "bis"),
+            Palabra(palabra: "cannabis", enGriego: "ka.na.bis"),
+            Palabra(palabra: "cassis", enGriego: "ka.sis"),
+            Palabra(palabra: "clitoris", enGriego: "kli.to.ʀis"),
+            Palabra(palabra: "fils", enGriego: "fis"),
+            Palabra(palabra: "gratis", enGriego: "gʀa.tis"),
+            Palabra(palabra: "iris", enGriego: "i.ʀis"),
+            Palabra(palabra: "jadis", enGriego: "ʒa.dis"),
+            Palabra(palabra: "maïs", enGriego: "ma.is"),
+            Palabra(palabra: "métis", enGriego: "mᴇ.tis"),
+            Palabra(palabra: "oasis", enGriego: "o.a.sis"),
+            Palabra(palabra: "pénis", enGriego: "pᴇ.nis"),
+            Palabra(palabra: "pubis", enGriego: "py.bis"),
+            Palabra(palabra: "synopsis", enGriego: "si.nop.sis"),
+            Palabra(palabra: "tennis", enGriego: "tᴇ.nis"),
+            Palabra(palabra: "tournevis", enGriego: "tuʀ.n&Œ&.vis"),
+            Palabra(palabra: "vis", enGriego: "vis"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "contresens", enGriego: "kõ.tʀ&Œ&.sɑ̃s"),
+            Palabra(palabra: "sens", enGriego: "tuʀ.n&Œ&.vis"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "couscous", enGriego: "kus.kus"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "exprès", enGriego: "ᴇks.pʀᴇs"),
+            Palabra(palabra: "herpes", enGriego: "ᴇʀ.pᴇs"),
+            Palabra(palabra: "palmarès", enGriego: "pal.ma.ʀᴇs"),
+            Palabra(palabra: " ", enGriego: " "),
+            
+            Palabra(palabra: "mœurs", enGriego: "m&Œ&ʀs"),
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "ours", enGriego: "uʀs"),
+            Palabra(palabra: " ", enGriego: " "),
           ]
         ),
         

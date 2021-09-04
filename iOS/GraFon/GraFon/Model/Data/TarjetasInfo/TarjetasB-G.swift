@@ -303,7 +303,7 @@ extension tarjetas{
                               transcriben el sonido
                           """,
               imagenFonema: "ʃ",
-              imagenConsejo: nil, //ME FALTA LA IMAGEN DEL OFERTÓN
+              imagenConsejo: "e_retro_varias-letras_n2", //ME FALTA LA IMAGEN DEL OFERTÓN
               textodeAbajo: nil
             )
           ],

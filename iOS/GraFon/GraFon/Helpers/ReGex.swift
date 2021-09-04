@@ -16,7 +16,7 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒœŒ¿, -]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒœŒ¿,ºª¢ -]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }
@@ -60,9 +60,12 @@ class UILabelPersonalizado: UILabel{
             Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
             Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema)),
             
-            Formato(simbolo: "&", color: .colorLetraRosa, fuente: .Roboto(.bold, size: (Tamanio.letrasRosaBocina - 6))),
-            Formato(simbolo: "%", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema - 6))
+            Formato(simbolo: "&", color: .colorLetraRosa, fuente: .Roboto(.bold, size: (font.pointSize - 6))),
+            Formato(simbolo: "%", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema - 6)),
+            Formato(simbolo: "º", color: self.textColor, fuente: .Roboto(.italic, size: font.pointSize-3)),
+            Formato(simbolo: "ª", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize-3)),
             
+            Formato(simbolo: "¢", color: self.textColor, fuente: .Roboto(.regular, size: font.pointSize-3)),
         ]
         
         var textoSinSimbolos: String = texto

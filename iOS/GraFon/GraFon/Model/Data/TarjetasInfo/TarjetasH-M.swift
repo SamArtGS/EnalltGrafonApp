@@ -363,7 +363,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "gra*mma*tical", enGriego: "gʀa.ma.ti.kal"),
-                    Palabra(palabra: "téléc*omma*nde", enGriego: "tᴇ.lᴇ.ko.mɑ̃d"),
+                    Palabra(palabra: "ºtélécªommaªndeº", enGriego: "tᴇ.lᴇ.ko.mɑ̃d"),
                     Palabra(palabra: "*immo*ral", enGriego: "i.mo.ʀal")
               ],
               pronuciacion: "-mm-",

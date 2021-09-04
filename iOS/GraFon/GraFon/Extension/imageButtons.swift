@@ -10,9 +10,10 @@ import UIKit
 
 extension UIViewController {
 
-    func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
+    func menuButton(_ target: Any?, action: Selector, imageName: String, imageSelected: String? = nil) -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: imageName), for: .normal)
+        
         button.addTarget(target, action: action, for: .touchUpInside)
 
         let menuBarItem = UIBarButtonItem(customView: button)

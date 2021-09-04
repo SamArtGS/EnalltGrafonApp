@@ -46,6 +46,11 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         collectionView.backgroundColor = .clear
         
         colocarFondo(imagen: "bck_n1_juegos_v2")
+        
+        let BarButtonItemIzquierdo = menuButton(self,
+        action: #selector(salir2),
+        imageName: "n2_btn_jgo_cerrar")
+        self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
     }
     
     override func viewWillAppear(_ animated: Bool) {

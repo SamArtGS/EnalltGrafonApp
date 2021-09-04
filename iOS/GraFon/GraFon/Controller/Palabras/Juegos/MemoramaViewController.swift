@@ -99,8 +99,9 @@ class MemoramaViewController: UICollectionViewController {
         imageName: "icons8-query")
         
         let botonPausa = menuButton(self,
-        action: #selector(pausaPlay),
-        imageName: "icons8-no_audio")
+        action: #selector(pausaPlay(_:)),
+        imageName: "icons8-no_audio",
+        imageSelected: "icons8-sound")
         
         
         //self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
@@ -113,14 +114,25 @@ class MemoramaViewController: UICollectionViewController {
         self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
         
     }
-    @objc func pausaPlay(){
+    @objc func pausaPlay(_ sender: UIBarButtonItem?){
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.pause()
             booleano = false
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = true
+            
+            //guard let button = sender?.customView! as? UIButton else { return }
+            //button.isSelected = false
         }
         else {
             reproductorAudio?.play()
             booleano = true
+            //self.navigationItem.rightBarButtonItems?[1].image = UIImage(named: "icons8-no-audio")
+            //sender?.image = UIImage(named: "icons8-no-audio")
+            //guard let button = sender?.customView! as? UIButton else { return }
+            //button.isSelected = true
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = false
         }
     }
     
@@ -319,7 +331,8 @@ extension MemoramaViewController: UICollectionViewDelegateFlowLayout{
             return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.1),
                           height: (view.safeAreaLayoutGuide.layoutFrame.height/4.5))
         }else{
-            return CGSize(width: 150, height: 200)
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.2),
+                          height: (view.safeAreaLayoutGuide.layoutFrame.height/4.5))
         }
     }
     
@@ -407,7 +420,7 @@ extension MemoramaViewController{
 
 extension MemoramaViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag || player.isEqual(reproductorAudio) || !booleano{
+        if flag && player.isEqual(reproductorAudio) && !booleano{
             reproductorAudio?.play()
         }
     }

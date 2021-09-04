@@ -103,12 +103,10 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                     Data.letras.filter({letra in
                                             letra.identificador == indice}).first?.grafiasPocoFrecuentes != nil
                     {
-                    print("tarjeta de grafías")
-                    
                     let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.letras.filter({letra in
                         letra.identificador == indice}).first?.grafiasPocoFrecuentes)
                         //vcs.letraTitulo = items[0].title
-                        vcs.letraTitulo = "Grafías poco frecuentes"
+                        vcs.letraTitulo = "Palabras en la boca"
                         self.navigationController?.pushViewController(vcs, animated: true)
                     
                     
@@ -231,8 +229,6 @@ extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
                     && indexPath.item == (Data.letras.filter({letra in
                     letra.identificador == indice})
                     .first?.tarjetas?.count ?? 0)  {
-                    
-                    print("entra a poner título a la fucking tarjeta")
                     cell.palabrerio.text = "Grafías \npoco \nfrecuentes"
                     
                 }

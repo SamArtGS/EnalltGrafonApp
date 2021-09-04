@@ -24,13 +24,25 @@ class ExcepcionesController: UIViewController {
         guard let destapado = excepciones else { return }
         self.title = titulo
         
+        var bool: Bool = false
+        
         for palabra in destapado{
+            if palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur"{
+                bool = true
+            }
             let silabaGenerada = previstaPar(palabra)
             pilaVerticalExcepciones.addArrangedSubview(silabaGenerada)
+            
+            ponersubtituloParentesis(palabra: palabra.palabra)
+            
             NSLayoutConstraint.activate([
                 silabaGenerada.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 15),
                 silabaGenerada.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor, constant: -15)
             ])
+        }
+        
+        if bool {
+            colocarExcepcionesLargasParler()
         }
     }
     
@@ -58,6 +70,7 @@ class ExcepcionesController: UIViewController {
         let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.isScrollEnabled = true
+        scroll.isPagingEnabled = false
         scroll.isUserInteractionEnabled = true
         return scroll
     }()
@@ -66,7 +79,7 @@ class ExcepcionesController: UIViewController {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.backgroundColor = .none
         elementosApilados.axis = .vertical
-        elementosApilados.distribution = .fillEqually
+        elementosApilados.distribution = .fillProportionally
         elementosApilados.alignment = .leading
         elementosApilados.spacing = 14
         elementosApilados.translatesAutoresizingMaskIntoConstraints = false
@@ -83,12 +96,12 @@ class ExcepcionesController: UIViewController {
         vista.translatesAutoresizingMaskIntoConstraints = false
         
         
-        labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques)
+        labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques - 2 )
         labelIzq.textAlignment = .left
         labelIzq.textColor = .colorLetras
         labelIzq.contentMode = .scaleAspectFit
         
-        labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques)
+        labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques - 2)
         labelDer.textColor = .colorLetraRosa
         labelDer.textAlignment = .left
         labelDer.contentMode = .scaleAspectFit
@@ -147,6 +160,8 @@ class ExcepcionesController: UIViewController {
         
         view.addSubview(cuadritoBlanco)
         cuadritoBlanco.addSubview(scrollView)
+        scrollView.isPagingEnabled = false
+        
         scrollView.addSubview(pilaVerticalExcepciones)
         cuadritoBlanco.addSubview(imagenVuelta)
         
@@ -177,4 +192,259 @@ class ExcepcionesController: UIViewController {
            
         ])
     }
+    
+    
+    //MARK: NO MANCHES
+    
+    
+    // YA ME CANSÉ DE EXCEPCIONES LARGAS, DE VA DE M@DR4Z0
+    
+    private let stackHorizontal: UIStackView = {
+        let stack = UIStackView()
+        stack.spacing = 15
+        stack.alignment = .center
+        stack.axis = .horizontal
+        stack.distribution = .equalCentering
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private let stackHorizontal2: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .leading
+        stack.axis = .horizontal
+        stack.distribution = .equalSpacing
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private let stackSustantivo: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .trailing
+        stack.axis = .vertical
+        stack.spacing = 7
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private let stackMedio: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .center
+        stack.axis = .vertical
+        stack.spacing = 7
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private let stackVerbo: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .leading
+        stack.axis = .vertical
+        stack.spacing = 7
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private let labelNegrita: (String) -> UILabelPersonalizado = {text in
+       let etiqueta = UILabelPersonalizado()
+       etiqueta.numberOfLines = 10
+       etiqueta.font = .Roboto(.regular, size: 15)
+        etiqueta.textColor = .black
+       etiqueta.translatesAutoresizingMaskIntoConstraints = false
+       etiqueta.textAlignment = .left
+       etiqueta.contentMode = .scaleAspectFit
+        etiqueta.text = text
+       return etiqueta
+    }
+    
+    private let labelRosa: (String) -> UILabelPersonalizado = {text in
+       let etiqueta = UILabelPersonalizado()
+       etiqueta.numberOfLines = 1
+       etiqueta.font = .Roboto(.regular, size: 15)
+       etiqueta.textColor = .colorLetraRosa
+       etiqueta.translatesAutoresizingMaskIntoConstraints = false
+       etiqueta.textAlignment = .left
+       etiqueta.contentMode = .scaleAspectFit
+       etiqueta.text = text
+       return etiqueta
+    }
+    
+    private let labelMedio: (String) -> UILabelPersonalizado = { text in
+       let etiqueta = UILabelPersonalizado()
+       etiqueta.numberOfLines = 1
+
+       etiqueta.font = .Roboto(.regular, size: 15)
+       etiqueta.textColor = .colorLetras
+       etiqueta.translatesAutoresizingMaskIntoConstraints = false
+       etiqueta.textAlignment = .left
+       etiqueta.contentMode = .scaleAspectFit
+        etiqueta.text = text
+       return etiqueta
+    }
+}
+
+extension ExcepcionesController{
+    
+    func contraintsExtras(){
+        pilaVerticalExcepciones.addArrangedSubview(stackHorizontal2)
+        stackHorizontal2.addArrangedSubview(labelNegrita("SUSTANTIVO"))
+        let v = labelNegrita("\t\t  VERBO")
+        v.textAlignment = .center
+        stackHorizontal2.addArrangedSubview(v)
+        stackHorizontal2.alignment = .bottom
+        pilaVerticalExcepciones.addArrangedSubview(stackHorizontal)
+        stackHorizontal.addArrangedSubview(stackSustantivo)
+        stackHorizontal.addArrangedSubview(stackMedio)
+        stackHorizontal.addArrangedSubview(stackVerbo)
+        
+        NSLayoutConstraint.activate([
+            stackHorizontal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackHorizontal2.leadingAnchor.constraint(equalTo: stackHorizontal.leadingAnchor),
+            stackHorizontal2.trailingAnchor.constraint(equalTo: stackHorizontal.trailingAnchor),
+            stackHorizontal2.heightAnchor.constraint(equalToConstant: 100)
+        ])
+    }
+    
+    func colocarExcepcionesLargasParler(){
+        
+        contraintsExtras()
+        
+        let derecha:[String] = ["di.l¢Œ¢ʀ","a.k¢Œ¢ʀ","ɛ̃.tᴇʀ.vju.v¢Œ¢ʀ","pos.tᴇʀ","ʀ¢Œ¢.poʀ.tᴇʀ","skwa.t¢Œ¢ʀ","sy.poʀ.tᴇʀ"]
+        let medio:[String] = ["deal*er*","hack*er*","interview*er*","post*er*","report*er*","squatt*er*","support*er*"]
+        let izquierda:[String] = [
+            "di.lᴇ","a.kᴇ","ɛ̃.tᴇʀ.vju.vᴇ","pos.tᴇ","ʀ¢Œ¢.poʀ.tᴇ","skwa.tᴇ","sy.poʀ.tᴇ"]
+        
+        for dere in derecha{
+            stackSustantivo.addArrangedSubview(labelRosa(dere))
+        }
+        
+        for medi in medio{
+            stackMedio.addArrangedSubview(labelMedio(medi))
+        }
+        
+        for izq in izquierda{
+            stackVerbo.addArrangedSubview(labelRosa(izq))
+        }
+        
+        let bloqueBlanco = UIView()
+        bloqueBlanco.backgroundColor = .white
+        pilaVerticalExcepciones.addArrangedSubview(bloqueBlanco)
+        NSLayoutConstraint.activate([
+            bloqueBlanco.heightAnchor.constraint(equalToConstant: 60),
+            bloqueBlanco.widthAnchor.constraint(equalToConstant: 100),
+        ])
+        
+        
+        
+    }
+    
+    func ponersubtituloParentesis(palabra: String){
+        switch palabra {
+        case "aérosol":
+            let palobro = labelNegrita("(todas las palabras que empiezan con aéro-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "antisémite":
+            let palobro = labelNegrita("(todas las palabras que empiezan con anti-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        
+        case "asyntaxique":
+            let palobro = labelNegrita("(todas las palabras que empiezan con asy-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "contresigné":
+            let palobro = labelNegrita("(todas las palabras que empiezan con contre-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "extrasensoriel":
+            let palobro = labelNegrita("(todas las palabras que empiezan con extra-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "microsystème":
+            let palobro = labelNegrita("(todas las palabras que empiezan con micro-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "multiservice":
+            let palobro = labelNegrita("(todas las palabras que empiezan con multi-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "polysémique":
+            let palobro = labelNegrita("(todas las palabras que empiezan con poly-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        case "suprasegmental":
+            let palobro = labelNegrita("(todas las palabras que empiezan con supra-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+        case "ultrason":
+            let palobro = labelNegrita("(todas las palabras que empiezan con ultra-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+        case "tétrasyllabe":
+            let palobro = labelNegrita("(todos los prefijos cardinales seguidos de la palabra syll-)")
+            palobro.font = .Roboto(.regular, size: 12)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
+            
+        default:
+            return
+        }
+    }
+    
+    
 }

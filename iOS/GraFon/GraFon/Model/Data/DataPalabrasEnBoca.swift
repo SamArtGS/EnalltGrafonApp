@@ -73,13 +73,11 @@ extension Data{
                     imagenFonema: "o", imagenConsejo: nil,
                     textodeAbajo: nil
                 ),
-                
-                
                 Silaba(palabras: [
                         Palabra(palabra: "p*aon*", enGriego: "pɑ̃")
                     ],
-                    pronuciacion: "aou",
-                    explicacion: "Al final de una palabra \n\n transcriben el sonido",
+                    pronuciacion: "-aou",
+                    explicacion: "Al final de una palabra \n transcriben el sonido",
                     imagenFonema: "ɑ̃",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -89,22 +87,139 @@ extension Data{
         Letra(identificador: 3,
               letra: "e",
               imagenHoja: "2b_n2",
-              tarjetas: tarjetas.tarjetasE
+              tarjetas: tarjetas.tarjetasE,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "f*œ*tus", enGriego: "fᴇ.tys")
+                    ],
+                    pronuciacion: "-œ-",
+                    explicacion: "En medio de una palabra \n transcriben el sonido",
+                    imagenFonema: "ᴇ",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "No*ë*l", enGriego: "no.ᴇl")
+                    ],
+                    pronuciacion: "oë",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "o.ᴇ",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*œu*f", enGriego: "œf")
+                    ],
+                    pronuciacion: "œu-",
+                    explicacion: "Al inicio de una palabra\n transcriben el sonido",
+                    imagenFonema: "&Œ&",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*œi*l", enGriego: "œj")
+                    ],
+                    pronuciacion: "œi-",
+                    explicacion: "Al inicio de una palabra\n transcriben el sonido",
+                    imagenFonema: "&Œ&",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "pi*ed*", enGriego: "pjᴇ")
+                    ],
+                    pronuciacion: "-ed",
+                    explicacion: "Al final de una palabra \n transcriben el sonido",
+                    imagenFonema: "ᴇ",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              
+              ]
         ),
         Letra(identificador: 4,
               letra: "i",
               imagenHoja: "2c_n2",
-              tarjetas: tarjetas.tarjetasI
+              tarjetas: tarjetas.tarjetasI,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "p*aïe*n", enGriego: "pa.jɛ̃"),
+                        Palabra(palabra: "*aïe*ul", enGriego: "a.jœl")
+                    ],
+                    pronuciacion: "aïe",
+                    explicacion: "$a$ transcribe el sonido \n#a# \nLa $i$ transcribe el sonido",
+                    imagenFonema: "j",
+                    imagenConsejo: nil,
+                    textodeAbajo: "y forma parte de la sílaba que sigue."
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "m*aï*s", enGriego: "ma.is")
+                    ],
+                    pronuciacion: "aï",
+                    explicacion: "$a$ transcribe el sonido \n#a# \nLa $ï$ transcribe el sonido",
+                    imagenFonema: "i",
+                    imagenConsejo: nil,
+                    textodeAbajo: "y forma parte de la sílaba que sigue."
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "ég*oï*ste", enGriego: "ᴇ.go.ist")
+                    ],
+                    pronuciacion: "oï",
+                    explicacion: "$o$ transcribe el sonido \n#o# \nLa $ï$ transcribe el sonido",
+                    imagenFonema: "i",
+                    imagenConsejo: nil,
+                    textodeAbajo: "y forma parte de la sílaba que sigue."
+                )
+              ]
         ),
         Letra(identificador: 5,
               letra: "o",
               imagenHoja: "2d_n2",
               tarjetas: tarjetas.tarjetasO
+
         ),
         Letra(identificador: 6,
               letra: "u",
               imagenHoja: "2e_n2",
-              tarjetas: tarjetas.tarjetasU
+              tarjetas: tarjetas.tarjetasU,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "*aou*t", enGriego: "ut")
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "u",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*mûr*", enGriego: "myʀ")
+                    ],
+                    pronuciacion: "û",
+                    explicacion: "transcribe el sonido",
+                    imagenFonema: "y",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*aigüe*", enGriego: "ᴇ.gy")
+                    ],
+                    pronuciacion: "ü",
+                    explicacion: "transcribe el sonido",
+                    imagenFonema: "y",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                Silaba(palabras: [
+                        Palabra(palabra: "*ambigüité*", enGriego: "ɑ̃.bi.gɥi.tᴇ")
+                    ],
+                    pronuciacion: "üi",
+                    explicacion: "transcriben los sonidos",
+                    imagenFonema: "ɥi",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              ]
         ),
         Letra(identificador: 7,
               letra: "y",
@@ -189,7 +304,19 @@ extension Data{
         Letra(identificador: 20,
               letra: "q",
               imagenHoja: "5d_n2",
-              tarjetas: tarjetas.tarjetasQ
+              tarjetas: tarjetas.tarjetasQ,
+              grafiasPocoFrecuentes:[
+                Silaba(palabras: [
+                        Palabra(palabra: "cin*q*", enGriego: "sɛ̃k"),
+                        Palabra(palabra: "co*q*", enGriego: "kok"),
+                    ],
+                    pronuciacion: "-q",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "k",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              ]
         ),
         Letra(identificador: 21,
               letra: "r",
@@ -204,7 +331,19 @@ extension Data{
         Letra(identificador: 23,
               letra: "t",
               imagenHoja: "6a_n2",
-              tarjetas: tarjetas.tarjetasT
+              tarjetas: tarjetas.tarjetasT,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "ane*th*", enGriego: "a.nᴇt"),
+                        Palabra(palabra: "mammou*th*", enGriego: "ma.mut")
+                    ],
+                    pronuciacion: "-th",
+                    explicacion: "Al final de una palabra \n transcriben el sonido",
+                    imagenFonema: "t",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              ]
         ),
         Letra(identificador: 24,
               letra: "v",

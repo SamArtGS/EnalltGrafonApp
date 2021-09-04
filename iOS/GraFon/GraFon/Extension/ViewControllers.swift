@@ -25,6 +25,20 @@ extension UIViewController{
         self.present(alert, animated: true, completion: nil)
     }
     
+    @objc func salir2(){
+        let alert = UIAlertController(title: "SALIR", message: "¿Abandonar el juego?", preferredStyle: .alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self]_ in
+            //guard let viewController = self?.navigationController?.viewControllers else { return }
+            self?.navigationController?.popViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default))
+        
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func presentacionModal(viewController: UIViewController, halfTransition: inout HalfModalTransitioningDelegate?){
         if #available(iOS 13, *) {
             let olvidoVC = viewController

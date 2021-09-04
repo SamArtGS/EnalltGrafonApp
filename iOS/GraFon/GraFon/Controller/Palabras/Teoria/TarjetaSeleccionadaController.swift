@@ -19,6 +19,7 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     var letraTitulo: String? {
         didSet{
             guard let titulo = letraTitulo else { return }
+            
             self.title = titulo
         }
     }
@@ -128,7 +129,9 @@ extension TarjetaSeleccionadaController{
             }
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! GrafiasPocoFrecuentesView
-            
+            if indexPath.item == 0{
+                cell.isPrimero = true
+            }
             cell.grafiasPocoFrecuentes = silabas?[indexPath.item]
             cell.backgroundColor = .white
             //cell.determinarFondo(color: UIColor.white)
@@ -144,6 +147,11 @@ extension TarjetaSeleccionadaController{
 }
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if silabas?[indexPath.item].pronuciacion == "aïe" || silabas?[indexPath.item].pronuciacion == "aï" || silabas?[indexPath.item].pronuciacion == "oï"{
+            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: 350)
+        }else{
+        
          if indexPath.item == 0 {
             var cuenta: Int = 0
             tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
@@ -153,13 +161,20 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 150 + palabrasCount)
             } else {
+                print("aqui entre")
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 400 + palabrasCount)
             }
          }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
+        if bool{
+            return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
+        }else{
+            return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

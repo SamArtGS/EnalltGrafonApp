@@ -59,7 +59,7 @@ extension tarjetas{
               ],
               pronuciacion: "-tion-",
               explicacion: """
-                            en sustantivo y adjetivo, \n#-tieu-#, \n#-tiel-#, \n#-tia-#, \n\n $t$ transcribe el sonido
+                            en sustantivo y adjetivo, \n%-tieu-%, \n%-tiel-%, \n%-tia-%, \n\n $t$ transcribe el sonido
                           """,
               imagenFonema: "s",
               imagenConsejo: nil,
@@ -72,24 +72,40 @@ extension tarjetas{
             Palabra(palabra: "bureaucratie", enGriego: "by.ʀo.kʀa.si"),
             Palabra(palabra: "démocratie", enGriego: "dᴇ.mo.kʀa.si"),
             Palabra(palabra: "diplomatie", enGriego: "di.plo.ma.si"),
-          
-            
             Palabra(palabra: "idiotie", enGriego: "i.djo.si"),
             Palabra(palabra: "ineptie", enGriego: "i.nᴇ.psi"),
             Palabra(palabra: "minutie", enGriego: "mi.ny.si"),
             Palabra(palabra: "péripétie", enGriego: "pᴇ.ʀi.pᴇ.si"),
             Palabra(palabra: "prophétie", enGriego: "pʀo.fᴇ.si"),
-            
-            
             Palabra(palabra: "suprématie", enGriego: "sy.pʀᴇ.ma.si"),
             Palabra(palabra: "technocratie", enGriego: "tᴇ.kno.kʀa.si"),
             Palabra(palabra: "balbutier", enGriego: "bal.by.sjᴇ"),
             Palabra(palabra: "initier", enGriego: "i.ni.sjᴇ"),
-            Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃")
+            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃"),
+            Palabra(palabra: "tahitien", enGriego: "ta.i.sjɛ̃"),
+            Palabra(palabra: "égyptien", enGriego: "ᴇ.ʒip.sjɛ̃"),
+            Palabra(palabra: "vénitien", enGriego: "vᴇ.ni.sjɛ̃"),
+            Palabra(palabra: "patient", enGriego: "pa.sjɑ̃"),
+            Palabra(palabra: "impatient", enGriego: "ɛ̃.pa.sjɑ̃"),
+            Palabra(palabra: " ", enGriego: " "),
+            
+            Palabra(palabra: "bestial", enGriego: "bᴇs.tjal"),
+            Palabra(palabra: "bestiaire", enGriego: "bᴇs.tjᴇʀ"),
+            Palabra(palabra: "christianisme ", enGriego: "kʀis.tja.nism"),
+            Palabra(palabra: "vestiaire", enGriego: "vᴇs.tjᴇʀ"),
+            Palabra(palabra: " ", enGriego: " "),
+            
+            Palabra(palabra: "question", enGriego: "kᴇs.tjõ"),
+            Palabra(palabra: "digestion", enGriego: "di.ʒᴇs.tjõ"),
+            Palabra(palabra: "suggestion", enGriego: "sy.gʒᴇs.tjõ"),
+            Palabra(palabra: "combustion", enGriego: "kõ.bys.tjõ"),
+            Palabra(palabra: "autogestion", enGriego: "o.to.ʒᴇs.tjõ"),
+            Palabra(palabra: " ", enGriego: " "),
           ]
         ),
         
-        Tarjeta(audio: "pb_T_03",
+        Tarjeta(audio: "pb_t_03",
           silabas: [
             Silaba(
               palabras: [
@@ -165,7 +181,7 @@ extension tarjetas{
           excepciones: nil
         ),
         
-        Tarjeta(audio: "pb_T_04",
+        Tarjeta(audio: "pb_T_05",
           silabas: [
             Silaba(
               palabras: [
@@ -229,7 +245,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ew",
               explicacion: """
-                              Al final de una palabra \n\n transcribe el sonido
+                              Al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "u",
               imagenConsejo: nil,
@@ -241,7 +257,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ow",
               explicacion: """
-                              Al final de una palabra \n\n transcribe el sonido
+                              Al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "o",
               imagenConsejo: nil,
@@ -294,18 +310,18 @@ extension tarjetas{
             Palabra(palabra: "six", enGriego: "sis"),
             Palabra(palabra: "dix", enGriego: "dis"),
             Palabra(palabra: "coccyx", enGriego: "ko.ksis"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "max", enGriego: "maks"),
             Palabra(palabra: "inox", enGriego: "inoks"),
             Palabra(palabra: "silex", enGriego: "si.lᴇks"),
-            
             Palabra(palabra: "onyx", enGriego: "oniks"),
             Palabra(palabra: "latex", enGriego: "la.tᴇks"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "pharynx", enGriego: "fa.ʀɛ̃ks"),
             Palabra(palabra: "cortex", enGriego: "koʀ.tᴇks"),
             Palabra(palabra: "larynx", enGriego: "la.ʀɛ̃ks"),
             Palabra(palabra: "thorax", enGriego: "to.ʀaks"),
-            
-            
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "index", enGriego: "ɛ̃.dᴇks"),
             Palabra(palabra: "furax", enGriego: "fy.ʀaks"),
             Palabra(palabra: "codex", enGriego: "ko.dᴇks"),
@@ -407,7 +423,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ez",
               explicacion: """
-                              Al final de una palabra \n\n no transcriben el sonido
+                              Al final de una palabra \n\n transcriben el sonido
                           """,
               imagenFonema: "ᴇ",
               imagenConsejo: "z_retro_3Bb_n2",
