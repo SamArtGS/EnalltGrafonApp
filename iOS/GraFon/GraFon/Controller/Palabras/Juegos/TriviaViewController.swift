@@ -12,12 +12,13 @@ import AVFoundation
 
 class TriviaViewController: UICollectionViewController {
     
-    private var segundosRestantes = 120
+    private var segundosRestantes = 60
     private var score: Int = 0
     private let fondoSonido: String = "music_Instruso"
     private var reproductorAudio: AVAudioPlayer?
     private let dataShuffle = Data.trivias
     private var reproductorLetra: AVAudioPlayer?
+    private var booleano: Bool = false
     
     init(collection: UICollectionViewLayout) {
         super.init(collectionViewLayout: collection)
@@ -68,11 +69,15 @@ class TriviaViewController: UICollectionViewController {
     @objc func pausaPlay(){
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.pause()
-            //booleano = false
+            booleano = false
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = true
         }
         else {
             reproductorAudio?.play()
-            //booleano = true
+            booleano = true
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = false
         }
     }
     
@@ -85,7 +90,7 @@ class TriviaViewController: UICollectionViewController {
         let alert = UIAlertController(title: "¿Seguir jugando?", message: "Lograste \(score) puntos en 2 minutos", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
-            self?.segundosRestantes = 120
+            self?.segundosRestantes = 60
             self?.score = 0
             self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             
@@ -106,7 +111,7 @@ class TriviaViewController: UICollectionViewController {
         
         contadorA10+=1
         
-        if contadorA10 == 10{
+        if contadorA10 == 10 && segundosRestantes >= 0{
             score -= 1
             puntaje.title = "Puntos: \(score)"
             sonarPunto(bool: false)
@@ -250,8 +255,20 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
         if indexPath.item + 1 >= dataShuffle.count{
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
         
-        
+    }
+    override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        collectionView.visibleCells.forEach { cell in
+            cell.isUserInteractionEnabled = true
+        }
+    }
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        collectionView.visibleCells.forEach { cell in
+            cell.isUserInteractionEnabled = false
+        }
     }
     
     
@@ -268,8 +285,8 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
         }
     }
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag || player.isEqual(reproductorAudio) {
-            reproductorAudio?.play()
+        if flag && player.isEqual(reproductorAudio){
+                reproductorAudio?.play()
         }
     }
 }

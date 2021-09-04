@@ -135,7 +135,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         super.init(frame: frame)
         botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         configurarConstraints()
-
+        
     }
     
     
@@ -205,19 +205,22 @@ class TriviaCollectionViewCell: UICollectionViewCell{
     
     @objc func verificarRespuesta(_ sender: UITapGestureRecognizer){
         guard let imagenHoja = sender.view as? ImagenTrivia else { return }
+        self.isUserInteractionEnabled = false
+        imagenHoja.isUserInteractionEnabled = false
+        palabraSuperior.isUserInteractionEnabled = false
+        palabraCentral.isUserInteractionEnabled = false
+        palabraInferior.isUserInteractionEnabled = false
+        
         if imagenHoja.palabra == trivia?.respuesta{
-            
-            palabraSuperior.isUserInteractionEnabled = false
-            palabraCentral.isUserInteractionEnabled = false
-            palabraInferior.isUserInteractionEnabled = false
             
             imagenHoja.image = imagenHoja.imagenCorrecta
             delegate?.sonarPunto(bool: true)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: { [weak self] in
                 self?.delegate?.recolectarPuntaje(correcto: true)
                 imagenHoja.image = imagenHoja.imagenNormal
-                
+                imagenHoja.isUserInteractionEnabled = true
+                self?.isUserInteractionEnabled = true
                 self?.palabraSuperior.isUserInteractionEnabled = true
                 self?.palabraCentral.isUserInteractionEnabled = true
                 self?.palabraInferior.isUserInteractionEnabled = true
@@ -228,16 +231,13 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         }else{
             
             imagenHoja.image = imagenHoja.imagenIncorrecta
-            palabraSuperior.isUserInteractionEnabled = false
-            palabraCentral.isUserInteractionEnabled = false
-            palabraInferior.isUserInteractionEnabled = false
             delegate?.sonarPunto(bool: false)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self ] in 
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: { [weak self ] in
                 self?.delegate?.recolectarPuntaje(correcto: false)
                 imagenHoja.image = imagenHoja.imagenNormal
-                
-                
+                imagenHoja.isUserInteractionEnabled = true
+                self?.isUserInteractionEnabled = true
                 self?.palabraSuperior.isUserInteractionEnabled = true
                 self?.palabraCentral.isUserInteractionEnabled = true
                 self?.palabraInferior.isUserInteractionEnabled = true

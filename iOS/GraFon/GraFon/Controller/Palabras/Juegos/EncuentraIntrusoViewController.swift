@@ -24,6 +24,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private var letraSonidoCurso:SonidoActualIntruso?
     private var queueIntrusos:[ContenidoHoja]?
     private var score:Int = 0
+    private var booleano: Bool = false
 
     
     private let botonLetra:UIButton = {
@@ -101,11 +102,15 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func pausaPlay(){
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.pause()
-            //booleano = false
+            booleano = false
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = true
         }
         else {
             reproductorAudio?.play()
-            //booleano = true
+            booleano = true
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = false
         }
     }
     
@@ -423,9 +428,10 @@ extension EncuentraIntrusoViewController{
         
     }
     
+
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag || player.isEqual(reproductorAudio) {
-            reproductorAudio?.play()
+        if flag && player.isEqual(reproductorAudio){
+                reproductorAudio?.play()
         }
     }
     
