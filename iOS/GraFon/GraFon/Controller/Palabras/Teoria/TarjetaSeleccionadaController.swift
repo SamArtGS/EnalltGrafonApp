@@ -257,12 +257,12 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                
                 if indexPath.item == tarjeta?.silabas.count{
-                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 190 + palabrasCount)
+                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 250 + palabrasCount)
                 }else{
-                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 150 + palabrasCount)
+                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 180 + palabrasCount)
                 }
             } else {
-               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 400 + palabrasCount)
+               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 370 + palabrasCount)
             }
          }
         }
