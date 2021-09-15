@@ -14,12 +14,38 @@ class ExcepcionesController: UIViewController {
     var excepciones: [Palabra]?
     var titulo: String?
     
-    init(excepciones: [Palabra]?, titulo: String) {
+    init(excepciones: [Palabra]?, titulo: String, puerta: Int) {
         self.titulo = titulo
         
         super.init(nibName: nil, bundle: nil)
-        
         pilaVerticalExcepciones.addArrangedSubview(explicacion)
+        
+        var colorLetras: UIColor = .white
+        
+        switch puerta {
+        case 0:
+            colorLetras = .colorLetraVerde
+            view.backgroundColor = .colorFondoTarjetasGrupoDePalabras
+            
+            if titulo == "Más que una palabra"{
+                imagenVuelta.removeFromSuperview()
+            }else{
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
+                imagenVuelta.setImage(UIImage(named: "ico_ir-vuelta_n3"), for: .normal)
+                imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+                colorLetras = .colorLetrasGrupoPalabras
+            }
+            
+        case 2:
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
+            
+            imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+            colorLetras = .colorLetras
+            view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+        default:
+            break
+        }
+        
         
         guard let destapado = excepciones else { return }
         self.title = titulo
@@ -30,7 +56,7 @@ class ExcepcionesController: UIViewController {
             if palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur"{
                 bool = true
             }
-            let silabaGenerada = previstaPar(palabra)
+            let silabaGenerada = previstaPar(palabra,colorLetras)
             pilaVerticalExcepciones.addArrangedSubview(silabaGenerada)
             
             ponersubtituloParentesis(palabra: palabra.palabra)
@@ -54,12 +80,13 @@ class ExcepcionesController: UIViewController {
         return view
     }()
     
-    private let explicacion: UILabel = {
+    let explicacion: UILabel = {
        let etiqueta = UILabel()
        etiqueta.numberOfLines = 10
        etiqueta.font = .Roboto(.regular, size: 20)
-        etiqueta.textColor = .black
-       etiqueta.text = "   Excepciones más frecuentes"
+       etiqueta.textColor = .black
+        
+        etiqueta.text = "Excepciones más frecuentes"
        etiqueta.translatesAutoresizingMaskIntoConstraints = false
        etiqueta.textAlignment = .left
        etiqueta.contentMode = .scaleAspectFit
@@ -86,7 +113,7 @@ class ExcepcionesController: UIViewController {
         return elementosApilados
     }()
     
-    private let previstaPar: (Palabra) -> (UIStackView) = { palabra in
+    private let previstaPar: (Palabra, UIColor) -> (UIStackView) = { palabra, color in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabelPersonalizado()
@@ -98,7 +125,7 @@ class ExcepcionesController: UIViewController {
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques - 2 )
         labelIzq.textAlignment = .left
-        labelIzq.textColor = .colorLetras
+        labelIzq.textColor = color
         labelIzq.contentMode = .scaleAspectFit
         
         labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques - 2)
@@ -132,12 +159,7 @@ class ExcepcionesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
         configurarConstraints()
-        imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
     }
     @objc func any(){
         

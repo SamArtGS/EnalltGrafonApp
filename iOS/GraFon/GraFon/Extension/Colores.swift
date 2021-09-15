@@ -40,28 +40,34 @@ extension UIColor {
     ]
     static let colorLetras:UIColor = .colorBarraSuperiorPalabras
     static let colorLetraRosa:UIColor = UIColor(red: 214/255, green: 0/255, blue: 130/255, alpha: 1.0)
-    static let colorLetraVerde:UIColor = .colorBarraSuperiorPalabras
+    
     
     
     
     //MARK: GRUPOS DE PALABRAS
     
-    static let colorNavigationBarGruposPalabras: UIColor = UIColor(red: 53/255, green: 103/255, blue: 37/255, alpha: 1.0)
-    static let colorLineaBarraSuperiorGruposPalabras: UIColor = UIColor(red: 68/255, green: 148/255, blue: 42/255, alpha: 1)
+    static let colorNavigationBarGruposPalabras: UIColor = UIColor(red: 31/255, green: 104/255, blue: 23/255, alpha: 1.0)
+    static let colorLineaBarraSuperiorGruposPalabras: UIColor = UIColor(red: 15/255, green: 150/255, blue: 4/255, alpha: 1)
     static let colorTabBarGruposPalabras:UIColor = colorNavigationBarGruposPalabras
     static let colorSeleccionadoTabBarGruposPalabras: UIColor = .white
     static let colorNoSeleccionadoTabBarGruposPalabras: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
     
-    static let colorFondoTarjetasGrupoDePalabras: UIColor = UIColor(red: 244/255, green: 253/255, blue: 248/255, alpha: 1.0)
+    static let colorFondoTarjetasGrupoDePalabras: UIColor = UIColor(red: 248/255, green: 253/255, blue: 248/255, alpha: 1.0)
+
+    static let colorLetrasGrupoPalabras: UIColor = UIColor(red: 6/255, green: 73/255, blue: 6/255, alpha: 1.0)
+    static let colorLetraVerde:UIColor = .colorLetrasGrupoPalabras
     
     static let fondosSilabaGrupoPalabras: [UIColor] = [
-        UIColor(red: 249/255, green: 232/255, blue: 226/255, alpha: 1.0),
-        UIColor(red: 244/255, green: 218/255, blue: 209/255, alpha: 1.0),
-        UIColor(red: 241/255, green: 206/255, blue: 194/255, alpha: 1.0),
-        UIColor(red: 238/255, green: 194/255, blue: 180/255, alpha: 1.0),
-        UIColor(red: 235/255, green: 180/255, blue: 162/255, alpha: 1.0),
-        UIColor(red: 230/255, green: 167/255, blue: 148/255, alpha: 1.0),
-        UIColor(red: 225/255, green: 151/255, blue: 128/255, alpha: 1.0)
+        UIColor(red: 227/255, green: 244/255, blue: 213/255, alpha: 1.0),
+        UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0),
+        UIColor(red: 201/255, green: 234/255, blue: 177/255, alpha: 1.0),
+        UIColor(red: 188/255, green: 230/255, blue: 158/255, alpha: 1.0),
+        UIColor(red: 176/255, green: 223/255, blue: 223/255, alpha: 1.0),
+    ]
+    
+    static let parejaVerdes: [UIColor] = [
+        UIColor(red: 227/255, green: 244/255, blue: 213/255, alpha: 1.0),
+        UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
     ]
     
     static let naranjaMemorama1: UIColor = UIColor(red: 237/255, green: 161/255, blue: 62/255, alpha: 1.0)

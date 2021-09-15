@@ -35,10 +35,11 @@ class MenuTarjetas: UICollectionViewController, UIToolbarDelegate{
     
     func configuracionToolBar(){
         if puertaSeleccionada == 0{
-            self.title = "Grupo de palabras"
+            self.title = "Más que una palabra"
             self.navigationController?.toolbar.isTranslucent = false
             self.navigationController?.toolbar.barTintColor = .colorTabBarGruposPalabras
             self.navigationController?.toolbar.tintColor = .white
+            
         }
         if puertaSeleccionada == 2{
             self.title = "Palabras en la boca"
@@ -88,13 +89,41 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
         
         switch puertaSeleccionada {
             case 0:
-            let tarjetaSeleccionada = Data.grupoPalabras.filter{letra in
-                letra.identificador != 0}[(indice ?? 0)-1].tarjetas?[seleccionado]
                 
-            let vcs = TarjetaSeleccionadaController(collectionViewLayout:scrollLayout,
-                                                        tarjeta: tarjetaSeleccionada)
-                vcs.letraTitulo = items[0].title
-                self.navigationController?.pushViewController(vcs, animated: true)
+                if Data.grupoPalabras.filter({letra in
+                                                letra.identificador != 0})[(indice ?? 0)-1].tarjetas?.count ?? 0 <= seleccionado &&
+                    (Data.grupoPalabras.filter({letra in
+                                                letra.identificador == indice}).first?.otrosCasos != nil ||
+                        Data.grupoPalabras.filter({letra in letra.identificador == indice}).first?.otrosGrupos != nil){
+                    
+                    
+                    if seleccionado ==  Data.grupoPalabras.filter({letra in
+                                                                    letra.identificador != 0})[(indice ?? 0)-1].tarjetas!.count {
+                        let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.grupoPalabras.filter({letra in
+                            letra.identificador == indice}).first?.otrosCasos, puerta: puertaSeleccionada)
+                        vcs.letraTitulo = "Más que una palabra"
+                        
+                        self.navigationController?.pushViewController(vcs, animated: true)
+                        
+                    }
+                    
+                    if seleccionado ==  Data.grupoPalabras.filter({letra in
+                                                                    letra.identificador != 0})[(indice ?? 0)-1].tarjetas!.count + 1{
+                        
+                    let vcss = ExcepcionesController(excepciones: Data.grupoPalabras.filter({grupo in
+                            grupo.identificador == indice}).first?.otrosGrupos, titulo: "Más que una palabra", puerta: 0)
+                        vcss.explicacion.text = "Otros grupos"
+                        self.navigationController?.pushViewController(vcss, animated: true)
+                    }
+                }else{
+                    let tarjetaSeleccionada = Data.grupoPalabras.filter{letra in
+                        letra.identificador != 0}[(indice ?? 0)-1].tarjetas?[seleccionado]
+                        
+                    let vcs = TarjetaSeleccionadaController(collectionViewLayout:scrollLayout,
+                                                                tarjeta: tarjetaSeleccionada, puerta: puertaSeleccionada)
+                        vcs.letraTitulo = items[0].title
+                        self.navigationController?.pushViewController(vcs, animated: true)
+                }
                 
             case 2:
                 
@@ -104,7 +133,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                                             letra.identificador == indice}).first?.grafiasPocoFrecuentes != nil
                     {
                     let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.letras.filter({letra in
-                        letra.identificador == indice}).first?.grafiasPocoFrecuentes)
+                                                                                                                                letra.identificador == indice}).first?.grafiasPocoFrecuentes, puerta: puertaSeleccionada)
                         vcs.letraTitulo = "Palabras en la boca"
                         self.navigationController?.pushViewController(vcs, animated: true)
                     
@@ -113,7 +142,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                     let tarjetaSeleccionada = Data.letras.filter{letra in
                         letra.identificador != 0}[(indice ?? 0)-1].tarjetas?[seleccionado]
                     let vcs = TarjetaSeleccionadaController(collectionViewLayout:scrollLayout,
-                                                            tarjeta: tarjetaSeleccionada)
+                                                            tarjeta: tarjetaSeleccionada, puerta: puertaSeleccionada)
                     vcs.letraTitulo = items[0].title
                     self.navigationController?.pushViewController(vcs, animated: true)
                 }
@@ -123,7 +152,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                 let tarjetaSeleccionada = Data.letras.filter{letra in
                     letra.identificador != 0}[(indice ?? 0)-1].tarjetas?[seleccionado]
                 let vcs = TarjetaSeleccionadaController(collectionViewLayout:scrollLayout,
-                                                        tarjeta: tarjetaSeleccionada)
+                                                        tarjeta: tarjetaSeleccionada, puerta: puertaSeleccionada)
                 vcs.letraTitulo = items[0].title
                 self.navigationController?.pushViewController(vcs, animated: true)
         }
@@ -177,9 +206,26 @@ extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if puertaSeleccionada == 0{
-            return Data.grupoPalabras.filter{letra in
-                letra.identificador == indice}
-                .first?.tarjetas?.count ?? 0
+            
+            if Data.grupoPalabras.filter({letra in
+                                    letra.identificador == indice}).first?.otrosCasos != nil{
+                if Data.grupoPalabras.filter({letra in
+                                                letra.identificador == indice}).first?.otrosGrupos != nil{
+                    return (Data.grupoPalabras.filter{letra in
+                        letra.identificador == indice}
+                        .first?.tarjetas?.count ?? 0) + 2
+                }else{
+                    return (Data.grupoPalabras.filter{letra in
+                        letra.identificador == indice}
+                        .first?.tarjetas?.count ?? 0) + 1
+                    
+                }
+                
+            }else{
+                return Data.grupoPalabras.filter{letra in
+                    letra.identificador == indice}
+                    .first?.tarjetas?.count ?? 0
+            }
         }
         if puertaSeleccionada == 2{
             
@@ -207,12 +253,40 @@ extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
         
         
         if puertaSeleccionada == 0{
-            cell.palabrasEnTarjeta = Data.grupoPalabras.filter{letra
-                in letra.identificador == indice}
-                .first?.tarjetas?[indexPath.item]
+            
+            
+            if indexPath.item < (Data.grupoPalabras.filter({letra in
+                                                    letra.identificador == indice})
+                                    .first?.tarjetas?.count ?? 0) {
+                
+                cell.palabrasEnTarjeta = Data.grupoPalabras.filter{letra
+                    in letra.identificador == indice}
+                    .first?.tarjetas?[indexPath.item]
+                cell.palabrerio.textColor = .colorLetrasGrupoPalabras
+            }else{
+                if Data.grupoPalabras.filter({letra in
+                                        letra.identificador == indice})
+                    .first?.otrosCasos != nil
+                    && indexPath.item  == (Data.grupoPalabras.filter({letra in
+                    letra.identificador == indice})
+                    .first?.tarjetas?.count ?? 0)  {
+                    cell.palabrerio.textColor = .colorLetraVerde
+                    cell.palabrerio.text = "Otros casos"
+    
+                }
+                if Data.grupoPalabras.filter({letra in
+                                        letra.identificador == indice})
+                    .first?.otrosGrupos != nil
+                    && indexPath.item - 1 == (Data.grupoPalabras.filter({letra in
+                    letra.identificador == indice})
+                    .first?.tarjetas?.count ?? 0)  {
+                    cell.palabrerio.textColor = .colorLetraVerde
+                    cell.palabrerio.text = "Otros grupos"
+                    
+                }
+            }
         }
         if puertaSeleccionada == 2{
-            
             
             if indexPath.item < (Data.letras.filter({letra in
                                                     letra.identificador == indice})
@@ -228,6 +302,7 @@ extension CeldaColeccionDeColecciones: UICollectionViewDataSource{
                     && indexPath.item == (Data.letras.filter({letra in
                     letra.identificador == indice})
                     .first?.tarjetas?.count ?? 0)  {
+                    
                     cell.palabrerio.text = "Grafías \npoco \nfrecuentes"
                     
                 }

@@ -15,6 +15,8 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     private var tarjeta: Tarjeta?
     private var silabas: [Silaba]?
     private var bool: Bool = false
+    private var puerta: Int
+    private var sizeBoolCell = false
     
     var letraTitulo: String? {
         didSet{
@@ -30,19 +32,38 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
         configuracionVisual()
     }
     
-    init(collectionViewLayout layout: UICollectionViewLayout, tarjeta: Tarjeta?) {
+    init(collectionViewLayout layout: UICollectionViewLayout, tarjeta: Tarjeta?, puerta: Int) {
+        self.puerta = puerta
         super.init(collectionViewLayout: layout)
         self.collectionView!.register(CeldaSonidoYSilabas.self, forCellWithReuseIdentifier: identificadorCeldaInicio)
         self.collectionView!.register(CeldaSilabasYExplicacion.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
         bool = true
         self.tarjeta = tarjeta
+        configuracionPorPuerta(puerta: puerta)
+        
     }
     
-    init(collectionViewLayout layout: UICollectionViewLayout, silabas: [Silaba]?){
+    func configuracionPorPuerta(puerta: Int){
+        switch puerta {
+        case 0:
+            collectionView.backgroundColor = .colorFondoTarjetasGrupoDePalabras
+        case 2:
+            collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+        default:
+            break
+        }
+    }
+    
+    init(collectionViewLayout layout: UICollectionViewLayout, silabas: [Silaba]?, puerta: Int){
+        self.puerta = puerta
         super.init(collectionViewLayout: layout)
         bool = false
         self.collectionView!.register(GrafiasPocoFrecuentesView.self, forCellWithReuseIdentifier: identificadorCeldaSilabas)
         self.silabas = silabas
+        configuracionPorPuerta(puerta: puerta)
+        if puerta == 0 {
+            sizeBoolCell = true
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -96,13 +117,62 @@ extension TarjetaSeleccionadaController{
         switch indexPath.item {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaInicio, for: indexPath) as! CeldaSonidoYSilabas
-                cell.tarjetaSeleccionada = tarjeta
+                
+                switch puerta {
+                case 0:
+                    switch tarjeta {
+                    case Data.grupoPalabras[0].tarjetas![0]:
+                        cell.cualEsVoletada = 0
+                        
+                    case Data.grupoPalabras[0].tarjetas![1]:
+                        cell.cualEsVoletada = 1
+                        
+                    case Data.grupoPalabras[0].tarjetas![3]:
+                        cell.cualEsVoletada = 2
+                    
+                    case Data.grupoPalabras[1].tarjetas![0]:
+                        cell.cualEsVoletada = 3
+                    case Data.grupoPalabras[1].tarjetas![1]:
+                        cell.cualEsVoletada = 4
+                    case Data.grupoPalabras[1].tarjetas![2]:
+                        cell.cualEsVoletada = 5
+                    case Data.grupoPalabras[1].tarjetas![3]:
+                        cell.cualEsVoletada = 6
+                    case Data.grupoPalabras[1].tarjetas![4]:
+                        cell.cualEsVoletada = 7
+                    case Data.grupoPalabras[1].tarjetas![5]:
+                        cell.cualEsVoletada = 8
+                    case Data.grupoPalabras[1].tarjetas![6]:
+                        cell.cualEsVoletada = 9
+                    
+                    default:
+                        break
+                    }
+                    
+                    cell.tarjetaSeleccionadaGrupos = tarjeta
+                    
+                case 2:
+                    cell.tarjetaSeleccionada = tarjeta
+                    
+                default:
+                    break
+                }
+                
                 return cell
             case 1:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
+                switch puerta {
+                case 0:
+                    cell.puerta = 0
+                    cell.determinarFondo(color: UIColor.fondosSilabaGrupoPalabras[indexPath.item - 1])
+                case 2:
+                    cell.puerta = 2
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                default:
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                }
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
-                cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
                 
                 if tarjeta?.silabas.count == 1 {
                     cell.delegate = self
@@ -113,17 +183,37 @@ extension TarjetaSeleccionadaController{
                 return cell
             case (tarjeta?.silabas.count ?? 1):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
+                
+                switch puerta {
+                case 0:
+                    cell.puerta = 0
+                    cell.determinarFondo(color: UIColor.fondosSilabaGrupoPalabras[indexPath.item - 1])
+                case 2:
+                    cell.puerta = 2
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                default:
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                }
+                
                 cell.delegate = self
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
-                cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
                 cell.esTarjetaFinal(hayExcepciones: tarjeta?.excepciones != nil)
                 return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! CeldaSilabasYExplicacion
+                switch puerta {
+                case 0:
+                    cell.puerta = 0
+                    cell.determinarFondo(color: UIColor.fondosSilabaGrupoPalabras[indexPath.item - 1])
+                case 2:
+                    cell.puerta = 2
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                default:
+                    cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
+                }
                 cell.silaba = tarjeta?.silabas[indexPath.item - 1]
                 cell.backgroundColor = .white
-                cell.determinarFondo(color: UIColor.fondosSilabaPalabrasEnBoca[indexPath.item - 1])
                 cell.esTarjetaNormal()
                 return cell
             }
@@ -131,10 +221,12 @@ extension TarjetaSeleccionadaController{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identificadorCeldaSilabas, for: indexPath) as! GrafiasPocoFrecuentesView
             if indexPath.item == 0{
                 cell.isPrimero = true
+            }else{
+                cell.isPrimero = false
             }
+            cell.puerta = puerta
             cell.grafiasPocoFrecuentes = silabas?[indexPath.item]
             cell.backgroundColor = .white
-            //cell.determinarFondo(color: UIColor.white)
             return cell
         }
     }
@@ -148,6 +240,10 @@ extension TarjetaSeleccionadaController{
 extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        if sizeBoolCell{
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 350)
+        }
+        
         if silabas?[indexPath.item].pronuciacion == "aïe" || silabas?[indexPath.item].pronuciacion == "aï" || silabas?[indexPath.item].pronuciacion == "oï"{
             return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: 350)
         }else{
@@ -159,9 +255,13 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
          } else {
             let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
-               return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 150 + palabrasCount)
+               
+                if indexPath.item == tarjeta?.silabas.count{
+                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 190 + palabrasCount)
+                }else{
+                    return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 150 + palabrasCount)
+                }
             } else {
-                print("aqui entre")
                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)-20, height: 400 + palabrasCount)
             }
          }
@@ -190,7 +290,9 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
 
 extension TarjetaSeleccionadaController{
     func mostrarExcepciones(){
-        let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones, titulo: letraTitulo ?? "")
+        
+        
+        let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones, titulo: letraTitulo ?? "", puerta: puerta)
         
         self.navigationController?.pushViewController(secondVC, animated: false)
         secondVC.excepciones = tarjeta?.excepciones

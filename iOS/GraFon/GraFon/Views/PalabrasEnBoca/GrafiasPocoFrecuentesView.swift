@@ -11,12 +11,33 @@ import UIKit
 class GrafiasPocoFrecuentesView: UICollectionViewCell {
     
     var isPrimero: Bool = false
+    var colorLetras: UIColor = .black
+    
+    var puerta: Int? {
+        didSet{
+            guard let puerta = puerta else { return }
+            switch puerta {
+            case 0:
+                colorLetras = .colorLetraVerde
+                titulo.textColor = .colorLetraVerde
+                titulo.text = "Otros casos"
+                posicionLetraLabel.textColor = .colorLetraVerde
+            case 2:
+                colorLetras = .colorLetras
+                posicionLetraLabel.textColor = .colorLetras
+                titulo.textColor = .colorLetras
+                titulo.text = "Grafías poco frecuentes"
+            default:
+                break
+            }
+        }
+    }
     
     var grafiasPocoFrecuentes: Silaba? {
         didSet {
             
             guard let destapado = grafiasPocoFrecuentes else { return }
-            let silabaGenerada = previstaSilaba(destapado)
+            let silabaGenerada = previstaSilaba(destapado, colorLetras)
             let textoAbajo = textoDeAbajo(destapado.textodeAbajo)
             
             configurarConstraints()
@@ -40,8 +61,6 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
             pilaViews.addArrangedSubview(silabaGenerada)
             
             
-            
-            
             NSLayoutConstraint.activate([
                 explicacion.leadingAnchor.constraint(equalTo: pilaViews.leadingAnchor, constant: 10),
                 explicacion.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10),
@@ -55,6 +74,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
             pilaViews.subviews.forEach { (view) in
                 view.removeFromSuperview()
             }
+            
         }
     }
     
@@ -62,7 +82,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
     private let pilaViews: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.axis = .vertical
-        elementosApilados.distribution = .equalCentering
+        elementosApilados.distribution = .fillProportionally
         elementosApilados.alignment = .center
         elementosApilados.spacing = 4
         
@@ -78,7 +98,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         return view
     }()
     
-    private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
+    private let previstaSilaba: (Silaba, UIColor) -> (UIStackView) = { silaba, color in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
         let labelDer:UILabel = UILabelPersonalizado()
@@ -89,7 +109,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques - 5)
         labelIzq.textAlignment = .right
-        labelIzq.textColor = .colorLetras
+        labelIzq.textColor = color
         labelIzq.contentMode = .scaleAspectFit
         
         labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques-5)
@@ -146,7 +166,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         return etiqueta
     }()
     
-    private var titulo: UILabelPersonalizado = {
+    var titulo: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
         etiqueta.text = "Grafías poco frecuentes"
         etiqueta.lineBreakMode = .byWordWrapping

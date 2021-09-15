@@ -14,7 +14,16 @@ class CeldaColeccionDeColecciones: UICollectionViewCell {
     var indice: Int?
     weak var delegate:SeleccionarTarjetaDelegate?
     var selectedIndexPath: IndexPath!
-    var puertaSeleccionada: Int = 0
+    var puertaSeleccionada: Int?{
+        didSet{
+            guard let puertaSeleccionada = puertaSeleccionada else { return }
+            if puertaSeleccionada == 0{
+                coleccionView.backgroundColor = .colorFondoTarjetasGrupoDePalabras
+            }else{
+                coleccionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+            }
+        }
+    }
     
     let coleccionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -44,11 +53,7 @@ class CeldaColeccionDeColecciones: UICollectionViewCell {
         coleccionView.dataSource = self
         coleccionView.register(CeldaPalabras.self, forCellWithReuseIdentifier: "Tarjeta")
         coleccionView.isScrollEnabled = true
-        if puertaSeleccionada == 0{
-            coleccionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca        }
-        if puertaSeleccionada == 2{
-            coleccionView.backgroundColor = .colorFondoTarjetasGrupoDePalabras
-        }
+        
         
         configurarConstraints()
     }

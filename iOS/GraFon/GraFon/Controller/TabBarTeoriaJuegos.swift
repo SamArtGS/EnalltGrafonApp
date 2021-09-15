@@ -30,10 +30,6 @@ class TabBarTeoriaJuegos: UITabBarController{
         fatalError("init(coder:) has not been implemented")
     }
     
-    ///
-    /// Funciones de ciclo de vida del VC
-    ///
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
@@ -72,9 +68,9 @@ extension TabBarTeoriaJuegos{
         
         switch puerta {
             case 0:
-                self.title = "Grupos de palabras"
+                self.title = "Más que una palabra"
                 
-                let teoria = crearNavegacion(titulo: "Grupos de palabras",
+                let teoria = crearNavegacion(titulo: "Más que una palabra",
                                              imagenIcono: "icon-study",
                                              controller: MenuMoldeVC(collectionViewLayout: scrollLayout,
                                                                      puertaSeleccionada: puerta)

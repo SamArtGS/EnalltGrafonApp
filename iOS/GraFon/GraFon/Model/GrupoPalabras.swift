@@ -14,4 +14,16 @@ struct GrupoPalabras{
     let letra: String
     let imagenGrupo: String
     let tarjetas: [Tarjeta]?
+    
+    let otrosCasos:[Silaba]?
+    let otrosGrupos:[Palabra]?
+    
+    init(identificador:Int, letra: String, imagenGrupo:String, tarjetas:[Tarjeta]?, otrosCasos:[Silaba]? = nil, otrosGrupos:[Palabra]? = nil){
+        self.identificador = identificador
+        self.letra = letra
+        self.imagenGrupo = imagenGrupo
+        self.tarjetas = tarjetas
+        self.otrosCasos = otrosCasos
+        self.otrosGrupos = otrosGrupos
+    }
 }

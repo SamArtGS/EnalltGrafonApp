@@ -11,16 +11,58 @@ import UIKit
 class CeldaSilabasYExplicacion: UICollectionViewCell {
     
     private var imagenConsejo: String?
+    private var imagenConsejoAntes: String?
     var esGrafiasPocoFrecuentes: Bool = false
+    
+    var colorLetrasRemarcadas: UIColor = .black
+    var imageLabio: String = ""
+    var imagenVueltaImagen: String = ""
+    var adornitoImagen: String = ""
+    
+    var puerta: Int?{
+        didSet{
+            switch puerta {
+            case 0:
+                colorLetrasRemarcadas = .colorLetraVerde
+                posicionLetraLabel.textColor = .colorLetraVerde
+                imagenVueltaImagen = "ico_ir-vuelta_n3"
+                adornitoImagen = "barra_n3"
+                imagenVuelta.setImage(UIImage(named: imagenVueltaImagen), for: .normal)
+                adornito.image = UIImage(named: adornitoImagen)
+                imagenVuelta.setImage(UIImage(named: "ico_ir-frente_n3"), for: .normal)
+            case 2:
+                colorLetrasRemarcadas = .colorLetras
+                posicionLetraLabel.textColor = .colorLetras
+                imagenVueltaImagen = "ico_ir-frente_n2"
+                adornitoImagen = "barra_n2_n2"
+                imagenVuelta.setImage(UIImage(named: imagenVueltaImagen), for: .normal)
+                adornito.image = UIImage(named: adornitoImagen)
+                
+                
+            default:
+                print("No default")
+            }
+        }
+    }
     
     var delegate:MostrarExcepcionesDelegate?
     
     var silaba: Silaba? {
         didSet {
             guard let destapado = silaba else { return }
-            let silabaGenerada = previstaSilaba(destapado)
+            let silabaGenerada = self.previstaSilabaMia(destapado, colorLetrasRemarcadas)
             
             posicionLetraLabel.text = destapado.pronuciacion
+            
+            switch puerta {
+            case 0:
+                posicionLetraLabel.textColor = .colorLetraVerde
+            case 2:
+                posicionLetraLabel.textColor = .colorLetras
+            default:
+                break
+            }
+            
             explicacion.text = destapado.explicacion
             
             imagenConsejo = destapado.imagenConsejo
@@ -36,7 +78,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
                 silabaGenerada.trailingAnchor.constraint(equalTo: pilaViews.trailingAnchor, constant: -10)
             ])
             
-            if destapado.imagenFonema == "ico_sin-sonido_n2"{
+            if destapado.imagenFonema == "ico_sin-sonido_n2" ||  destapado.imagenFonema == "ico_sin-sonido_n3"{
                 pilaViews.addArrangedSubview(labio(UIImage(named: destapado.imagenFonema)))
             }else{
                 pilaViews.addArrangedSubview(pronunciacion(destapado.imagenFonema))
@@ -48,10 +90,14 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
             
             if let imagenConsejo = destapado.imagenConsejo{
                 let imagenPajaroAgregada: UIImageView = imagenPajaro(UIImage(named: imagenConsejo))
+                if puerta == 0{
+                    imagenPajaroAgregada.image = UIImage(named: "retro_gruposPalabras_n3")
+                }else{
+                    imagenPajaroAgregada.image = UIImage(named: "retro_n2")
+                }
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mostrarExplicacion(tapGestureRecognizer:)))
                 imagenPajaroAgregada.addGestureRecognizer(tapGestureRecognizer)
                 pilaViews.addArrangedSubview(imagenPajaroAgregada)
-                
             }
         }
         willSet{
@@ -83,11 +129,9 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         return view
     }()
     
-    private let previstaSilaba: (Silaba) -> (UIStackView) = { silaba in
+    private let previstaSilabaMia: (Silaba, UIColor) -> (UIStackView) = { silaba, color in
         let vista = UIStackView()
         let labelIzq:UILabel = UILabelPersonalizado()
-        
-        
         let labelDer:UILabel = UILabelPersonalizado()
         
         
@@ -98,7 +142,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         
         labelIzq.font = .Roboto(.italic, size: Tamanio.letrasCafeBloques)
         labelIzq.textAlignment = .right
-        labelIzq.textColor = .colorLetras
+        labelIzq.textColor = color
         labelIzq.contentMode = .scaleAspectFit
         
         labelDer.font = .Roboto(.regular, size: Tamanio.letrasRosasBloques)
@@ -139,7 +183,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private var posicionLetraLabel: UILabelPersonalizado = {
         let etiqueta = UILabelPersonalizado()
         etiqueta.font = .Roboto(.bold, size: Tamanio.letraPosicionBloque)
-        etiqueta.textColor = .colorBarraSuperiorPalabras
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
         etiqueta.contentMode = .scaleAspectFit
@@ -171,7 +214,7 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     }
     
     private var imagenPajaro: ( UIImage? ) -> UIImageView = { imagen in
-        let imageView = UIImageView(image: UIImage(named: "retro_n2"))
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
@@ -203,7 +246,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "barra_n2_n2")
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -215,7 +257,18 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
         tappedImage.image = UIImage(named: destapado)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-            tappedImage.image = UIImage(named: "retro_n2")
+            
+            switch self.puerta{
+            case 0:
+                tappedImage.image = UIImage(named: "retro_gruposPalabras_n3")
+            case 2:
+                tappedImage.image = UIImage(named: "retro_n2")
+            case .none:
+                break
+            case .some(_):
+                break
+            }
+            
         })
     }
     
@@ -232,7 +285,6 @@ class CeldaSilabasYExplicacion: UICollectionViewCell {
     private let imagenVuelta: UIButton = {
         let boton = UIButton(type: .custom)
         boton.isUserInteractionEnabled = true
-        boton.setImage(UIImage(named: "ico_ir-frente_n2"), for: .normal)
         boton.contentMode = .scaleAspectFit
         return boton
     }()
