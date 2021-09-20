@@ -120,7 +120,7 @@ struct tarjetas {
             silabas: [
                 Silaba(
                     palabras: [
-                        Palabra(palabra: "pa*in*", enGriego: "pɛ̃"),
+                        Palabra(palabra: "p*ain*", enGriego: "pɛ̃"),
                         Palabra(palabra: "*ain*si", enGriego: "ɛ̃.si")
                     ],
                     pronuciacion: "ain",
@@ -262,7 +262,7 @@ struct tarjetas {
                           Palabra(palabra: "*ami*e", enGriego: "a.mi")
                     ],
                     pronuciacion: "am",
-                    explicacion: "Seguidas de otra $m$ o de una vocal (excepto $e$ al final de una palabra), \n\n a transcribe el sonido",
+                    explicacion: "Seguidas de otra $m$ o de una vocal (excepto $e$ al final de una palabra), \n\n $a$ transcribe el sonido",
                     imagenFonema: "a",
                     imagenConsejo: nil,
                     textodeAbajo: "La $m$ forma parte de la sílaba que sigue."
@@ -282,7 +282,7 @@ struct tarjetas {
                           Palabra(palabra: "*amn*ésie", enGriego: "am.nᴇ.zi")
                     ],
                     pronuciacion: "am",
-                    explicacion: "Seguidas de una n, \n\n $am$ transcriben los sonidos",
+                    explicacion: "Seguidas de una $n$, \n\n $am$ transcriben los sonidos",
                     imagenFonema: "am",
                     imagenConsejo: nil,
                     textodeAbajo: "La $n$ forma parte de la sílaba que sigue."
@@ -601,7 +601,7 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "européen", enGriego: "&Œ&.ʀo.pᴇ.ɛ̃"),
+                            Palabra(palabra: "europ*éen*", enGriego: "&Œ&.ʀo.pᴇ.ɛ̃"),
                       ],
                       pronuciacion: "-éen",
                       explicacion: """
@@ -652,7 +652,7 @@ struct tarjetas {
                   ),
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "ils prennent", enGriego: "il.pʀᴇn")
+                            Palabra(palabra: "ils pr*enne*nt", enGriego: "il.pʀᴇn")
                       ],
                       pronuciacion: "-enn-",
                       explicacion: """
@@ -884,7 +884,7 @@ struct tarjetas {
                   Silaba(
                       palabras: [
                             Palabra(palabra: "parl*er*", enGriego: "paʀ.lᴇ"),
-                            Palabra(palabra: "infirmi*er*", enGriego: "ɛ̃.fir.mjᴇ")
+                            Palabra(palabra: "infirmi*er*", enGriego: "ɛ̃.fiʀ.mjᴇ")
                       ],
                       pronuciacion: "-er",
                       explicacion: """
@@ -900,6 +900,7 @@ struct tarjetas {
                 Palabra(palabra: "am*er*", enGriego: "a.mᴇʀ"),
                 Palabra(palabra: "canc*er*", enGriego: "kɑ̃.sᴇʀ"),
                 Palabra(palabra: "ch*er*", enGriego: "ʃᴇʀ"),
+                Palabra(palabra: "enf*er*", enGriego: "ɑ̃.fᴇʀ"),
                 Palabra(palabra: "f*er*", enGriego: "fᴇʀ"),
                 Palabra(palabra: "fi*er*", enGriego: "fjᴇʀ"),
                 Palabra(palabra: "hamst*er*", enGriego: "ams.tᴇʀ"),
@@ -1046,6 +1047,7 @@ struct tarjetas {
                   )
               ],
               excepciones: [
+                Palabra(palabra: "", enGriego: ""),
                 Palabra(palabra: "j’ai eu", enGriego: "ʒᴇ.y"),
                 Palabra(palabra: "nous l’avons eue", enGriego: "nu.la.võ.y"),
                 Palabra(palabra: "nous eûmes", enGriego: "nu.zym"),
@@ -1163,7 +1165,7 @@ struct tarjetas {
               silabas: [
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "ac*cuei*l", enGriego: "a.k&Œ&j"),
+                            Palabra(palabra: "ac*cueil*", enGriego: "a.k&Œ&j"),
                       ],
                       //TODO: Cambiar la o
                       pronuciacion: "cueil ¿o¿ cueill",
@@ -1265,7 +1267,7 @@ struct tarjetas {
               
               Silaba(
                   palabras: [
-                        Palabra(palabra: "amie", enGriego: "a.mi")
+                        Palabra(palabra: "am*ie*", enGriego: "a.mi")
                   ],
                   pronuciacion: "i",
                   explicacion: """
@@ -1388,7 +1390,7 @@ struct tarjetas {
           excepciones: [
             Palabra(palabra: "faisable", enGriego: "f&Œ&.zabl"),
             Palabra(palabra: "bienfaisant", enGriego: "bjɛ̃.f&Œ&.zɑ̃"),
-            Palabra(palabra: "nous faisons", enGriego: "f&Œ&.zabl")
+            Palabra(palabra: "nous faisons", enGriego: "nu.f&Œ&.zõ")
           ]
         ),
         
@@ -1426,9 +1428,11 @@ struct tarjetas {
             Palabra(palabra: "villa", enGriego: "vi.la"),
             Palabra(palabra: "village", enGriego: "vi.laʒ"),
             Palabra(palabra: "ville", enGriego: "vil"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "mille", enGriego: "mil"),
             Palabra(palabra: "million", enGriego: "mi.ljõ"),
             Palabra(palabra: "milliard", enGriego: "mi.ljaʀ"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "tranquillité", enGriego: "trɑ̃.ki.li.tᴇ"),
             Palabra(palabra: "tranquille", enGriego: "trɑ̃.kil"),
           ]
@@ -1663,7 +1667,7 @@ struct tarjetas {
               Silaba(
                   palabras: [
                         Palabra(palabra: "v*in*", enGriego: "vɛ̃"),
-                        Palabra(palabra: "v*ingt*", enGriego: "vɛ̃"),
+                        Palabra(palabra: "v*ing*t", enGriego: "vɛ̃"),
                   ],
                   pronuciacion: "in",
                   explicacion: """
@@ -1764,7 +1768,7 @@ struct tarjetas {
         Tarjeta(audio: "pb_o_02",
                 silabas: [
                Silaba(palabras: [
-                    Palabra(palabra: "*opp*rimée", enGriego: "o.pri.mᴇ"),
+                    Palabra(palabra: "*opp*rimée", enGriego: "o.pʀi.mᴇ"),
                     Palabra(palabra: "c*onn*u", enGriego: "co.ny"),
                     Palabra(palabra: "p*omm*e", enGriego: "pom"),
                 ],
@@ -1794,7 +1798,7 @@ struct tarjetas {
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "s*omb*re", enGriego: "sõbr"),
+                        Palabra(palabra: "s*omb*re", enGriego: "sõbʀ"),
                         Palabra(palabra: "c*ons*équence", enGriego: "kõ.sᴇ.kɑ̃s")
                   ],
                   pronuciacion: "o",
@@ -2121,7 +2125,7 @@ struct tarjetas {
               ),
               Silaba(
                   palabras: [
-                        Palabra(palabra: "*un*ir", enGriego: "y.niʀ"),
+                        Palabra(palabra: "*uni*r", enGriego: "y.niʀ"),
                         Palabra(palabra: "t*unn*el", enGriego: "ty.nᴇl")
                   ],
                   pronuciacion: "un",
@@ -2299,8 +2303,9 @@ struct tarjetas {
               )
           ],
           excepciones: [
-            Palabra(palabra: "j’ai eu", enGriego: "paʀ.fɛ̃"),
-            Palabra(palabra: "nous l’avons eue", enGriego: "nous eûmes"),
+            Palabra(palabra: "", enGriego: ""),
+            Palabra(palabra: "j’ai eu", enGriego: "ʒᴇ.y"),
+            Palabra(palabra: "nous l’avons eue", enGriego: "nu.la.võ.y"),
             Palabra(palabra: "nous eûmes", enGriego: "nu.zym"),
             Palabra(palabra: "ils eurent", enGriego: "il.zyʀ")
           ]
@@ -2591,7 +2596,7 @@ struct tarjetas {
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "cr*ay*on", enGriego: "kʀᴇ.jõ"),
+                    Palabra(palabra: "cr*ayo*n", enGriego: "kʀᴇ.jõ"),
                     Palabra(palabra: "elles p*aya*ient", enGriego: "ᴇl.pᴇ.jᴇ"),
                     Palabra(palabra: "r*ayu*re", enGriego: "ʀᴇ.jyʀ")
               ],

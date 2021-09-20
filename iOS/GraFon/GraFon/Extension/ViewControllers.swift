@@ -121,28 +121,7 @@ extension UIStackView {
     }
 
 }
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
-//
-//            let orient = UIApplication.shared.statusBarOrientation
-//
-//            switch orient {
-//            case .portrait:
-//                print("Portrait")
-//                self.collectionView.updateConstraints()
-//                break
-//                // Do something
-//            default:
-//                print("LandScape")
-//                self.collectionView.updateConstraints()
-//                // Do something else
-//                break
-//            }
-//            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
-//                print("rotation completed")
-//        })
-//    }
+
 extension UINavigationController {
    open override var preferredStatusBarStyle: UIStatusBarStyle {
       return topViewController?.preferredStatusBarStyle ?? .default

@@ -85,8 +85,7 @@ class ExcepcionesController: UIViewController {
        etiqueta.numberOfLines = 10
        etiqueta.font = .Roboto(.regular, size: 20)
        etiqueta.textColor = .black
-        
-        etiqueta.text = "Excepciones más frecuentes"
+       etiqueta.text = "Excepciones más frecuentes"
        etiqueta.translatesAutoresizingMaskIntoConstraints = false
        etiqueta.textAlignment = .left
        etiqueta.contentMode = .scaleAspectFit

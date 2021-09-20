@@ -8,9 +8,27 @@
 
 import UIKit
 
+
+class NavigationController: UINavigationController {
+
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+}
+
+
+
+
 class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
@@ -28,12 +46,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if UIDevice().userInterfaceIdiom == .phone {
-            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.height))
-        }else{
-            return CGSize(width: (view.frame.width)/2,
-                          height: (view.frame.height)/2.1)
-        }
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.height))
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -84,7 +98,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AppUtility.lockOrientation(.portrait)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         self.navigationController?.isNavigationBarHidden = true
     }
     

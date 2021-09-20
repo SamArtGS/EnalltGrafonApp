@@ -67,7 +67,7 @@ class PantallaResultados: UIView {
             botonInicioJuego.addTarget(nil, action: #selector(irPajaros), for: .touchUpInside)
         case .felicidades:
             botonInicioJuego.setImage(UIImage(named: "icono_puertas_color"), for: .normal)
-            botonInicioJuego.addTarget(botonInicioJuego, action: #selector(irPuertas), for: .touchUpInside)
+            botonInicioJuego.addTarget(nil, action: #selector(irPuertas), for: .touchUpInside)
         }
     }
         
