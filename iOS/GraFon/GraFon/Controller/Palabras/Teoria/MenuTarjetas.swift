@@ -101,7 +101,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                                                                     letra.identificador != 0})[(indice ?? 0)-1].tarjetas!.count {
                         let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.grupoPalabras.filter({letra in
                             letra.identificador == indice}).first?.otrosCasos, puerta: puertaSeleccionada)
-                        vcs.letraTitulo = "Más que una palabra"
+                        vcs.letraTitulo = "Otros casos"
                         
                         self.navigationController?.pushViewController(vcs, animated: true)
                         
@@ -111,7 +111,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                                                                     letra.identificador != 0})[(indice ?? 0)-1].tarjetas!.count + 1{
                         
                     let vcss = ExcepcionesController(excepciones: Data.grupoPalabras.filter({grupo in
-                            grupo.identificador == indice}).first?.otrosGrupos, titulo: "Más que una palabra", puerta: 0)
+                            grupo.identificador == indice}).first?.otrosGrupos, titulo: "Otros grupos", puerta: 0)
                         vcss.explicacion.text = "Otros grupos"
                         self.navigationController?.pushViewController(vcss, animated: true)
                     }
@@ -134,7 +134,7 @@ extension MenuTarjetas: SeleccionarTarjetaDelegate{
                     {
                     let vcs = TarjetaSeleccionadaController(collectionViewLayout: scrollLayout, silabas: Data.letras.filter({letra in
                                                                                                                                 letra.identificador == indice}).first?.grafiasPocoFrecuentes, puerta: puertaSeleccionada)
-                        vcs.letraTitulo = "Palabras en la boca"
+                        vcs.letraTitulo = "Grafías poco frecuentes"
                         self.navigationController?.pushViewController(vcs, animated: true)
                     
                     

@@ -19,14 +19,10 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
             switch puerta {
             case 0:
                 colorLetras = .colorLetraVerde
-                titulo.textColor = .colorLetraVerde
-                titulo.text = "Otros casos"
                 posicionLetraLabel.textColor = .colorLetraVerde
             case 2:
                 colorLetras = .colorLetras
                 posicionLetraLabel.textColor = .colorLetras
-                titulo.textColor = .colorLetras
-                titulo.text = "Grafías poco frecuentes"
             default:
                 break
             }
@@ -166,19 +162,6 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         return etiqueta
     }()
     
-    var titulo: UILabelPersonalizado = {
-        let etiqueta = UILabelPersonalizado()
-        etiqueta.text = "Grafías poco frecuentes"
-        etiqueta.lineBreakMode = .byWordWrapping
-        etiqueta.numberOfLines = 0
-        etiqueta.font = .Roboto(.regular, size: Tamanio.letraCafeTarjetasMenu)
-        etiqueta.textColor = .colorLetras
-        etiqueta.translatesAutoresizingMaskIntoConstraints = false
-        etiqueta.textAlignment = .center
-        etiqueta.contentMode = .scaleAspectFit
-        return etiqueta
-    }()
-    
     private var pronunciacion: (String) -> UILabel = { texto in
         let etiqueta = UILabelPersonalizado()
         
@@ -195,7 +178,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         let etiqueta = UILabelPersonalizado()
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
-        etiqueta.font = .Roboto(.regular, size: Tamanio.letraExplicacion)
+        etiqueta.font = .Roboto(.regular, size: Tamanio.letraExplicacion - 2)
         etiqueta.textColor = .black
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.textAlignment = .center
@@ -225,9 +208,7 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
         
         //addSubview(fondo)
         addSubview(pilaViews)
-        if isPrimero{
-            pilaViews.addArrangedSubview(titulo)
-        }
+        
         
         NSLayoutConstraint.activate([
             //fondo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
@@ -237,8 +218,8 @@ class GrafiasPocoFrecuentesView: UICollectionViewCell {
             
             pilaViews.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             //pilaViews.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -5),
-            //pilaViews.leadingAnchor.constraint(equalTo: leadingAnchor),
-            //pilaViews.trailingAnchor.constraint(equalTo: trailingAnchor)
+            pilaViews.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            pilaViews.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
     

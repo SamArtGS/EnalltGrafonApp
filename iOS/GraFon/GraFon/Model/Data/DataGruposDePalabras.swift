@@ -71,7 +71,7 @@ extension Data{
                 Palabra(palabra: "hippie", enGriego: "i.pi"),
                 Palabra(palabra: "homard", enGriego: "o.maʀ"),
                 Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
-                Palabra(palabra: "hotdog", enGriego: "i.bu"),
+                Palabra(palabra: "hotdog", enGriego: "ot.dog"),
                 Palabra(palabra: "hyène", enGriego: "jᴇn"),
               ]
             ),
@@ -97,7 +97,7 @@ extension Data{
                   ],
                   pronuciacion: "un¿,¿ aucun",
                   explicacion: """
-                                  Antes de un sustantivo que empieza con vocal o ~h \n un~ transcriben el sonido
+                                  Antes de un sustantivo que empieza con vocal o ~h \n\n un~ transcriben el sonido
                               """,
                   imagenFonema: "ɛ̃",
                   imagenConsejo: nil,
@@ -113,21 +113,18 @@ extension Data{
                 Palabra(palabra: "hamac", enGriego: "a.mak"),
                 Palabra(palabra: "hamburger", enGriego: "ɑ̃.b&Œ&ʀ.g&Œ&ʀ"),
                 Palabra(palabra: "hamster", enGriego: "ams.tᴇʀ"),
-                Palabra(palabra: "hanche", enGriego: "ɑ̃ʃ"),
                 Palabra(palabra: "handicap", enGriego: "ɑ̃.di.kap"),
                 Palabra(palabra: "haricot", enGriego: "a.ʀi.ko"),
                 Palabra(palabra: "harpe", enGriego: "aʀp"),
                 Palabra(palabra: "hasard", enGriego: "a.zaʀ"),
-                Palabra(palabra: "hausse", enGriego: "os"),
                 Palabra(palabra: "haut", enGriego: "o"),
-                Palabra(palabra: "hernie", enGriego: "ᴇʀ.ni"),
                 Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                 Palabra(palabra: "hibou", enGriego: "i.bu"),
                 Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ro.glif"),
                 Palabra(palabra: "hippie", enGriego: "i.pi"),
                 Palabra(palabra: "homard", enGriego: "o.maʀ"),
                 Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
-                Palabra(palabra: "hotdog", enGriego: "i.bu")
+                Palabra(palabra: "hotdog", enGriego: "ot.dog")
               ]
             ),
             Tarjeta(audio: "mp_g1_03",
@@ -151,7 +148,7 @@ extension Data{
                   ],
                   pronuciacion: "mon, ton, son",
                   explicacion: """
-                                  Antes de un sustantivo que empieza con vocal o ~h \n on~ transcriben el sonido
+                                  Antes de un sustantivo que empieza con vocal o ~h \n\n on~ transcriben el sonido
                               """,
                   imagenFonema: "õ",
                   imagenConsejo: nil,
@@ -170,12 +167,9 @@ extension Data{
                    Palabra(palabra: "hamac", enGriego: "a.mak"),
                    Palabra(palabra: "hamburger", enGriego: "ɑ̃.b&Œ&ʀ.g&Œ&ʀ"),
                    Palabra(palabra: "hamster", enGriego: "ams.tᴇʀ"),
-                   Palabra(palabra: "hanche", enGriego: "ɑ̃ʃ"),
                    Palabra(palabra: "handicap", enGriego: "ɑ̃.di.kap"),
                    Palabra(palabra: "haricot", enGriego: "a.ʀi.ko"),
-                   Palabra(palabra: "harpe", enGriego: "aʀp"),
                    Palabra(palabra: "hasard", enGriego: "a.zaʀ"),
-                   Palabra(palabra: "hausse", enGriego: "os"),
                    Palabra(palabra: "haut", enGriego: "o"),
                    Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                    Palabra(palabra: "hibou", enGriego: "i.bu"),
@@ -183,7 +177,7 @@ extension Data{
                    Palabra(palabra: "hippie", enGriego: "i.pi"),
                    Palabra(palabra: "homard", enGriego: "o.maʀ"),
                    Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
-                   Palabra(palabra: "hotdog", enGriego: "i.bu")
+                   Palabra(palabra: "hotdog", enGriego: "ot.dog")
                 
               ]
             ),
@@ -211,7 +205,7 @@ extension Data{
                   ],
                   pronuciacion: "en",
                   explicacion: """
-                                  Antes de una palabra que empieza con consonante (excepto ~h~) \n\n transcriben el sonido
+                                  Antes de una palabra que empieza con vocal o ~h~ \n\n transcriben el sonido
                               """,
                   imagenFonema: "ɑ̃",
                   imagenConsejo: nil,
@@ -234,7 +228,7 @@ extension Data{
                             ],
                             pronuciacion: "petit",
                             explicacion: """
-                                            Antes de un sustantivo que empieza con vocal o ~h \n t~ indica la formación de una nueva\n sílaba\n que empieza con el sonido
+                                            Antes de un sustantivo que empieza con vocal o ~h \n\n t~ indica la formación de una nueva sílaba\n que empieza con el sonido
                                         """,
                             imagenFonema: "t",
                             imagenConsejo: nil,
@@ -246,7 +240,7 @@ extension Data{
                           ],
                           pronuciacion: "bon",
                           explicacion: """
-                                          Antes de un sustantivo que empieza con vocal o ~h~ \n transcribe los sonidos
+                                          Antes de un sustantivo que empieza con vocal o ~h~ \n\n transcribe los sonidos
                                       """,
                           imagenFonema: "bo",
                           imagenConsejo: nil,
@@ -261,11 +255,11 @@ extension Data{
                           ],
                           pronuciacion: "très, plus, moins",
                           explicacion: """
-                                          Antes de un adjetivo que empieza con vocal o ~h \n s~ indica la formación \n de una nueva sílaba que empieza con el sonido
+                                          Antes de un adjetivo que empieza con vocal o ~h \n\n s~ indica la formación de una nueva sílaba que empieza con el sonido
                                       """,
                           imagenFonema: "z",
                           imagenConsejo: nil,
-                          textodeAbajo: "~n~ indica la formación de \n una nueva sílaba que empieza con el sonido \n #n#"
+                          textodeAbajo: nil
                         ),
                         
                         
@@ -276,7 +270,7 @@ extension Data{
                           ],
                           pronuciacion: "quand, grand",
                           explicacion: """
-                                          Antes de una palabra que empieza con vocal o ~h \n d~ indica la formación de \n una nueva sílaba que empieza con el sonido
+                                          Antes de una palabra que empieza con vocal o ~h \n\n d~ indica la formación de una nueva sílaba que empieza con el sonido
                                       """,
                           imagenFonema: "t",
                           imagenConsejo: nil,
@@ -291,7 +285,7 @@ extension Data{
                           ],
                           pronuciacion: "premier, dernier, léger",
                           explicacion: """
-                                          Antes de un sustantivo que empieza con vocal o ~h \n r~ indica la formación de una nueva \n sílaba que empieza con el sonido
+                                          Antes de un sustantivo que empieza con vocal o ~h \n\n r~ indica la formación de una nueva \n sílaba que empieza con el sonido
                                       """,
                           imagenFonema: "ʀ",
                           imagenConsejo: nil,
@@ -301,38 +295,64 @@ extension Data{
                         
                         Silaba(
                           palabras: [
-                                Palabra(palabra: "*ancien é*lève", enGriego: "ɑ̃sjᴇ.nᴇ.lᴇv")
+                                Palabra(palabra: "*bien a*imable", enGriego: "bjɛ̃.nᴇ.mabl")
                           ],
                           pronuciacion: "bien",
                           explicacion: """
-                                          Antes de un adjetivo que empieza con vocal o ~h \n ien~ transcriben el sonido
+                                          Antes de un adjetivo que empieza con vocal o ~h \n\n ien~ transcriben el sonido
                                       """,
                           imagenFonema: "jɛ̃",
                           imagenConsejo: nil,
                           textodeAbajo: "e indican la formación de una nueva \n sílaba que empieza con el sonido \n #n#"
-                        )
+                        ),
+                        
+                        Silaba(
+                          palabras: [
+                                Palabra(palabra: "*ancien é*lève", enGriego: "ɑ̃sjᴇ.nᴇ.lᴇv")
+                          ],
+                          pronuciacion: "ancien",
+                          explicacion: """
+                                          Antes de un sustantivo que empieza con vocal o \n\n ~h \n\n ien~ transcriben el sonido
+                                      """,
+                          imagenFonema: "jᴇ",
+                          imagenConsejo: nil,
+                          textodeAbajo: "indica la formación de una nueva sílaba que empieza con el sonido \n\n #n#"
+                        ),
                       ],
                       otrosGrupos: [
                         Palabra(palabra: "avant-hier", enGriego: "a.vɑ̃.tjᴇʀ"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "accent aigu ", enGriego: "a.ksɑ̃.tᴇ.gy"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "comment allez-vous ?", enGriego: "ko.mɑ̃.ta.lᴇ.vu"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "de mieux en mieux", enGriego: "d&Œ&.mj&Œ&.zɑ̃.mj&Œ&"),
                         Palabra(palabra: "de moins en moins", enGriego: "dɶ.mwɛ̃.zɑ̃.mwɛ̃"),
                         Palabra(palabra: "de plus en plus", enGriego: "d&Œ&.ply.zɑ̃.ply"),
+                        Palabra(palabra: "de temps en temps", enGriego: "d&Œ&.tɑ̃.zɑ̃.tɑ̃"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "en plein air", enGriego: "ɑ̃.plᴇ.nᴇʀ"),
                         Palabra(palabra: "en plein été", enGriego: "ɑ̃.plᴇ.nᴇ.tᴇ"),
                         Palabra(palabra: "en plein hiver", enGriego: "ɑ̃.plᴇ.ni.vᴇʀ"),
-                        
-                        
-                      Palabra(palabra: "on en a", enGriego: "õ.nɑ̃.na"),
-                      Palabra(palabra: "petit à petit", enGriego: "p&Œ&.ti.ta.p&Œ&.ti"),
-                      Palabra(palabra: "mot à mot", enGriego: "mo.ta.mo"),
-                      Palabra(palabra: "tout à coup", enGriego: "tu.ta.ku"),
-                      Palabra(palabra: "tout à  fait", enGriego: "tu.ta.fᴇ"),
-                      Palabra(palabra: "tout à l’heure", enGriego: "tu.ta.l&Œ&ʀ"),
-                      Palabra(palabra: "Les Champs-Élysées", enGriego: "lᴇ.ʃɑ̃.zᴇ.li.zᴇ"),
-                      Palabra(palabra: "Les États-Unis", enGriego: "lᴇ.zᴇ.ta.zy.ni"),
-                      Palabra(palabra: "Les Nations-Unies", enGriego: "lᴇ.na.sjõ.zy.ni"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "on en a", enGriego: "õ.nɑ̃.na"),
+                        Palabra(palabra: "petit à petit", enGriego: "p&Œ&.ti.ta.p&Œ&.ti"),
+                        Palabra(palabra: "mot à mot", enGriego: "mo.ta.mo"),
+                        Palabra(palabra: "tout à coup", enGriego: "tu.ta.ku"),
+                        Palabra(palabra: "tout à  fait", enGriego: "tu.ta.fᴇ"),
+                        Palabra(palabra: "tout à l’heure", enGriego: "tu.ta.l&Œ&ʀ"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "Les Champs-Élysées", enGriego: "lᴇ.ʃɑ̃.zᴇ.li.zᴇ"),
+                        Palabra(palabra: "Les États-Unis", enGriego: "lᴇ.zᴇ.ta.zy.ni"),
+                        Palabra(palabra: "Les Nations-Unies", enGriego: "lᴇ.na.sjõ.zy.ni"),
+                        Palabra(palabra: "", enGriego: ""),
+                        Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "Moyen Âge", enGriego: "mwa.jᴇ.naʒ"),
                         Palabra(palabra: "Moyen Orient", enGriego: "mwa.jᴇ.no.ʀjɑ̃"),
                       ]

@@ -27,8 +27,9 @@ class ExcepcionesController: UIViewController {
             colorLetras = .colorLetraVerde
             view.backgroundColor = .colorFondoTarjetasGrupoDePalabras
             
-            if titulo == "Más que una palabra"{
+            if titulo == "Otros grupos"{
                 imagenVuelta.removeFromSuperview()
+                explicacion.removeFromSuperview()
             }else{
                 self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
                 imagenVuelta.setImage(UIImage(named: "ico_ir-vuelta_n3"), for: .normal)

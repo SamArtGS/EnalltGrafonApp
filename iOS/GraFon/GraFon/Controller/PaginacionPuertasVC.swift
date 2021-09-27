@@ -117,7 +117,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                                  forCellWithReuseIdentifier: "cellid")
         
         
-        /*
+        
         let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-query")
         view.addSubview(boton)
         NSLayoutConstraint.activate([
@@ -127,7 +127,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
             boton.heightAnchor.constraint(equalToConstant: 30)
         ])
         
-        */
+        
     }
     
     

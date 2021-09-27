@@ -21,7 +21,6 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     var letraTitulo: String? {
         didSet{
             guard let titulo = letraTitulo else { return }
-            
             self.title = titulo
         }
     }
@@ -46,7 +45,10 @@ class TarjetaSeleccionadaController: UICollectionViewController, MostrarExcepcio
     func configuracionPorPuerta(puerta: Int){
         switch puerta {
         case 0:
-            collectionView.backgroundColor = .colorFondoTarjetasGrupoDePalabras
+            if self.title == "Otros casos" || title == "Otros grupos"{
+                collectionView.backgroundColor = UIColor(red: 227/255, green: 244/255, blue: 213/255, alpha: 1.0)
+            }
+            collectionView.backgroundColor = UIColor(red: 240/255, green: 249/255, blue: 233/255, alpha: 1.0)
         case 2:
             collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         default:
@@ -280,8 +282,13 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        if bool{
+            return 0
+        }else{
+            return 10
+        }
     }
     
     
