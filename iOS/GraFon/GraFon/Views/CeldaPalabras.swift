@@ -52,12 +52,12 @@ class CeldaPalabras: UICollectionViewCell {
         Palabra(palabra: "prene*z-en*", enGriego: "pʀ&Œ&.nᴇ.zɑ̃")
     ],
     [
-        Palabra(palabra: "répon*d-il*?", enGriego: "ʀᴇ.põ.til"),
-        Palabra(palabra: "pleu*t-il*?", enGriego: "pl&Œ&.til"),
-        Palabra(palabra: "ºsonºªt-ilsª ºd’accord?º", enGriego: "sõ.til.da.koʀ"),
-        Palabra(palabra: "par*t-elle*?", enGriego: "paʀ.tᴇl"),
-        Palabra(palabra: "mangen*t-elles*?", enGriego: "mɑ̃ʒ.tᴇl"),
-        Palabra(palabra: "atten*d-on*?", enGriego: "a.tɑ̃.tõ")
+        Palabra(palabra: "répon*d-il* ?", enGriego: "ʀᴇ.põ.til"),
+        Palabra(palabra: "pleu*t-il* ?", enGriego: "pl&Œ&.til"),
+        Palabra(palabra: "ºsonºªt-ilsª ºd’accord ?º", enGriego: "sõ.til.da.koʀ"),
+        Palabra(palabra: "par*t-elle* ?", enGriego: "paʀ.tᴇl"),
+        Palabra(palabra: "mangen*t-elles* ?", enGriego: "mɑ̃ʒ.tᴇl"),
+        Palabra(palabra: "atten*d-on* ?", enGriego: "a.tɑ̃.tõ")
     ],
     [
         Palabra(palabra: "*on t*raverse", enGriego: "õ.tʀa.vᴇʀs"),

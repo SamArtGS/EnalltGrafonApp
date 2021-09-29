@@ -136,14 +136,11 @@ extension TarjetaSeleccionadaController{
                         cell.cualEsVoletada = 3
                     case Data.grupoPalabras[1].tarjetas![1]:
                         cell.cualEsVoletada = 4
-                    case Data.grupoPalabras[1].tarjetas![2]:
-                        cell.cualEsVoletada = 5
-                    case Data.grupoPalabras[1].tarjetas![3]:
-                        cell.cualEsVoletada = 6
+                    
+                    
                     case Data.grupoPalabras[1].tarjetas![4]:
                         cell.cualEsVoletada = 7
-                    case Data.grupoPalabras[1].tarjetas![5]:
-                        cell.cualEsVoletada = 8
+                    
                     case Data.grupoPalabras[1].tarjetas![6]:
                         cell.cualEsVoletada = 9
                     
@@ -255,7 +252,12 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
             tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
             return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
          } else {
-            let palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
+            var palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
+            
+            if (tarjeta?.silabas[indexPath.item - 1].textodeAbajo) != nil{
+                palabrasCount += 50
+            }
+            
             if (tarjeta?.silabas[indexPath.item - 1 ].imagenConsejo) == nil{
                
                 if indexPath.item == tarjeta?.silabas.count{

@@ -187,8 +187,14 @@ extension SySJuego1VC: juegoSimbolosySonidosDelegate{
 
 extension SySJuego1VC: pantallaResultadosDelegate{
     func irOtroJuego() {
+        /*
+         navigationController?.dismiss(animated: true)
+         navigationController?.popViewController(animated: true)
+        */
         navigationController?.dismiss(animated: true)
-        navigationController?.popViewController(animated: true)
+        let vc = (navigationController?.viewControllers[1]) as? TabBarTeoriaJuegos
+        vc?.selectedIndex = 0
+        navigationController?.popToViewController(vc!, animated: true)
     }
     
     func irPantallaPajaros() {
@@ -201,7 +207,9 @@ extension SySJuego1VC: pantallaResultadosDelegate{
     func irAPuertas() {
         self.dismiss(animated: true)
         guard let viewController = navigationController?.viewControllers else { return }
-        navigationController?.popToViewController(viewController[0], animated: true)
+        let vc = (viewController[0]) as? PagePuertasCV
+        vc?.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: true)
+        navigationController?.popToViewController(vc!, animated: true)
         navigationController?.setToolbarHidden(true, animated: false)
     }
 }

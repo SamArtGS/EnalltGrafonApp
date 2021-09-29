@@ -216,7 +216,7 @@ extension Data{
               ],
               excepciones: [
                 Palabra(palabra: "en haut", enGriego: "ɑ̃.o"),
-                Palabra(palabra: "en hauteur", enGriego: "ɑ̃.otɶʀ")
+                Palabra(palabra: "en hauteur", enGriego: "ɑ̃.o.tɶʀ")
               
               ]
             ),
@@ -370,7 +370,7 @@ extension Data{
                   ],
                   pronuciacion: "-s",
                   explicacion: """
-                                  Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un verbo que empieza con consonante (excepto ~h~) \n no transcribe ningún sonido.
+                                  Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un verbo que empieza con consonante (excepto ~h~) \n\n no transcribe ningún sonido.
                               """,
                   imagenFonema: sinSonidoGP,
                   imagenConsejo: nil,
@@ -384,7 +384,7 @@ extension Data{
                   ],
                   pronuciacion: "-s",
                   explicacion: """
-                                  Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un verbo que empieza con vocal o ~h~ \n indica la formación de una nueva sílaba que empieza con el sonido
+                                  Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un verbo que empieza con vocal o ~h~ \n\n indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
                   imagenConsejo: "retro_3A1-gpo2_n3",
@@ -405,7 +405,7 @@ extension Data{
                   ],
                   pronuciacion: "-s",
                   explicacion: """
-                              Al final de~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un pronombre que empieza con consonante \n no transcribe ningún sonido
+                              Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de un pronombre que empieza con consonante \n\n no transcribe ningún sonido.
                               """,
                   imagenFonema: sinSonidoGP,
                   imagenConsejo: nil,
@@ -418,7 +418,7 @@ extension Data{
                   ],
                   pronuciacion: "-s",
                   explicacion: """
-                              Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de ~y~ o ~en~, \n indica la formación de una nueva sílaba que empieza con el sonido
+                              Al final de ~elles~, ~ils~, ~nous~, ~vous~, ~les~, seguida de ~y~ o ~en~ \n\n indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
                   imagenConsejo: nil,
@@ -437,10 +437,10 @@ extension Data{
                   ],
                   pronuciacion: "-s ¿o¿ -z",
                   explicacion: """
-                              Al final de un verbo en imperativo seguido de ~y~ o ~en~ \n indica la formación de una nueva sílaba que empieza con el sonido
+                              Al final de un verbo en imperativo seguido de ~y~ o ~en~ \n\n indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
-                  imagenConsejo: "retro_3D-gpo2_n3",
+                  imagenConsejo: nil,
                   textodeAbajo: nil
                 )
               ],
@@ -451,10 +451,10 @@ extension Data{
               silabas: [
                 Silaba(
                   palabras: [
-                        Palabra(palabra: "répon*d-il*?", enGriego: "ʀᴇ.põ.til"),
-                        Palabra(palabra: "pleu*t-il*?", enGriego: "pl&Œ&.til"),
-                        Palabra(palabra: "ºsonºªt-ilsª ºd’accord?º", enGriego: "sõ.til.da.koʀ"),
-                        Palabra(palabra: "par*t-elle*?", enGriego: "paʀ.tᴇl"),
+                        Palabra(palabra: "répon*d-il* ?", enGriego: "ʀᴇ.põ.til"),
+                        Palabra(palabra: "pleu*t-il* ?", enGriego: "pl&Œ&.til"),
+                        Palabra(palabra: "ºsonºªt-ilsª ºd’accord ?º", enGriego: "sõ.til.da.koʀ"),
+                        Palabra(palabra: "par*t-elle* ?", enGriego: "paʀ.tᴇl"),
                         Palabra(palabra: "mangen*t-elles* ?", enGriego: "mɑ̃ʒ.tᴇl"),
                         Palabra(palabra: "atten*d-on* ?", enGriego: "a.tɑ̃.tõ")
                   ],
@@ -492,7 +492,7 @@ extension Data{
                   ],
                   pronuciacion: "on",
                   explicacion: """
-                              Antes de un verbo que empieza con vocal o ~h~ \n transcribe el sonido
+                              Antes de un verbo que empieza con vocal o ~h~ \n\n transcribe el sonido
                               """,
                   imagenFonema: "õ",
                   imagenConsejo: nil,
@@ -513,16 +513,14 @@ extension Data{
                   ],
                   pronuciacion: "on",
                   explicacion: """
-                              Antes de ~y~ o ~en~ \n transcribe el sonido
+                              Antes de ~y~ o ~en~ \n\n transcribe el sonido
                               """,
                   imagenFonema: "õ",
                   imagenConsejo: nil,
                   textodeAbajo: "e indica la formación de una nueva sílaba que empieza con el sonido \n\n #n#"
                 )
               ],
-              excepciones: [
-                Palabra(palabra: "on hurlait", enGriego: "õ.yʀ.lᴇ")
-              ]
+              excepciones: nil
             ),
             
             Tarjeta(audio: "mp_g2_07",
@@ -561,6 +559,12 @@ extension Data{
             )
         
         ]),
+        
+        
+        // MARK: GRUPO 3 --------------------------------------------------------------------
+        // ----------------------------------------------------------------------------------
+        
+        
         GrupoPalabras(identificador: 3, letra: "Grupo de palabras 3", imagenGrupo: "2b_n3", tarjetas:[
                       
             Tarjeta(audio: "mp_g3_01",
@@ -584,7 +588,7 @@ extension Data{
                   ],
                   pronuciacion: "un",
                   explicacion: """
-                                 Antes de ~an~ y ~euro~ \n transcribe el sonido
+                                 Antes de ~an~ y ~euro~ \n\n transcribe el sonido
                               """,
                   imagenFonema: "ɛ̃",
                   imagenConsejo: nil,
@@ -609,13 +613,13 @@ extension Data{
                 ),
                 Silaba(
                   palabras: [
-                    Palabra(palabra: "deu*x a*ns", enGriego: "d&Œ&.zɑ̃"),
-                    Palabra(palabra: "deu*x h*eures", enGriego: "d&Œ&.z&Œ&ʀ"),
-                    Palabra(palabra: "deu*x e*uros", enGriego: "d&Œ&.z&Œ&.ʀo")
+                    Palabra(palabra: "deu*x ans*", enGriego: "d&Œ&.zɑ̃"),
+                    Palabra(palabra: "deu*x heures*", enGriego: "d&Œ&.z&Œ&ʀ"),
+                    Palabra(palabra: "deu*x euros*", enGriego: "d&Œ&.z&Œ&.ʀo")
                   ],
-                  pronuciacion: "un",
+                  pronuciacion: "deux",
                   explicacion: """
-                                 Antes de ~ans~, ~heures~, ~euros~ \n ~x~ indica la formación de una nueva sílaba que empieza con el sonido
+                                 Antes de ~ans~, ~heures~, ~euros~ \n\n ~x~ indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
                   imagenConsejo: "retro_3B-gpo3_n3",
@@ -673,11 +677,11 @@ extension Data{
                 ),
                 Silaba(
                   palabras: [
-                    Palabra(palabra: "si*x a*ns", enGriego: "si.zɑ̃"),
-                    Palabra(palabra: "si*x h*eures", enGriego: "si.z&Œ&ʀ"),
-                    Palabra(palabra: "si*x e*uros", enGriego: "si.z&Œ&.ʀo")
+                    Palabra(palabra: "si*x ans*", enGriego: "si.zɑ̃"),
+                    Palabra(palabra: "si*x heures*", enGriego: "si.z&Œ&ʀ"),
+                    Palabra(palabra: "si*x euros*", enGriego: "si.z&Œ&.ʀo")
                   ],
-                  pronuciacion: "trois",
+                  pronuciacion: "six",
                   explicacion: """
                                  Antes de ~ans~, ~heures~, ~euros~ \n\n ~x~ indica la formación de una nueva sílaba que empieza con el sonido
                               """,
@@ -732,7 +736,7 @@ extension Data{
                 ),
                 Silaba(
                   palabras: [
-                    Palabra(palabra: "hui*t p*esos", enGriego: "ɥi.pᴇ.zo")
+                    Palabra(palabra: "hui*t p*esos", enGriego: "ɥi.pᴇ.zos")
                   ],
                   pronuciacion: "huit",
                   explicacion: """
@@ -780,7 +784,7 @@ extension Data{
                   ],
                   pronuciacion: "neuf",
                   explicacion: """
-                                 Antes de ~ans~ y ~heures~ \n ~f~ indica la formación de una nueva sílaba que empieza con el sonido
+                                 Antes de ~ans~ y ~heures~ \n\n ~f~ indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "v",
                   imagenConsejo: "retro_3F-gpo3_n3",
@@ -813,7 +817,7 @@ extension Data{
                   ],
                   pronuciacion: "dix",
                   explicacion: """
-                                 Antes de ~ans~, ~heures~, ~euros~ \n ~x~ indica la formación de una nueva sílaba que empieza con el sonido
+                                 Antes de ~ans~, ~heures~, ~euros~ 	\n\n ~x~ indica la formación de una nueva sílaba que empieza con el sonido
                               """,
                   imagenFonema: "z",
                   imagenConsejo: nil,
@@ -825,7 +829,7 @@ extension Data{
                   ],
                   pronuciacion: "dix",
                   explicacion: """
-                                 Antes de una consonante \n ~x~ no transcribe ningún sonido.
+                                 Antes de una consonante \n\n ~x~ no transcribe ningún sonido.
                               """,
                   imagenFonema: sinSonidoGP,
                   imagenConsejo: nil,
@@ -857,11 +861,11 @@ extension Data{
                   ],
                   pronuciacion: "vingt",
                   explicacion: """
-                                 Antes de ~ans~, ~heures~, ~euros~ \n ~g~ no transcribe ningún sonido
+                                 Antes de ~ans~, ~heures~, ~euros~ \n\n ~g~ no transcribe ningún sonido
                               """,
                   imagenFonema: sinSonidoGP,
                   imagenConsejo: nil,
-                  textodeAbajo: "~t~ indica la formación de una nueva sílaba que empieza con el sonido \n #t#"
+                  textodeAbajo: "~t~ indica la formación de una nueva sílaba que empieza con el sonido \n\n #t#"
                 )
               ],
               excepciones: nil
