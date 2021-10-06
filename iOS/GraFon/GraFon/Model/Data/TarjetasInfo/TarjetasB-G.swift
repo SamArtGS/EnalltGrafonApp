@@ -138,16 +138,16 @@ extension tarjetas{
           excepciones: [
             Palabra(palabra: "second", enGriego: "s&Œ&.gõ"),
             Palabra(palabra: "seconde", enGriego: "sɶ.gõd"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "tabac", enGriego: "ta.ba"),
             Palabra(palabra: "estomac", enGriego: "ᴇs.to.ma"),
-            Palabra(palabra: " ", enGriego: " "),
-            Palabra(palabra: "caoutchouc", enGriego: "kau.tʃu"),
+            Palabra(palabra: "caoutchouc", enGriego: "ka.u.tʃu"),
             Palabra(palabra: "croc", enGriego: "kʀo"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "blanc", enGriego: "blɑ̃"),
             Palabra(palabra: "franc", enGriego: "fʀɑ̃"),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "tronc", enGriego: "tʀõ"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "porc", enGriego: "poʀ"),
           ]
         ),
@@ -258,12 +258,14 @@ extension tarjetas{
             Palabra(palabra: "choléra", enGriego: "ko.lᴇ.ʀa"),
             Palabra(palabra: "chorale", enGriego: "ko.ʀal"),
             Palabra(palabra: "archaïque", enGriego: "aʀ.ka.ik"),
-            Palabra(palabra: "archéologie", enGriego: "aʀ.kᴇo.lo.ʒi"),
+            Palabra(palabra: "archéologie", enGriego: "aʀ.kᴇ.o.lo.ʒi"),
             Palabra(palabra: "orchestre", enGriego: "oʀ.kᴇstʀ"),
             Palabra(palabra: "orchidée", enGriego: "oʀ.ki.dᴇ"),
             Palabra(palabra: "écho", enGriego: "ᴇ.ko"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwiʃ"),
             Palabra(palabra: "scotch", enGriego: "skotʃ"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "psychique", enGriego: "psi.ʃik"),
             Palabra(palabra: "psychisme", enGriego: "psi.ʃism"),
             Palabra(palabra: "psyché", enGriego: "psi.ʃᴇ")
@@ -419,7 +421,7 @@ extension tarjetas{
                               Al final de una palabra \n\n no transcribe ningún sonido.
                           """,
               imagenFonema: sinSonido,
-              imagenConsejo: nil, //ME FALTÓ LA DE NI SIQUIERA LO INTENTES
+              imagenConsejo: "e_retro_3Eb_n2",
               textodeAbajo: nil
             )
           ],
@@ -459,7 +461,7 @@ extension tarjetas{
                               Al final de una palabra \n\n no transcriben ningún sonido.
                           """,
               imagenFonema: sinSonido,
-              imagenConsejo: "e_retro_3Eb_n2", //PARECE QUE NO HAY "MEME" DE LISA
+              imagenConsejo: "e_retro_3Eb_n2",
               textodeAbajo: nil
             )
           ],
@@ -491,8 +493,8 @@ extension tarjetas{
             Palabra(palabra: "serf", enGriego: "sᴇʀ"),
             Palabra(palabra: "cerf", enGriego: "sᴇʀ"),
             Palabra(palabra: "chef-d’œuvre", enGriego: "ʃᴇ.d&Œ&vʀ"),
+            //Palabras en plural
             
-            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "œufs", enGriego: "&Œ&"),
             Palabra(palabra: "bœufs", enGriego: "b&Œ&")
           ]

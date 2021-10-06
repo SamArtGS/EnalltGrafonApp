@@ -199,6 +199,7 @@
 		5450B3E6265D791800BB36BA /* pb_i_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B350265D791800BB36BA /* pb_i_12.mp3 */; };
 		5450B3E7265D791800BB36BA /* pb_s_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B351265D791800BB36BA /* pb_s_02.mp3 */; };
 		5450B3E8265D791800BB36BA /* pb_s_07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5450B352265D791800BB36BA /* pb_s_07.mp3 */; };
+		54581468270B5CB200791FC3 /* LoteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54581467270B5CB200791FC3 /* LoteriaViewController.swift */; };
 		545FE2FD26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FE2FC26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift */; };
 		546301F925FA025E00E005BC /* Colores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546301F825FA025E00E005BC /* Colores.swift */; };
 		5466CAB62642DC7600443B58 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */; };
@@ -606,6 +607,7 @@
 		5450B350265D791800BB36BA /* pb_i_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_i_12.mp3; sourceTree = "<group>"; };
 		5450B351265D791800BB36BA /* pb_s_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_s_02.mp3; sourceTree = "<group>"; };
 		5450B352265D791800BB36BA /* pb_s_07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_s_07.mp3; sourceTree = "<group>"; };
+		54581467270B5CB200791FC3 /* LoteriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoteriaViewController.swift; sourceTree = "<group>"; };
 		545FE2FC26DDE3F3009DB80B /* GrafiasPocoFrecuentesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrafiasPocoFrecuentesView.swift; sourceTree = "<group>"; };
 		546301F825FA025E00E005BC /* Colores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colores.swift; sourceTree = "<group>"; };
 		5466CAAB2642DC7600443B58 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 		54004F2626E42F720065AEFD /* GruposPalabras */ = {
 			isa = PBXGroup;
 			children = (
+				54581467270B5CB200791FC3 /* LoteriaViewController.swift */,
 			);
 			path = GruposPalabras;
 			sourceTree = "<group>";
@@ -1893,6 +1896,7 @@
 				5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */,
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
 				5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */,
+				54581468270B5CB200791FC3 /* LoteriaViewController.swift in Sources */,
 				548FBA9326C0243300E8A109 /* GrupoPalabras.swift in Sources */,
 				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
 				54BFA47426D9B6980050FD61 /* Trivia.swift in Sources */,
@@ -2048,7 +2052,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -2069,7 +2073,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

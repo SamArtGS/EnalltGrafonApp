@@ -244,13 +244,13 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
         }
         
         if silabas?[indexPath.item].pronuciacion == "aïe" || silabas?[indexPath.item].pronuciacion == "aï" || silabas?[indexPath.item].pronuciacion == "oï"{
-            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: 350)
+            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: 370)
         }else{
         
          if indexPath.item == 0 {
             var cuenta: Int = 0
             tarjeta?.silabas.forEach{silaba in cuenta += silaba.palabras.count}
-            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 210))
+            return CGSize(width: ((view.safeAreaLayoutGuide.layoutFrame.width)-20), height: CGFloat((cuenta-1) * 30  + 230))
          } else {
             var palabrasCount:CGFloat = CGFloat((tarjeta?.silabas[indexPath.item - 1 ].palabras.count ?? 1) * 30) + CGFloat(tarjeta?.silabas[indexPath.item - 1].explicacion.count ?? 1) * 1
             

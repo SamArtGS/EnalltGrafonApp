@@ -401,6 +401,17 @@ extension ExcepcionesController{
                 palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
                 palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
             ])
+        
+        case "chef-d’œuvre":
+            let palobro = labelNegrita("Palabras en plural:")
+            let palobro2 = labelNegrita(" ")
+            palobro.font = .Roboto(.regular, size: 20)
+            pilaVerticalExcepciones.addArrangedSubview(palobro2)
+            pilaVerticalExcepciones.addArrangedSubview(palobro)
+            NSLayoutConstraint.activate([
+                palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),
+                palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
+            ])
             
         case "extrasensoriel":
             let palobro = labelNegrita("(todas las palabras que empiezan con extra-)")

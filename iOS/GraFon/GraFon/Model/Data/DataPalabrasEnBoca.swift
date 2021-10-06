@@ -76,8 +76,8 @@ extension Data{
                 Silaba(palabras: [
                         Palabra(palabra: "p*aon*", enGriego: "pɑ̃")
                     ],
-                    pronuciacion: "-aou",
-                    explicacion: "Al final de una palabra \n transcriben el sonido",
+                    pronuciacion: "-aon",
+                    explicacion: "Al final de una palabra \n\n transcriben el sonido",
                     imagenFonema: "ɑ̃",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -93,13 +93,13 @@ extension Data{
                         Palabra(palabra: "f*œ*tus", enGriego: "fᴇ.tys")
                     ],
                     pronuciacion: "-œ-",
-                    explicacion: "En medio de una palabra \n transcriben el sonido",
+                    explicacion: "En medio de una palabra \n\n transcriben el sonido",
                     imagenFonema: "ᴇ",
                     imagenConsejo: nil,
                     textodeAbajo: nil
                 ),
                 Silaba(palabras: [
-                        Palabra(palabra: "No*ë*l", enGriego: "no.ᴇl")
+                        Palabra(palabra: "N*oë*l", enGriego: "no.ᴇl")
                     ],
                     pronuciacion: "oë",
                     explicacion: "transcriben el sonido",
@@ -111,7 +111,7 @@ extension Data{
                         Palabra(palabra: "*œu*f", enGriego: "œf")
                     ],
                     pronuciacion: "œu-",
-                    explicacion: "Al inicio de una palabra\n transcriben el sonido",
+                    explicacion: "Al inicio de una palabra \n\n transcriben el sonido",
                     imagenFonema: "&Œ&",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -120,7 +120,7 @@ extension Data{
                         Palabra(palabra: "*œi*l", enGriego: "œj")
                     ],
                     pronuciacion: "œi-",
-                    explicacion: "Al inicio de una palabra\n transcriben el sonido",
+                    explicacion: "Al inicio de una palabra \n\n transcriben el sonido",
                     imagenFonema: "&Œ&",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -129,7 +129,7 @@ extension Data{
                         Palabra(palabra: "pi*ed*", enGriego: "pjᴇ")
                     ],
                     pronuciacion: "-ed",
-                    explicacion: "Al final de una palabra \n transcriben el sonido",
+                    explicacion: "Al final de una palabra \n\n transcriben el sonido",
                     imagenFonema: "ᴇ",
                     imagenConsejo: nil,
                     textodeAbajo: nil
@@ -147,7 +147,7 @@ extension Data{
                         Palabra(palabra: "*aïe*ul", enGriego: "a.jœl")
                     ],
                     pronuciacion: "aïe",
-                    explicacion: "$a$ transcribe el sonido \n#a# \nLa $i$ transcribe el sonido",
+                    explicacion: "$a$ transcribe el sonido \n\n #a# \n\n La $i$ transcribe el sonido",
                     imagenFonema: "j",
                     imagenConsejo: nil,
                     textodeAbajo: "y forma parte de la sílaba que sigue."
@@ -156,7 +156,7 @@ extension Data{
                         Palabra(palabra: "m*aï*s", enGriego: "ma.is")
                     ],
                     pronuciacion: "aï",
-                    explicacion: "$a$ transcribe el sonido \n#a# \nLa $ï$ transcribe el sonido",
+                    explicacion: "$a$ transcribe el sonido \n\n #a# \n\n La $ï$ transcribe el sonido",
                     imagenFonema: "i",
                     imagenConsejo: nil,
                     textodeAbajo: "y forma parte de la sílaba que sigue."
@@ -165,7 +165,7 @@ extension Data{
                         Palabra(palabra: "ég*oï*ste", enGriego: "ᴇ.go.ist")
                     ],
                     pronuciacion: "oï",
-                    explicacion: "$o$ transcribe el sonido \n#o# \nLa $ï$ transcribe el sonido",
+                    explicacion: "$o$ transcribe el sonido \n\n #o# \n\n La $ï$ transcribe el sonido",
                     imagenFonema: "i",
                     imagenConsejo: nil,
                     textodeAbajo: "y forma parte de la sílaba que sigue."
@@ -338,7 +338,7 @@ extension Data{
                         Palabra(palabra: "mammou*th*", enGriego: "ma.mut")
                     ],
                     pronuciacion: "-th",
-                    explicacion: "Al final de una palabra \n transcriben el sonido",
+                    explicacion: "Al final de una palabra \n\n transcriben el sonido",
                     imagenFonema: "t",
                     imagenConsejo: nil,
                     textodeAbajo: nil

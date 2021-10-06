@@ -193,7 +193,7 @@ struct Data{
         //Renglón 4
 
         Fonema(identificador: 13,
-               fonema: "ā",
+               fonema: "ɑ̃",
                imagenPajaro: "4a",
                imagenFonemaAntes: "20_smb-a_n1mdpi",
                imagenFonemaDespues: "20_smb-b_n1mdpi",
