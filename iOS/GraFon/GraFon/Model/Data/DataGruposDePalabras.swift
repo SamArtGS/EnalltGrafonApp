@@ -877,3 +877,60 @@ extension Data{
         
     ]
 }
+
+
+
+extension Data{
+    
+    static let loteria1:Loteria = Loteria(parejasLoteria: [
+        ParejaLoteria(sonido: "lot1_01", palabra: "aucun intérêt"),
+        ParejaLoteria(sonido: "lot1_02", palabra: "aucun doute"),
+        ParejaLoteria(sonido: "lot1_03", palabra: "des sportifs"),
+        ParejaLoteria(sonido: "lot1_04", palabra: "des féministes"),
+        ParejaLoteria(sonido: "lot1_05", palabra: "des ennemis"),
+        ParejaLoteria(sonido: "lot1_06", palabra: "des artistes"),
+        ParejaLoteria(sonido: "lot1_07", palabra: "en face"),
+        ParejaLoteria(sonido: "lot1_08", palabra: "en hiver"),
+        ParejaLoteria(sonido: "lot1_09", palabra: "en Italie"),
+        ParejaLoteria(sonido: "lot1_10", palabra: "grands yeux"),
+        ParejaLoteria(sonido: "lot1_11", palabra: "grands magasins"),
+        ParejaLoteria(sonido: "lot1_12", palabra: "les autres"),
+        ParejaLoteria(sonido: "lot1_13", palabra: "les femmes"),
+        ParejaLoteria(sonido: "lot1_14", palabra: "moins bien"),
+        ParejaLoteria(sonido: "lot1_15", palabra: "moins important"),
+        ParejaLoteria(sonido: "lot1_16", palabra: "mon amour"),
+        ParejaLoteria(sonido: "lot1_17", palabra: "ton frère"),
+        ParejaLoteria(sonido: "lot1_18", palabra: "son amie"),
+        ParejaLoteria(sonido: "lot1_19", palabra: "un film"),
+        ParejaLoteria(sonido: "lot1_20", palabra: "un homme"),
+        ParejaLoteria(sonido: "lot1_21", palabra: "bon exemple"),
+        ParejaLoteria(sonido: "lot1_22", palabra: "bien informé"),
+        ParejaLoteria(sonido: "lot1_23", palabra: "plus âgé"),
+        ParejaLoteria(sonido: "lot1_25", palabra: "quelles idées"),
+        ParejaLoteria(sonido: "lot1_26", palabra: "ils pleurent"),
+        ParejaLoteria(sonido: "lot1_27", palabra: "elles adorent"),
+        ParejaLoteria(sonido: "lot1_28", palabra: "je les connais"),
+        ParejaLoteria(sonido: "lot1_29", palabra: "je les aime"),
+        ParejaLoteria(sonido: "lot1_30", palabra: "nous sommes 43"),
+        ParejaLoteria(sonido: "lot1_31", palabra: "vous avez raison"),
+        ParejaLoteria(sonido: "lot1_32", palabra: "elles entrent"),
+        ParejaLoteria(sonido: "lot1_33", palabra: "tu entres"),
+        ParejaLoteria(sonido: "lot1_34", palabra: "elles y pensent"),
+        ParejaLoteria(sonido: "lot1_35", palabra: "ils en achètent"),
+        ParejaLoteria(sonido: "lot1_36", palabra: "elles se lèvent"),
+        ParejaLoteria(sonido: "lot1_37", palabra: "ils me parlent"),
+        ParejaLoteria(sonido: "lot1_38", palabra: "allez-y"),
+        ParejaLoteria(sonido: "lot1_39", palabra: "prends-en"),
+        ParejaLoteria(sonido: "lot1_40", palabra: "elles hésitent"),
+        ParejaLoteria(sonido: "lot1_41", palabra: "ils cuisinent"),
+        ParejaLoteria(sonido: "lot1_42", palabra: "on insiste"),
+        ParejaLoteria(sonido: "lot1_43", palabra: "on arrive"),
+        ParejaLoteria(sonido: "lot1_44", palabra: "on chante"),
+        ParejaLoteria(sonido: "lot1_45", palabra: "on craque"),
+        ParejaLoteria(sonido: "lot1_46", palabra: "on en a envie"),
+        ParejaLoteria(sonido: "lot1_47", palabra: "on y croit"),
+        ParejaLoteria(sonido: "lot1_48", palabra: "en attendant"),
+        ParejaLoteria(sonido: "lot1_49", palabra: "j'en veux"),
+        ParejaLoteria(sonido: "lot1_50", palabra: "on a le trac")
+    ])
+}

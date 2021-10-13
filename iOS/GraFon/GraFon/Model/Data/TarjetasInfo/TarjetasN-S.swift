@@ -120,7 +120,7 @@ extension tarjetas{
               ],
               pronuciacion: "an",
               explicacion: """
-                              Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben el sonido
+                              Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido
                           """,
               imagenFonema: "ɑ̃",
               imagenConsejo: nil,
@@ -133,7 +133,7 @@ extension tarjetas{
               ],
               pronuciacion: "on",
               explicacion: """
-                              Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben el sonido
+                              Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido
                           """,
               imagenFonema: "õ",
               imagenConsejo: nil,
@@ -149,7 +149,7 @@ extension tarjetas{
               ],
               pronuciacion: "ain, ein, in, un ¿o¿ yn",
               explicacion: """
-                              Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben el sonido
+                              Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido
                           """,
               imagenFonema: "ɛ̃",
               imagenConsejo: "e_retro_varias-letras_n2",
@@ -162,7 +162,7 @@ extension tarjetas{
               ],
               pronuciacion: "oin",
               explicacion: """
-                              Al final de una palabra o seguidas de una consonante (exepto $n$) \n\n transcriben los sonidos
+                              Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben los sonidos
                           """,
               imagenFonema: "wɛ̃",
               imagenConsejo: nil,
@@ -171,7 +171,9 @@ extension tarjetas{
           ],
           excepciones: [
             Palabra(palabra: "fan", enGriego: "fan"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "monsieur", enGriego: "m&Œ&.sj&Œ&"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "in", enGriego: "in"),
             Palabra(palabra: "gin", enGriego: "dʒin"),
             Palabra(palabra: "fun", enGriego: "f&Œ&n"),
@@ -188,7 +190,7 @@ extension tarjetas{
               ],
               pronuciacion: "en",
               explicacion: """
-                              Seguidas de una consonante (excepto en el grupo -ent al final de una palabra) \n\n transcriben el sonido
+                              Seguidas de una consonante (excepto en el grupo $-ent$ al final de una palabra) \n\n transcriben el sonido
                           """,
               imagenFonema: "ɑ̃",
               imagenConsejo: nil,
@@ -219,6 +221,7 @@ extension tarjetas{
             Palabra(palabra: "referendum", enGriego: "ʀᴇ.fᴇ.ʀɛ̃.dom"),
             Palabra(palabra: "suspense", enGriego: "sys.pᴇns"),
             Palabra(palabra: "weekend", enGriego: "wi.kᴇnd"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "abdomen", enGriego: "ab.do.mᴇn"),
             Palabra(palabra: "amen", enGriego: "a.mᴇn"),
             Palabra(palabra: "éden", enGriego: "ᴇ.dᴇn"),
@@ -318,7 +321,7 @@ extension tarjetas{
               ],
               pronuciacion: "p",
               explicacion: """
-                              Seguida de consonante excepto $h$, $-ps$ al final de una palabra o $-pt$ al final de un verbo conjugado \n\n transcribe el sonido
+                              Seguida de consonante (excepto $h$, $-ps$ al final de una palabra o $-pt$ al final de un verbo conjugado) \n\n transcribe el sonido
                           """,
               imagenFonema: "p",
               imagenConsejo: nil,
@@ -340,9 +343,12 @@ extension tarjetas{
           excepciones: [
             Palabra(palabra: "compte", enGriego: "kõt"),
             Palabra(palabra: "comptable", enGriego: "kõ.tabl"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "sept", enGriego: "sᴇt"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "baptiser ", enGriego: "ba.ti.zᴇ"),
             Palabra(palabra: "baptême", enGriego: "ba.tᴇm"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "sculpter", enGriego: "skyl.tᴇ"),
             Palabra(palabra: "sculpteur", enGriego: "skyl.t&Œ&ʀ"),
           ]
@@ -356,7 +362,7 @@ extension tarjetas{
               ],
               pronuciacion: "-p",
               explicacion: """
-                              Al final de una palabra excepto en los grupos $-oup$ o $-amp$ \n\n transcribe el sonido
+                              Al final de una palabra (excepto en los grupos $-oup$ o $-amp$) \n\n transcribe el sonido
                           """,
               imagenFonema: "p",
               imagenConsejo: nil,
@@ -406,7 +412,7 @@ extension tarjetas{
               ],
               pronuciacion: "-ps",
               explicacion: """
-                              Al final de una palabra \n\n no transcribe ningún sonido.
+                              Al final de una palabra \n\n no transcriben ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: "e_retro_3Eb_n2",
@@ -428,7 +434,7 @@ extension tarjetas{
               ],
               pronuciacion: "-pt",
               explicacion: """
-                              Al final de un verbo conjugado \n\n no transcribe ningún sonido.
+                              Al final de un verbo conjugado \n\n no transcriben ningún sonido.
                           """,
               imagenFonema: sinSonido,
               imagenConsejo: nil,
@@ -475,11 +481,13 @@ extension tarjetas{
             )
           ],
           excepciones: [
-              Palabra(palabra: "piqure", enGriego: "pi.kyʀ"),
-              Palabra(palabra: "craqure", enGriego: "kʀa.kyʀ"),
-              Palabra(palabra: "aquarelle", enGriego: "a.kwa.ʀᴇl"),
-              Palabra(palabra: "aquatique ", enGriego: "a.kwa.tik"),
+            Palabra(palabra: "piqure", enGriego: "pi.kyʀ"),
+            Palabra(palabra: "craqure", enGriego: "kʀa.kyʀ"),
+            Palabra(palabra: "", enGriego: ""),
+            Palabra(palabra: "aquarelle", enGriego: "a.kwa.ʀᴇl"),
+            Palabra(palabra: "aquatique ", enGriego: "a.kwa.tik"),
             Palabra(palabra: "aquarium", enGriego: "a.kwa.ʀjom"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "aquifère", enGriego: "a.kɥi.fᴇʀ"),
             Palabra(palabra: "équilatéral", enGriego: "ᴇ.kɥi.la.tᴇ.ʀal"),
             Palabra(palabra: "requiem ", enGriego: "ʀᴇ.kɥi.ᴇm"),
@@ -538,7 +546,8 @@ extension tarjetas{
           ],
           excepciones: [
             Palabra(palabra: "monsieur", enGriego: "m&Œ&.sj&Œ&"),
-            Palabra(palabra: "messieurs", enGriego: "mᴇ.sjɶ"),
+            Palabra(palabra: "messieurs", enGriego: "mᴇ.sj&Œ&"),
+            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "alzheimer", enGriego: "al.zaj.mᴇʀ"),
             Palabra(palabra: "amer", enGriego: "a.mᴇʀ"),
             Palabra(palabra: "cancer", enGriego: "kɑ̃.sᴇʀ"),
@@ -550,7 +559,6 @@ extension tarjetas{
             Palabra(palabra: "hier", enGriego: "jᴇʀ"),
             Palabra(palabra: "hiver", enGriego: "i.vᴇʀ"),
             Palabra(palabra: "hyper", enGriego: "i.pᴇʀ"),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "kasher", enGriego: "ka.ʃᴇʀ"),
             Palabra(palabra: "mer", enGriego: "mᴇʀ"),
             Palabra(palabra: "polyester", enGriego: "po.ljᴇs.tᴇʀ"),
@@ -560,27 +568,24 @@ extension tarjetas{
             Palabra(palabra: "bestseller", enGriego: "bᴇst.sᴇ.lᴇʀ"),
             Palabra(palabra: "bulldozer", enGriego: "byl.do.zᴇʀ"),
             Palabra(palabra: "charter", enGriego: "ʃaʀ.tᴇʀ"),
-            Palabra(palabra: "cluster", enGriego: "klɶs.tɶʀ"),
+            Palabra(palabra: "cluster", enGriego: "kl&Œ&s.t&Œ&ʀ"),
             Palabra(palabra: "corner", enGriego: "koʀ.nᴇʀ"),
-            Palabra(palabra: " ", enGriego: " "),
-            Palabra(palabra: "crooner", enGriego: "kʀu.nɶʀ"),
-            Palabra(palabra: "cutter", enGriego: "kɶ.tɶʀ"),
-            Palabra(palabra: "designer", enGriego: "di.zaj.nɶʀ"),
-            Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "crooner", enGriego: "kʀu.n&Œ&ʀ"),
+            Palabra(palabra: "cutter", enGriego: "k&Œ&.t&Œ&ʀ"),
+            Palabra(palabra: "designer", enGriego: "di.zaj.n&Œ&ʀ"),
             Palabra(palabra: "docker", enGriego: "do.kᴇʀ"),
             Palabra(palabra: "gangster", enGriego: "gɑ̃g.stᴇʀ"),
             Palabra(palabra: "geyser", enGriego: "ʒᴇ.zᴇʀ"),
-            Palabra(palabra: "globe-trotter", enGriego: "glob.tʀo.tɶʀ"),
-            Palabra(palabra: "hamburger", enGriego: "ɑ̃.bɶʀ.gɶʀ"),
+            Palabra(palabra: "globe-trotter", enGriego: "glob.tʀo.t&Œ&ʀ"),
+            Palabra(palabra: "hamburger", enGriego: "ɑ̃.b&Œ&ʀ.g&Œ&ʀ"),
             Palabra(palabra: "joker", enGriego: "dʒo.kᴇʀ"),
             Palabra(palabra: "master", enGriego: "mas.tᴇʀ"),
             Palabra(palabra: "poker", enGriego: "po.kᴇʀ"),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "revolver", enGriego: "ʀᴇ.vol.vᴇʀ"),
-            Palabra(palabra: "rocker", enGriego: "ʀo.kɶʀ"),
-            Palabra(palabra: "roller", enGriego: "ʀo.lɶʀ"),
-            Palabra(palabra: "scooter", enGriego: "sku.tɶʀ"),
-            Palabra(palabra: "sweater", enGriego: "swᴇ.tɶʀ"),
+            Palabra(palabra: "rocker", enGriego: "ʀo.k&Œ&ʀ"),
+            Palabra(palabra: "roller", enGriego: "ʀo.l&Œ&ʀ"),
+            Palabra(palabra: "scooter", enGriego: "sku.t&Œ&ʀ"),
+            Palabra(palabra: "sweater", enGriego: "swᴇ.t&Œ&ʀ"),
             Palabra(palabra: "toner", enGriego: "to.nᴇʀ"),
             Palabra(palabra: "water", enGriego: "wa.tᴇʀ")
           
@@ -676,36 +681,32 @@ extension tarjetas{
             Palabra(palabra: "abasourdir", enGriego: "a.ba.suʀ.diʀ"),
             Palabra(palabra: "aseptiser", enGriego: "a.sᴇp.ti.zᴇ "),
             Palabra(palabra: "asexué", enGriego: "a.sᴇ.ksɥᴇ"),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "asocial", enGriego: "a.so.sjal"),
             Palabra(palabra: "biosynthèse", enGriego: "bjo.sɛ̃.tᴇz"),
             Palabra(palabra: "cosignataire", enGriego: "ko.si.nja.tᴇʀ "),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "carrousel", enGriego: "ka.ʀu.sᴇl"),
-            Palabra(palabra: "entresol", enGriego: "aɑ̃.tʀ&Œ&.sol"),
-            Palabra(palabra: "parasol", enGriego: "pa.ʀa.sol"),
+            Palabra(palabra: "entresol", enGriego: "ɑ̃.tʀ&Œ&.sol"),
             Palabra(palabra: " ", enGriego: " "),
+            Palabra(palabra: "parasol", enGriego: "pa.ʀa.sol"),
             Palabra(palabra: "parasoleil", enGriego: "pa.ʀa.so.lᴇj"),
             Palabra(palabra: "photosensible", enGriego: "fo.to.sɑ̃.sibl"),
             Palabra(palabra: "préséance", enGriego: "pʀᴇ.sᴇ.ɑ̃s"),
             Palabra(palabra: "présupposer", enGriego: "pʀᴇ.sy.po.zᴇ"),
-            Palabra(palabra: "presupposition", enGriego: "pʀᴇ.sy.po.zᴇ"),
+            Palabra(palabra: "presupposition", enGriego: "pʀᴇ.sy.po.zi.sjõ"),
             Palabra(palabra: "vraisemblable", enGriego: "vʀᴇ.sɑ̃.blabl"),
             Palabra(palabra: "vraisemblance", enGriego: "vʀᴇ.sɑ̃.blɑ̃s"),
             Palabra(palabra: " ", enGriego: " "),
-            
             Palabra(palabra: "bisexué", enGriego: "bi.sᴇ.ksɥᴇ"),
             Palabra(palabra: "hétérosexuel", enGriego: "ᴇ.tᴇ.ʀo.sᴇ.ksɥᴇl"),
             Palabra(palabra: "homosexuel", enGriego: "o.mo.sᴇ.ksɥᴇl"),
             
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "aérosol", enGriego: "a.ᴇ.ʀo.sol"),
-            
-            
+            //Subtitulo
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "antisocial", enGriego: "ɑ̃.ti.so.sjal"),
             Palabra(palabra: "antisémite", enGriego: "ɑ̃.ti.sᴇ.mit"),
-            
+            //Subtitulo
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "asymétrie", enGriego: "a.si.mᴇ.tʀi"),
             Palabra(palabra: "asynchrone", enGriego: "a.sɛ̃.kʀon"),
@@ -714,8 +715,7 @@ extension tarjetas{
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "contresens", enGriego: "kõ.tʀ&Œ&.sɑ̃s"),
             Palabra(palabra: "contresigné", enGriego: "kõ.tʀ&Œ&.si.njᴇ"),
-            Palabra(palabra: "asyntaxique", enGriego: "a.sɛ̃.ta.ksik"),
-            
+            //Subtítulo
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "extrascolaire", enGriego: "ᴇks.tʀa.sko.lᴇʀ"),
             Palabra(palabra: "extrasensible", enGriego: "ᴇks.tʀa.sɑ̃.sibl"),
@@ -838,8 +838,6 @@ extension tarjetas{
             Palabra(palabra: "campus", enGriego: "kɑ̃.pys"),
             Palabra(palabra: "corpus", enGriego: "koʀ.pys"),
             Palabra(palabra: "cursus", enGriego: "kyʀ.sys"),
-            Palabra(palabra: " ", enGriego: " "),
-            
             Palabra(palabra: "eucalyptus", enGriego: "&Œ&.ka.lip.tys"),
             Palabra(palabra: "fœtus", enGriego: "fᴇ.tys"),
             Palabra(palabra: "infarctus", enGriego: "ɛ̃.faʀk.tys"),
@@ -854,7 +852,6 @@ extension tarjetas{
             Palabra(palabra: "tonus", enGriego: "to.nys"),
             Palabra(palabra: "uterus", enGriego: "y.tᴇ.ʀys"),
             Palabra(palabra: "virus", enGriego: "vi.ʀys"),
-            Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "bis", enGriego: "bis"),
             Palabra(palabra: "cannabis", enGriego: "ka.na.bis"),
             Palabra(palabra: "cassis", enGriego: "ka.sis"),
@@ -874,7 +871,7 @@ extension tarjetas{
             Palabra(palabra: "vis", enGriego: "vis"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "contresens", enGriego: "kõ.tʀ&Œ&.sɑ̃s"),
-            Palabra(palabra: "sens", enGriego: "tuʀ.n&Œ&.vis"),
+            Palabra(palabra: "sens", enGriego: "sɑ̃s"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "couscous", enGriego: "kus.kus"),
             Palabra(palabra: " ", enGriego: " "),
@@ -882,7 +879,6 @@ extension tarjetas{
             Palabra(palabra: "herpes", enGriego: "ᴇʀ.pᴇs"),
             Palabra(palabra: "palmarès", enGriego: "pal.ma.ʀᴇs"),
             Palabra(palabra: " ", enGriego: " "),
-            
             Palabra(palabra: "mœurs", enGriego: "m&Œ&ʀs"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "ours", enGriego: "uʀs"),

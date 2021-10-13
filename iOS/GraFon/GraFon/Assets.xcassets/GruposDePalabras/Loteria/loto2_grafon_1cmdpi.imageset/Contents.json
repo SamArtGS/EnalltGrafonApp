@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "loto2_grafon_1cmdpi.png",
+      "filename" : "loto2_personaje.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "loto2_personaje@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "loto2_personaje@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

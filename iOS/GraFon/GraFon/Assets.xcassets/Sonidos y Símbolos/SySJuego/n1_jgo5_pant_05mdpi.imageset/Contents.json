@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "n1_jgo5_pant_05mdpi.png",
+      "filename" : "n1_jgo5_pant_05.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "n1_jgo5_pant_05@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "n1_jgo5_pant_05@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -26,9 +26,7 @@ extension tarjetas{
               textodeAbajo: nil
             )
           ],
-          excepciones: [
-          
-          ]
+          excepciones: nil
         ),
         
         Tarjeta(audio: "pb_T_02",
@@ -233,7 +231,7 @@ extension tarjetas{
               ],
               pronuciacion: "w",
               explicacion: """
-                              Excepto al final de una palabra \n\n transcriben el sonido
+                              Excepto al final de una palabra \n\n transcribe el sonido
                           """,
               imagenFonema: "w",
               imagenConsejo: nil,
@@ -266,10 +264,14 @@ extension tarjetas{
           ],
           excepciones: [
             Palabra(palabra: "wagon", enGriego: "va.gõ"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "crawl", enGriego: "kʀol"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "bowling", enGriego: "bu.liŋ"),
             Palabra(palabra: "clown", enGriego: "klun"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "interviewer", enGriego: "ɛ̃.tᴇʀ.vju.vᴇ"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "rickshaw", enGriego: "ʀi.kʃo")
           ]
         ),
@@ -312,9 +314,9 @@ extension tarjetas{
             Palabra(palabra: "coccyx", enGriego: "ko.ksis"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "max", enGriego: "maks"),
-            Palabra(palabra: "inox", enGriego: "inoks"),
+            Palabra(palabra: "inox", enGriego: "i.noks"),
             Palabra(palabra: "silex", enGriego: "si.lᴇks"),
-            Palabra(palabra: "onyx", enGriego: "oniks"),
+            Palabra(palabra: "onyx", enGriego: "o.niks"),
             Palabra(palabra: "latex", enGriego: "la.tᴇks"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "pharynx", enGriego: "fa.ʀɛ̃ks"),
@@ -374,7 +376,7 @@ extension tarjetas{
             Palabra(palabra: "sixième", enGriego: "si.zjᴇm"),
             Palabra(palabra: "dixième", enGriego: "di.zjᴇm"),
             Palabra(palabra: "dix-huit", enGriego: "di.zyit"),
-            Palabra(palabra: "dix-neuf", enGriego: "di.znɶf"),
+            Palabra(palabra: "dix-neuf", enGriego: "di.zn&Œ&f"),
             Palabra(palabra: "hexagone", enGriego: "ᴇ.gza.gon")
           ]
         )

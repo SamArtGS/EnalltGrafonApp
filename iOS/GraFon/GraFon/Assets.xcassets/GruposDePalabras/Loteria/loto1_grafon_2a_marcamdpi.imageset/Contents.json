@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "loto1_grafon_2a_marcamdpi.png",
+      "filename" : "loto1_grafon_2a_pantalla_completa.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "loto1_grafon_2a_pantalla_completa@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "loto1_grafon_2a_pantalla_completa@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

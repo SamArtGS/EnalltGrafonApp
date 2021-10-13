@@ -62,7 +62,7 @@ class UILabelPersonalizado: UILabel{
             Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
             Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema)),
             Formato(simbolo: "~", color: .colorLetraVerde, fuente: .Roboto(.bold, size: font.pointSize)),
-            Formato(simbolo: "&", color: .colorLetraRosa, fuente: .Roboto(.bold, size: (font.pointSize - 6))),
+            Formato(simbolo: "&", color: .colorLetraRosa, fuente: .Roboto(.bold, size: (font.pointSize - 5))),
             Formato(simbolo: "%", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema - 6)),
             Formato(simbolo: "º", color: self.textColor, fuente: .Roboto(.italic, size: font.pointSize-3)),
             Formato(simbolo: "ª", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize-3)),

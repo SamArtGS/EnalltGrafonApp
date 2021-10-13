@@ -54,7 +54,7 @@ class ExcepcionesController: UIViewController {
         var bool: Bool = false
         
         for palabra in destapado{
-            if palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur"{
+            if (palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur") && (titulo == "e" || titulo=="r"){
                 bool = true
             }
             let silabaGenerada = previstaPar(palabra,colorLetras)
@@ -466,8 +466,8 @@ extension ExcepcionesController{
                 palobro.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor)
             ])
         case "tétrasyllabe":
-            let palobro = labelNegrita("(todos los prefijos cardinales seguidos de la palabra syll-)")
-            palobro.font = .Roboto(.regular, size: 12)
+            let palobro = labelNegrita("(todos los prefijos cardinales seguidos de la palabra syllabe)")
+            palobro.font = .Roboto(.regular, size: 11)
             pilaVerticalExcepciones.addArrangedSubview(palobro)
             NSLayoutConstraint.activate([
                 palobro.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 10),

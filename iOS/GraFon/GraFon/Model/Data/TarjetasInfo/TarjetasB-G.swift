@@ -567,6 +567,7 @@ extension tarjetas{
             Palabra(palabra: "geisha", enGriego: "gᴇi.ʃa"),
             Palabra(palabra: "gestalt", enGriego: "gᴇʃ.talt"),
             Palabra(palabra: "yogi", enGriego: "jo.gi"),
+            Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "gin", enGriego: "dʒin"),
             Palabra(palabra: "ginseng", enGriego: "dʒin.sᴇŋ")
           ]
@@ -647,7 +648,7 @@ extension tarjetas{
           ],
           excepciones: [
             Palabra(palabra: "long", enGriego: "lõ"),
-            Palabra(palabra: "sang", enGriego: "lõ"),
+            Palabra(palabra: "sang", enGriego: "sɑ̃"),
             Palabra(palabra: "étang", enGriego: "ᴇ.tɑ̃"),
             
             Palabra(palabra: "hareng", enGriego: "a.ʀɑ̃"),

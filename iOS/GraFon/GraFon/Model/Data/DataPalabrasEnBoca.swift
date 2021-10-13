@@ -311,7 +311,7 @@ extension Data{
                         Palabra(palabra: "co*q*", enGriego: "kok"),
                     ],
                     pronuciacion: "-q",
-                    explicacion: "transcriben el sonido",
+                    explicacion: "Al final de una palabra \n\n transcribe el sonido",
                     imagenFonema: "k",
                     imagenConsejo: nil,
                     textodeAbajo: nil

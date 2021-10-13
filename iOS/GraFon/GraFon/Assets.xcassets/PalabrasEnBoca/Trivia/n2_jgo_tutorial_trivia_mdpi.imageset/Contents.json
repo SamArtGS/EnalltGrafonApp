@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "n2_jgo_tutorial_trivia_mdpi.png",
+      "filename" : "n2_tutorial_trivia.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "n2_tutorial_trivia@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "n2_tutorial_trivia@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

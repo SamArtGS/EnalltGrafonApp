@@ -201,7 +201,6 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
     private let botonSonido: UIButton = {
         let boton = UIButton(type: .custom)
         boton.translatesAutoresizingMaskIntoConstraints = false
-        
         boton.contentMode = .scaleAspectFit
         boton.isUserInteractionEnabled = true
         return boton

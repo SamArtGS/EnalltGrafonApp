@@ -75,7 +75,7 @@ extension TabBarTeoriaJuegos{
                                              controller: MenuMoldeVC(collectionViewLayout: scrollLayout,
                                                                      puertaSeleccionada: puerta)
                                              )
-                let practica = crearNavegacion(titulo: "Juegos",
+                let practica = crearNavegacion(titulo: "Lotofón",
                                                imagenIcono: "icon-play",
                                                controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                                              )
@@ -100,7 +100,7 @@ extension TabBarTeoriaJuegos{
                                              imagenIcono: "icon-study",
                                              controller: MenuMoldeVC(collectionViewLayout: scrollLayout,puertaSeleccionada: puerta)
                                              )
-                let practica = crearNavegacion(titulo: "Juegos",
+                let practica = crearNavegacion(titulo: "Grafefón",
                                                imagenIcono: "icon-play",
                                                controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                                              )
@@ -122,7 +122,7 @@ extension TabBarTeoriaJuegos{
                                              imagenIcono: "icon-study",
                                              controller: MenuMoldeVC(collectionViewLayout: scrollLayout,                              puertaSeleccionada: puerta)
                 )
-                let practica = crearNavegacion(titulo: "Juegos",
+                let practica = crearNavegacion(titulo: "Simbolofón",
                                                imagenIcono: "icon-play",
                                                controller: SeleccionarNivelController(collectionViewLayout: scrollJuegos, puertaSeleccionada: puerta)
                 )

@@ -22,6 +22,11 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
                                            "n2_jgo_btn_intr_mdpi",
                                            "n2_jgo_btn_triv_mdpi"]
     
+    let nombreImagenesNiveles3:[String] = [
+                                            "btn_jgo_loto01mdpi",
+                                            "btn_jgo_loto02mdpi"
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +89,7 @@ extension SeleccionarNivelController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch puertaInt {
         case 0:
-            return nombreImagenesNiveles1.count
+            return nombreImagenesNiveles3.count
         case 1:
             return nombreImagenesNiveles1.count
         case 2:
@@ -100,7 +105,7 @@ extension SeleccionarNivelController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CeldaMolde
         switch puertaInt {
             case 0:
-                cell.nivel = nombreImagenesNiveles1[indexPath.item]
+                cell.nivel = nombreImagenesNiveles3[indexPath.item]
                 break
             case 1:
                 cell.nivel = nombreImagenesNiveles2[indexPath.item]
@@ -124,7 +129,8 @@ extension SeleccionarNivelController{
         
         switch puertaInt{
         case 0:
-            let vcs = SySJuego1VC(collectionViewLayout:scrollLayout, nivelSelecionado: indexPath.item + 1)
+            let vcs = LoteriaViewController()
+            vcs.loteria = Data.loteria1
             self.navigationController?.pushViewController(vcs, animated: true)
         case 1:
             print("Hola")
@@ -167,8 +173,13 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/1.0,
+        if puertaInt == 0{
+            return CGSize(width: (view.frame.width)/1.1,
+                                 height: (view.safeAreaLayoutGuide.layoutFrame.height)/4.0)
+        }else{
+            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/1.0,
                              height: (view.safeAreaLayoutGuide.layoutFrame.height)/6.0)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -177,7 +188,7 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
         var top:CGFloat = 20
         switch puertaInt {
         case 0:
-            top = 50
+            top = 100
             break
         case 1:
             top = 50
@@ -197,7 +208,11 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
         return 0.0
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        if puertaInt == 0{
+            return 15.0
+        }else{
+            return 0.0
+        }
     }
 
 }
