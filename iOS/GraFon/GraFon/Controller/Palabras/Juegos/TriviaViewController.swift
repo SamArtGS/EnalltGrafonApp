@@ -12,11 +12,13 @@ import AVFoundation
 
 class TriviaViewController: UICollectionViewController {
     
-    private var segundosRestantes = 60
+    
+    private let segundosRestantesDefault = 120
+    private var segundosRestantes = 120
     private var score: Int = 0
     private let fondoSonido: String = "music_Instruso"
     private var reproductorAudio: AVAudioPlayer?
-    private let dataShuffle = Data.trivias
+    private var dataShuffle = Data.trivias.shuffled()
     private var reproductorLetra: AVAudioPlayer?
     private var booleano: Bool = false
     
@@ -90,10 +92,10 @@ class TriviaViewController: UICollectionViewController {
         let alert = UIAlertController(title: "¿Seguir jugando?", message: "Lograste \(score) puntos en 2 minutos", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
-            self?.segundosRestantes = 60
+            self?.segundosRestantes = self?.segundosRestantesDefault ?? 120
             self?.score = 0
             self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
-            
+            self?.dataShuffle = Data.trivias.shuffled()
             self?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
@@ -253,6 +255,7 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
         collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
         
         if indexPath.item + 1 >= dataShuffle.count{
+            dataShuffle = Data.trivias.shuffled()
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
         }
     }

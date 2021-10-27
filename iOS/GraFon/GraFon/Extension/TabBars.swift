@@ -33,9 +33,11 @@ extension UITabBarController: UINavigationControllerDelegate {
 extension UITabBarController: UINavigationBarDelegate{
     
     func colorearTabBar(colorFondo: UIColor, colorSeleccionado: UIColor, colorNoSeleccionado: UIColor){
-        if #available(iOS 13.0, *) {
+        
+        if #available(iOS 15.0, *) {
             let appearance = UITabBarAppearance()
             appearance.backgroundColor = colorFondo
+            appearance.configureWithOpaqueBackground()
             let item = UITabBarItemAppearance()
             item.normal.iconColor = colorNoSeleccionado
             item.selected.iconColor = colorSeleccionado
@@ -49,6 +51,25 @@ extension UITabBarController: UINavigationBarDelegate{
             appearance.inlineLayoutAppearance = item
             appearance.compactInlineLayoutAppearance = item
             tabBar.standardAppearance = appearance
+            //tabBar.scrollEdgeAppearance = appearance
+        }else if #available(iOS 13.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundColor = colorFondo
+            
+            let item = UITabBarItemAppearance()
+            item.normal.iconColor = colorNoSeleccionado
+            item.selected.iconColor = colorSeleccionado
+            item.normal.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: colorNoSeleccionado,
+                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 10)
+            ]
+            item.selected.titleTextAttributes = [NSAttributedString.Key
+                                                .foregroundColor: colorSeleccionado]
+            appearance.stackedLayoutAppearance = item
+            appearance.inlineLayoutAppearance = item
+            appearance.compactInlineLayoutAppearance = item
+            tabBar.standardAppearance = appearance
+            
         }else{
             tabBar.barTintColor = colorFondo
             tabBar.unselectedItemTintColor = colorNoSeleccionado
@@ -58,16 +79,29 @@ extension UITabBarController: UINavigationBarDelegate{
     }
     
     func colorearNavigationBar(colorFondo: UIColor, colorLineaAdorno: UIColor, colorLetras: UIColor){
-        let apariencia = UINavigationBar.appearance()
-        apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
-        apariencia.shadowImage = colorLineaAdorno.as1ptImage()
-        apariencia.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: colorLetras,
-            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
-        ]
-        apariencia.tintColor = colorLetras
-        navigationController?.delegate = self
-        navigationController?.navigationBar.delegate = self
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = colorFondo
+            navigationController?.delegate = self
+            navigationController?.navigationBar.delegate = self
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance;
+            navigationController?.navigationBar.compactAppearance = appearance;
+            
+        } else {
+            let apariencia = UINavigationBar.appearance()
+            apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
+            apariencia.shadowImage = colorLineaAdorno.as1ptImage()
+            apariencia.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: colorLetras,
+                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+            ]
+            apariencia.tintColor = colorLetras
+            navigationController?.delegate = self
+            navigationController?.navigationBar.delegate = self
+        }
+        
+        
     }
 }
 

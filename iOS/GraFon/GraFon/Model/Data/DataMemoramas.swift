@@ -56,7 +56,7 @@ extension Data{
         ParejaCartas(primeraPalabra: "poids", segundaPalabra: "pois"),
         ParejaCartas(primeraPalabra: "poule", segundaPalabra: "poules"),
         
-        ParejaCartas(primeraPalabra: "reine", segundaPalabra: "pans"),
+        ParejaCartas(primeraPalabra: "reine", segundaPalabra: "renne"),
         ParejaCartas(primeraPalabra: "peau", segundaPalabra: "pots"),
         ParejaCartas(primeraPalabra: "raide", segundaPalabra: "raides"),
         ParejaCartas(primeraPalabra: "roue", segundaPalabra: "roux"),
@@ -241,17 +241,15 @@ extension Data{
         ParejaCartas(primeraPalabra: "chères", segundaPalabra: "chair"),
         ParejaCartas(primeraPalabra: "champs", segundaPalabra: "chant"),
         
-        
-        
         ParejaCartas(primeraPalabra: "air", segundaPalabra: "ères"),
-        ParejaCartas(primeraPalabra: "are", segundaPalabra: "are"),
+        ParejaCartas(primeraPalabra: "are", segundaPalabra: "ares"),
         ParejaCartas(primeraPalabra: "allés", segundaPalabra: "aller"),
         ParejaCartas(primeraPalabra: "elle", segundaPalabra: "ailes"),
         
         ParejaCartas(primeraPalabra: "maire", segundaPalabra: "mer"),
         ParejaCartas(primeraPalabra: "mot", segundaPalabra: "mots"),
         ParejaCartas(primeraPalabra: "moi", segundaPalabra: "mois"),
-        ParejaCartas(primeraPalabra: "mal", segundaPalabra: "malles"),
+        ParejaCartas(primeraPalabra: "mal", segundaPalabra: "malle"),
         
         ParejaCartas(primeraPalabra: "cerf", segundaPalabra: "serre"),
         ParejaCartas(primeraPalabra: "celle", segundaPalabra: "sel"),

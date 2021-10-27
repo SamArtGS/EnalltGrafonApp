@@ -89,9 +89,16 @@ class MemoramaViewController: UICollectionViewController {
         generarTarjetas()
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         self.collectionView!.register(CeldaMemorama.self, forCellWithReuseIdentifier: reuseIdentifier)
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+        
+        
+        
+        //TODO: Verificar que contador anterior se muera como debe. 
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] timer in
             self?.updateCounter()
         }
+        
+        
+        
         collectionView.isScrollEnabled = false
         
         let BarButtonItemDerecho = menuButton(self,
@@ -289,15 +296,16 @@ class MemoramaViewController: UICollectionViewController {
         print("PAREJA.", cell.palabra ?? "", cell.pareja ?? "")
         cell.flip()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(indexPath.item*200)) {
-            cell.flipBack()
+        
+        
+        
+        let time = 50
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(indexPath.item*time)) {
+              cell.flipBack()
         }
         
         return cell
     }
-    
-   
-
     
     private var puntaje: UIBarButtonItem = {
         return UIBarButtonItem(title: "Pares: 0",style: .plain, target: nil, action: nil)

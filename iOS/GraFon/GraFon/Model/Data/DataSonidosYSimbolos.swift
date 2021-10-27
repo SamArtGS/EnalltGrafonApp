@@ -70,7 +70,7 @@ struct Data{
                audio: ""
         ),
         Fonema(identificador: 1,
-               fonema: "œ",
+               fonema: "Œ",
                imagenPajaro: "1e",
                imagenFonemaAntes: "18_smb-a_n1mdpi",
                imagenFonemaDespues: "18_smb-b_n1mdpi",
@@ -123,7 +123,7 @@ struct Data{
                audio: "201"
         ),
         Fonema(identificador: 6,
-               fonema: "E",
+               fonema: "ᴇ",
                imagenPajaro: "2e",
                imagenFonemaAntes: "04_smb-a_n1mdpi",
                imagenFonemaDespues: "04_smb-b_n1mdpi",
@@ -209,7 +209,7 @@ struct Data{
                audio: "203"
         ),
         Fonema(identificador: 15,
-               fonema: "Ē",
+               fonema: "ɛ̃",
                imagenPajaro: "4c",
                imagenFonemaAntes: "22_smb-a_n1mdpi",
                imagenFonemaDespues: "22_smb-b_n1mdpi",
@@ -225,7 +225,7 @@ struct Data{
                audio: "196"
         ),
         Fonema(identificador: 17,
-               fonema: "ŋ",
+               fonema: "n",
                imagenPajaro: "4e",
                imagenFonemaAntes: "15_smb-a_n1mdpi",
                imagenFonemaDespues: "15_smb-b_n1mdpi",
@@ -252,7 +252,7 @@ struct Data{
                audio: ""
         ),
         Fonema(identificador: 18,
-               fonema: "∫",
+               fonema: "ʃ",
                imagenPajaro: "5b",
                imagenFonemaAntes: "24_smb-a_n1mdpi",
                imagenFonemaDespues: "24_smb-b_n1mdpi",
@@ -260,7 +260,7 @@ struct Data{
                audio: "206"
         ),
         Fonema(identificador: 19,
-               fonema: "3",
+               fonema: "ʒ",
                imagenPajaro: "5c",
                imagenFonemaAntes: "25_smb-a_n1mdpi",
                imagenFonemaDespues: "25_smb-b_n1mdpi",
@@ -268,7 +268,7 @@ struct Data{
                audio: "207"
         ),
         Fonema(identificador: 20,
-               fonema: "n",
+               fonema: "ŋ",
                imagenPajaro: "5d",
                imagenFonemaAntes: "31_smb-a_n1mdpi",
                imagenFonemaDespues: "31_smb-b_n1mdpi",
@@ -276,7 +276,7 @@ struct Data{
                audio: "213"
         ),
         Fonema(identificador: 21,
-               fonema: "R",
+               fonema: "ʀ",
                imagenPajaro: "5e",
                imagenFonemaAntes: "17_smb-a_n1mdpi",
                imagenFonemaDespues: "17_smb-b_n1mdpi",
@@ -634,7 +634,7 @@ struct Data{
         // :--------------------------:
         
         ParejaSonido(
-            nivel: 3,
+                nivel: 3,
                 imagen: "n1_jgo3_pant_01mdpi",
                 sonido: "140",
                 correcto: true
@@ -771,10 +771,10 @@ struct Data{
                 correcto: false
         ),
         ParejaSonido(
-            nivel: 4,
+                nivel: 4,
                 imagen: "n1_jgo4_pant_03mdpi",
                 sonido: "51",
-                correcto: true
+                correcto: false
         ),
         ParejaSonido(
             nivel: 4,
@@ -986,7 +986,7 @@ struct Data{
         ),
         ParejaSonido(
             nivel: 5,
-                imagen: "n1_jgo4_pant_18mdpi",
+                imagen: "n1_jgo5_pant_18mdpi",
                 sonido: "78",
                 correcto: true
         ),

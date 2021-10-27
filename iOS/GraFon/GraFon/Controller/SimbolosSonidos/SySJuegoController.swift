@@ -124,7 +124,11 @@ extension SySJuego1VC{
     }
     
     func configuracionToolBar(){
-        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 100).isActive = true
+        
+        //Tamaño de la barra de progreso
+        barraProgreso.widthAnchor.constraint(equalToConstant: view.frame.width - 110).isActive = true
+        
+        
         let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
@@ -194,6 +198,7 @@ extension SySJuego1VC: pantallaResultadosDelegate{
         navigationController?.dismiss(animated: true)
         let vc = (navigationController?.viewControllers[1]) as? TabBarTeoriaJuegos
         vc?.selectedIndex = 0
+        vc?.title = "Símbolos y Sonidos"
         navigationController?.popToViewController(vc!, animated: true)
     }
     
@@ -201,6 +206,7 @@ extension SySJuego1VC: pantallaResultadosDelegate{
         navigationController?.dismiss(animated: true)
         let vc = (navigationController?.viewControllers[1]) as? TabBarTeoriaJuegos
         vc?.selectedIndex = 0
+        vc?.title = "Símbolos y Sonidos"
         navigationController?.popToViewController(vc!, animated: true)
     }
     

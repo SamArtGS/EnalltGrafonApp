@@ -72,11 +72,21 @@ extension UIColor {
     
     static let naranjaMemorama1: UIColor = UIColor(red: 237/255, green: 161/255, blue: 62/255, alpha: 1.0)
     
+    static func rgba(_ r: Int, _ g: Int, _ b: Int, _ a: Int) -> UIColor {
+        return UIColor(red: CGFloat(r/255), green: CGFloat(g/255), blue: CGFloat(b/255), alpha: CGFloat(a))
+    }
+    
+    static let colorVerdeFondoLoteria = UIColor(red: 240/255, green: 249/255, blue: 233/255, alpha: 1.0)
+    static let colorVerdeFondoTarjetaLoteria = UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
+    
 }
 
 
 
 extension UIColor {
+    
+    
+    
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat
 

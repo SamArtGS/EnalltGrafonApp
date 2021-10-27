@@ -108,7 +108,7 @@ extension Data{
                     textodeAbajo: nil
                 ),
                 Silaba(palabras: [
-                        Palabra(palabra: "*œu*f", enGriego: "œf")
+                        Palabra(palabra: "*œu*f", enGriego: "&Œ&f")
                     ],
                     pronuciacion: "œu-",
                     explicacion: "Al inicio de una palabra \n\n transcriben el sonido",
@@ -117,7 +117,7 @@ extension Data{
                     textodeAbajo: nil
                 ),
                 Silaba(palabras: [
-                        Palabra(palabra: "*œi*l", enGriego: "œj")
+                        Palabra(palabra: "*œi*l", enGriego: "&Œ&j")
                     ],
                     pronuciacion: "œi-",
                     explicacion: "Al inicio de una palabra \n\n transcriben el sonido",
@@ -144,7 +144,7 @@ extension Data{
               grafiasPocoFrecuentes: [
                 Silaba(palabras: [
                         Palabra(palabra: "p*aïe*n", enGriego: "pa.jɛ̃"),
-                        Palabra(palabra: "*aïe*ul", enGriego: "a.jœl")
+                        Palabra(palabra: "*aïe*ul", enGriego: "a.j&Œ&l")
                     ],
                     pronuciacion: "aïe",
                     explicacion: "$a$ transcribe el sonido \n\n #a# \n\n La $i$ transcribe el sonido",
@@ -162,7 +162,8 @@ extension Data{
                     textodeAbajo: "y forma parte de la sílaba que sigue."
                 ),
                 Silaba(palabras: [
-                        Palabra(palabra: "ég*oï*ste", enGriego: "ᴇ.go.ist")
+                        Palabra(palabra: "ég*oï*ste", enGriego: "ᴇ.go.ist"),
+                        Palabra(palabra: "", enGriego: ""),
                     ],
                     pronuciacion: "oï",
                     explicacion: "$o$ transcribe el sonido \n\n #o# \n\n La $ï$ transcribe el sonido",
@@ -175,8 +176,110 @@ extension Data{
         Letra(identificador: 5,
               letra: "o",
               imagenHoja: "2d_n2",
-              tarjetas: tarjetas.tarjetasO
-
+              tarjetas: tarjetas.tarjetasO,
+              grafiasPocoFrecuentes: [
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "y*aou*rt", enGriego: "ja.uʀt"),
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "transcriben los sonidos",
+                    imagenFonema: "a.u",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "*aou*t", enGriego: "ut"),
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "u",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "p*aon*", enGriego: "pɑ̃"),
+                    ],
+                    pronuciacion: "aou",
+                    explicacion: "en posición final \n\n transcriben el sonido",
+                    imagenFonema: "ɑ̃",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "p*ô*le", enGriego: "pol"),
+                    ],
+                    pronuciacion: "ô",
+                    explicacion: "transcribe el sonido",
+                    imagenFonema: "o",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "k*oa*la", enGriego: "ko.a.la"),
+                    ],
+                    pronuciacion: "oa",
+                    explicacion: "transcriben los sonidos",
+                    imagenFonema: "o.a",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "f*œ*tus", enGriego: "fᴇ.tys"),
+                    ],
+                    pronuciacion: "œ",
+                    explicacion: "transcribe el sonido",
+                    imagenFonema: "ᴇ",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "p*oê*le", enGriego: "pwal"),
+                    ],
+                    pronuciacion: "oê",
+                    explicacion: "transcriben los sonidos",
+                    imagenFonema: "wa",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "N*oë*l", enGriego: "no.ᴇl"),
+                    ],
+                    pronuciacion: "oë",
+                    explicacion: "$o$ transcribe el sonido",
+                    imagenFonema: "o",
+                    imagenConsejo: nil,
+                    textodeAbajo: "La $ë$ forma parte de la sílaba que sigue."
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "*œi*l", enGriego: "&Œ&j"),
+                    ],
+                    pronuciacion: "œi",
+                    explicacion: "transcriben el sonido",
+                    imagenFonema: "&Œ&",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                ),
+                
+                Silaba(palabras: [
+                        Palabra(palabra: "ég*oï*ste", enGriego: "ᴇ.go.ist"),
+                    ],
+                    pronuciacion: "oï",
+                    explicacion: "$o$ transcribe el sonido",
+                    imagenFonema: "o",
+                    imagenConsejo: nil,
+                    textodeAbajo: "La $ï$ forma parte de la sílaba que sigue."
+                ),
+              ]
         ),
         Letra(identificador: 6,
               letra: "u",
@@ -254,7 +357,18 @@ extension Data{
         Letra(identificador: 12,
               letra: "g",
               imagenHoja: "3f_n2",
-              tarjetas: tarjetas.tarjetasG
+              tarjetas: tarjetas.tarjetasG,
+              grafiasPocoFrecuentes: [
+                Silaba(palabras: [
+                        Palabra(palabra: "doi*gt*", enGriego: "dwa")
+                    ],
+                    pronuciacion: "-gt",
+                    explicacion: "Al final de una palabra \n\n no transcriben ningún sonido.",
+                    imagenFonema: "ico_sin-sonido_n2",
+                    imagenConsejo: nil,
+                    textodeAbajo: nil
+                )
+              ]
         ),
         Letra(identificador: 13,
               letra: "h",

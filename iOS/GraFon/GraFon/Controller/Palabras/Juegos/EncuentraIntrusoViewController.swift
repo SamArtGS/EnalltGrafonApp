@@ -12,10 +12,6 @@ import AVFoundation
 
 class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     
-    deinit {
-        print("SE RECLAMA TODO LIMPIO")
-    }
-    
     private let fondoSonido: String = "music_Instruso"
     private var reproductorAudio: AVAudioPlayer?
     private var reproductorLetra: AVAudioPlayer?
@@ -184,8 +180,6 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
             botonLetra.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             botonLetra.widthAnchor.constraint(equalToConstant: 90),
             botonLetra.heightAnchor.constraint(equalToConstant: 50),
-            
-            
             zonaMuerta.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             zonaMuerta.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             zonaMuerta.bottomAnchor.constraint(equalTo: view.bottomAnchor),

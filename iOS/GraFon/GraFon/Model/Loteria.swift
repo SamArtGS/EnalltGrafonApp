@@ -12,10 +12,21 @@ struct ParejaLoteria{
     let sonido: String
     let palabra: String
 }
-class ImagenLoteria: UIImageView{
+class ImagenLoteria: UIButton{
+    var volteada: Bool = false
     var colorBorde: UIColor = .clear
     var colorBackgroud: UIColor = .clear
     var imagenMostar: UIImage? = nil
+    var palabra: UILabelPersonalizado? = nil
+    
+    var imagenTarjeta:UIButton = {
+        let view = UIButton()
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.isUserInteractionEnabled = true
+        return view
+    }()
 }
 
 struct Loteria{
