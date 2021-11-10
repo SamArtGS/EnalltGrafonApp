@@ -58,6 +58,7 @@ extension Data{
         ContenidoHoja(palabra: "fromage",   sonido: 1),
         
             //MAL
+        ContenidoHoja(palabra: "carton",    sonido: -1),
         ContenidoHoja(palabra: "ton",       sonido: -1),
         ContenidoHoja(palabra: "prénom",    sonido: -1),
         ContenidoHoja(palabra: "sombre",    sonido: -1),
@@ -329,7 +330,7 @@ extension Data{
         ContenidoHoja(palabra: "voyage",   sonido: 6),
         ContenidoHoja(palabra: "citoyen",  sonido: 6),
         ContenidoHoja(palabra: "sœur",     sonido: 6),
-        ContenidoHoja(palabra: "emploi",   sonido: 6),
+        ContenidoHoja(palabra: "œuvre",    sonido: 6),
         
         //MAL
         ContenidoHoja(palabra: "au",         sonido: -6),

@@ -13,6 +13,8 @@ enum JuegoLanzarPalabras {
     case memoramaFrases
     case intruso
     case trivia
+    case loteria1
+    case loteria2
     
     func retuTitle() -> String {
         switch self {
@@ -24,6 +26,11 @@ enum JuegoLanzarPalabras {
             return "Memorama Frases"
         case .trivia:
             return "Trivia"
+        case .loteria1:
+            return "Lotería 1"
+        case .loteria2:
+            return "Lotería 2"
+            
         }
     }
 }
@@ -39,12 +46,19 @@ class InstruccionesVC: UIViewController {
         
         imagenPresentacion.image = UIImage(named: imagenInstruccion)
         
+        switch juegoLanzar {
+        case .intruso,.memoramaFrases,.memoramaPalabras,.trivia:
+            view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+        case .loteria1, .loteria2:
+            view.backgroundColor = .colorVerdeFondoLoteria
+        }
+        
         
         if modal{
-            botonInicioJuego.setImage(UIImage(named: "n2_btn_jgo_conituar"), for: .normal)
+            botonInicioJuego.setImage(UIImage(named: imagenBoton), for: .normal)
             botonInicioJuego.addTarget(self, action: #selector(dismissA), for: .touchUpInside)
         }else{
-            botonInicioJuego.setImage(UIImage(named: "n2_jgo_btn_jugar_mdpi"), for: .normal)
+            botonInicioJuego.setImage(UIImage(named: imagenBoton), for: .normal)
             botonInicioJuego.addTarget(self, action: #selector(iniciar), for: .touchUpInside)
         }
     }
@@ -109,6 +123,16 @@ class InstruccionesVC: UIViewController {
             let viewz = TriviaViewController(collection: collect)
             viewz.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(TriviaViewController(collection: collect), animated: true)
+        case .loteria1:
+            let loteria = LoteriaViewController()
+            loteria.loteria = Data.loteria1
+            loteria.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(loteria, animated: true)
+        case .loteria2:
+            let loteria = LoteriaViewController()
+            loteria.loteria = Data.loteria2
+            loteria.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(loteria, animated: true)
         }
     }
     
@@ -139,7 +163,6 @@ class InstruccionesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         setUpConstraints()
         self.title = juegoLanzar.retuTitle()
     }

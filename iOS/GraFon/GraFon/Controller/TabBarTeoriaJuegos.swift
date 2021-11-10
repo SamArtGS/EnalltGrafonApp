@@ -156,10 +156,6 @@ extension TabBarTeoriaJuegos: UITabBarControllerDelegate{
             switch puertaSeleccionada {
             case 0:
                 self.title = viewController.title
-                let BarButtonItemDerecho = menuButton(self,
-                action: #selector(instrucciones),
-                imageName: "icons8-query")
-                self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
             case 2:
                 self.title = viewController.title
             default:

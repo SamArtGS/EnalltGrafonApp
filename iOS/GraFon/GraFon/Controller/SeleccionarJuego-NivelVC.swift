@@ -129,9 +129,14 @@ extension SeleccionarNivelController{
         
         switch puertaInt{
         case 0:
-            let vcs = LoteriaViewController()
-            vcs.loteria = Data.loteria1
-            self.navigationController?.pushViewController(vcs, animated: true)
+            if indexPath.item == 0{
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto1mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .loteria1)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            }else{
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto2mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .loteria2)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            }
+            
         case 1:
             print("Hola")
         case 2:

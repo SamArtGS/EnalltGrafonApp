@@ -90,12 +90,13 @@ class MemoramaViewController: UICollectionViewController {
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         self.collectionView!.register(CeldaMemorama.self, forCellWithReuseIdentifier: reuseIdentifier)
         
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter(sender:)), userInfo: nil, repeats: false)
         
-        
-        //TODO: Verificar que contador anterior se muera como debe. 
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] timer in
-            self?.updateCounter()
-        }
+//        //TODO: Verificar que contador anterior se muera como debe.
+//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+//            print(timer)
+//            self?.
+//        }
         
         
         
@@ -234,7 +235,8 @@ class MemoramaViewController: UICollectionViewController {
         }
     }
     
-    @objc func updateCounter() {
+    @objc func updateCounter(sender: Any) {
+        print(sender)
         if segundosRestantes >= 0 {
             switch segundosRestantes {
             case 0:
@@ -253,6 +255,7 @@ class MemoramaViewController: UICollectionViewController {
             }
             segundosRestantes -= 1
         }
+        print(segundosRestantes)
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -16,7 +16,7 @@ struct Formato {
     
     init(simbolo: String, color: UIColor, fuente: UIFont){
         self.simbolo = simbolo
-        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒœŒ,¿?’ -]*\\\(simbolo)"
+        self.regex = "\\\(simbolo)[a-zA-Z\\u00C0-\\u00FF0-9_ \nʒœŒ,¿?’! -]*\\\(simbolo)"
         self.color = color
         self.fuente = fuente
     }

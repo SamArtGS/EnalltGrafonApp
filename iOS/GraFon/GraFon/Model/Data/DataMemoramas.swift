@@ -275,14 +275,14 @@ extension Data{
         ParejaCartas(primeraPalabra: "*Chantez !*", segundaPalabra: "Nous avons \n *chanté* en duo."),
         
         ParejaCartas(primeraPalabra: "Elle *boit* du vin chaud.", segundaPalabra: "Je *bois* de l'atole."),
-        ParejaCartas(primeraPalabra: "Tu vois !", segundaPalabra: "Elles *voient* clairement."),
+        ParejaCartas(primeraPalabra: "Tu *vois* !", segundaPalabra: "Elles *voient* clairement."),
         ParejaCartas(primeraPalabra: "Ils *verraient* le jour.", segundaPalabra: "Vous *verrez* l'éclipse."),
         ParejaCartas(primeraPalabra: "Tu *boiras* du tascalate.", segundaPalabra: "Elle *boira* du cointreau."),
         
         ParejaCartas(primeraPalabra: "Je *vis* en paix.", segundaPalabra: "Elle *vit* tranquillement."),
         ParejaCartas(primeraPalabra: "Tu *vivras* longtemps.", segundaPalabra: "Il *vivra* en colocation."),
         ParejaCartas(primeraPalabra: "On *vivrait* ensemble.", segundaPalabra: "Ils *vivraient* bien."),
-        ParejaCartas(primeraPalabra: "Elle a *vécu* avec moi.", segundaPalabra: "Il l'a *vécue.*"),
+        ParejaCartas(primeraPalabra: "Elle a *vécu* avec moi.", segundaPalabra: "Il l'a *vécue*."),
         
         ParejaCartas(primeraPalabra: "Elle *fait* ses devoirs.", segundaPalabra: "Je *fais* les courses."),
         ParejaCartas(primeraPalabra: "On *fera* la vaisselle.", segundaPalabra: "Tu *feras* ton lit."),
@@ -400,7 +400,7 @@ extension Data{
         ParejaCartas(primeraPalabra: "On se *coupait* la parole.", segundaPalabra: "Désolée de *couper* court."),
         
         ParejaCartas(primeraPalabra: "On *vend* sur Internet.", segundaPalabra: "Tu *vends* cher."),
-        ParejaCartas(primeraPalabra: "Tu *vendras* ta voiture", segundaPalabra: "lle les *vendra* sur le marché."),
+        ParejaCartas(primeraPalabra: "Tu *vendras* ta voiture", segundaPalabra: "Elle les *vendra* sur le marché."),
         ParejaCartas(primeraPalabra: "Je les *vendais* au plus offrant.", segundaPalabra: "Ils *vendaient* bon marché."),
         ParejaCartas(primeraPalabra: "Il a été *vendu* pour 400 €.", segundaPalabra: "Je l'ai *vendue* aux enchères."),
         
@@ -412,7 +412,7 @@ extension Data{
         ParejaCartas(primeraPalabra: "Elles *perdent* tout.", segundaPalabra: "On *perd* du poids."),
         ParejaCartas(primeraPalabra: "Tu *perdrais* patience.", segundaPalabra: "Je *perdrai* sa confiance."),
         ParejaCartas(primeraPalabra: "Pumas *perdait* 0-1.", segundaPalabra: "Tu *perdais* ton temps."),
-        ParejaCartas(primeraPalabra: "*Elle se sentait *perdue*.", segundaPalabra: "Il a *perdu* la boussole."),
+        ParejaCartas(primeraPalabra: "Elle se sentait *perdue*.", segundaPalabra: "Il a *perdu* la boussole."),
         
         ParejaCartas(primeraPalabra: "On *passe* faire un coucou.", segundaPalabra: "Ils *passent* tous les jours."),
         ParejaCartas(primeraPalabra: "Elle *passera* sous le pont.", segundaPalabra: "Tu *passeras* l'examen lundi."),

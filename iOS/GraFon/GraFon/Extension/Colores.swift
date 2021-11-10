@@ -77,10 +77,15 @@ extension UIColor {
     }
     
     static let colorVerdeFondoLoteria = UIColor(red: 240/255, green: 249/255, blue: 233/255, alpha: 1.0)
-    static let colorVerdeFondoTarjetaLoteria = UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
+    
+    
+    static let colorVerdeFondoTarjetaLoteria1 = UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
+    
+    static let colorVerdeFondoTarjetaLoteria2 = UIColor(red: 143/255, green: 179/255, blue: 140/255, alpha: 1.0)
+    
+    static let letrasRojasLoteria = UIColor(red: 173/255, green: 18/255, blue: 51/255, alpha: 1.0)
     
 }
-
 
 
 extension UIColor {

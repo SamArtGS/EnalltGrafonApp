@@ -157,14 +157,17 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
             self?.score = 0
+            self?.puntaje.title = "Puntos: \(self?.score ?? 0)"
             self?.reload()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
             self?.score = 0
+            self?.puntaje.title = "Puntos: \(self?.score ?? 0)"
             self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
             self?.reload()
         }))
+        
 
         self.present(alert, animated: true, completion: nil)
     }
