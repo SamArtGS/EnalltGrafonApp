@@ -22,6 +22,10 @@ class LoteriaViewController: UIViewController {
 
     var reproductorAudio: AVAudioPlayer?
     
+    deinit {
+        print("No hay ciclo uff")
+    }
+    
     var loteria:Loteria?{
         didSet{
             guard let loteria = loteria else { return }
@@ -35,8 +39,6 @@ class LoteriaViewController: UIViewController {
                 distribuirConstraints(seleccionada: 2)
                 botonSonido.isUserInteractionEnabled = true
             }
-            
-            
             loteria1 = loteria.parejasLoteria.shuffled() // Arreglo de cartas de lotería
             let loterian = loteria.parejasLoteria.shuffled()[0..<8].map({ pareja in pareja })
             loteria2 = loterian                      // Cartas de jugadores
@@ -51,7 +53,7 @@ class LoteriaViewController: UIViewController {
     
     var loteriaRepeat:Loteria?{
         didSet{
-            guard let loteriap = loteria else { return }
+            guard let loteriap = loteriaRepeat else { return }
             loteria3 = loteriap.parejasLoteria
             if loteria == Data.loteria1{
                 imagePajaro.image = UIImage(named: "loto1_grafon_1cmdpi")
@@ -63,11 +65,11 @@ class LoteriaViewController: UIViewController {
                 botonSonido.isUserInteractionEnabled = true
             }
             loteria1 = loteriap.parejasLoteria.shuffled() // Arreglo de cartas de lotería
-            let loterian = loteriap.parejasLoteria[0..<8].map({ pareja in pareja })
-            loteria2 = loterian                      // Cartas de jugadores
-            for i in 0..<loterian.count{
-                labelContainers[i].text = loterian[i].palabra
-                imageContainers[i].pareja = loterian[i]
+            
+            guard let loteria2 = loteria2 else { return }
+            for i in 0..<loteria2.count{
+                labelContainers[i].text = loteria2[i].palabra
+                imageContainers[i].pareja = loteria2[i]
             }
         }
     }
@@ -327,10 +329,19 @@ class LoteriaViewController: UIViewController {
     }()
     
     
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.paro = false
+        self.reproductorAudio?.stop()
+        view.layer.removeAllAnimations()
+        view.subviews.forEach { view in
+            view.layer.removeAllAnimations()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lotofón"
         botonSonido.addTarget(self, action: #selector(playLoteria), for: .touchUpInside)
         let BarButtonItemIzquierdo = menuButton(self,
         action: #selector(salir),
@@ -426,11 +437,6 @@ class LoteriaViewController: UIViewController {
         view.backgroundColor = .colorVerdeFondoLoteria
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
     @objc func voltear(sender:UITapGestureRecognizer){
         
         imageContainers.forEach { imagen in
@@ -517,8 +523,11 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
         reproductorAudio?.stop()
         var mensaje = ""
         botonSonido.isSelected = false
-        if ganador == 1{ mensaje = "Grafón ganó"
-        }else{ mensaje = "Le ganaste a Grafón" }
+        if ganador == 1{
+            mensaje = "Grafón ganó"
+        }else{
+            mensaje = "Le ganaste a Grafón"
+        }
         let alert = UIAlertController(title: mensaje, message: "¿Volver a jugar con la misma plantilla?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: { [weak self] _ in
             self?.view.subviews.forEach { viewcita in
@@ -532,7 +541,6 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
             self?.reproductorAudio?.stop()
             self?.loteria4.removeAll()
             self?.loteria1?.removeAll()
-            self?.loteria2?.removeAll()
             self?.puntosJugador = 0
             self?.loteriaRepeat = Loteria(parejasLoteria: (self?.loteria3)!)
             self?.paro = true

@@ -39,7 +39,7 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
         
         switch puertaInt {
         case 0: // Grupo de palabras
-            colocarFondo(imagen: "bck_n1_juegos_v2")
+            colocarFondo(imagen: "fondo_menu_lotomdpi")
             break
         case 1: // Puerta amarilla
             colocarFondo(imagen: "bck_n1_juegos_v2")

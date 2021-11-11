@@ -27,9 +27,9 @@ enum JuegoLanzarPalabras {
         case .trivia:
             return "Trivia"
         case .loteria1:
-            return "Lotería 1"
+            return "Lotofón 1"
         case .loteria2:
-            return "Lotería 2"
+            return "Lotofón 2"
             
         }
     }
