@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "fondo_menu_loto@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "fondo_menu_loto@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
