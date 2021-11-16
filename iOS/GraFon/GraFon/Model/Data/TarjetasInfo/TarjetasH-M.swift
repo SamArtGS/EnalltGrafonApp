@@ -282,7 +282,7 @@ extension tarjetas{
             Palabra(palabra: "fils", enGriego: "fis"),
             Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "soul", enGriego: "su"),
-            Palabra(palabra: "cul", enGriego: "cy")
+            Palabra(palabra: "cul", enGriego: "ky")
           ]
         ),
         

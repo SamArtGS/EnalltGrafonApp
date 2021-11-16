@@ -137,7 +137,7 @@ extension tarjetas{
           ],
           excepciones: [
             Palabra(palabra: "second", enGriego: "s&Œ&.gõ"),
-            Palabra(palabra: "seconde", enGriego: "sɶ.gõd"),
+            Palabra(palabra: "seconde", enGriego: "s&Œ&.gõd"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "tabac", enGriego: "ta.ba"),
             Palabra(palabra: "estomac", enGriego: "ᴇs.to.ma"),

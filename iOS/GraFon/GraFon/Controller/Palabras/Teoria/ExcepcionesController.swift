@@ -13,64 +13,14 @@ class ExcepcionesController: UIViewController {
     lazy var pantalla = PantallaExcepciones()
     var excepciones: [Palabra]?
     var titulo: String?
+    var puerta: Int = 0
     
     init(excepciones: [Palabra]?, titulo: String, puerta: Int) {
         self.titulo = titulo
         
+        self.puerta = puerta
+        self.excepciones = excepciones
         super.init(nibName: nil, bundle: nil)
-        pilaVerticalExcepciones.addArrangedSubview(explicacion)
-        
-        var colorLetras: UIColor = .white
-        
-        switch puerta {
-        case 0:
-            colorLetras = .colorLetraVerde
-            view.backgroundColor = .colorFondoTarjetasGrupoDePalabras
-            
-            if titulo == "Otros grupos"{
-                imagenVuelta.removeFromSuperview()
-                explicacion.removeFromSuperview()
-            }else{
-                self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
-                imagenVuelta.setImage(UIImage(named: "ico_ir-vuelta_n3"), for: .normal)
-                imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-                colorLetras = .colorLetrasGrupoPalabras
-            }
-            
-        case 2:
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
-            
-            imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-            colorLetras = .colorLetras
-            view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
-        default:
-            break
-        }
-        
-        
-        guard let destapado = excepciones else { return }
-        self.title = titulo
-        
-        var bool: Bool = false
-        
-        for palabra in destapado{
-            if (palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur") && (titulo == "e" || titulo=="r"){
-                bool = true
-            }
-            let silabaGenerada = previstaPar(palabra,colorLetras)
-            pilaVerticalExcepciones.addArrangedSubview(silabaGenerada)
-            
-            ponersubtituloParentesis(palabra: palabra.palabra)
-            
-            NSLayoutConstraint.activate([
-                silabaGenerada.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 15),
-                silabaGenerada.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor, constant: -15)
-            ])
-        }
-        
-        if bool {
-            colocarExcepcionesLargasParler()
-        }
     }
     
     private let cuadritoBlanco: UIView = {
@@ -147,7 +97,6 @@ class ExcepcionesController: UIViewController {
     private let imagenVuelta: UIButton = {
         let boton = UIButton(type: .custom)
         boton.isUserInteractionEnabled = true
-        boton.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
         boton.contentMode = .scaleAspectFit
         boton.translatesAutoresizingMaskIntoConstraints = false
         return boton
@@ -159,7 +108,66 @@ class ExcepcionesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var colorLetras: UIColor = .white
+        pilaVerticalExcepciones.addArrangedSubview(explicacion)
+        
+        switch puerta {
+        case 0:
+            colorLetras = .colorLetraVerde
+            view.backgroundColor = .colorFondoTarjetasGrupoDePalabras
+            if title == "Otros grupos"{
+                imagenVuelta.removeFromSuperview()
+                explicacion.removeFromSuperview()
+            }
+            if titulo == "Otros grupos"{
+                imagenVuelta.removeFromSuperview()
+                explicacion.removeFromSuperview()
+            }else{
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
+                imagenVuelta.setImage(UIImage(named: "ico_ir-vuelta_n3"), for: .normal)
+                imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+                colorLetras = .colorLetrasGrupoPalabras
+            }
+            
+        case 2:
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(self.any))
+            
+            imagenVuelta.setImage(UIImage(named: "ico_ir-vuelta_n2"), for: .normal)
+            imagenVuelta.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+            colorLetras = .colorLetras
+            view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
+        default:
+            break
+        }
+        
+        
+        guard let destapado = excepciones else { return }
+        self.title = titulo
+        
+        var bool: Bool = false
+        
+        for palabra in destapado{
+            if (palabra.palabra == "alzheim*er*" || palabra.palabra == "monsieur") && (titulo == "e" || titulo=="r"){
+                bool = true
+            }
+            let silabaGenerada = previstaPar(palabra,colorLetras)
+            pilaVerticalExcepciones.addArrangedSubview(silabaGenerada)
+            
+            ponersubtituloParentesis(palabra: palabra.palabra)
+            
+            NSLayoutConstraint.activate([
+                silabaGenerada.leadingAnchor.constraint(equalTo: pilaVerticalExcepciones.leadingAnchor, constant: 15),
+                silabaGenerada.trailingAnchor.constraint(equalTo: pilaVerticalExcepciones.trailingAnchor, constant: -15)
+            ])
+        }
         configurarConstraints()
+        if bool {
+            colocarExcepcionesLargasParler()
+        }
+        
+        
+        
     }
     @objc func any(){
         

@@ -24,7 +24,7 @@ extension UIFont {
         case boldItalic = "-BoldItalic"
         case bold = "-Bold"
     }
-
+    
     static func HelveticaNeue(_ type: formato = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
         return UIFont(name: "HelveticaNeue\(type.rawValue)", size: size)!
     }

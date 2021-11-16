@@ -322,7 +322,7 @@ struct tarjetas {
                 Silaba(
                     palabras: [
                         Palabra(palabra: "pl*an*", enGriego: "plɑ̃"),
-                        Palabra(palabra: "ch*ant*", enGriego: "ʃɑ̃")
+                        Palabra(palabra: "ch*ant*", enGriego: "ʃ∫ɑ̃")
                     ],
                     pronuciacion: "an",
                     explicacion: "Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido",
@@ -924,7 +924,7 @@ struct tarjetas {
                 Palabra(palabra: "dock*er*", enGriego: "do.kᴇʀ"),
                 
                 Palabra(palabra: "gangst*er*", enGriego: "gɑ̃g.stᴇʀ"),
-                Palabra(palabra: "gey*er*", enGriego: "ʒᴇ.zᴇʀ"),
+                Palabra(palabra: "gey*zer*", enGriego: "ʒᴇ.zᴇʀ"),
                 Palabra(palabra: "globe-trott*er*", enGriego: "glob.tʀo.tɶʀ"),
                 Palabra(palabra: "hamburg*er*", enGriego: "ɑ̃.bɶʀ.gɶʀ"),
                 Palabra(palabra: "jok*er*", enGriego: "dʒo.kᴇʀ"),
@@ -1769,7 +1769,7 @@ struct tarjetas {
                 silabas: [
                Silaba(palabras: [
                     Palabra(palabra: "*opp*rimée", enGriego: "o.pʀi.mᴇ"),
-                    Palabra(palabra: "c*onn*u", enGriego: "co.ny"),
+                    Palabra(palabra: "c*onn*u", enGriego: "ko.ny"),
                     Palabra(palabra: "p*omm*e", enGriego: "pom"),
                 ],
                   pronuciacion: "o",
@@ -1833,7 +1833,7 @@ struct tarjetas {
           silabas: [
               Silaba(
                   palabras: [
-                        Palabra(palabra: "*coo*pérer", enGriego: "co.o.pᴇ.ʀᴇ")
+                        Palabra(palabra: "*coo*pérer", enGriego: "ko.o.pᴇ.ʀᴇ")
                   ],
                   pronuciacion: "coo-",
                   explicacion: """

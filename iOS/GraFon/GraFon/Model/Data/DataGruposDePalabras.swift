@@ -67,7 +67,7 @@ extension Data{
                 Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                 Palabra(palabra: "hibou", enGriego: "i.bu"),
                 Palabra(palabra: "hiérarchie", enGriego: "jᴇ.ʀaʀ.ʃi"),
-                Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ro.glif"),
+                Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ʀo.glif"),
                 Palabra(palabra: "hippie", enGriego: "i.pi"),
                 Palabra(palabra: "homard", enGriego: "o.maʀ"),
                 Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
@@ -115,12 +115,12 @@ extension Data{
                 Palabra(palabra: "hamster", enGriego: "ams.tᴇʀ"),
                 Palabra(palabra: "handicap", enGriego: "ɑ̃.di.kap"),
                 Palabra(palabra: "haricot", enGriego: "a.ʀi.ko"),
-                Palabra(palabra: "harpe", enGriego: "aʀp"),
+                
                 Palabra(palabra: "hasard", enGriego: "a.zaʀ"),
                 Palabra(palabra: "haut", enGriego: "o"),
                 Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                 Palabra(palabra: "hibou", enGriego: "i.bu"),
-                Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ro.glif"),
+                Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ʀo.glif"),
                 Palabra(palabra: "hippie", enGriego: "i.pi"),
                 Palabra(palabra: "homard", enGriego: "o.maʀ"),
                 Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
@@ -173,7 +173,7 @@ extension Data{
                    Palabra(palabra: "haut", enGriego: "o"),
                    Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                    Palabra(palabra: "hibou", enGriego: "i.bu"),
-                   Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ro.glif"),
+                   Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ʀo.glif"),
                    Palabra(palabra: "hippie", enGriego: "i.pi"),
                    Palabra(palabra: "homard", enGriego: "o.maʀ"),
                    Palabra(palabra: "hors-d’oeuvre", enGriego: "oʀ.d&Œ&vʀ"),
@@ -216,7 +216,7 @@ extension Data{
               ],
               excepciones: [
                 Palabra(palabra: "en haut", enGriego: "ɑ̃.o"),
-                Palabra(palabra: "en hauteur", enGriego: "ɑ̃.o.tɶʀ")
+                Palabra(palabra: "en hauteur", enGriego: "ɑ̃.o.t&Œ&ʀ")
               
               ]
             ),
@@ -224,7 +224,7 @@ extension Data{
                       otrosCasos: [
                           Silaba(
                             palabras: [
-                                  Palabra(palabra: "*petit a*mi", enGriego: "pɶ.ti.ta.mi")
+                                  Palabra(palabra: "*petit a*mi", enGriego: "p&Œ&.ti.ta.mi")
                             ],
                             pronuciacion: "petit",
                             explicacion: """
@@ -266,7 +266,7 @@ extension Data{
                         Silaba(
                           palabras: [
                                 Palabra(palabra: "*quand o*n", enGriego: "kɑ̃.tõ"),
-                                Palabra(palabra: "*grand a*ppartement", enGriego: "gʀɑ̃.ta.paʀ.tᴇ.mɑ̃")
+                                Palabra(palabra: "*grand a*ppartement", enGriego: "gʀɑ̃.ta.paʀ.t&Œ&.mɑ̃")
                           ],
                           pronuciacion: "quand, grand",
                           explicacion: """
@@ -280,7 +280,7 @@ extension Data{
                         Silaba(
                           palabras: [
                                 Palabra(palabra: "*dernier é*pisode", enGriego: "dᴇʀ.njᴇ.ʀᴇ.pi.zod"),
-                                Palabra(palabra: "*premier é*tage", enGriego: "pʀɶ.mjᴇ.ʀᴇ.taʒ"),
+                                Palabra(palabra: "*premier é*tage", enGriego: "pʀ&Œ&.mjᴇ.ʀᴇ.taʒ"),
                                 Palabra(palabra: "*léger a*ccent", enGriego: "lᴇ.ʒᴇ.ʀa.ksɑ̃")
                           ],
                           pronuciacion: "premier, dernier, léger",
@@ -308,11 +308,11 @@ extension Data{
                         
                         Silaba(
                           palabras: [
-                                Palabra(palabra: "*ancien é*lève", enGriego: "ɑ̃sjᴇ.nᴇ.lᴇv")
+                                Palabra(palabra: "*ancien é*lève", enGriego: "ɑ̃.sjᴇ.nᴇ.lᴇv")
                           ],
                           pronuciacion: "ancien",
                           explicacion: """
-                                          Antes de un sustantivo que empieza con vocal o \n\n ~h \n\n ien~ transcriben el sonido
+                                          Antes de un sustantivo que empieza con vocal o ~h \n\n ien~ transcriben el sonido
                                       """,
                           imagenFonema: "jᴇ",
                           imagenConsejo: nil,
@@ -330,8 +330,7 @@ extension Data{
                         Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "de mieux en mieux", enGriego: "d&Œ&.mj&Œ&.zɑ̃.mj&Œ&"),
-                        Palabra(palabra: "de moins en moins", enGriego: "dɶ.mwɛ̃.zɑ̃.mwɛ̃"),
-                        Palabra(palabra: "de plus en plus", enGriego: "d&Œ&.ply.zɑ̃.ply"),
+                        Palabra(palabra: "de moins en moins", enGriego: "d&Œ&.mwɛ̃.zɑ̃.mwɛ̃"),
                         Palabra(palabra: "de temps en temps", enGriego: "d&Œ&.tɑ̃.zɑ̃.tɑ̃"),
                         Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "", enGriego: ""),

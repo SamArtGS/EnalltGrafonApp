@@ -23,19 +23,25 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private var booleano: Bool = false
 
     
+    private let labelBoton: UILabelPersonalizado = {
+        let label = UILabelPersonalizado()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .Roboto(.bold, size: 20)
+        label.textColor = .colorLetraRosa
+        label.textAlignment = .center
+        return label
+    }()
+    
     private let botonLetra:UIButton = {
         let boton = UIButton(type: .system)
         boton.setBackgroundColor(.white, for: .normal)
         boton.setBackgroundColor(.colorLetras, for: .selected)
-        boton.setTitleColor(.colorLetraRosa, for: .normal)
-        boton.setTitleColor(.white, for: .highlighted)
         boton.translatesAutoresizingMaskIntoConstraints = false
         boton.layer.cornerRadius = 20
         boton.layer.borderWidth = 3
         boton.isUserInteractionEnabled = true
         boton.clipsToBounds = true
         boton.layer.borderColor = UIColor.systemOrange.cgColor
-        boton.titleLabel?.font = .Roboto(.bold, size: 20)
         boton.contentMode = .scaleAspectFit
         return boton
     }()
@@ -157,13 +163,13 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
             self?.score = 0
-            self?.puntaje.title = "Puntos: \(self?.score ?? 0)"
+            self?.puntaje.title = "Puntos: 0"
             self?.reload()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = 120
             self?.score = 0
-            self?.puntaje.title = "Puntos: \(self?.score ?? 0)"
+            self?.puntaje.title = "Puntos: 0"
             self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
             self?.reload()
         }))
@@ -176,7 +182,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         view.addSubview(botonLetra)
         view.addSubview(zonaMuerta)
         view.bringSubviewToFront(zonaMuerta)
-        botonLetra.setTitle(letraSonidoCurso?.letra, for: .normal)
+        botonLetra.addSubview(labelBoton)
+        labelBoton.text = letraSonidoCurso?.letra
+        
         
         NSLayoutConstraint.activate([
             botonLetra.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
@@ -186,7 +194,12 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
             zonaMuerta.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             zonaMuerta.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             zonaMuerta.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            zonaMuerta.heightAnchor.constraint(equalToConstant: 100)
+            zonaMuerta.heightAnchor.constraint(equalToConstant: 100),
+            
+            labelBoton.topAnchor.constraint(equalTo: botonLetra.topAnchor),
+            labelBoton.leadingAnchor.constraint(equalTo: botonLetra.leadingAnchor),
+            labelBoton.trailingAnchor.constraint(equalTo: botonLetra.trailingAnchor),
+            labelBoton.bottomAnchor.constraint(equalTo: botonLetra.bottomAnchor),
         ])
     }
     
@@ -338,17 +351,21 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func presionarHoja(_ sender: UITapGestureRecognizer){
         guard let imagenHoja = sender.view as? ImagenHojaCayendo else { return }
         guard let imagenCurso = imagenHoja.imagenHoja?.imagenNormal else { return }
-        if (!imagenHoja.isEqual(imagenCurso)){
-            if imagenHoja.contenidoHoja?.sonido == letraSonidoCurso?.tipo {
-                imagenHoja.cambiarABien()
-                darPuntaje(acierto: true)
-                imagenHoja.isUserInteractionEnabled = false
-                sonarAudio(1)
-            }else{
-                imagenHoja.cambiarAMal()
-                darPuntaje(acierto: false)
-                imagenHoja.isUserInteractionEnabled = false
-                sonarAudio(2)
+        
+        if segundosRestantes > 0{
+        
+            if (!imagenHoja.isEqual(imagenCurso)){
+                if imagenHoja.contenidoHoja?.sonido == letraSonidoCurso?.tipo {
+                    imagenHoja.cambiarABien()
+                    darPuntaje(acierto: true)
+                    imagenHoja.isUserInteractionEnabled = false
+                    sonarAudio(1)
+                    }else{
+                    imagenHoja.cambiarAMal()
+                    darPuntaje(acierto: false)
+                    imagenHoja.isUserInteractionEnabled = false
+                    sonarAudio(2)
+                }
             }
         }
     }
@@ -358,7 +375,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     }()
     
     private var tiempo: UIBarButtonItem = {
-        return UIBarButtonItem(title: "Tiempo: 1:00",style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: "Tiempo: 2:00",style: .plain, target: nil, action: nil)
     }()
     
     private var flexibleSpace: UIBarButtonItem = {

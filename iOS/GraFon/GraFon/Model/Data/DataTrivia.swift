@@ -28,7 +28,7 @@ extension Data{
                incorrecta2: "gant"),
         
         Trivia(letra: "fɑ̃",
-               audio: "37",
+               audio: "37_1",
                respuesta: "enfant",
                incorrecta1: "infâme",
                incorrecta2: "profane"),
@@ -63,7 +63,7 @@ extension Data{
                incorrecta1: "maison",
                incorrecta2: "raison"),
         
-        Trivia(letra: "sœ",
+        Trivia(letra: "s&Œ&",
                audio: "112",
                respuesta: "danseur",
                incorrecta1: "peser",
@@ -93,7 +93,7 @@ extension Data{
                incorrecta1: "magasin",
                incorrecta2: "royal"),
         
-        Trivia(letra: "kœ",
+        Trivia(letra: "k&Œ&",
                audio: "12",
                respuesta: "liqueur",
                incorrecta1: "acquérir",
@@ -123,7 +123,7 @@ extension Data{
                incorrecta1: "solaire",
                incorrecta2: "vilain"),
         
-        Trivia(letra: "pœ",
+        Trivia(letra: "p&Œ&",
                audio: "92",
                respuesta: "thérapeutique",
                incorrecta1: "expérience",
@@ -141,8 +141,8 @@ extension Data{
                incorrecta1: "heureuse",
                incorrecta2: "autoroute"),
         
-        Trivia(letra: "vᴇ",
-               audio: "143",
+        Trivia(letra: "f&Œ&",
+               audio: "32",
                respuesta: "coiffeur",
                incorrecta1: "défendre",
                incorrecta2: "confession"),
@@ -177,7 +177,7 @@ extension Data{
                incorrecta1: "marocain",
                incorrecta2: "remplaçant"),
         
-        Trivia(letra: "dɶ",
+        Trivia(letra: "d&Œ&",
                audio: "22",
                respuesta: "hideux",
                incorrecta1: "cadeaux",
@@ -221,6 +221,11 @@ extension Data{
                incorrecta1: "mauvais",
                incorrecta2: "écrivain"),
         
+        Trivia(letra: "vᴇ",
+               audio: "143",
+               respuesta: "mauvais",
+               incorrecta1: "neveu",
+               incorrecta2: "cerveau"),
         
         Trivia(letra: "ʃᴇ",
                audio: "153",
@@ -228,13 +233,13 @@ extension Data{
                incorrecta1: "reproche",
                incorrecta2: "affiche"),
         
-        Trivia(letra: "ʒɶ",
+        Trivia(letra: "ʒ&Œ&",
                audio: "52",
                respuesta: "je",
                incorrecta1: "trajet",
                incorrecta2: "j’ai"),
         
-        Trivia(letra: "ɶ",
+        Trivia(letra: "t&Œ&",
                audio: "132",
                respuesta: "te",
                incorrecta1: "gâteau",

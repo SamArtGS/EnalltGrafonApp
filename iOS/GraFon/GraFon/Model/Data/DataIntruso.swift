@@ -540,7 +540,7 @@ extension Data{
         SonidoActualIntruso(letra: "õ", tipo: 1, sonido: "intruso_01"),
         SonidoActualIntruso(letra: "ɑ̃", tipo: 2, sonido: "intruso_02"),
         SonidoActualIntruso(letra: "ɛ̃", tipo: 3, sonido: "intruso_03"),
-        SonidoActualIntruso(letra: "Œ", tipo: 4, sonido: "intruso_04"),
+        SonidoActualIntruso(letra: "&Œ&", tipo: 4, sonido: "intruso_04"),
         SonidoActualIntruso(letra: "ᴇ", tipo: 5, sonido: "intruso_05"),
         SonidoActualIntruso(letra: "o", tipo: 6, sonido: "intruso_06"),
         SonidoActualIntruso(letra: "a", tipo: 7, sonido: "intruso_07"),

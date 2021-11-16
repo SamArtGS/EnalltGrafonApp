@@ -300,14 +300,17 @@ extension TarjetaSeleccionadaController: UICollectionViewDelegateFlowLayout{
 extension TarjetaSeleccionadaController{
     func mostrarExcepciones(){
         
-        
         let secondVC = ExcepcionesController(excepciones: tarjeta?.excepciones, titulo: letraTitulo ?? "", puerta: puerta)
         
         self.navigationController?.pushViewController(secondVC, animated: false)
-        secondVC.excepciones = tarjeta?.excepciones
+
         secondVC.navigationController?.title = self.title
         
-        UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight])
+        UIView.transition(from: self.view, to: secondVC.view, duration: 0.85, options: [.transitionFlipFromRight]) { bool in
+            if bool{
+                debugPrint("Termina la animación")
+            }
+        }
     }
     
     

@@ -21,7 +21,18 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         didSet{
             guard let trivia = trivia else{ return }
             
-            botonSonido.setTitle(trivia.letra, for: .normal)
+            
+            botonSonido.addSubview(labelBoton)
+            
+            NSLayoutConstraint.activate([
+                labelBoton.topAnchor.constraint(equalTo: botonSonido.topAnchor),
+                labelBoton.leadingAnchor.constraint(equalTo: botonSonido.leadingAnchor),
+                labelBoton.trailingAnchor.constraint(equalTo: botonSonido.trailingAnchor),
+                labelBoton.bottomAnchor.constraint(equalTo: botonSonido.bottomAnchor),
+            ])
+            labelBoton.text = trivia.letra
+            
+            
             sonido = trivia.audio
             
             var palabras = [trivia.incorrecta1, trivia.incorrecta2, trivia.respuesta]
@@ -29,7 +40,6 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             labelSuperior.text   = palabras[0]
             labelMedio.text      = palabras[1]
             labelInferior.text   = palabras[2]
-            
             palabraSuperior.palabra = palabras[0]
             palabraCentral.palabra = palabras[1]
             palabraInferior.palabra = palabras[2]
@@ -51,17 +61,24 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         let boton = UIButton(type: .system)
         boton.setBackgroundColor(.white, for: .normal)
         boton.setBackgroundColor(.colorLetras, for: .selected)
-        boton.setTitleColor(.colorLetraRosa, for: .normal)
-        boton.setTitleColor(.white, for: .highlighted)
         boton.translatesAutoresizingMaskIntoConstraints = false
         boton.layer.cornerRadius = 10
         boton.layer.borderWidth = 3
         boton.isUserInteractionEnabled = true
         boton.clipsToBounds = true
         boton.layer.borderColor = UIColor.systemOrange.cgColor
-        boton.titleLabel?.font = .Roboto(.bold, size: 20)
         boton.contentMode = .scaleAspectFit
         return boton
+    }()
+    
+    
+    private let labelBoton: UILabelPersonalizado = {
+        let label = UILabelPersonalizado()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .Roboto(.bold, size: 20)
+        label.textColor = .colorLetraRosa
+        label.textAlignment = .center
+        return label
     }()
     
     private let labelSuperior: UILabel = {

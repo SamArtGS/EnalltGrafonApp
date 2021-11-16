@@ -114,6 +114,14 @@ class TriviaViewController: UICollectionViewController {
         contadorA10+=1
         
         if contadorA10 == 10 && segundosRestantes >= 0{
+            
+            collectionView.visibleCells.forEach { cell in
+                cell.isUserInteractionEnabled = false
+                cell.subviews.forEach { view in
+                    view.isUserInteractionEnabled = false
+                }
+            }
+            
             score -= 1
             puntaje.title = "Puntos: \(score)"
             sonarPunto(bool: false)
@@ -126,6 +134,14 @@ class TriviaViewController: UICollectionViewController {
                 collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             }
             contadorA10 = 0
+            
+            
+            collectionView.visibleCells.forEach { cell in
+                cell.isUserInteractionEnabled = true
+                cell.subviews.forEach { view in
+                    view.isUserInteractionEnabled = true
+                }
+            }
         }
         
         if segundosRestantes >= 0 {
@@ -241,6 +257,8 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
     
     
     func recolectarPuntaje(correcto: Bool) {
+        
+        self.collectionView.isUserInteractionEnabled = false
         if correcto{
             score += 1
             puntaje.title = "Puntos: \(score)"
@@ -258,6 +276,7 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
             dataShuffle = Data.trivias.shuffled()
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
         }
+        self.collectionView.isUserInteractionEnabled = true
     }
     
     override func viewDidLayoutSubviews() {
