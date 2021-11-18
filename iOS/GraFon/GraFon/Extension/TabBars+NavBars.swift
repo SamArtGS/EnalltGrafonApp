@@ -87,28 +87,26 @@ extension UITabBarController: UINavigationBarDelegate{
     
     func colorearNavigationBar(colorFondo: UIColor, colorLineaAdorno: UIColor, colorLetras: UIColor){
         if #available(iOS 15.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = colorFondo
-            navigationController?.delegate = self
-            navigationController?.navigationBar.delegate = self
-            navigationController?.navigationBar.standardAppearance = appearance;
-            navigationController?.navigationBar.scrollEdgeAppearance = appearance;
-            navigationController?.navigationBar.compactAppearance = appearance;
-            
-        } else {
-            let apariencia = UINavigationBar.appearance()
-            apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
-            apariencia.shadowImage = colorLineaAdorno.as1ptImage()
-            apariencia.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: colorLetras,
-                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
-            ]
-            apariencia.tintColor = colorLetras
-            navigationController?.delegate = self
-            navigationController?.navigationBar.delegate = self
-        }
-        
-        
+                    let appearance = UINavigationBarAppearance()
+                    appearance.backgroundColor = colorFondo
+                    navigationController?.delegate = self
+                    navigationController?.navigationBar.delegate = self
+                    navigationController?.navigationBar.standardAppearance = appearance;
+                    navigationController?.navigationBar.scrollEdgeAppearance = appearance;
+                    navigationController?.navigationBar.compactAppearance = appearance;
+                    
+                } else {
+                    let apariencia = UINavigationBar.appearance()
+                    apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
+                    apariencia.shadowImage = colorLineaAdorno.as1ptImage()
+                    apariencia.titleTextAttributes = [
+                        NSAttributedString.Key.foregroundColor: colorLetras,
+                        NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+                    ]
+                    apariencia.tintColor = colorLetras
+                    navigationController?.delegate = self
+                    navigationController?.navigationBar.delegate = self
+                }
     }
 }
 
@@ -117,10 +115,3 @@ extension UITabBarController {
         return selectedViewController?.childForStatusBarStyle ?? selectedViewController
     }
 }
-
-extension UINavigationController {
-    open override var childForStatusBarStyle: UIViewController? {
-        return topViewController?.childForStatusBarStyle ?? topViewController
-    }
-}
-

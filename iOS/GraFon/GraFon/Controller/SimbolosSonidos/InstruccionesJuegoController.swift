@@ -45,7 +45,6 @@ class PresentacionCreditos: Carcasa {
 
 class PresentacionJuegoSyS: Carcasa {
     lazy var pantalla = PantallaJuegoSyS()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
@@ -65,7 +64,6 @@ extension PresentacionJuegoSyS: pantallaInstruccionesDelegate{
 }
 
 class PuntuacionJuegoSyS: Carcasa {
-    
     
     init(puntaje:Int) {
         pantalla.puntaje = puntaje

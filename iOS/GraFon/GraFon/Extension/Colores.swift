@@ -11,7 +11,6 @@ import UIKit
 extension UIColor {
     
     //MARK: SONIDOS Y SÍMBOLOS
-    
     static let colorBarraSuperiorSyS: UIColor = UIColor(red: 82/255, green: 145/255, blue: 179/255, alpha: 1)
     static let colorLineaBarraSuperiorSyS: UIColor = UIColor(red: 68/255, green: 89/255, blue: 115/255, alpha: 1)
     static let colorToolBarSyS: UIColor = UIColor(red: 213/255, green: 224/255, blue: 224/255, alpha: 1)
@@ -21,7 +20,6 @@ extension UIColor {
     
     
     //MARK: PALABRAS
-    
     static let colorBarraSuperiorPalabras: UIColor = UIColor(red: 137/255, green: 55/255, blue: 26/255, alpha: 1)
     static let colorLineaBarraSuperiorPalabras: UIColor = UIColor(red: 209/255, green: 95/255, blue: 59/255, alpha: 1)
     static let colorSeleccionadoTabBarSonidoSimbolo: UIColor = .white
@@ -41,22 +39,15 @@ extension UIColor {
     static let colorLetras:UIColor = .colorBarraSuperiorPalabras
     static let colorLetraRosa:UIColor = UIColor(red: 214/255, green: 0/255, blue: 130/255, alpha: 1.0)
     
-    
-    
-    
     //MARK: GRUPOS DE PALABRAS
-    
     static let colorNavigationBarGruposPalabras: UIColor = UIColor(red: 31/255, green: 104/255, blue: 23/255, alpha: 1.0)
     static let colorLineaBarraSuperiorGruposPalabras: UIColor = UIColor(red: 15/255, green: 150/255, blue: 4/255, alpha: 1)
     static let colorTabBarGruposPalabras:UIColor = colorNavigationBarGruposPalabras
     static let colorSeleccionadoTabBarGruposPalabras: UIColor = .white
     static let colorNoSeleccionadoTabBarGruposPalabras: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
-    
     static let colorFondoTarjetasGrupoDePalabras: UIColor = UIColor(red: 248/255, green: 253/255, blue: 248/255, alpha: 1.0)
-
     static let colorLetrasGrupoPalabras: UIColor = UIColor(red: 6/255, green: 73/255, blue: 6/255, alpha: 1.0)
     static let colorLetraVerde:UIColor = .colorLetrasGrupoPalabras
-    
     static let fondosSilabaGrupoPalabras: [UIColor] = [
         UIColor(red: 227/255, green: 244/255, blue: 213/255, alpha: 1.0),
         UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0),
@@ -64,27 +55,26 @@ extension UIColor {
         UIColor(red: 188/255, green: 230/255, blue: 158/255, alpha: 1.0),
         UIColor(red: 176/255, green: 223/255, blue: 223/255, alpha: 1.0),
     ]
-    
     static let parejaVerdes: [UIColor] = [
         UIColor(red: 227/255, green: 244/255, blue: 213/255, alpha: 1.0),
         UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
     ]
-    
     static let naranjaMemorama1: UIColor = UIColor(red: 237/255, green: 161/255, blue: 62/255, alpha: 1.0)
-    
     static func rgba(_ r: Int, _ g: Int, _ b: Int, _ a: Int) -> UIColor {
         return UIColor(red: CGFloat(r/255), green: CGFloat(g/255), blue: CGFloat(b/255), alpha: CGFloat(a))
     }
-    
     static let colorVerdeFondoLoteria = UIColor(red: 240/255, green: 249/255, blue: 233/255, alpha: 1.0)
-    
-    
     static let colorVerdeFondoTarjetaLoteria1 = UIColor(red: 213/255, green: 238/255, blue: 194/255, alpha: 1.0)
-    
     static let colorVerdeFondoTarjetaLoteria2 = UIColor(red: 143/255, green: 179/255, blue: 140/255, alpha: 1.0)
-    
     static let letrasRojasLoteria = UIColor(red: 173/255, green: 18/255, blue: 51/255, alpha: 1.0)
     
+    
+    //MARK: A divertirse
+    static let colorNavigationBarADivertirse: UIColor = UIColor(red: 232/255, green: 189/255, blue: 12/255, alpha: 1.0)
+    static let colorBarraNavigationBarADivertirse: UIColor = UIColor(red: 125/255, green: 67/255, blue: 201/255, alpha: 1.0)
+    
+    
+    static let colorFondoTurboFon: UIColor = UIColor(red: 242/255, green: 236/255, blue: 250/255, alpha: 1.0)
 }
 
 

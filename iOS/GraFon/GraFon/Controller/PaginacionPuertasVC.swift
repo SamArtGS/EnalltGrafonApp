@@ -85,6 +85,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
                         self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     case 3:
+                        let viewTable = TabBarTeoriaJuegos(puertaSeleccionada: 1)
+                        self.navigationController?.pushViewController(viewTable, animated: true)
                         break
                     default:
                         break
@@ -118,7 +120,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         
         
-        let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-query")
+        let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-view_more")
         view.addSubview(boton)
         NSLayoutConstraint.activate([
             boton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -133,7 +135,8 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     
     @objc func mostrarExtras(){
-        presentacionModal(viewController: Carcasa(), halfTransition: &halfModalTransitioningDelegate)
+        mostrarAlerta(title: "...", message: "Aquí van los créditos")
+        //presentacionModal(viewController: Carcasa(), halfTransition: &halfModalTransitioningDelegate)
     }
     
 }

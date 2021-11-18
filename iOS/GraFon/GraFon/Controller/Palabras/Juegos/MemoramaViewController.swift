@@ -82,6 +82,8 @@ class MemoramaViewController: UICollectionViewController {
         print("Limpieza de memoramas")
     }
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         audioFondo()
@@ -90,7 +92,7 @@ class MemoramaViewController: UICollectionViewController {
         collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         self.collectionView!.register(CeldaMemorama.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter(sender:)), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter(sender:)), userInfo: nil, repeats: true)
         
 //        //TODO: Verificar que contador anterior se muera como debe.
 //        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
@@ -168,6 +170,7 @@ class MemoramaViewController: UICollectionViewController {
     }
     
     func terminarJuego(){
+        timer?.invalidate()
         let alert = UIAlertController(title: "Parejas: \(score)", message: "¿Seguir jugando con la misma pareja?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in

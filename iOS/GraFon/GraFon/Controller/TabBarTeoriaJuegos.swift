@@ -33,6 +33,23 @@ class TabBarTeoriaJuegos: UITabBarController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+        
+        switch puertaSeleccionada {
+        case 0:
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorGruposPalabras.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarGruposPalabras.as1ptImage(), for: .default)
+        case 1:
+            navigationController?.navigationBar.shadowImage = UIColor.colorBarraNavigationBarADivertirse.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarADivertirse.as1ptImage(), for: .default)
+        case 2:
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorBarraSuperiorPalabras.as1ptImage(), for: .default)
+        case 3:
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorTabBarSonidoSimbolo.as1ptImage(), for: .default)
+        default:
+            break
+        }
     }
     
     override func viewDidLoad() {
@@ -91,7 +108,17 @@ extension TabBarTeoriaJuegos{
                 )
                 break
             case 1:
-                self.title = "A divertirse"
+                self.title = "¡A divertirse!"
+                
+                
+                
+                let juegos = crearNavegacion(titulo: "Palabras en la boca",
+                                             imagenIcono: "icon-study",
+                                             controller: MenuJuegos())
+                colorearNavigationBar(colorFondo: .colorNavigationBarADivertirse, colorLineaAdorno: .colorBarraNavigationBarADivertirse, colorLetras: .white)
+                
+                viewControllers = [juegos]
+                
                 break
             case 2:
                 self.title = "Palabras en la boca"

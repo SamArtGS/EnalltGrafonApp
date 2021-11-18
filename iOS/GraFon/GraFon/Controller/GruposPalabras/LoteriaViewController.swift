@@ -15,12 +15,11 @@ class LoteriaViewController: UIViewController {
     var loteria2: [ParejaLoteria]?
     var loteria3: [ParejaLoteria]?
     var loteria4: [ParejaLoteria] = [ParejaLoteria]()
-    
     var puntosGrafon:Int = 0
     var puntosJugador:Int = 0
     var paro:Bool = true
-
     var reproductorAudio: AVAudioPlayer?
+    var mensajeSalida: String = ""
     
     deinit {
         print("No hay ciclo uff")
@@ -33,17 +32,18 @@ class LoteriaViewController: UIViewController {
             if loteria == Data.loteria1{
                 imagePajaro.image = UIImage(named: "loto1_grafon_1cmdpi")
                 distribuirConstraints(seleccionada: 1)
+                mensajeSalida = "Grafona ganó"
                 botonSonido.isUserInteractionEnabled = true
             }else{
                 imagePajaro.image = UIImage(named: "loto2_grafon_1cmdpi")
+                mensajeSalida = "Grafón ganó"
                 distribuirConstraints(seleccionada: 2)
                 botonSonido.isUserInteractionEnabled = true
             }
-            loteria1 = loteria.parejasLoteria.shuffled() // Arreglo de cartas de lotería
+            //loteria1 = loteria.parejasLoteria.shuffled() // Arreglo de cartas de lotería
             let loterian = loteria.parejasLoteria.shuffled()[0..<8].map({ pareja in pareja })
+            loteria1 = loterian.shuffled()
             loteria2 = loterian                      // Cartas de jugadores
-            
-            
             for i in 0..<loterian.count{
                 labelContainers[i].text = loterian[i].palabra
                 imageContainers[i].pareja = loterian[i]
@@ -64,9 +64,10 @@ class LoteriaViewController: UIViewController {
                 distribuirConstraints(seleccionada: 2)
                 botonSonido.isUserInteractionEnabled = true
             }
-            loteria1 = loteriap.parejasLoteria.shuffled() // Arreglo de cartas de lotería
+            //loteria1 = loteriap.parejasLoteria.shuffled() // Arreglo de cartas de lotería
             
             guard let loteria2 = loteria2 else { return }
+            loteria1 = loteria2.shuffled()
             for i in 0..<loteria2.count{
                 labelContainers[i].text = loteria2[i].palabra
                 imageContainers[i].pareja = loteria2[i]
@@ -81,12 +82,29 @@ class LoteriaViewController: UIViewController {
             print("No pude sacar la carta")
             return
         }
+        
+        
+        
+        
         botonSonido.isUserInteractionEnabled = false
         loteria4.append(carta)
-        print(carta)
+        
+        
         let sonido = Bundle.main.path(forResource: carta.sonido, ofType: "mp3")
+        
+        
         do{
             reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido!))
+            
+            for i in 0..<4{
+                if imageContainers[i].pareja?.sonido == carta.sonido{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                        
+                        self.imageContainers[i].volteada = true
+                        self.imageContainers[i].flipBack()
+                    }
+                }
+            }
             reproductorAudio?.delegate = self
             reproductorAudio?.play()
             botonSonido.isSelected = true
@@ -491,8 +509,9 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
                 for i in 0..<4{
                     if imageContainers[i].pareja?.sonido == sonido{
                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                            self.imageContainers[i].flipBack()
+                            
                             self.imageContainers[i].volteada = true
+                            self.imageContainers[i].flipBack()
                         }
                     }
                 }
@@ -508,7 +527,6 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
                 
             }else{
                 terminarJuego(ganador: 1)
-                
                 botonSonido.isUserInteractionEnabled = false
                 botonSonido.isSelected = false
             }
@@ -524,7 +542,7 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
         var mensaje = ""
         botonSonido.isSelected = false
         if ganador == 1{
-            mensaje = "Grafón ganó"
+            mensaje = mensajeSalida
         }else{
             mensaje = "Le ganaste a Grafón"
         }

@@ -27,6 +27,12 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
                                             "btn_jgo_loto02mdpi"
     ]
     
+    let nombreImagenesNiveles4:[String] = [
+                                            "menu_juego1",
+                                            "menu_juego2",
+                                            "menu_juego3"
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +45,36 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
         
         switch puertaInt {
         case 0: // Grupo de palabras
-            colocarFondo(imagen: "fondo_menu_lotomdpi")
+            colocarFondoCompleto(imagen: "fondo_menu_lotomdpi")
             break
         case 1: // Puerta amarilla
-            colocarFondo(imagen: "bck_n1_juegos_v2")
+            colocarFondoCompleto(imagen: "N4_menú_background")
             break
         case 2: //Puerta palabras
             collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
             break
         case 3: // sonidos y simbolos
-            colocarFondo(imagen: "bck_n1_juegos_v2")
+            colocarFondoCompleto(imagen: "bck_n1_juegos_v2")
             break
         default:
             break
         }
-        
-
+    }
+    
+    var banderinUltimaPuerta: Int? {
+        didSet{
+            guard let banderinUltimaPuerta = banderinUltimaPuerta else { return }
+            switch banderinUltimaPuerta {
+            case 1:
+                break
+            case 2:
+                break
+            case 3:
+                break
+            default:
+                break
+            }
+        }
     }
     
     init(collectionViewLayout layout: UICollectionViewLayout, puertaSeleccionada: Int) {
@@ -91,7 +111,7 @@ extension SeleccionarNivelController{
         case 0:
             return nombreImagenesNiveles3.count
         case 1:
-            return nombreImagenesNiveles1.count
+            return nombreImagenesNiveles4.count
         case 2:
             return nombreImagenesNiveles2.count
         case 3:
@@ -108,7 +128,7 @@ extension SeleccionarNivelController{
                 cell.nivel = nombreImagenesNiveles3[indexPath.item]
                 break
             case 1:
-                cell.nivel = nombreImagenesNiveles2[indexPath.item]
+                cell.nivel = nombreImagenesNiveles4[indexPath.item]
                 break
             case 2:
                 cell.nivel = nombreImagenesNiveles2[indexPath.item]
@@ -138,7 +158,23 @@ extension SeleccionarNivelController{
             }
             
         case 1:
-            print("Hola")
+            switch indexPath.item {
+            case 0:
+                //Tutorial de Si/No
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon1)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 1:
+                //Tutorial de Dilemas
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto1mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .turbofon2)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 2:
+                //Tutorial de Dilemas
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto1mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .turbofon3)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            default:
+                break
+            }
+            
         case 2:
             seleccionarJuegoPalabrasEnBoca(opcion: indexPath.item)
         default:
@@ -178,12 +214,16 @@ extension SeleccionarNivelController : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if puertaInt == 0{
+        switch puertaInt {
+        case 0:
             return CGSize(width: (view.frame.width)/1.1,
                                  height: (view.safeAreaLayoutGuide.layoutFrame.height)/4.0)
-        }else{
-            return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width)/1.0,
-                             height: (view.safeAreaLayoutGuide.layoutFrame.height)/6.0)
+        case 1:
+            return CGSize(width: (view.frame.width)/1.1,
+                                 height: (view.safeAreaLayoutGuide.layoutFrame.height)/4.0)
+        default:
+            return CGSize(width: (view.frame.width)/1.0,
+                                 height: (view.safeAreaLayoutGuide.layoutFrame.height)/6.0)
         }
     }
     

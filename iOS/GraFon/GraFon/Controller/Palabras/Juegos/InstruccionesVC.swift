@@ -16,6 +16,10 @@ enum JuegoLanzarPalabras {
     case loteria1
     case loteria2
     
+    case turbofon1
+    case turbofon2
+    case turbofon3
+    
     func retuTitle() -> String {
         switch self {
         case .intruso:
@@ -30,7 +34,12 @@ enum JuegoLanzarPalabras {
             return "Lotofón 1"
         case .loteria2:
             return "Lotofón 2"
-            
+        case .turbofon1:
+            return "Juego si o no"
+        case .turbofon2:
+            return "Juego de los dilemas"
+        case .turbofon3:
+            return "Juego de las citas"
         }
     }
 }
@@ -51,6 +60,8 @@ class InstruccionesVC: UIViewController {
             view.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
         case .loteria1, .loteria2:
             view.backgroundColor = .colorVerdeFondoLoteria
+        case .turbofon1, .turbofon2, .turbofon3:
+            view.backgroundColor = .colorFondoTurboFon
         }
         
         
@@ -129,6 +140,21 @@ class InstruccionesVC: UIViewController {
             loteria.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(loteria, animated: true)
         case .loteria2:
+            let loteria = LoteriaViewController()
+            loteria.loteria = Data.loteria2
+            loteria.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(loteria, animated: true)
+        case .turbofon1:
+            let citas = JuegoCitas()
+            //loteria.loteria = Data.loteria2
+            citas.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(citas, animated: true)
+        case .turbofon2:
+            let loteria = LoteriaViewController()
+            loteria.loteria = Data.loteria2
+            loteria.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(loteria, animated: true)
+        case .turbofon3:
             let loteria = LoteriaViewController()
             loteria.loteria = Data.loteria2
             loteria.title = juegoLanzar.retuTitle()
