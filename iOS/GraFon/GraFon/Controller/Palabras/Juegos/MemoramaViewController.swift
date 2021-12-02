@@ -30,7 +30,7 @@ class MemoramaViewController: UICollectionViewController {
         
         
         if tipoMemorama == .memoramaPalabras{
-            self.segundosRestantes = 59
+            self.segundosRestantes = 60
             self.tiempo.title = "Tiempo: 1:00"
             fondoSonido = "Memorama_palabras"
         }else{
@@ -202,7 +202,7 @@ class MemoramaViewController: UICollectionViewController {
         }))
         
         if tipoMemorama == .memoramaPalabras{
-            self.segundosRestantes = 59
+            self.segundosRestantes = 60
         }else{
             self.segundosRestantes = 120
         }

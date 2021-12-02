@@ -333,8 +333,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                             self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
                             if viewcita.image == viewcita.imagenHoja?.imagenNormal &&  viewcita.contenidoHoja?.sonido == self?.letraSonidoCurso?.tipo {
                                 
+                                //Creo este es el que genera errores
                                     viewcita.cambiarAMal()
-                            
                                     viewcita.isUserInteractionEnabled = false
                                     self?.darPuntaje(acierto: false)
                                     self?.sonarAudio(2)
