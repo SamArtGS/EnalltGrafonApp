@@ -28,18 +28,170 @@ class Carcasa: UIViewController{
 }
 
 
-class PresentacionCreditos: Carcasa {
-    lazy var pantalla = PantallaCreditos()
+class PresentacionCreditos: UIViewController {
+    
+    let texto = [
+        NSMutableAttributedString(string: "Proyecto PAPIME PE401220\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        NSMutableAttributedString(string: "Créditos de desarrollo\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 18),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        NSMutableAttributedString(string: "Coordinación de Educación a Distancia\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        NSMutableAttributedString(string: "Desarrollo en Android\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Alejandro Ortiz Berrocal \n Alejandro Rodríguez Allende\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Desarrollo en iOS\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Samuel Arturo Garrido Sánchez\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Diseño de interfaz gráfica e ilustraciones\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "María Teresa Cesáreo Castillo \n María Antonieta Rodríguez Rivera\n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Créditos de contenido\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 18),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Departamento de Linguística Aplicada\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Autora\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Béatrice Florence Blin\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Departamento de Francés\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Profesoras participantes\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Mónica Rizo Marechal \n Jessou Jandet \n María Eugenia Quezada\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Alumnos de la Licenciatura\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Fulano \n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+    ]
+    
+    // MARK: Elementos de UI
+    
+    private let logoApp: UIImageView = {
+        let logo = UIImageView()
+        logo.image = UIImage(named: "1024")
+        logo.contentMode = .scaleAspectFit
+        return logo
+    }()
+    
+    private let enaltLogo: UIImageView = {
+        let logo = UIImageView()
+        logo.image = UIImage(named: "enalt")
+        logo.contentMode = .scaleAspectFit
+        return logo
+    }()
+    
+    private let pilaVertical: UIStackView = {
+       let elementosApilados:UIStackView = UIStackView()
+        elementosApilados.axis = .vertical
+        elementosApilados.distribution = .fill
+        elementosApilados.alignment = .center
+        elementosApilados.spacing = 5
+        elementosApilados.translatesAutoresizingMaskIntoConstraints = false
+        return elementosApilados
+    }()
+    
+    private let textoCreditos: UILabelPersonalizado = {
+        let creditosEscritos = UILabelPersonalizado()
+        creditosEscritos.translatesAutoresizingMaskIntoConstraints = false
+        creditosEscritos.contentMode = .scaleAspectFit
+        creditosEscritos.lineBreakMode = .byWordWrapping
+        creditosEscritos.numberOfLines = 0
+        creditosEscritos.textAlignment = .center
+        return creditosEscritos
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
-        colocarFondoCompleto(imagen: "bck_n1_juegos_v2")
-        configure(vista: pantalla)
-        //pantalla.delegate = self
+        view.backgroundColor = .white
+        distribucionConstrains()
     }
     deinit {
         print("\n\nSe reclama controller instrucciones\n\n")
+    }
+    
+    private let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.isScrollEnabled = true
+        scroll.isPagingEnabled = false
+        scroll.isUserInteractionEnabled = true
+        return scroll
+    }()
+    
+    func distribucionConstrains(){
+        let combination = NSMutableAttributedString()
+        
+        for stri in texto{
+            combination.append(stri)
+        }
+        textoCreditos.attributedText = combination
+        
+        view.addSubview(scrollView)
+        scrollView.isPagingEnabled = false
+        scrollView.addSubview(pilaVertical)
+        pilaVertical.addArrangedSubview(logoApp)
+        pilaVertical.addArrangedSubview(textoCreditos)
+        pilaVertical.addArrangedSubview(enaltLogo)
+        
+        NSLayoutConstraint.activate([
+            
+            logoApp.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            logoApp.heightAnchor.constraint(equalTo: logoApp.widthAnchor, multiplier: 0.8),
+            
+            enaltLogo.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            enaltLogo.heightAnchor.constraint(equalTo: enaltLogo.widthAnchor, multiplier: 0.3683),
+            
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            pilaVertical.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            pilaVertical.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            pilaVertical.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            pilaVertical.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -30),
+            
+            textoCreditos.widthAnchor.constraint(equalTo: view.widthAnchor),
+            
+        ])
     }
 }
 

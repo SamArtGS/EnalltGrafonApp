@@ -47,7 +47,11 @@ class CitaCell: UICollectionViewCell{
     let tituloLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .Roboto(.bold, size: 14)
+        if UIDevice().userInterfaceIdiom == .pad{
+            label.font = .Roboto(.bold, size: 24)
+        }else{
+            label.font = .Roboto(.bold, size: 14)
+        }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -55,10 +59,16 @@ class CitaCell: UICollectionViewCell{
         return label
     }()
     
+
+    
     let letraLabel: UILabelPersonalizado = {
         let label = UILabelPersonalizado()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .Roboto(.bold, size: 17)
+        if UIDevice().userInterfaceIdiom == .pad{
+            label.font = .Roboto(.bold, size: 27)
+        }else{
+            label.font = .Roboto(.bold, size: 17)
+        }
         label.textColor = .colorLetraRosa
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -69,7 +79,11 @@ class CitaCell: UICollectionViewCell{
     let citaLabel: UILabelPersonalizado = {
         let label = UILabelPersonalizado()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .Roboto(.italic, size: 14)
+        if UIDevice().userInterfaceIdiom == .pad{
+            label.font = .Roboto(.italic, size: 24)
+        }else{
+            label.font = .Roboto(.italic, size: 14)
+        }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -80,7 +94,11 @@ class CitaCell: UICollectionViewCell{
     let libroLabel: UILabelPersonalizado = {
         let label = UILabelPersonalizado()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .Roboto(.bold, size: 12)
+        if UIDevice().userInterfaceIdiom == .pad{
+            label.font = .Roboto(.bold, size: 22)
+        }else{
+            label.font = .Roboto(.bold, size: 12)
+        }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -91,7 +109,11 @@ class CitaCell: UICollectionViewCell{
     let autorLabel: UILabelPersonalizado = {
         let label = UILabelPersonalizado()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .Roboto(.boldItalic, size: 12)
+        if UIDevice().userInterfaceIdiom == .pad{
+            label.font = .Roboto(.boldItalic, size: 22)
+        }else{
+            label.font = .Roboto(.boldItalic, size: 12)
+        }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
         label.adjustsFontForContentSizeCategory = true

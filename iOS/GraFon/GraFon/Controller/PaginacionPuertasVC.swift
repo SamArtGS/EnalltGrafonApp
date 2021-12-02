@@ -135,8 +135,7 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     
     @objc func mostrarExtras(){
-        mostrarAlerta(title: "...", message: "Aquí van los créditos")
-        //presentacionModal(viewController: Carcasa(), halfTransition: &halfModalTransitioningDelegate)
+        presentacionModal(viewController: PresentacionCreditos(), halfTransition: &halfModalTransitioningDelegate)
     }
     
 }

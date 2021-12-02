@@ -46,6 +46,8 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         }
     }
     
+    
+    
     private let stack: UIStackView = {
        let stack:UIStackView = UIStackView()
         stack.isUserInteractionEnabled = true
@@ -152,6 +154,9 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         super.init(frame: frame)
         botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         configurarConstraints()
+        palabraSuperior.isUserInteractionEnabled = true
+        palabraCentral.isUserInteractionEnabled = true
+        palabraInferior.isUserInteractionEnabled = true
         
     }
     
@@ -193,9 +198,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             botonSonido.heightAnchor.constraint(equalToConstant: 50),
             botonSonido.widthAnchor.constraint(equalToConstant: 90),
             
-            palabraSuperior.widthAnchor.constraint(equalTo: widthAnchor),
-            palabraCentral.widthAnchor.constraint(equalTo: widthAnchor),
-            palabraInferior.widthAnchor.constraint(equalTo: widthAnchor),
+            
             
             
             labelSuperior.centerXAnchor.constraint(equalTo: palabraSuperior.centerXAnchor),
@@ -208,6 +211,18 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             labelInferior.centerYAnchor.constraint(equalTo: palabraInferior.centerYAnchor,constant: 10),
         
         ])
+        
+        if UIDevice().userInterfaceIdiom == .pad{
+            palabraSuperior.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            palabraCentral.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            palabraInferior.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+        }else{
+            palabraSuperior.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            palabraCentral.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            palabraInferior.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+        }
+        
+        
     }
     
     @objc func sonarAudio(){
@@ -253,11 +268,6 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: { [weak self ] in
                 self?.delegate?.recolectarPuntaje(correcto: false)
                 imagenHoja.image = imagenHoja.imagenNormal
-                imagenHoja.isUserInteractionEnabled = true
-                self?.isUserInteractionEnabled = true
-                self?.palabraSuperior.isUserInteractionEnabled = true
-                self?.palabraCentral.isUserInteractionEnabled = true
-                self?.palabraInferior.isUserInteractionEnabled = true
             })
             
             

@@ -15,7 +15,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private let fondoSonido: String = "Encuentra_al_Intruso"
     private var reproductorAudio: AVAudioPlayer?
     private var reproductorLetra: AVAudioPlayer?
-    private var segundosRestantes = 120
+    private var segundosRestantes = 10
     private var playing:Bool = true
     private var letraSonidoCurso:SonidoActualIntruso?
     private var queueIntrusos:[ContenidoHoja]?
@@ -170,17 +170,38 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         let alert = UIAlertController(title: "Puntos: \(score)", message: "¿Seguir jugando con el mismo sonido?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
+            self?.reload()
             self?.segundosRestantes = 120
+            
+            self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+                self?.updateCounter()
+            }
+            
+            self?.timer2 = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] timer in
+                    self?.soltarHoja()
+            }
+            
             self?.score = 0
             self?.puntaje.title = "Puntos: 0"
-            self?.reload()
+            
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
+            
             self?.segundosRestantes = 120
-            self?.score = 0
-            self?.puntaje.title = "Puntos: 0"
+            
+            
+            self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+                self?.updateCounter()
+            }
+            
+            self?.timer2 = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] timer in
+                    self?.soltarHoja()
+            }
+            
             self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
             self?.reload()
+            self?.score = 0
+            self?.puntaje.title = "Puntos: 0"
         }))
         
 
@@ -399,10 +420,10 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     
      func reload(){
         
-        
         view.subviews.forEach { view in
             
             if view.isKind(of: ImagenHojaCayendo.self){
+                
                 print("Removiendo hojas")
                 view.layer.removeAllAnimations()
                 view.removeFromSuperview()
