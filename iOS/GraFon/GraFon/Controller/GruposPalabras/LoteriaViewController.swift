@@ -19,7 +19,13 @@ class LoteriaViewController: UIViewController {
     var puntosJugador:Int = 0
     var paro:Bool = true
     var reproductorAudio: AVAudioPlayer?
+    var reproductorMusica: AVAudioPlayer?
     var mensajeSalida: String = ""
+    var mensajeSalida2: String = ""
+    private var booleano: Bool = false
+    private var fondoSonido: String = ""
+    
+    var timer: Timer?
     
     deinit {
         print("No hay ciclo uff")
@@ -30,16 +36,21 @@ class LoteriaViewController: UIViewController {
             guard let loteria = loteria else { return }
             loteria3 = loteria.parejasLoteria
             if loteria == Data.loteria1{
+                fondoSonido = "Lotofon_1"
                 imagePajaro.image = UIImage(named: "loto1_grafon_1cmdpi")
                 distribuirConstraints(seleccionada: 1)
                 mensajeSalida = "Grafona ganó"
+                mensajeSalida2 = "Le ganaste a Grafona"
                 botonSonido.isUserInteractionEnabled = true
             }else{
                 imagePajaro.image = UIImage(named: "loto2_grafon_1cmdpi")
                 mensajeSalida = "Grafón ganó"
+                mensajeSalida2 = "Le ganaste a Grafón"
+                fondoSonido = "Lotofon_2"
                 distribuirConstraints(seleccionada: 2)
                 botonSonido.isUserInteractionEnabled = true
             }
+            
             //loteria1 = loteria.parejasLoteria.shuffled() // Arreglo de cartas de lotería
             let loterian = loteria.parejasLoteria.shuffled()[0..<8].map({ pareja in pareja })
             loteria1 = loterian.shuffled()
@@ -82,10 +93,7 @@ class LoteriaViewController: UIViewController {
             print("No pude sacar la carta")
             return
         }
-        
-        
-        
-        
+
         botonSonido.isUserInteractionEnabled = false
         loteria4.append(carta)
         
@@ -352,6 +360,7 @@ class LoteriaViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.paro = false
         self.reproductorAudio?.stop()
+        self.reproductorMusica?.stop()
         view.layer.removeAllAnimations()
         view.subviews.forEach { view in
             view.layer.removeAllAnimations()
@@ -360,6 +369,8 @@ class LoteriaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         botonSonido.addTarget(self, action: #selector(playLoteria), for: .touchUpInside)
         let BarButtonItemIzquierdo = menuButton(self,
         action: #selector(salir),
@@ -371,6 +382,28 @@ class LoteriaViewController: UIViewController {
         imageName: "icons8-query")
         
         self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho]
+        let botonPausa = menuButton(self,
+        action: #selector(pausaPlay),
+        imageName: "icons8-no_audio")
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
+        self.navigationItem.leftBarButtonItem = BarButtonItemIzquierdo
+        
+        audioFondo()
+    }
+    
+    @objc func pausaPlay(){
+        if (reproductorMusica?.isPlaying ?? false) {
+            reproductorMusica?.pause()
+            booleano = false
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = true
+        }
+        else {
+            reproductorMusica?.play()
+            booleano = true
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = false
+        }
     }
     
     @objc
@@ -497,7 +530,12 @@ extension ImagenLoteria{
 }
 extension LoteriaViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag && paro{
+        
+        if flag && player.isEqual(reproductorMusica){
+            reproductorMusica?.play()
+        }
+        
+        if flag && paro && player.isEqual(reproductorAudio){
             if !(loteria1?.isEmpty ?? false){
                 guard let carta = loteria1?.popLast() else {
                     print("No pude sacar la carta")
@@ -539,12 +577,13 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
     func terminarJuego(ganador: Int){
         paro = false
         reproductorAudio?.stop()
+       
         var mensaje = ""
         botonSonido.isSelected = false
         if ganador == 1{
             mensaje = mensajeSalida
         }else{
-            mensaje = "Le ganaste a Grafón"
+            mensaje = mensajeSalida2
         }
         let alert = UIAlertController(title: mensaje, message: "¿Volver a jugar con la misma plantilla?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: { [weak self] _ in
@@ -554,6 +593,7 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
                     viewc.removeFromSuperview()
                 }
             }
+            
             self?.botonSonido.isSelected = false
             self?.paro = false
             self?.reproductorAudio?.stop()
@@ -582,5 +622,18 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
             self?.paro = true
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func audioFondo(){
+        let sonido12 = Bundle.main.path(forResource: fondoSonido, ofType: "mp3")
+        reproductorMusica = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido12 ?? "15"))
+        reproductorMusica?.delegate = self
+        reproductorMusica?.volume = 0.2
+        if (reproductorMusica?.isPlaying ?? false) {
+            reproductorMusica?.stop()
+        }
+        else {
+            reproductorMusica?.play()
+        }
     }
 }

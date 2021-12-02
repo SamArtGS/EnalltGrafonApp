@@ -28,9 +28,9 @@ struct Data{
                nombreImagenPuertaAbierta: "PuertaGrupoPalabrasAbierta",
                pantallaReferenciada: "PuertaJuegos"),
         
-        Puerta(nombreImagenPuertaCerrada: "PuertaJuegos",
-               nombreImagenPuertaMedio: "PuertaJuegos",
-               nombreImagenPuertaAbierta: "PuertaJuegos",
+        Puerta(nombreImagenPuertaCerrada: "PuertaJuegosCerrada",
+               nombreImagenPuertaMedio: "PuertaJuegosMedio",
+               nombreImagenPuertaAbierta: "PuertaJuegosAbierta",
                pantallaReferenciada: "PuertaJuegos"),
     
     ]

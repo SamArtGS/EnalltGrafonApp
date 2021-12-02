@@ -9,19 +9,27 @@
 import UIKit
 
 enum JuegoLanzarPalabras {
+    
+    case simbolofon1
+    case simbolofon2
+    case simbolofon3
+    case simbolofon4
+    case simbolofon5
+    
     case memoramaPalabras
     case memoramaFrases
     case intruso
     case trivia
     case loteria1
     case loteria2
-    
     case turbofon1
     case turbofon2
     case turbofon3
     
     func retuTitle() -> String {
         switch self {
+        
+        
         case .intruso:
             return "Intruso"
         case .memoramaPalabras:
@@ -35,11 +43,13 @@ enum JuegoLanzarPalabras {
         case .loteria2:
             return "Lotofón 2"
         case .turbofon1:
-            return "Juego si o no"
+            return "Juego sí o no"
         case .turbofon2:
             return "Juego de los dilemas"
         case .turbofon3:
             return "Juego de las citas"
+        case .simbolofon1,.simbolofon2, .simbolofon3, .simbolofon4, .simbolofon5:
+            return "Simbolofón"
         }
     }
 }
@@ -62,6 +72,8 @@ class InstruccionesVC: UIViewController {
             view.backgroundColor = .colorVerdeFondoLoteria
         case .turbofon1, .turbofon2, .turbofon3:
             view.backgroundColor = .colorFondoTurboFon
+        case .simbolofon1,.simbolofon2, .simbolofon3, .simbolofon4, .simbolofon5:
+            colocarFondoCompleto(imagen: "bck_n1_juegos_v2")
         }
         
         
@@ -144,21 +156,54 @@ class InstruccionesVC: UIViewController {
             loteria.loteria = Data.loteria2
             loteria.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(loteria, animated: true)
+            
         case .turbofon1:
             let citas = JuegoCitas()
-            //loteria.loteria = Data.loteria2
             citas.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(citas, animated: true)
         case .turbofon2:
-            let loteria = LoteriaViewController()
-            loteria.loteria = Data.loteria2
-            loteria.title = juegoLanzar.retuTitle()
-            navigationController?.pushViewController(loteria, animated: true)
+            let citas = JuegoCitas()
+            citas.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(citas, animated: true)
         case .turbofon3:
-            let loteria = LoteriaViewController()
-            loteria.loteria = Data.loteria2
-            loteria.title = juegoLanzar.retuTitle()
-            navigationController?.pushViewController(loteria, animated: true)
+            let citas = JuegoCitas()
+            citas.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(citas, animated: true)
+            
+        case .simbolofon1:
+            let collect = UICollectionViewFlowLayout()
+            collect.scrollDirection = .horizontal
+            let simbolofon = SySJuego1VC(collectionViewLayout: collect, nivelSelecionado: 1)
+            simbolofon.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(simbolofon, animated: true)
+        case .simbolofon2:
+            let collect = UICollectionViewFlowLayout()
+            collect.scrollDirection = .horizontal
+            let simbolofon = SySJuego1VC(collectionViewLayout: collect, nivelSelecionado: 2)
+            simbolofon.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(simbolofon, animated: true)
+            break
+        case .simbolofon3:
+            let collect = UICollectionViewFlowLayout()
+            collect.scrollDirection = .horizontal
+            let simbolofon = SySJuego1VC(collectionViewLayout: collect, nivelSelecionado: 3)
+            simbolofon.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(simbolofon, animated: true)
+            break
+        case .simbolofon4:
+            let collect = UICollectionViewFlowLayout()
+            collect.scrollDirection = .horizontal
+            let simbolofon = SySJuego1VC(collectionViewLayout: collect, nivelSelecionado: 4)
+            simbolofon.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(simbolofon, animated: true)
+            break
+        case .simbolofon5:
+            let collect = UICollectionViewFlowLayout()
+            collect.scrollDirection = .horizontal
+            let simbolofon = SySJuego1VC(collectionViewLayout: collect, nivelSelecionado: 5)
+            simbolofon.title = juegoLanzar.retuTitle()
+            navigationController?.pushViewController(simbolofon, animated: true)
+            break
         }
     }
     

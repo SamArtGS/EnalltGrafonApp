@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate{
 
@@ -15,8 +17,24 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     private var puntos: Int = 0
     private var tarjetas: [ParejaSonido]?
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
+    private var fondoSonido: String = "music_Instruso"
+    private var booleano: Bool = false
     
+    var reproductorMusica: AVAudioPlayer?
     
+    func audioFondo(){
+        let sonido12 = Bundle.main.path(forResource: fondoSonido, ofType: "mp3")
+        reproductorMusica = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido12 ?? "15"))
+        reproductorMusica?.delegate = self
+        reproductorMusica?.volume = 0.2
+        if (reproductorMusica?.isPlaying ?? false) {
+            reproductorMusica?.stop()
+        }
+        else {
+            reproductorMusica?.play()
+        }
+    }
+
     
     @objc func instrucciones(){
         presentacionModal(viewController: PresentacionJuegoSyS(), halfTransition: &halfModalTransitioningDelegate)
@@ -62,6 +80,7 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.reproductorMusica?.stop()
         view.backgroundColor = .white
         self.navigationController?.setToolbarHidden(true, animated: false)
     }
@@ -121,6 +140,29 @@ extension SySJuego1VC{
         action: #selector(instrucciones),
         imageName: "icons8-query")
         self.navigationItem.rightBarButtonItem = BarButtonItemDerecho
+        
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho]
+        let botonPausa = menuButton(self,
+        action: #selector(pausaPlay),
+        imageName: "icons8-no_audio")
+        self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
+        
+        audioFondo()
+    }
+    
+    @objc func pausaPlay(){
+        if (reproductorMusica?.isPlaying ?? false) {
+            reproductorMusica?.pause()
+            booleano = false
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = true
+        }
+        else {
+            reproductorMusica?.play()
+            booleano = true
+            guard let boton = self.navigationItem.rightBarButtonItems?[1].customView as? UIButton else { return }
+            boton.isSelected = false
+        }
     }
     
     func configuracionToolBar(){
@@ -217,5 +259,14 @@ extension SySJuego1VC: pantallaResultadosDelegate{
         vc?.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: true)
         navigationController?.popToViewController(vc!, animated: true)
         navigationController?.setToolbarHidden(true, animated: false)
+    }
+}
+
+extension SySJuego1VC: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+        if flag && player.isEqual(reproductorMusica){
+            reproductorMusica?.play()
+        }
     }
 }

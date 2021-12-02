@@ -165,11 +165,11 @@ extension SeleccionarNivelController{
                 self.navigationController?.pushViewController(vcs, animated: true)
             case 1:
                 //Tutorial de Dilemas
-                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto1mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .turbofon2)
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon2)
                 self.navigationController?.pushViewController(vcs, animated: true)
             case 2:
                 //Tutorial de Dilemas
-                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_loto1mdpi", imagenBoton: "btn_loto_jugarmdpi", juegoLanzar: .turbofon3)
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon3)
                 self.navigationController?.pushViewController(vcs, animated: true)
             default:
                 break
@@ -178,8 +178,28 @@ extension SeleccionarNivelController{
         case 2:
             seleccionarJuegoPalabrasEnBoca(opcion: indexPath.item)
         default:
-            let vcs = SySJuego1VC(collectionViewLayout:scrollLayout, nivelSelecionado: indexPath.item + 1)
-            self.navigationController?.pushViewController(vcs, animated: true)
+            
+            switch indexPath.item + 1 {
+            case 1:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .simbolofon1)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 2:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .simbolofon2)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 3:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .simbolofon3)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 4:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .simbolofon4)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            case 5:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .simbolofon5)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            default:
+                let vcs = InstruccionesVC(imagenInstruccion: "demo_n1_jgo", imagenBoton: "n1_jgo_iniciar_mdpi", juegoLanzar: .turbofon3)
+                self.navigationController?.pushViewController(vcs, animated: true)
+            }
+           
         }
         
         

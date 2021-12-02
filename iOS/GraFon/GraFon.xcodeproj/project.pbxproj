@@ -39,6 +39,14 @@
 		5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */; };
 		5421F0F325DB751B00B309FC /* DataSonidosYSimbolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */; };
 		5423A06126487C20007B4F89 /* coleccionDeColecciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */; };
+		542D1332275583E700594499 /* CitasJuegoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D1331275583E700594499 /* CitasJuegoCell.swift */; };
+		542D133527559C6900594499 /* Memorama_frases.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133327559C6900594499 /* Memorama_frases.mp3 */; };
+		542D133627559C6900594499 /* Memorama_palabras.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133427559C6900594499 /* Memorama_palabras.mp3 */; };
+		542D133927559C7800594499 /* Lotofon_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133727559C7700594499 /* Lotofon_1.mp3 */; };
+		542D133A27559C7800594499 /* Lotofon_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133827559C7800594499 /* Lotofon_2.mp3 */; };
+		542D133C27559C8400594499 /* Encuentra_al_Intruso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133B27559C8400594499 /* Encuentra_al_Intruso.mp3 */; };
+		542D133E27559C8E00594499 /* Trivia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133D27559C8E00594499 /* Trivia.mp3 */; };
+		542D134027559CD300594499 /* Juego_de_citas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 542D133F27559CD300594499 /* Juego_de_citas.mp3 */; };
 		542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D5AF52604E7CE0074927F /* imageButtons.swift */; };
 		5447D489267D82D100D88FA1 /* TamanosLetras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447D488267D82D100D88FA1 /* TamanosLetras.swift */; };
 		5449C1DA26D5D89400AEBCA9 /* music_Instruso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5449C1D926D5D89400AEBCA9 /* music_Instruso.mp3 */; };
@@ -554,6 +562,14 @@
 		5420D224265460DA0069ABF1 /* TarjetaEEE-Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TarjetaEEE-Y.swift"; sourceTree = "<group>"; };
 		5421F0F225DB751B00B309FC /* DataSonidosYSimbolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSonidosYSimbolos.swift; sourceTree = "<group>"; };
 		5423A06026487C20007B4F89 /* coleccionDeColecciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coleccionDeColecciones.swift; sourceTree = "<group>"; };
+		542D1331275583E700594499 /* CitasJuegoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasJuegoCell.swift; sourceTree = "<group>"; };
+		542D133327559C6900594499 /* Memorama_frases.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Memorama_frases.mp3; sourceTree = "<group>"; };
+		542D133427559C6900594499 /* Memorama_palabras.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Memorama_palabras.mp3; sourceTree = "<group>"; };
+		542D133727559C7700594499 /* Lotofon_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lotofon_1.mp3; sourceTree = "<group>"; };
+		542D133827559C7800594499 /* Lotofon_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lotofon_2.mp3; sourceTree = "<group>"; };
+		542D133B27559C8400594499 /* Encuentra_al_Intruso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Encuentra_al_Intruso.mp3; sourceTree = "<group>"; };
+		542D133D27559C8E00594499 /* Trivia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trivia.mp3; sourceTree = "<group>"; };
+		542D133F27559CD300594499 /* Juego_de_citas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Juego_de_citas.mp3; sourceTree = "<group>"; };
 		542D5AF52604E7CE0074927F /* imageButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageButtons.swift; sourceTree = "<group>"; };
 		5447D488267D82D100D88FA1 /* TamanosLetras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamanosLetras.swift; sourceTree = "<group>"; };
 		5449C1D926D5D89400AEBCA9 /* music_Instruso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music_Instruso.mp3; sourceTree = "<group>"; };
@@ -1095,6 +1111,14 @@
 			path = TarjetasInfo;
 			sourceTree = "<group>";
 		};
+		542D1330275583D500594499 /* ADivertirse */ = {
+			isa = PBXGroup;
+			children = (
+				542D1331275583E700594499 /* CitasJuegoCell.swift */,
+			);
+			path = ADivertirse;
+			sourceTree = "<group>";
+		};
 		5466CAAA2642DC7600443B58 /* Lato */ = {
 			isa = PBXGroup;
 			children = (
@@ -1242,6 +1266,7 @@
 				5449C1E726D7352C00AEBCA9 /* AlertaJuegosPalabras.swift */,
 				54A0F886262676BD00A6D308 /* SimbolosSonidos */,
 				5406E83926403BAD00EE25B3 /* PalabrasEnBoca */,
+				542D1330275583D500594499 /* ADivertirse */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1325,6 +1350,13 @@
 		54DC9F6B26364CAE003D4F68 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				542D133F27559CD300594499 /* Juego_de_citas.mp3 */,
+				542D133D27559C8E00594499 /* Trivia.mp3 */,
+				542D133B27559C8400594499 /* Encuentra_al_Intruso.mp3 */,
+				542D133727559C7700594499 /* Lotofon_1.mp3 */,
+				542D133827559C7800594499 /* Lotofon_2.mp3 */,
+				542D133327559C6900594499 /* Memorama_frases.mp3 */,
+				542D133427559C6900594499 /* Memorama_palabras.mp3 */,
 				54082EA126DCAB5F0064902F /* mp_g3_01.mp3 */,
 				54082EA826DCAB600064902F /* mp_g3_02.mp3 */,
 				54082EA626DCAB600064902F /* mp_g3_03.mp3 */,
@@ -1826,6 +1858,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				542D133527559C6900594499 /* Memorama_frases.mp3 in Resources */,
 				54EA1A7E2732D07600C99F0B /* lot1_34.mp3 in Resources */,
 				54EA1A712732D07600C99F0B /* lot1_08.mp3 in Resources */,
 				5450B357265D791800BB36BA /* pb_i_07.mp3 in Resources */,
@@ -1912,10 +1945,12 @@
 				54A2049126D577200000BB1B /* intruso_05.mp3 in Resources */,
 				5466CAD72642DC8700443B58 /* LICENSE.txt in Resources */,
 				54EA1AEF2732D33700C99F0B /* lot2_21.mp3 in Resources */,
+				542D133E27559C8E00594499 /* Trivia.mp3 in Resources */,
 				54EA1AE42732D33700C99F0B /* lot2_38.mp3 in Resources */,
 				5450B37B265D791800BB36BA /* pb_u_02.mp3 in Resources */,
 				54DC9FFB26364CAE003D4F68 /* 85.mp3 in Resources */,
 				54DCA02B26364CAE003D4F68 /* 202.mp3 in Resources */,
+				542D133627559C6900594499 /* Memorama_palabras.mp3 in Resources */,
 				54A712802742D6D600927588 /* 37_1.mp3 in Resources */,
 				54DC9FDC26364CAE003D4F68 /* 140.mp3 in Resources */,
 				5450B3A7265D791800BB36BA /* pb_i_10.mp3 in Resources */,
@@ -1995,6 +2030,7 @@
 				5450B3DE265D791800BB36BA /* pb_X_01.mp3 in Resources */,
 				5450B380265D791800BB36BA /* pb_o_02.mp3 in Resources */,
 				5450B3A2265D791800BB36BA /* pb_l_02.mp3 in Resources */,
+				542D133A27559C7800594499 /* Lotofon_2.mp3 in Resources */,
 				5450B3A8265D791800BB36BA /* pb_a_07.mp3 in Resources */,
 				54082E9D26DCAB4A0064902F /* mp_g2_01.mp3 in Resources */,
 				5466CAB72642DC7600443B58 /* Lato-LightItalic.ttf in Resources */,
@@ -2134,6 +2170,7 @@
 				54082EAC26DCAB600064902F /* mp_g3_05.mp3 in Resources */,
 				54DC9FE426364CAE003D4F68 /* 169.mp3 in Resources */,
 				54DCA00A26364CAE003D4F68 /* 137.mp3 in Resources */,
+				542D133927559C7800594499 /* Lotofon_1.mp3 in Resources */,
 				5466CAB62642DC7600443B58 /* Lato-Italic.ttf in Resources */,
 				5450B374265D791800BB36BA /* pb_v_01.mp3 in Resources */,
 				5466CAD32642DC8700443B58 /* Roboto-ThinItalic.ttf in Resources */,
@@ -2211,6 +2248,7 @@
 				54EA1A922732D07600C99F0B /* lot1_30.mp3 in Resources */,
 				546691D227172B9C00C9C26E /* pb_g_05.mp3 in Resources */,
 				54DCA04526364CAE003D4F68 /* 206.mp3 in Resources */,
+				542D134027559CD300594499 /* Juego_de_citas.mp3 in Resources */,
 				54DCA01126364CAE003D4F68 /* 119.mp3 in Resources */,
 				5449C1DC26D5F31E00AEBCA9 /* acierto.wav in Resources */,
 				54DC9FDD26364CAE003D4F68 /* 154.mp3 in Resources */,
@@ -2232,6 +2270,7 @@
 				54DCA02826364CAE003D4F68 /* 203.mp3 in Resources */,
 				5450B377265D791800BB36BA /* pb_u_06.mp3 in Resources */,
 				5450B372265D791800BB36BA /* pb_y_02.mp3 in Resources */,
+				542D133C27559C8400594499 /* Encuentra_al_Intruso.mp3 in Resources */,
 				54EA1AEC2732D33700C99F0B /* lot2_34.mp3 in Resources */,
 				5450B3A9265D791800BB36BA /* pb_n_07.mp3 in Resources */,
 				54EA1AF92732D33700C99F0B /* lot2_43.mp3 in Resources */,
@@ -2334,6 +2373,7 @@
 				5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */,
 				54581468270B5CB200791FC3 /* LoteriaViewController.swift in Sources */,
 				54AB30CD274547D100F2F13B /* Tourofon.swift in Sources */,
+				542D1332275583E700594499 /* CitasJuegoCell.swift in Sources */,
 				548FBA9326C0243300E8A109 /* GrupoPalabras.swift in Sources */,
 				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
 				54BFA47426D9B6980050FD61 /* Trivia.swift in Sources */,
@@ -2489,7 +2529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -2510,7 +2550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

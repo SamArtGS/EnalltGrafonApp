@@ -322,7 +322,7 @@ struct tarjetas {
                 Silaba(
                     palabras: [
                         Palabra(palabra: "pl*an*", enGriego: "plɑ̃"),
-                        Palabra(palabra: "ch*ant*", enGriego: "ʃ∫ɑ̃")
+                        Palabra(palabra: "ch*ant*", enGriego: "ʃɑ̃")
                     ],
                     pronuciacion: "an",
                     explicacion: "Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido",

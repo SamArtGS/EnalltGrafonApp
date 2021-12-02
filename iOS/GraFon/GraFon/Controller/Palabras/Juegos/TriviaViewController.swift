@@ -16,7 +16,7 @@ class TriviaViewController: UICollectionViewController {
     private let segundosRestantesDefault = 120
     private var segundosRestantes = 120
     private var score: Int = 0
-    private let fondoSonido: String = "music_Instruso"
+    private let fondoSonido: String = "Trivia"
     private var reproductorAudio: AVAudioPlayer?
     private var dataShuffle = Data.trivias.shuffled()
     private var reproductorLetra: AVAudioPlayer?
@@ -107,20 +107,12 @@ class TriviaViewController: UICollectionViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    private var booleanYaPaso: Bool = false
     private var contadorA10: Int = 0
     
     @objc func updateCounter() {
         
-        contadorA10+=1
-        
-        if contadorA10 == 10 && segundosRestantes >= 0{
-            
-            collectionView.visibleCells.forEach { cell in
-                cell.isUserInteractionEnabled = false
-                cell.subviews.forEach { view in
-                    view.isUserInteractionEnabled = false
-                }
-            }
+        if contadorA10 == 10 && segundosRestantes >= 0 && !booleanYaPaso{
             
             score -= 1
             puntaje.title = "Puntos: \(score)"
@@ -134,15 +126,8 @@ class TriviaViewController: UICollectionViewController {
                 collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             }
             contadorA10 = 0
-            
-            
-            collectionView.visibleCells.forEach { cell in
-                cell.isUserInteractionEnabled = true
-                cell.subviews.forEach { view in
-                    view.isUserInteractionEnabled = true
-                }
-            }
         }
+        contadorA10+=1
         
         if segundosRestantes >= 0 {
             switch segundosRestantes {
@@ -235,6 +220,7 @@ extension TriviaViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
+    
     func sonarPunto(bool: Bool) {
         if bool{
             let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
@@ -257,7 +243,7 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
     
     
     func recolectarPuntaje(correcto: Bool) {
-        
+        booleanYaPaso = true
         self.collectionView.isUserInteractionEnabled = false
         if correcto{
             score += 1

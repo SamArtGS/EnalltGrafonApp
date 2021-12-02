@@ -6,4 +6,31 @@
 //  Copyright © 2021 SamArtGS. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class JuegoSiNo: UIViewController{
+    
+    var cita: Cita?{
+        didSet{
+            
+        }
+    }
+    
+    let mapa: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    let cuadritoBlanco: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        
+        return view
+    }()
+    
+    
+    
+    
+}

@@ -77,7 +77,6 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         }
         items[0].title = "\(filtrado[indexPath.item].fonema)"
         items[2].title = "\(filtrado[indexPath.item].identificador) / \(filtrado.count)"
-        
     }
     override func collectionView(_ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {

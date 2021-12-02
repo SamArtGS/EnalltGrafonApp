@@ -8,7 +8,7 @@
 import UIKit
 
 protocol pantallaInstruccionesDelegate: AnyObject{
-    func iniciarJuego()
+    func continuarJuego()
 }
 protocol juegoSimbolosySonidosDelegate: AnyObject{
     func siguiente()
@@ -31,4 +31,9 @@ protocol pantallaResultadosDelegate: AnyObject{
 protocol juegoTriviaDelegate: AnyObject{
     func recolectarPuntaje(correcto: Bool)
     func sonarPunto(bool: Bool)
+}
+
+protocol juegoCitasDelegate: AnyObject{
+    func recolectarPuntaje(correcto: Bool)
+    func sonarPoint(bool: Bool)
 }

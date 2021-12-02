@@ -11,7 +11,7 @@ import AVFoundation
 
 class MemoramaViewController: UICollectionViewController {
     
-    private let fondoSonido: String = "music_Instruso"
+    private var fondoSonido: String = ""
     private var reproductorAudio: AVAudioPlayer?
     private var segundosRestantes = 0
     private var score:Int = 0
@@ -32,9 +32,11 @@ class MemoramaViewController: UICollectionViewController {
         if tipoMemorama == .memoramaPalabras{
             self.segundosRestantes = 59
             self.tiempo.title = "Tiempo: 1:00"
+            fondoSonido = "Memorama_palabras"
         }else{
             self.segundosRestantes = 120
             self.tiempo.title = "Tiempo: 2:00"
+            fondoSonido = "Memorama_frases"
         }
     }
     
@@ -174,7 +176,7 @@ class MemoramaViewController: UICollectionViewController {
         let alert = UIAlertController(title: "Parejas: \(score)", message: "¿Seguir jugando con la misma pareja?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
-            
+            self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
             self?.cartas?.shuffle()
             self?.score = 0
             self?.puntaje.title = "Pares: 0"
@@ -193,6 +195,8 @@ class MemoramaViewController: UICollectionViewController {
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             self?.score = 0
             self?.puntaje.title = "Pares: 0"
+            
+            self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
             self?.generarTarjetas()
             self?.collectionView.reloadData()
         }))
@@ -272,6 +276,7 @@ class MemoramaViewController: UICollectionViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(true, animated: false)
         self.reproductorAudio?.stop()
+        timer?.invalidate()
         view.layer.removeAllAnimations()
         view.subviews.forEach { view in
             view.layer.removeAllAnimations()

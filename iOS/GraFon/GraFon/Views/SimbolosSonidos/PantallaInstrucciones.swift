@@ -72,6 +72,6 @@ class PantallaJuegoSyS: UIView{
 }
 extension PantallaJuegoSyS{
     @objc func iniciar(){
-        delegate?.iniciarJuego()
+        delegate?.continuarJuego()
     }
 }

@@ -158,7 +158,6 @@ extension MenuJuegos{
         let scrollLayout = UICollectionViewFlowLayout()
         scrollLayout.scrollDirection = .vertical
         let vc = SeleccionarNivelController(collectionViewLayout: scrollLayout, puertaSeleccionada: 0)
-        
         vc.title = "Lotofón"
         navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorGruposPalabras.as1ptImage()
         navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarGruposPalabras.as1ptImage(), for: .default)

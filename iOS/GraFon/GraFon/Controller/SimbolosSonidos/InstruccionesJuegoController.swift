@@ -58,7 +58,7 @@ class PresentacionJuegoSyS: Carcasa {
 }
 
 extension PresentacionJuegoSyS: pantallaInstruccionesDelegate{
-    func iniciarJuego() {
+    func continuarJuego() {
         dismiss(animated: true, completion: nil)
     }
 }

@@ -12,7 +12,7 @@ import AVFoundation
 
 class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     
-    private let fondoSonido: String = "music_Instruso"
+    private let fondoSonido: String = "Encuentra_al_Intruso"
     private var reproductorAudio: AVAudioPlayer?
     private var reproductorLetra: AVAudioPlayer?
     private var segundosRestantes = 120
@@ -22,6 +22,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private var score:Int = 0
     private var booleano: Bool = false
 
+    deinit {
+        print("limpieza correcta intruso")
+    }
     
     private let labelBoton: UILabelPersonalizado = {
         let label = UILabelPersonalizado()
@@ -64,6 +67,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         return vista
     }()
     
+    var timer1:Timer?
+    var timer2:Timer?
+    
     override func viewDidLoad() {
         self.title = "Encuentra al intruso"
         view.backgroundColor = .white
@@ -91,11 +97,11 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         imageName: "icons8-no_audio")
         self.navigationItem.rightBarButtonItems = [BarButtonItemDerecho,botonPausa]
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+        timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             self?.updateCounter()
         }
         
-        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] timer in
+        timer2 = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] timer in
                 self?.soltarHoja()
         }
         letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
@@ -157,6 +163,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     func terminarJuego(){
+        
+        timer1?.invalidate()
+        timer2?.invalidate()
         
         let alert = UIAlertController(title: "Puntos: \(score)", message: "¿Seguir jugando con el mismo sonido?", preferredStyle: .alert)
 
@@ -266,6 +275,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(true, animated: false)
+        timer1?.invalidate()
+        timer2?.invalidate()
         self.reproductorAudio?.stop()
         self.reproductorLetra?.stop()
         view.layer.removeAllAnimations()

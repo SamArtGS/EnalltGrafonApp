@@ -936,10 +936,10 @@ extension Data{
     
     static let loteria2:Loteria = Loteria(parejasLoteria: [
         ParejaLoteria(sonido: "lot2_01", palabra: "31 ans"),
-        ParejaLoteria(sonido: "lot2_02", palabra: "21 an"),
+        ParejaLoteria(sonido: "lot2_02", palabra: "21 ans"),
         ParejaLoteria(sonido: "lot2_03", palabra: "1 an"),
         ParejaLoteria(sonido: "lot2_04", palabra: "1 €"),
-        ParejaLoteria(sonido: "lot2_05", palabra: "$1"),
+        ParejaLoteria(sonido: "lot2_05", palabra: "＄1"),
         ParejaLoteria(sonido: "lot2_06", palabra: "22 h"),
         ParejaLoteria(sonido: "lot2_07", palabra: "2 h"),
         ParejaLoteria(sonido: "lot2_08", palabra: "2 €"),
@@ -956,7 +956,7 @@ extension Data{
         ParejaLoteria(sonido: "lot2_19", palabra: "6"),
         ParejaLoteria(sonido: "lot2_20", palabra: "26 ans"),
         ParejaLoteria(sonido: "lot2_21", palabra: "6 ans"),
-        ParejaLoteria(sonido: "lot2_22", palabra: "$6"),
+        ParejaLoteria(sonido: "lot2_22", palabra: "＄6"),
         ParejaLoteria(sonido: "lot2_23", palabra: "6 €"),
         ParejaLoteria(sonido: "lot2_24", palabra: "6 h"),
         ParejaLoteria(sonido: "lot2_25", palabra: "8"),
@@ -965,8 +965,8 @@ extension Data{
         ParejaLoteria(sonido: "lot2_28", palabra: "18 h"),
         ParejaLoteria(sonido: "lot2_29", palabra: "8 h"),
         ParejaLoteria(sonido: "lot2_30", palabra: "8 €"),
-        ParejaLoteria(sonido: "lot2_31", palabra: "$8"),
-        ParejaLoteria(sonido: "lot2_32", palabra: "$19"),
+        ParejaLoteria(sonido: "lot2_31", palabra: "＄8"),
+        ParejaLoteria(sonido: "lot2_32", palabra: "＄19"),
         ParejaLoteria(sonido: "lot2_33", palabra: "9"),
         ParejaLoteria(sonido: "lot2_34", palabra: "19"),
         ParejaLoteria(sonido: "lot2_35", palabra: "19 ans"),
@@ -978,12 +978,12 @@ extension Data{
         ParejaLoteria(sonido: "lot2_41", palabra: "10 ans"),
         ParejaLoteria(sonido: "lot2_42", palabra: "10"),
         ParejaLoteria(sonido: "lot2_43", palabra: "10 h"),
-        ParejaLoteria(sonido: "lot2_44", palabra: "$10"),
+        ParejaLoteria(sonido: "lot2_44", palabra: "＄10"),
         ParejaLoteria(sonido: "lot2_45", palabra: "10 €"),
         ParejaLoteria(sonido: "lot2_46", palabra: "20"),
         ParejaLoteria(sonido: "lot2_47", palabra: "20 ans"),
         ParejaLoteria(sonido: "lot2_48", palabra: "20 h"),
-        ParejaLoteria(sonido: "lot2_49", palabra: "$20"),
+        ParejaLoteria(sonido: "lot2_49", palabra: "＄20"),
         ParejaLoteria(sonido: "lot2_50", palabra: "20 €")
     ])
 }
