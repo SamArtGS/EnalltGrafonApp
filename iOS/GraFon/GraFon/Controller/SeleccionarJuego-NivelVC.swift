@@ -48,7 +48,7 @@ class SeleccionarNivelController: UICollectionViewController, UITabBarController
             colocarFondoCompleto(imagen: "fondo_menu_lotomdpi")
             break
         case 1: // Puerta amarilla
-            colocarFondoCompleto(imagen: "N4_menú_background")
+            colocarFondoCompleto(imagen: "N4_menu_background")
             break
         case 2: //Puerta palabras
             collectionView.backgroundColor = .colorFondoTarjetasPalabrasEnBoca
@@ -168,7 +168,7 @@ extension SeleccionarNivelController{
                 let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon2)
                 self.navigationController?.pushViewController(vcs, animated: true)
             case 2:
-                //Tutorial de Dilemas
+                //Tutorial de Citas
                 let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon3)
                 self.navigationController?.pushViewController(vcs, animated: true)
             default:

@@ -15,7 +15,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private let fondoSonido: String = "Encuentra_al_Intruso"
     private var reproductorAudio: AVAudioPlayer?
     private var reproductorLetra: AVAudioPlayer?
-    private var segundosRestantes = 10
+    private var segundosRestantes = 20
     private var playing:Bool = true
     private var letraSonidoCurso:SonidoActualIntruso?
     private var queueIntrusos:[ContenidoHoja]?
@@ -104,8 +104,11 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         timer2 = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] timer in
                 self?.soltarHoja()
         }
-        letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
+        randomNumber = Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)
+        letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[randomNumber]
     }
+    
+    var randomNumber: Int = 0
     
     @objc func pausaPlay(){
         if (reproductorAudio?.isPlaying ?? false) {
@@ -170,9 +173,8 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         let alert = UIAlertController(title: "Puntos: \(score)", message: "¿Seguir jugando con el mismo sonido?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
-            self?.reload()
-            self?.segundosRestantes = 120
-            
+            self?.segundosRestantes = 20
+            self?.labelBoton.font = .Roboto(.bold, size: 20)
             self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
                 self?.updateCounter()
             }
@@ -181,15 +183,18 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                     self?.soltarHoja()
             }
             
+            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[self?.randomNumber ?? 0]
+            self?.reload()
             self?.score = 0
             self?.puntaje.title = "Puntos: 0"
+            
             
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             
-            self?.segundosRestantes = 120
+            self?.segundosRestantes = 20
             
-            
+            self?.labelBoton.font = .Roboto(.bold, size: 20)
             self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
                 self?.updateCounter()
             }
@@ -198,7 +203,9 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                     self?.soltarHoja()
             }
             
-            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
+            
+            self?.randomNumber = Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)
+            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[self?.randomNumber ?? 0]
             self?.reload()
             self?.score = 0
             self?.puntaje.title = "Puntos: 0"
@@ -331,7 +338,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         ])
         sigSag(viewcita: imagenView)
     }
-    private var terminar: Bool = false
+    private var terminar: Bool = true
     
     func sigSag(viewcita:ImagenHojaCayendo, posX: CGFloat = 0, posY: CGFloat = 0, delayo: Int = 0){
         UIView.animate(withDuration: 1,
@@ -354,11 +361,12 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                             self?.sigSag(viewcita: viewcita, posX: -posX + 35, posY: posY + 50)
                             if viewcita.image == viewcita.imagenHoja?.imagenNormal &&  viewcita.contenidoHoja?.sonido == self?.letraSonidoCurso?.tipo {
                                 
-                                //Creo este es el que genera errores
+                                if !(self!.terminar){
                                     viewcita.cambiarAMal()
                                     viewcita.isUserInteractionEnabled = false
                                     self?.darPuntaje(acierto: false)
                                     self?.sonarAudio(2)
+                                }
                                 }
                         }else{
                             viewcita.isUserInteractionEnabled = false
@@ -419,22 +427,20 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     }()
     
      func reload(){
-        
+        terminar = false
         view.subviews.forEach { view in
-            
             if view.isKind(of: ImagenHojaCayendo.self){
-                
                 print("Removiendo hojas")
                 view.layer.removeAllAnimations()
                 view.removeFromSuperview()
-                terminar = true
             }else{
                 view.removeFromSuperview()
                 view.layer.removeAllAnimations()
             }
         }
-        viewWillAppear(false)
-        
+        colocarFondo(imagen: "Back-menu_jgo_intruso")
+        configurarConstraints()
+        terminar = true
     }
     
     @objc func preguntarCambioLetra(){

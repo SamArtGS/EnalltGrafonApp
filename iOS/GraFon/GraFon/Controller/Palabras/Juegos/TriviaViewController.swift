@@ -93,9 +93,10 @@ class TriviaViewController: UICollectionViewController {
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.segundosRestantes = self?.segundosRestantesDefault ?? 120
-            self?.score = 0
             self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             self?.dataShuffle = Data.trivias.shuffled()
+            self?.score = 0
+            self?.puntaje.title = "Puntos: 0"
             self?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
@@ -107,12 +108,20 @@ class TriviaViewController: UICollectionViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private var booleanYaPaso: Bool = false
     private var contadorA10: Int = 0
     
     @objc func updateCounter() {
         
-        if contadorA10 == 10 && segundosRestantes >= 0 && !booleanYaPaso{
+        contadorA10+=1
+        
+        if contadorA10 == 10 && segundosRestantes >= 0{
+            
+            collectionView.visibleCells.forEach { cell in
+                cell.isUserInteractionEnabled = false
+                cell.subviews.forEach { view in
+                    view.isUserInteractionEnabled = false
+                }
+            }
             
             score -= 1
             puntaje.title = "Puntos: \(score)"
@@ -126,8 +135,15 @@ class TriviaViewController: UICollectionViewController {
                 collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             }
             contadorA10 = 0
+            
+            
+            collectionView.visibleCells.forEach { cell in
+                cell.isUserInteractionEnabled = true
+                cell.subviews.forEach { view in
+                    view.isUserInteractionEnabled = true
+                }
+            }
         }
-        contadorA10+=1
         
         if segundosRestantes >= 0 {
             switch segundosRestantes {
@@ -203,8 +219,8 @@ extension TriviaViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width),
-                            height: (view.frame.height))
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width),
+                            height: (view.safeAreaLayoutGuide.layoutFrame.height))
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -220,7 +236,6 @@ extension TriviaViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
-    
     func sonarPunto(bool: Bool) {
         if bool{
             let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
@@ -243,7 +258,7 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
     
     
     func recolectarPuntaje(correcto: Bool) {
-        booleanYaPaso = true
+        
         self.collectionView.isUserInteractionEnabled = false
         if correcto{
             score += 1

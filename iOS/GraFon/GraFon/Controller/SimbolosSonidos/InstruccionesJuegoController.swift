@@ -31,15 +31,91 @@ class Carcasa: UIViewController{
 class PresentacionCreditos: UIViewController {
     
     let texto = [
-        NSMutableAttributedString(string: "Proyecto PAPIME PE401220\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14),
+        
+        NSMutableAttributedString(string: "Trabajo realizado con el apoyo del programa\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "UNAM-DGAPA-PAPIME PE401220\n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        
+        NSMutableAttributedString(string: "Responsable del proyecto\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Béatrice Florence Blin\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Corresponsable del proyecto\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "María Antonieta Rodríguez Rivera \n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Créditos de contenido\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 18),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Departamento de Linguística Aplicada de la ENALLT-UNAM\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Béatrice Florence Blin\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Departamento de francés de la ENALLT-UNAM\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Jessou Denise Jandette Torres\n María Eugenia Quezada Salazar \n Mónica Rizo Marechal\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Universidad de Jyväskylä  (Finlandia)\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Jean-Michel Kalmbach \n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Alumnos de la Licenciatura en Linguística aplicada de la ENALLT-UNAM\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Celestino Velázquez Martínez \n Edwin Monreal Alemán\n Braulio Nieto Cerca\n Aladar Martínez\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Alumnas de la Licenciatura en Traducción de la ENALLT-UNAM\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Ilse Ameyalli Sánchez Pacheco \n Nadia Ketzalli Sánchez Pacheco\n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
         NSMutableAttributedString(string: "Créditos de desarrollo\n\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 18),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         NSMutableAttributedString(string: "Coordinación de Educación a Distancia\n\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Diseño de interfaz gráfica e ilustraciones\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "María Teresa Cesáreo Castillo \n María Antonieta Rodríguez Rivera \n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
         NSMutableAttributedString(string: "Desarrollo en Android\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
@@ -56,49 +132,7 @@ class PresentacionCreditos: UIViewController {
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
-        NSMutableAttributedString(string: "Diseño de interfaz gráfica e ilustraciones\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "María Teresa Cesáreo Castillo \n María Antonieta Rodríguez Rivera\n\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Créditos de contenido\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 18),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Departamento de Linguística Aplicada\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Autora\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Béatrice Florence Blin\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Departamento de Francés\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 16),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Profesoras participantes\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Mónica Rizo Marechal \n Jessou Jandet \n María Eugenia Quezada\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Alumnos de la Licenciatura\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
-        
-        NSMutableAttributedString(string: "Fulano \n\n\n",
-                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
-                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+       
         
     ]
     

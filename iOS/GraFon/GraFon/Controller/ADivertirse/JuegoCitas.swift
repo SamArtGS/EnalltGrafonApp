@@ -13,7 +13,7 @@ class JuegoCitas: UIViewController{
     
     private var score: Int = 0
     
-    var citas = Data.citas.shuffled()
+    var citas = Data.citas.shuffled()[0...18]
     var timer: Timer?
     private var segundosRestantes = 300
     
@@ -71,67 +71,67 @@ class JuegoCitas: UIViewController{
 
     }
     
+    var tiempoText = ""
     @objc func updateCounter(sender: Timer) {
         print(segundosRestantes)
         if segundosRestantes >= 0 {
             switch segundosRestantes {
             case 0:
-                mapa.image = UIImage(named: "mapa_juego3_18")
+                tiempoText = "0:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
                 terminarJuego()
             case 1..<5:
-                mapa.image = UIImage(named: "mapa_juego3_17")
+                tiempoText = "0:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
             case 5..<10:
-                mapa.image = UIImage(named: "mapa_juego3_16")
+                tiempoText = "0:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
             case 10..<30:
-                mapa.image = UIImage(named: "mapa_juego3_15")
                 tiempo.title = "Tiempo: 0:\(segundosRestantes)"
             case 30..<60:
-                mapa.image = UIImage(named: "mapa_juego3_14")
+                tiempoText = "0:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:\(segundosRestantes)"
             case 60..<70:
-                mapa.image = UIImage(named: "mapa_juego3_13")
+                tiempoText = "1:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 1:0\(segundosRestantes - 60)"
             case 60..<70:
-                mapa.image = UIImage(named: "mapa_juego3_12")
+                tiempoText = "1:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 1:0\(segundosRestantes - 60)"
             case 70..<90:
-                mapa.image = UIImage(named: "mapa_juego3_11")
+                tiempoText = "1:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 1:\(segundosRestantes - 60)"
             case 90..<120:
-                mapa.image = UIImage(named: "mapa_juego3_10")
+                tiempoText = "1:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 1:\(segundosRestantes - 60)"
             case 120..<130:
-                mapa.image = UIImage(named: "mapa_juego3_9")
+                tiempoText = "2:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 2:0\(segundosRestantes - 120)"
             case 130..<150:
-                mapa.image = UIImage(named: "mapa_juego3_8")
+                tiempoText = "2:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 2:\(segundosRestantes - 120)"
             case 150..<180:
-                mapa.image = UIImage(named: "mapa_juego3_7")
+                tiempoText = "2:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 2:\(segundosRestantes - 120)"
             case 180..<190:
-                mapa.image = UIImage(named: "mapa_juego3_6")
+                tiempoText = "3:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 3:0\(segundosRestantes - 180)"
             case 190..<210:
-                mapa.image = UIImage(named: "mapa_juego3_5")
+                tiempoText = "3:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 3:\(segundosRestantes - 180)"
             case 210..<240:
-                mapa.image = UIImage(named: "mapa_juego3_4")
+                tiempoText = "3:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 3:\(segundosRestantes - 180)"
             case 240..<250:
-                mapa.image = UIImage(named: "mapa_juego3_3")
+                tiempoText = "4:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 4:0\(segundosRestantes - 240)"
             case 250..<280:
-                mapa.image = UIImage(named: "mapa_juego3_2")
+                tiempoText = "4:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 4:\(segundosRestantes - 240)"
             case 280..<300:
-                mapa.image = UIImage(named: "mapa_juego3_1")
+                tiempoText = "4:\(segundosRestantes)"
                 tiempo.title = "Tiempo: 4:\(segundosRestantes - 240)"
             case 300:
-                mapa.image = UIImage(named: "mapa_juego3_1")
+                tiempoText = "5:00"
                 tiempo.title = "Tiempo: 5:00"
             default:
                 debugPrint("no time")
@@ -142,12 +142,12 @@ class JuegoCitas: UIViewController{
     
     func terminarJuego(){
         timer?.invalidate()
-        let alert = UIAlertController(title: "Obtuviste: \(score) en 5 minutos", message: "¿Seguir jugando?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Obtuviste: \(score) en \(Int(segundosRestantes/60)) minutos", message: "¿Seguir jugando?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.timer?.invalidate()
             self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
-            self?.citas.shuffle()
+            self?.citas = Data.citas.shuffled()[0...18]
             self?.score = 0
             self?.segundosRestantes = 300
             self?.puntaje.title = "Puntos: 0"
@@ -272,7 +272,7 @@ class JuegoCitas: UIViewController{
 
 extension JuegoCitas: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Data.citas.count
+        return citas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -326,9 +326,9 @@ extension JuegoCitas: juegoCitasDelegate{
         
         if correcto{
             score += 1
+            mapa.image = UIImage(named: "mapa_juego3_\(score + 1)")
             puntaje.title = "Puntos: \(score)"
         }else{
-            score -= 1
             puntaje.title = "Puntos: \(score)"
         }
         
@@ -336,12 +336,11 @@ extension JuegoCitas: juegoCitasDelegate{
         guard let indexPath = coleccionView.indexPathsForVisibleItems.first else {
             return
         }
-        
-        //mapa.image = UIImage(named: "mapa_juego3_\(indexPath.item + 2)")
-        
-        coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
-        
-    
+        if indexPath.item + 1 == 18{
+            terminarJuego()
+        }else{
+            coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+        }
     }
 }
 

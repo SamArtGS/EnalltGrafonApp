@@ -47,7 +47,7 @@ class MenuJuegos: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "¡A divertirse!"
-        colocarFondoCompleto(imagen: "N4_a divertirse_background")
+        colocarFondoCompleto(imagen: "N4_a_divertirse_background")
         dibujarStackJuegos()
     }
     
