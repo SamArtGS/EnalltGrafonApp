@@ -15,7 +15,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     private let fondoSonido: String = "Encuentra_al_Intruso"
     private var reproductorAudio: AVAudioPlayer?
     private var reproductorLetra: AVAudioPlayer?
-    private var segundosRestantes = 20
+    private var segundosRestantes = 120
     private var playing:Bool = true
     private var letraSonidoCurso:SonidoActualIntruso?
     private var queueIntrusos:[ContenidoHoja]?
@@ -173,7 +173,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         let alert = UIAlertController(title: "Puntos: \(score)", message: "¿Seguir jugando con el mismo sonido?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
-            self?.segundosRestantes = 20
+            self?.segundosRestantes = 120
             self?.labelBoton.font = .Roboto(.bold, size: 20)
             self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
                 self?.updateCounter()
@@ -192,7 +192,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             
-            self?.segundosRestantes = 20
+            self?.segundosRestantes = 120
             
             self?.labelBoton.font = .Roboto(.bold, size: 20)
             self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in

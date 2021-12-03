@@ -152,6 +152,7 @@ class JuegoCitas: UIViewController{
             self?.segundosRestantes = 300
             self?.puntaje.title = "Puntos: 0"
             self?.coleccionView.reloadData()
+            self?.mapa.image = UIImage(named: "mapa_juego3_1")
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             guard let viewController = self?.navigationController?.viewControllers else { return }
@@ -336,8 +337,11 @@ extension JuegoCitas: juegoCitasDelegate{
         guard let indexPath = coleccionView.indexPathsForVisibleItems.first else {
             return
         }
+        print("index",indexPath.item + 1)
         if indexPath.item + 1 == 18{
             terminarJuego()
+            coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
+            
         }else{
             coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
         }

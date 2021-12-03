@@ -31,6 +31,7 @@ protocol pantallaResultadosDelegate: AnyObject{
 protocol juegoTriviaDelegate: AnyObject{
     func recolectarPuntaje(correcto: Bool)
     func sonarPunto(bool: Bool)
+    func tapcito() -> Bool
 }
 
 protocol juegoCitasDelegate: AnyObject{

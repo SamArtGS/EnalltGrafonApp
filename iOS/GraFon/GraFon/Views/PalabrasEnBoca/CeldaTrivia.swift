@@ -43,6 +43,10 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             palabraSuperior.palabra = palabras[0]
             palabraCentral.palabra = palabras[1]
             palabraInferior.palabra = palabras[2]
+            
+            palabraSuperior.isUserInteractionEnabled = true
+            palabraCentral.isUserInteractionEnabled = true
+            palabraInferior.isUserInteractionEnabled = true
         }
     }
     
@@ -83,7 +87,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         return label
     }()
     
-    private let labelSuperior: UILabel = {
+    let labelSuperior: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .Roboto(.bold, size: 25)
@@ -91,7 +95,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         return label
     }()
     
-    private let labelMedio: UILabel = {
+    let labelMedio: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .Roboto(.bold, size: 25)
@@ -99,7 +103,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         return label
     }()
     
-    private let labelInferior: UILabel = {
+    let labelInferior: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .Roboto(.bold, size: 25)
@@ -107,7 +111,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         return label
     }()
     
-    private let palabraSuperior: ImagenTrivia = {
+     let palabraSuperior: ImagenTrivia = {
         let imagenView = ImagenTrivia()
         imagenView.isUserInteractionEnabled = true
         imagenView.imagenCorrecta = UIImage(named: "btn_trivia_sup_acierto_n2")
@@ -121,29 +125,26 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         return imagenView
     }()
     
-    private let palabraCentral: ImagenTrivia = {
+     let palabraCentral: ImagenTrivia = {
         let imagenView = ImagenTrivia()
         imagenView.isUserInteractionEnabled = true
         imagenView.imagenCorrecta = UIImage(named: "btn_trivia_medio_acierto_n2")
         imagenView.imagenIncorrecta = UIImage(named: "btn_trivia_medio_error_n2")
         imagenView.imagenNormal = UIImage(named: "btn_trivia_medio_n2")
         imagenView.image = imagenView.imagenNormal
-        
         imagenView.translatesAutoresizingMaskIntoConstraints = false
         imagenView.contentMode = .scaleAspectFit
         imagenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(verificarRespuesta(_:))))
         return imagenView
     }()
     
-    private let palabraInferior: ImagenTrivia = {
+     let palabraInferior: ImagenTrivia = {
         let imagenView = ImagenTrivia()
         imagenView.isUserInteractionEnabled = true
         imagenView.imagenCorrecta = UIImage(named: "btn_trivia_inf_acierto_n2")
         imagenView.imagenIncorrecta = UIImage(named: "btn_trivia_sup-inf_error_n2")
         imagenView.imagenNormal = UIImage(named: "btn_trivia_sup-inf_n2")
         imagenView.image = imagenView.imagenNormal
-        
-        
         imagenView.translatesAutoresizingMaskIntoConstraints = false
         imagenView.contentMode = .scaleAspectFit
         imagenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(verificarRespuesta(_:))))
@@ -154,9 +155,6 @@ class TriviaCollectionViewCell: UICollectionViewCell{
         super.init(frame: frame)
         botonSonido.addTarget(self, action: #selector(sonarAudio), for: .touchUpInside)
         configurarConstraints()
-        palabraSuperior.isUserInteractionEnabled = true
-        palabraCentral.isUserInteractionEnabled = true
-        palabraInferior.isUserInteractionEnabled = true
         
     }
     
@@ -237,12 +235,14 @@ class TriviaCollectionViewCell: UICollectionViewCell{
     
     @objc func verificarRespuesta(_ sender: UITapGestureRecognizer){
         guard let imagenHoja = sender.view as? ImagenTrivia else { return }
-        self.isUserInteractionEnabled = false
-        imagenHoja.isUserInteractionEnabled = false
+        
+        
         palabraSuperior.isUserInteractionEnabled = false
         palabraCentral.isUserInteractionEnabled = false
         palabraInferior.isUserInteractionEnabled = false
         
+        guard let boolean =  delegate?.tapcito() else { return }
+        if boolean{
         if imagenHoja.palabra == trivia?.respuesta{
             
             imagenHoja.image = imagenHoja.imagenCorrecta
@@ -251,15 +251,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: { [weak self] in
                 self?.delegate?.recolectarPuntaje(correcto: true)
                 imagenHoja.image = imagenHoja.imagenNormal
-                imagenHoja.isUserInteractionEnabled = true
-                self?.isUserInteractionEnabled = true
-                self?.palabraSuperior.isUserInteractionEnabled = true
-                self?.palabraCentral.isUserInteractionEnabled = true
-                self?.palabraInferior.isUserInteractionEnabled = true
             })
-            
-            
-
         }else{
             
             imagenHoja.image = imagenHoja.imagenIncorrecta
@@ -269,8 +261,7 @@ class TriviaCollectionViewCell: UICollectionViewCell{
                 self?.delegate?.recolectarPuntaje(correcto: false)
                 imagenHoja.image = imagenHoja.imagenNormal
             })
-            
-            
-        }
+        }}
     }
 }
+

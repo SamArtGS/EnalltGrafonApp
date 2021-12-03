@@ -107,6 +107,7 @@ class TriviaViewController: UICollectionViewController {
 
         self.present(alert, animated: true, completion: nil)
     }
+    private var pasante: Bool = true
     
     private var contadorA10: Int = 0
     
@@ -114,21 +115,26 @@ class TriviaViewController: UICollectionViewController {
         
         contadorA10+=1
         
-        if contadorA10 == 10 && segundosRestantes >= 0{
-            
-            collectionView.visibleCells.forEach { cell in
-                cell.isUserInteractionEnabled = false
-                cell.subviews.forEach { view in
-                    view.isUserInteractionEnabled = false
-                }
+        if contadorA10 == 10 && segundosRestantes >= 0 && pasante{
+            pasante = false
+            guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
+                return
             }
+            
+            let cell = collectionView.cellForItem(at: indexPath) as! TriviaCollectionViewCell
+            
+            cell.palabraSuperior.isUserInteractionEnabled = false
+            cell.palabraCentral.isUserInteractionEnabled = false
+            cell.palabraInferior.isUserInteractionEnabled = false
+            
+            cell.subviews.forEach({ view in
+                view.isUserInteractionEnabled = false
+            })
             
             score -= 1
             puntaje.title = "Puntos: \(score)"
             sonarPunto(bool: false)
-            guard let indexPath = collectionView.indexPathsForVisibleItems.first else {
-                return
-            }
+            
             collectionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
             
             if indexPath.item + 1 >= dataShuffle.count{
@@ -136,13 +142,6 @@ class TriviaViewController: UICollectionViewController {
             }
             contadorA10 = 0
             
-            
-            collectionView.visibleCells.forEach { cell in
-                cell.isUserInteractionEnabled = true
-                cell.subviews.forEach { view in
-                    view.isUserInteractionEnabled = true
-                }
-            }
         }
         
         if segundosRestantes >= 0 {
@@ -236,6 +235,15 @@ extension TriviaViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
+    func tapcito() -> Bool {
+        if pasante{
+            pasante = false
+            return true
+        }else{
+            return false
+        }
+    }
+    
     func sonarPunto(bool: Bool) {
         if bool{
             let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
@@ -258,8 +266,8 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
     
     
     func recolectarPuntaje(correcto: Bool) {
-        
-        self.collectionView.isUserInteractionEnabled = false
+        pasante = false
+        contadorA10 = 0
         if correcto{
             score += 1
             puntaje.title = "Puntos: \(score)"
@@ -277,20 +285,19 @@ extension TriviaViewController: juegoTriviaDelegate, AVAudioPlayerDelegate{
             dataShuffle = Data.trivias.shuffled()
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
         }
-        self.collectionView.isUserInteractionEnabled = true
     }
     
     override func viewDidLayoutSubviews() {
         
     }
     override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        pasante = true
+        print("Finalizó scroll")
         collectionView.visibleCells.forEach { cell in
             cell.isUserInteractionEnabled = true
-        }
-    }
-    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        collectionView.visibleCells.forEach { cell in
-            cell.isUserInteractionEnabled = false
+            cell.subviews.forEach { view in
+                view.isUserInteractionEnabled = true
+            }
         }
     }
     
