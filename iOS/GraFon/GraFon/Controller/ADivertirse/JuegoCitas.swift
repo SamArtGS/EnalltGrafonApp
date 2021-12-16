@@ -13,7 +13,7 @@ class JuegoCitas: UIViewController{
     
     private var score: Int = 0
     
-    var citas = Data.citas.shuffled()[0...18]
+    var citas = Data.citas.shuffled()
     var timer: Timer?
     private var segundosRestantes = 300
     
@@ -79,7 +79,7 @@ class JuegoCitas: UIViewController{
             case 0:
                 tiempoText = "0:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
-                terminarJuego()
+                terminarJuego(bool: false)
             case 1..<5:
                 tiempoText = "0:0\(segundosRestantes)"
                 tiempo.title = "Tiempo: 0:0\(segundosRestantes)"
@@ -140,17 +140,27 @@ class JuegoCitas: UIViewController{
         }
     }
     
-    func terminarJuego(){
+    func terminarJuego(bool: Bool){
         timer?.invalidate()
-        let alert = UIAlertController(title: "Obtuviste: \(score) en \(Int(segundosRestantes/60)) minutos", message: "¿Seguir jugando?", preferredStyle: .alert)
+        
+        var tituloAlert = ""
+        //Están componiendo una puerta en mi casa //Si lo oigo
+        if bool{
+            tituloAlert = "¡Felicidades, llegaste a la meta!"
+            mapa.image = UIImage(named: "cruce_meta_juego3")
+        }else{
+            tituloAlert = "¡Intentalo de nuevo para llegar más lejos!"
+        }
+        let alert = UIAlertController(title: tituloAlert, message: "¿Seguir jugando?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
             self?.timer?.invalidate()
             self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
-            self?.citas = Data.citas.shuffled()[0...18]
+            self?.citas = Data.citas.shuffled()
             self?.score = 0
             self?.segundosRestantes = 300
             self?.puntaje.title = "Puntos: 0"
+            self?.citas = Data.citas.shuffled()
             self?.coleccionView.reloadData()
             self?.mapa.image = UIImage(named: "mapa_juego3_1")
         }))
@@ -159,6 +169,9 @@ class JuegoCitas: UIViewController{
             self?.navigationController?.popToViewController(viewController[viewController.count - 3], animated: true)
             self?.navigationController?.setToolbarHidden(true, animated: false)
         }))
+        
+        
+        
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -338,12 +351,22 @@ extension JuegoCitas: juegoCitasDelegate{
             return
         }
         print("index",indexPath.item + 1)
-        if indexPath.item + 1 == 18{
-            terminarJuego()
+        if self.score == 18{
+            terminarJuego(bool: true)
             coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             
         }else{
-            coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+            
+            if indexPath.item + 1 == citas.count{
+                
+                self.citas = Data.citas.shuffled()
+                self.coleccionView.reloadData()
+                coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+                
+            }else{
+                coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+            }
+            
         }
     }
 }

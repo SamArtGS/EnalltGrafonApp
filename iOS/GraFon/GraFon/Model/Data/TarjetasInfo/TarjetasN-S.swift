@@ -423,7 +423,7 @@ extension tarjetas{
             Palabra(palabra: "chips", enGriego: "ʃips"),
             Palabra(palabra: "laps", enGriego: "laps"),
             Palabra(palabra: "clips", enGriego: "klips"),
-            Palabra(palabra: "forceps ", enGriego: "foʀ.seps")
+            Palabra(palabra: "forceps ", enGriego: "foʀ.sᴇps")
           ]
         ),
         Tarjeta(audio: "pb_p_04",

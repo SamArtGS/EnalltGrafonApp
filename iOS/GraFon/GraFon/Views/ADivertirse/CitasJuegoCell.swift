@@ -19,18 +19,48 @@ class CitaCell: UICollectionViewCell{
             
             tituloLabel.text = "Si lees en voz alta, \n ¿cuántos sonidos como este encuentras?"
             letraLabel.text = cita.simbolo
+            
+            if UIDevice().userInterfaceIdiom == .pad{
+                letraLabel.font = .Roboto(.bold, size: 27)
+            }else{
+                letraLabel.font = .Roboto(.bold, size: 17)
+            }
+            
             citaLabel.text = cita.texto
             libroLabel.text = cita.obra
-            autorLabel.text = cita.autor
+            
+            if UIDevice().userInterfaceIdiom == .pad{
+                let atributoObra = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 24)]
+                let atributoAutor = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 24)]
+                
+                let partOne = NSMutableAttributedString(string: cita.obra + "\n", attributes: atributoObra)
+                let partTwo = NSMutableAttributedString(string: cita.autor, attributes: atributoAutor)
+                
+                partOne.append(partTwo)
+                
+                libroLabel.attributedText = partOne
+                
+            }else{
+                let atributoObra = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14)]
+                let atributoAutor = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14)]
+                
+                let partOne = NSMutableAttributedString(string: cita.obra + "\n", attributes: atributoObra)
+                let partTwo = NSMutableAttributedString(string: cita.autor, attributes: atributoAutor)
+                
+                partOne.append(partTwo)
+                
+                libroLabel.attributedText = partOne
+                
+            }
         }
     }
     
     private let pilaVertical: UIStackView = {
        let elementosApilados:UIStackView = UIStackView()
         elementosApilados.axis = .vertical
-        elementosApilados.distribution = .equalSpacing
+        elementosApilados.distribution = .equalCentering
         elementosApilados.alignment = .center
-        elementosApilados.spacing = 10
+        elementosApilados.spacing = 7
         elementosApilados.translatesAutoresizingMaskIntoConstraints = false
         return elementosApilados
     }()
@@ -70,9 +100,9 @@ class CitaCell: UICollectionViewCell{
             label.font = .Roboto(.bold, size: 17)
         }
         label.textColor = .colorLetraRosa
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
+        label.numberOfLines = 1
         label.textAlignment = .center
+        label.sizeToFit()
         return label
     }()
     
@@ -95,9 +125,9 @@ class CitaCell: UICollectionViewCell{
         let label = UILabelPersonalizado()
         label.translatesAutoresizingMaskIntoConstraints = false
         if UIDevice().userInterfaceIdiom == .pad{
-            label.font = .Roboto(.bold, size: 22)
+            label.font = .Roboto(.italic, size: 22)
         }else{
-            label.font = .Roboto(.bold, size: 12)
+            label.font = .Roboto(.italic, size: 12)
         }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
@@ -106,21 +136,21 @@ class CitaCell: UICollectionViewCell{
         return label
     }()
     
-    let autorLabel: UILabelPersonalizado = {
-        let label = UILabelPersonalizado()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        if UIDevice().userInterfaceIdiom == .pad{
-            label.font = .Roboto(.boldItalic, size: 22)
-        }else{
-            label.font = .Roboto(.boldItalic, size: 12)
-        }
-        label.textColor = .black
-        label.lineBreakMode = .byWordWrapping
-        label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 0
-        label.textAlignment = .right
-        return label
-    }()
+//    let autorLabel: UILabelPersonalizado = {
+//        let label = UILabelPersonalizado()
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        if UIDevice().userInterfaceIdiom == .pad{
+//            label.font = .Roboto(.regular, size: 22)
+//        }else{
+//            label.font = .Roboto(.regular, size: 12)
+//        }
+//        label.textColor = .black
+//        label.lineBreakMode = .byWordWrapping
+//        label.adjustsFontForContentSizeCategory = true
+//        label.numberOfLines = 0
+//        label.textAlignment = .right
+//        return label
+//    }()
     
     let imagenBrujula: UIImageView = {
         let imageView = UIImageView()
@@ -160,7 +190,7 @@ class CitaCell: UICollectionViewCell{
             
             botones.append(boton)
         }
-        return botones.shuffled()
+        return botones
     }()
     
     private let pilaHorizontal: () -> UIStackView = {
@@ -194,11 +224,12 @@ class CitaCell: UICollectionViewCell{
         pilaVertical.addArrangedSubview(letraLabel)
         pilaVertical.addArrangedSubview(citaLabel)
         pilaVertical.addArrangedSubview(libroLabel)
-        pilaVertical.addArrangedSubview(autorLabel)
+        //pilaVertical.addArrangedSubview(autorLabel)
         pilaVertical.addArrangedSubview(pilaHorizontal1)
         pilaVertical.addArrangedSubview(pilaHorizontal2)
+        letraLabel.sizeToFit()
         libroLabel.sizeToFit()
-        autorLabel.sizeToFit()
+        //autorLabel.sizeToFit()
         
         
         pilaHorizontal1.addArrangedSubview(conjuntoBotones[0])
@@ -236,9 +267,9 @@ class CitaCell: UICollectionViewCell{
             imagenBrujula.widthAnchor.constraint(equalTo: cuadritoBlanco.widthAnchor, multiplier: 0.1),
             imagenBrujula.heightAnchor.constraint(equalTo: imagenBrujula.widthAnchor),
             
-            
             letraLabel.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
             letraLabel.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
+            letraLabel.heightAnchor.constraint(equalTo: cuadritoBlanco.heightAnchor, multiplier: 0.08),
             
             citaLabel.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
             citaLabel.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
@@ -246,8 +277,8 @@ class CitaCell: UICollectionViewCell{
             libroLabel.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
             libroLabel.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
             
-            autorLabel.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
-            autorLabel.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
+            //autorLabel.leadingAnchor.constraint(equalTo: cuadritoBlanco.leadingAnchor, constant: 10),
+            //autorLabel.trailingAnchor.constraint(equalTo: cuadritoBlanco.trailingAnchor, constant: -10),
             
             
            

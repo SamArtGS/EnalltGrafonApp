@@ -14,7 +14,7 @@ extension Data{
     
     
     static let grupoPalabras:[GrupoPalabras] = [
-        GrupoPalabras(identificador: 1, letra: "Grupo de palabras 1", imagenGrupo: "1a_n3", tarjetas:
+        GrupoPalabras(identificador: 1, letra: "Grupos de palabras 1", imagenGrupo: "1a_n3", tarjetas:
         [
             Tarjeta(audio: "mp_g1_01",
               silabas: [
@@ -358,7 +358,7 @@ extension Data{
         
         
         ),
-        GrupoPalabras(identificador: 2, letra: "Grupo de palabras 2", imagenGrupo: "2a_n3", tarjetas: [
+        GrupoPalabras(identificador: 2, letra: "Grupos de palabras 2", imagenGrupo: "2a_n3", tarjetas: [
             Tarjeta(audio: "mp_g2_01",
               silabas: [
                 Silaba(
@@ -564,7 +564,7 @@ extension Data{
         // ----------------------------------------------------------------------------------
         
         
-        GrupoPalabras(identificador: 3, letra: "Grupo de palabras 3", imagenGrupo: "2b_n3", tarjetas:[
+        GrupoPalabras(identificador: 3, letra: "Grupos de palabras 3", imagenGrupo: "2b_n3", tarjetas:[
                       
             Tarjeta(audio: "mp_g3_01",
               silabas: [

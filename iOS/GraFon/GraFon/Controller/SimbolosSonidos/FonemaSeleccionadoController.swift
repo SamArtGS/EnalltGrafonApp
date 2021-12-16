@@ -75,6 +75,10 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         let filtrado = Data.fonemas.filter{ elemento in
             elemento.identificador != 0
         }
+        items[0].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white,
+                                         NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 15)], for: .normal)
+        items[0].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white,
+                                         NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 15)], for: .selected)
         items[0].title = "\(filtrado[indexPath.item].fonema)"
         items[2].title = "\(filtrado[indexPath.item].identificador) / \(filtrado.count)"
     }

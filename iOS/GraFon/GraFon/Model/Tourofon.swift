@@ -43,9 +43,9 @@ extension Data{
 
     Cita(simbolo: "o", texto: "Chez nous c'est chez vous\nEt c'est un nouveau monde", autor: "Corneille", obra: "Nouveau monde", cantidadSonidos: 1),
 
-        Cita(simbolo: "ɶ", texto: "Nos tâches tachent\ntour à tour\nles tours\nd’alentours.", autor: "Robert Desnos", obra: "Domaine Public", cantidadSonidos: 0),
+        Cita(simbolo: "&Œ&", texto: "Nos tâches tachent\ntour à tour\nles tours\nd’alentours.", autor: "Robert Desnos", obra: "Domaine Public", cantidadSonidos: 0),
 
-        Cita(simbolo: "ɶ", texto: "Peu de bipèdes depuis Adam\nont mérité le nom d’homme.", autor: "Marguerite Yourcenar", obra: "L’œuvre au noir", cantidadSonidos: 4),
+        Cita(simbolo: "&Œ&", texto: "Peu de bipèdes depuis Adam\nont mérité le nom d’homme.", autor: "Marguerite Yourcenar", obra: "L’œuvre au noir", cantidadSonidos: 4),
 
         Cita(simbolo: "u", texto: "Cher petit oreiller, doux et chaud\nsous ma tête,\nPlein de plume choisie, et blanc !\net fait pour moi !", autor: "Marceline Desbordes-Valmore", obra: "L’oreiller d’un enfant", cantidadSonidos: 3),
 
