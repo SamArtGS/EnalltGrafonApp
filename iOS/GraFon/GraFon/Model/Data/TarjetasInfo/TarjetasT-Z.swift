@@ -142,7 +142,7 @@ extension tarjetas{
           
           Palabra(palabra: "but", enGriego: "byt"),
           Palabra(palabra: "brut", enGriego: "bʀyt"),
-          Palabra(palabra: "chut", enGriego: "ʃyt"),
+          Palabra(palabra: "chut", enGriego: "∫yt"),
           Palabra(palabra: "zut", enGriego: "zyt")
         ]
         ),
@@ -227,7 +227,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "*w*eekend", enGriego: "wi.kᴇnd"),
-                    Palabra(palabra: "sand*w*ich", enGriego: "sɑ̃.dwitʃ")
+                    Palabra(palabra: "sand*w*ich", enGriego: "sɑ̃.dwit∫")
               ],
               pronuciacion: "w",
               explicacion: """
@@ -272,7 +272,7 @@ extension tarjetas{
             Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "interviewer", enGriego: "ɛ̃.tᴇʀ.vju.vᴇ"),
             Palabra(palabra: "", enGriego: ""),
-            Palabra(palabra: "rickshaw", enGriego: "ʀi.kʃo")
+            Palabra(palabra: "rickshaw", enGriego: "ʀi.k∫o")
           ]
         ),
     ]
@@ -420,7 +420,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "ch*ez*", enGriego: "ʃᴇ"),
+                    Palabra(palabra: "ch*ez*", enGriego: "∫ᴇ"),
                     Palabra(palabra: "vous parl*ez*", enGriego: "vu.paʀ.lᴇ")
               ],
               pronuciacion: "-ez",

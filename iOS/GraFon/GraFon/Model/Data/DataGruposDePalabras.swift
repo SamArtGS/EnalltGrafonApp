@@ -50,13 +50,13 @@ extension Data{
               excepciones: [
                 Palabra(palabra: "hongrois", enGriego: "õ.gʀwa"),
                 Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃"),
-                Palabra(palabra: "haschich", enGriego: "a.ʃiʃ"),
+                Palabra(palabra: "haschich", enGriego: "a.∫i∫"),
                 Palabra(palabra: "hall", enGriego: "ol"),
                 Palabra(palabra: "halo", enGriego: "a.lo"),
                 Palabra(palabra: "hamac", enGriego: "a.mak"),
                 Palabra(palabra: "hamburger", enGriego: "ɑ̃.b&Œ&ʀ.g&Œ&ʀ"),
                 Palabra(palabra: "hamster", enGriego: "ams.tᴇʀ"),
-                Palabra(palabra: "hanche", enGriego: "ɑ̃ʃ"),
+                Palabra(palabra: "hanche", enGriego: "ɑ̃∫"),
                 Palabra(palabra: "handicap", enGriego: "ɑ̃.di.kap"),
                 Palabra(palabra: "haricot", enGriego: "a.ʀi.ko"),
                 Palabra(palabra: "harpe", enGriego: "aʀp"),
@@ -66,7 +66,7 @@ extension Data{
                 Palabra(palabra: "hernie", enGriego: "ᴇʀ.ni"),
                 Palabra(palabra: "héros", enGriego: "ᴇ.ʀo"),
                 Palabra(palabra: "hibou", enGriego: "i.bu"),
-                Palabra(palabra: "hiérarchie", enGriego: "jᴇ.ʀaʀ.ʃi"),
+                Palabra(palabra: "hiérarchie", enGriego: "jᴇ.ʀaʀ.∫i"),
                 Palabra(palabra: "hiéroglyphe", enGriego: "jᴇ.ʀo.glif"),
                 Palabra(palabra: "hippie", enGriego: "i.pi"),
                 Palabra(palabra: "homard", enGriego: "o.maʀ"),
@@ -107,7 +107,7 @@ extension Data{
               excepciones: [
                 Palabra(palabra: "hongrois", enGriego: "õ.gʀwa"),
                 Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃"),
-                Palabra(palabra: "haschich", enGriego: "a.ʃiʃ"),
+                Palabra(palabra: "haschich", enGriego: "a.∫i∫"),
                 Palabra(palabra: "hall", enGriego: "ol"),
                 Palabra(palabra: "halo", enGriego: "a.lo"),
                 Palabra(palabra: "hamac", enGriego: "a.mak"),
@@ -161,7 +161,7 @@ extension Data{
                  
                    Palabra(palabra: "hongrois", enGriego: "õ.gʀwa"),
                    Palabra(palabra: "haïtien", enGriego: "a.i.sjɛ̃"),
-                   Palabra(palabra: "haschich", enGriego: "a.ʃiʃ"),
+                   Palabra(palabra: "haschich", enGriego: "a.∫i∫"),
                    Palabra(palabra: "hall", enGriego: "ol"),
                    Palabra(palabra: "halo", enGriego: "a.lo"),
                    Palabra(palabra: "hamac", enGriego: "a.mak"),
@@ -347,7 +347,7 @@ extension Data{
                         Palabra(palabra: "tout à l’heure", enGriego: "tu.ta.l&Œ&ʀ"),
                         Palabra(palabra: "", enGriego: ""),
                         Palabra(palabra: "", enGriego: ""),
-                        Palabra(palabra: "Les Champs-Élysées", enGriego: "lᴇ.ʃɑ̃.zᴇ.li.zᴇ"),
+                        Palabra(palabra: "Les Champs-Élysées", enGriego: "lᴇ.∫ɑ̃.zᴇ.li.zᴇ"),
                         Palabra(palabra: "Les États-Unis", enGriego: "lᴇ.zᴇ.ta.zy.ni"),
                         Palabra(palabra: "Les Nations-Unies", enGriego: "lᴇ.na.sjõ.zy.ni"),
                         Palabra(palabra: "", enGriego: ""),
@@ -540,7 +540,7 @@ extension Data{
                 ),
                 Silaba(
                   palabras: [
-                        Palabra(palabra: "tu *en a*chètes", enGriego: "ty.ɑ̃.na.ʃᴇt"),
+                        Palabra(palabra: "tu *en a*chètes", enGriego: "ty.ɑ̃.na.∫ᴇt"),
                         Palabra(palabra: "*en h*ésitant", enGriego: "ɑ̃.nᴇ.zi.tɑ̃")
                   ],
                   pronuciacion: "en",

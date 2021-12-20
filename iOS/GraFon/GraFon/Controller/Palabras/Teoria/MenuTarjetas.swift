@@ -36,9 +36,19 @@ class MenuTarjetas: UICollectionViewController, UIToolbarDelegate{
     func configuracionToolBar(){
         if puertaSeleccionada == 0{
             self.title = "Más que una palabra"
+            
             self.navigationController?.toolbar.isTranslucent = false
             self.navigationController?.toolbar.barTintColor = .colorTabBarGruposPalabras
             self.navigationController?.toolbar.tintColor = .white
+            
+            if #available(iOS 15.0, *) {
+                let appereance = UIToolbarAppearance()
+                appereance.configureWithOpaqueBackground()
+                appereance.backgroundColor = .colorTabBarGruposPalabras
+                navigationController?.toolbar.standardAppearance = appereance
+                navigationController?.toolbar.scrollEdgeAppearance = appereance
+                navigationController?.toolbar.compactAppearance = appereance
+            }
             
         }
         if puertaSeleccionada == 2{
@@ -46,6 +56,15 @@ class MenuTarjetas: UICollectionViewController, UIToolbarDelegate{
             self.navigationController?.toolbar.isTranslucent = false
             self.navigationController?.toolbar.barTintColor = .colorTabBarPalabrasEnBoca
             self.navigationController?.toolbar.tintColor = .white
+            
+            if #available(iOS 15.0, *) {
+                let appereance = UIToolbarAppearance()
+                appereance.configureWithOpaqueBackground()
+                appereance.backgroundColor = .colorTabBarPalabrasEnBoca
+                navigationController?.toolbar.standardAppearance = appereance
+                navigationController?.toolbar.scrollEdgeAppearance = appereance
+                navigationController?.toolbar.compactAppearance = appereance
+            }
         }
     }
     

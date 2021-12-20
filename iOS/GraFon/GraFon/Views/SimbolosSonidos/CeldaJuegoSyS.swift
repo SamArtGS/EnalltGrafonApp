@@ -89,6 +89,11 @@ class JuegoSySCelda: UICollectionViewCell, AVAudioPlayerDelegate{
         let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")
         do {
             reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+            do {
+                  try AVAudioSession.sharedInstance().setCategory(.playback)
+               } catch(let error) {
+                   print(error.localizedDescription)
+               }
             reproductorAudio.play()
         }catch{
             print("Error al reproducir el audio: \(error.localizedDescription)")

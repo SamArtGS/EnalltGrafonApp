@@ -116,7 +116,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "pl*an*", enGriego: "plɑ̃"),
-                    Palabra(palabra: "ch*ant*", enGriego: "ʃɑ̃")
+                    Palabra(palabra: "ch*ant*", enGriego: "∫ɑ̃")
               ],
               pronuciacion: "an",
               explicacion: """
@@ -382,7 +382,7 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "ch*amp*", enGriego: "ʃɑ̃")
+                    Palabra(palabra: "ch*amp*", enGriego: "∫ɑ̃")
               ],
               pronuciacion: "-amp",
               explicacion: """
@@ -420,7 +420,7 @@ extension tarjetas{
             )
           ],
           excepciones: [
-            Palabra(palabra: "chips", enGriego: "ʃips"),
+            Palabra(palabra: "chips", enGriego: "∫ips"),
             Palabra(palabra: "laps", enGriego: "laps"),
             Palabra(palabra: "clips", enGriego: "klips"),
             Palabra(palabra: "forceps ", enGriego: "foʀ.sᴇps")
@@ -551,7 +551,7 @@ extension tarjetas{
             Palabra(palabra: "alzheimer", enGriego: "al.zaj.mᴇʀ"),
             Palabra(palabra: "amer", enGriego: "a.mᴇʀ"),
             Palabra(palabra: "cancer", enGriego: "kɑ̃.sᴇʀ"),
-            Palabra(palabra: "cher", enGriego: "ʃᴇʀ"),
+            Palabra(palabra: "cher", enGriego: "∫ᴇʀ"),
             Palabra(palabra: "enfer", enGriego: "ɑ̃.fᴇʀ"),
             Palabra(palabra: "fer", enGriego: "fᴇʀ"),
             Palabra(palabra: "fier", enGriego: "fjᴇʀ"),
@@ -559,7 +559,7 @@ extension tarjetas{
             Palabra(palabra: "hier", enGriego: "jᴇʀ"),
             Palabra(palabra: "hiver", enGriego: "i.vᴇʀ"),
             Palabra(palabra: "hyper", enGriego: "i.pᴇʀ"),
-            Palabra(palabra: "kasher", enGriego: "ka.ʃᴇʀ"),
+            Palabra(palabra: "kasher", enGriego: "ka.∫ᴇʀ"),
             Palabra(palabra: "mer", enGriego: "mᴇʀ"),
             Palabra(palabra: "polyester", enGriego: "po.ljᴇs.tᴇʀ"),
             Palabra(palabra: "super", enGriego: "sy.pᴇʀ"),
@@ -567,7 +567,7 @@ extension tarjetas{
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "bestseller", enGriego: "bᴇst.sᴇ.lᴇʀ"),
             Palabra(palabra: "bulldozer", enGriego: "byl.do.zᴇʀ"),
-            Palabra(palabra: "charter", enGriego: "ʃaʀ.tᴇʀ"),
+            Palabra(palabra: "charter", enGriego: "∫aʀ.tᴇʀ"),
             Palabra(palabra: "cluster", enGriego: "kl&Œ&s.t&Œ&ʀ"),
             Palabra(palabra: "corner", enGriego: "koʀ.nᴇʀ"),
             Palabra(palabra: "crooner", enGriego: "kʀu.n&Œ&ʀ"),
@@ -632,13 +632,13 @@ extension tarjetas{
             ),
             Silaba(
               palabras: [
-                    Palabra(palabra: "*sch*éma", enGriego: "ʃᴇ.ma")
+                    Palabra(palabra: "*sch*éma", enGriego: "∫ᴇ.ma")
               ],
               pronuciacion: "sch-",
               explicacion: """
                               Al inicio de una palabra \n\n transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: nil,
               textodeAbajo: nil
             )
@@ -939,8 +939,8 @@ extension tarjetas{
             )
           ],
           excepciones: [
-            Palabra(palabra: "fasciste", enGriego: "fa.ʃist"),
-            Palabra(palabra: "fascisme", enGriego: "fa.ʃism"),
+            Palabra(palabra: "fasciste", enGriego: "fa.∫ist"),
+            Palabra(palabra: "fascisme", enGriego: "fa.∫ism"),
           ]
         ),
         
@@ -949,15 +949,15 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                Palabra(palabra: "*sché*ma", enGriego: "ʃᴇ.ma"),
-                Palabra(palabra: "ha*sch*ich", enGriego: "a.ʃiʃ"),
-                Palabra(palabra: "goula*sch*", enGriego: "gu.laʃ")
+                Palabra(palabra: "*sché*ma", enGriego: "∫ᴇ.ma"),
+                Palabra(palabra: "ha*sch*ich", enGriego: "a.∫i∫"),
+                Palabra(palabra: "goula*sch*", enGriego: "gu.la∫")
               ],
               pronuciacion: "sch",
               explicacion: """
                               transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: nil,
               textodeAbajo: nil
             )

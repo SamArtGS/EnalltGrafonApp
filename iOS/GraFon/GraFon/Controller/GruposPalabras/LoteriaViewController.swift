@@ -114,6 +114,11 @@ class LoteriaViewController: UIViewController {
                 }
             }
             reproductorAudio?.delegate = self
+            do {
+                  try AVAudioSession.sharedInstance().setCategory(.playback)
+               } catch(let error) {
+                   print(error.localizedDescription)
+               }
             reproductorAudio?.play()
             botonSonido.isSelected = true
         }catch{
@@ -629,6 +634,11 @@ extension LoteriaViewController: AVAudioPlayerDelegate{
         reproductorMusica = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido12 ?? "15"))
         reproductorMusica?.delegate = self
         reproductorMusica?.volume = 0.2
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
         if (reproductorMusica?.isPlaying ?? false) {
             reproductorMusica?.stop()
         }

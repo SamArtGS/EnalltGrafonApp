@@ -153,6 +153,11 @@ class MemoramaViewController: UICollectionViewController {
         reproductorAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
         reproductorAudio?.delegate = self
         reproductorAudio?.volume = 0.2
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.stop()
         }
@@ -222,6 +227,11 @@ class MemoramaViewController: UICollectionViewController {
                 reproductorLetra?.volume = 0.1
                 reproductorLetra = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
                 //reproductorLetra?.volume = 0.3
+                do {
+                      try AVAudioSession.sharedInstance().setCategory(.playback)
+                   } catch(let error) {
+                       print(error.localizedDescription)
+                   }
                 reproductorLetra?.play()
                 reproductorLetra?.volume = 1
                 reproductorLetra?.delegate = self
@@ -340,6 +350,21 @@ extension MemoramaViewController: UICollectionViewDelegateFlowLayout{
         let items = [puntaje, flexibleSpace,tiempo]
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
+        
+        
+        
+        
+        if #available(iOS 15.0, *) {
+            let appereance = UIToolbarAppearance()
+            appereance.configureWithOpaqueBackground()
+            appereance.backgroundColor = .colorTabBarPalabrasEnBoca
+            navigationController?.toolbar.standardAppearance = appereance
+            navigationController?.toolbar.scrollEdgeAppearance = appereance
+            navigationController?.toolbar.compactAppearance = appereance
+        }
+        
+        
+        
         self.navigationController?.toolbar.isTranslucent = false
         self.navigationController?.toolbar.barTintColor = .colorTabBarPalabrasEnBoca
         self.navigationController?.toolbar.tintColor = .white

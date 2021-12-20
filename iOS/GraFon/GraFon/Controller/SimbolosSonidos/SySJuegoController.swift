@@ -27,6 +27,13 @@ class SySJuego1VC: UICollectionViewController, UICollectionViewDelegateFlowLayou
         reproductorMusica = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido12 ?? "15"))
         reproductorMusica?.delegate = self
         reproductorMusica?.volume = 0.2
+        
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
+        
         if (reproductorMusica?.isPlaying ?? false) {
             reproductorMusica?.stop()
         }
@@ -172,6 +179,17 @@ extension SySJuego1VC{
         
         
         let items = [UIBarButtonItem(customView: barraProgreso), puntaje]
+        
+        if #available(iOS 15.0, *) {
+            let appereance = UIToolbarAppearance()
+            appereance.configureWithOpaqueBackground()
+            appereance.backgroundColor = .colorBarraSuperiorSyS
+            navigationController?.toolbar.standardAppearance = appereance
+            navigationController?.toolbar.scrollEdgeAppearance = appereance
+            navigationController?.toolbar.compactAppearance = appereance
+        }
+        
+        
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
         self.navigationController?.toolbar.isTranslucent = false

@@ -219,6 +219,11 @@ class JuegoCitas: UIViewController{
         reproductorMusica = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido12 ?? "15"))
         reproductorMusica?.delegate = self
         reproductorMusica?.volume = 0.2
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
         if (reproductorMusica?.isPlaying ?? false) {
             reproductorMusica?.stop()
         }
@@ -256,6 +261,17 @@ class JuegoCitas: UIViewController{
         self.toolbarItems = items
         self.navigationController?.setToolbarHidden(false, animated: true)
         self.navigationController?.toolbar.isTranslucent = false
+        
+        if #available(iOS 15.0, *) {
+            let appereance = UIToolbarAppearance()
+            appereance.configureWithOpaqueBackground()
+            appereance.backgroundColor = .colorNavigationBarADivertirse
+            UIToolbar.appearance().tintColor = .colorBarraNavigationBarADivertirse
+            navigationController?.toolbar.standardAppearance = appereance
+            navigationController?.toolbar.scrollEdgeAppearance = appereance
+            navigationController?.toolbar.compactAppearance = appereance
+        }
+        
         self.navigationController?.toolbar.barTintColor = .colorNavigationBarADivertirse
         self.navigationController?.toolbar.tintColor = .colorBarraNavigationBarADivertirse
     }

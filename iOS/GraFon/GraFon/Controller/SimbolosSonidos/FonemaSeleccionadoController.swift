@@ -50,6 +50,14 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         self.toolbarItems = items
         self.navigationController?.toolbar.isTranslucent = false
         self.navigationController?.toolbar.barTintColor = .colorTabBarSonidoSimbolo
+        if #available(iOS 15.0, *) {
+            let appereance = UIToolbarAppearance()
+            appereance.configureWithOpaqueBackground()
+            appereance.backgroundColor = .colorTabBarSonidoSimbolo
+            navigationController?.toolbar.standardAppearance = appereance
+            navigationController?.toolbar.scrollEdgeAppearance = appereance
+            navigationController?.toolbar.compactAppearance = appereance
+        }
         self.navigationController?.toolbar.tintColor = .white
     }
     
@@ -132,6 +140,11 @@ class SonidoSeleccionado: UICollectionViewController,UICollectionViewDelegateFlo
         let sonido = Bundle.main.path(forResource: filtrado[indexPath.item].audio, ofType: "mp3")
         do {
             reproductorAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "pb_a_01"))
+            do {
+                  try AVAudioSession.sharedInstance().setCategory(.playback)
+               } catch(let error) {
+                   print(error.localizedDescription)
+               }
             reproductorAudio.play()
         }catch{
             print("Error al reproducir el audio")

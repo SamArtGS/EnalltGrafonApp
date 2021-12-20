@@ -110,7 +110,7 @@ struct tarjetas {
                 )
             ],
             excepciones: [
-                Palabra(palabra: "coach", enGriego: "kotʃ"),
+                Palabra(palabra: "coach", enGriego: "kot∫"),
                 Palabra(palabra: "goal", enGriego: "gol"),
                 Palabra(palabra: "toast", enGriego: "tost")
             ]
@@ -322,7 +322,7 @@ struct tarjetas {
                 Silaba(
                     palabras: [
                         Palabra(palabra: "pl*an*", enGriego: "plɑ̃"),
-                        Palabra(palabra: "ch*ant*", enGriego: "ʃɑ̃")
+                        Palabra(palabra: "ch*ant*", enGriego: "∫ɑ̃")
                     ],
                     pronuciacion: "an",
                     explicacion: "Al final de una palabra o seguidas de una consonante (excepto $n$) \n\n transcriben el sonido",
@@ -466,7 +466,7 @@ struct tarjetas {
                    excepciones: [
                         Palabra(palabra: "papeterie", enGriego: "pa.pᴇ.tʀi"),
                         Palabra(palabra: "atelier", enGriego: "a.t&Œ&.ljᴇ"),
-                        Palabra(palabra: "nous chanterions", enGriego: "nu.ʃɑ̃.t&Œ&.ʀjõ"),
+                        Palabra(palabra: "nous chanterions", enGriego: "nu.∫ɑ̃.t&Œ&.ʀjõ"),
                         Palabra(palabra: "vous rappeliez", enGriego: "vu.ʀa.p&Œ&.ljᴇ")
                    ]
            ),
@@ -864,7 +864,7 @@ struct tarjetas {
               silabas: [
                   Silaba(
                       palabras: [
-                            Palabra(palabra: "ch*ez*", enGriego: "ʃᴇ"),
+                            Palabra(palabra: "ch*ez*", enGriego: "∫ᴇ"),
                             Palabra(palabra: "vous parl*ez*", enGriego: "vu.paʀ.lᴇ")
                       ],
                       pronuciacion: "-ez",
@@ -899,7 +899,7 @@ struct tarjetas {
                 Palabra(palabra: "alzheim*er*", enGriego: "al.zaj.mᴇʀ"),
                 Palabra(palabra: "am*er*", enGriego: "a.mᴇʀ"),
                 Palabra(palabra: "canc*er*", enGriego: "kɑ̃.sᴇʀ"),
-                Palabra(palabra: "ch*er*", enGriego: "ʃᴇʀ"),
+                Palabra(palabra: "ch*er*", enGriego: "∫ᴇʀ"),
                 Palabra(palabra: "enf*er*", enGriego: "ɑ̃.fᴇʀ"),
                 Palabra(palabra: "f*er*", enGriego: "fᴇʀ"),
                 Palabra(palabra: "fi*er*", enGriego: "fjᴇʀ"),
@@ -907,7 +907,7 @@ struct tarjetas {
                 Palabra(palabra: "hi*er*", enGriego: "jᴇʀ"),
                 Palabra(palabra: "hiv*er*", enGriego: "i.vᴇʀ"),
                 Palabra(palabra: "hyp*er*", enGriego: "i.pᴇʀ"),
-                Palabra(palabra: "kash*er*", enGriego: "ka.ʃᴇʀ"),
+                Palabra(palabra: "kash*er*", enGriego: "ka.∫ᴇʀ"),
                 Palabra(palabra: "m*er*", enGriego: "mᴇʀ"),
                 
                 Palabra(palabra: "polyest*er*", enGriego: "po.ljᴇs.tᴇʀ"),
@@ -915,7 +915,7 @@ struct tarjetas {
                 Palabra(palabra: "v*er*", enGriego: "vᴇʀ"),
                 Palabra(palabra: "bestsell*er*", enGriego: "bᴇst.sᴇ.lᴇʀ"),
                 Palabra(palabra: "bulldoz*er*", enGriego: "byl.do.zᴇʀ"),
-                Palabra(palabra: "chart*er*", enGriego: "ʃaʀ.tᴇʀ"),
+                Palabra(palabra: "chart*er*", enGriego: "∫aʀ.tᴇʀ"),
                 Palabra(palabra: "clust*er*", enGriego: "klɶs.tɶʀ"),
                 Palabra(palabra: "corn*er*", enGriego: "koʀ.nᴇʀ"),
                 Palabra(palabra: "croon*er*", enGriego: "kʀu.nɶʀ"),
@@ -1240,7 +1240,7 @@ struct tarjetas {
               Silaba(
                   palabras: [
                         Palabra(palabra: "p*ia*no", enGriego: "pja.no"),
-                        Palabra(palabra: "ch*ie*n", enGriego: "ʃjɛ̃")
+                        Palabra(palabra: "ch*ie*n", enGriego: "∫jɛ̃")
                   ],
                   pronuciacion: "i",
                   explicacion: """
@@ -2100,10 +2100,10 @@ struct tarjetas {
           ],
           excepciones: [
             Palabra(palabra: "club", enGriego: "kl&Œ&b"),
-            Palabra(palabra: "putsch", enGriego: "putʃ"),
+            Palabra(palabra: "putsch", enGriego: "put∫"),
             Palabra(palabra: "hamburger", enGriego: "ɑ̃.b&Œ&ʀ.g&Œ&ʀ"),
             Palabra(palabra: "hold-up", enGriego: "ol.d&Œ&p"),
-            Palabra(palabra: "ketchup", enGriego: "kᴇ.tʃ&Œ&p")
+            Palabra(palabra: "ketchup", enGriego: "kᴇ.t∫&Œ&p")
           ]
         ),
         

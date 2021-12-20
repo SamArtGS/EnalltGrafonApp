@@ -141,7 +141,7 @@ extension tarjetas{
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "tabac", enGriego: "ta.ba"),
             Palabra(palabra: "estomac", enGriego: "ᴇs.to.ma"),
-            Palabra(palabra: "caoutchouc", enGriego: "ka.u.tʃu"),
+            Palabra(palabra: "caoutchouc", enGriego: "ka.u.t∫u"),
             Palabra(palabra: "croc", enGriego: "kʀo"),
             Palabra(palabra: " ", enGriego: " "),
             Palabra(palabra: "blanc", enGriego: "blɑ̃"),
@@ -216,13 +216,13 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*cha*t", enGriego: "ʃa")
+                    Palabra(palabra: "*cha*t", enGriego: "∫a")
               ],
               pronuciacion: "ch",
               explicacion: """
                               Seguidas de una vocal \n\n transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: nil,
               textodeAbajo: nil
             ),
@@ -263,12 +263,12 @@ extension tarjetas{
             Palabra(palabra: "orchidée", enGriego: "oʀ.ki.dᴇ"),
             Palabra(palabra: "écho", enGriego: "ᴇ.ko"),
             Palabra(palabra: " ", enGriego: " "),
-            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwiʃ"),
-            Palabra(palabra: "scotch", enGriego: "skotʃ"),
+            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwi∫"),
+            Palabra(palabra: "scotch", enGriego: "skot∫"),
             Palabra(palabra: " ", enGriego: " "),
-            Palabra(palabra: "psychique", enGriego: "psi.ʃik"),
-            Palabra(palabra: "psychisme", enGriego: "psi.ʃism"),
-            Palabra(palabra: "psyché", enGriego: "psi.ʃᴇ")
+            Palabra(palabra: "psychique", enGriego: "psi.∫ik"),
+            Palabra(palabra: "psychisme", enGriego: "psi.∫ism"),
+            Palabra(palabra: "psyché", enGriego: "psi.∫ᴇ")
           
           ]
         ),
@@ -296,15 +296,15 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*sch*éma", enGriego: "ʃᴇ.ma"),
-                    Palabra(palabra: "ha*sch*ich", enGriego: "a.ʃiʃ"),
-                    Palabra(palabra: "goula*sch*", enGriego: "gu.laʃ")
+                    Palabra(palabra: "*sch*éma", enGriego: "∫ᴇ.ma"),
+                    Palabra(palabra: "ha*sch*ich", enGriego: "a.∫i∫"),
+                    Palabra(palabra: "goula*sch*", enGriego: "gu.la∫")
               ],
               pronuciacion: "sch",
               explicacion: """
                               transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: "e_retro_varias-letras_n2", //ME FALTA LA IMAGEN DEL OFERTÓN
               textodeAbajo: nil
             )
@@ -476,7 +476,7 @@ extension tarjetas{
             Silaba(
               palabras: [
                     Palabra(palabra: "*f*emme", enGriego: "fam"),
-                Palabra(palabra: "che*f*", enGriego: "ʃᴇf")
+                Palabra(palabra: "che*f*", enGriego: "∫ᴇf")
               ],
               pronuciacion: "f",
               explicacion: """
@@ -492,7 +492,7 @@ extension tarjetas{
             Palabra(palabra: "nerf", enGriego: "nᴇʀ"),
             Palabra(palabra: "serf", enGriego: "sᴇʀ"),
             Palabra(palabra: "cerf", enGriego: "sᴇʀ"),
-            Palabra(palabra: "chef-d’œuvre", enGriego: "ʃᴇ.d&Œ&vʀ"),
+            Palabra(palabra: "chef-d’œuvre", enGriego: "∫ᴇ.d&Œ&vʀ"),
             //Palabras en plural
             
             Palabra(palabra: "œufs", enGriego: "&Œ&"),
@@ -564,8 +564,8 @@ extension tarjetas{
             )
           ],
           excepciones: [
-            Palabra(palabra: "geisha", enGriego: "gᴇi.ʃa"),
-            Palabra(palabra: "gestalt", enGriego: "gᴇʃ.talt"),
+            Palabra(palabra: "geisha", enGriego: "gᴇi.∫a"),
+            Palabra(palabra: "gestalt", enGriego: "gᴇ∫.talt"),
             Palabra(palabra: "yogi", enGriego: "jo.gi"),
             Palabra(palabra: "", enGriego: ""),
             Palabra(palabra: "gin", enGriego: "dʒin"),

@@ -32,6 +32,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         label.font = .Roboto(.bold, size: 20)
         label.textColor = .colorLetraRosa
         label.textAlignment = .center
+        label.sizeToFit()
         return label
     }()
     
@@ -111,6 +112,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     var randomNumber: Int = 0
     
     @objc func pausaPlay(){
+        
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.pause()
             booleano = false
@@ -183,7 +185,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
                     self?.soltarHoja()
             }
             
-            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[self?.randomNumber ?? 0]
+            
             self?.reload()
             self?.score = 0
             self?.puntaje.title = "Puntos: 0"
@@ -193,6 +195,10 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
             
             self?.segundosRestantes = 120
+            
+            self?.queueIntrusos =  Data.intrusos.filter { contenido in
+                contenido.sonido == self?.letraSonidoCurso?.tipo || contenido.sonido * -1 == self?.letraSonidoCurso?.tipo
+            }
             
             self?.labelBoton.font = .Roboto(.bold, size: 20)
             self?.timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
@@ -216,6 +222,7 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func configurarConstraints(){
+        labelBoton.font = .Roboto(.bold, size: 20)
         view.addSubview(botonLetra)
         view.addSubview(zonaMuerta)
         view.bringSubviewToFront(zonaMuerta)
@@ -245,6 +252,11 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         reproductorAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
         reproductorAudio?.delegate = self
         reproductorAudio?.volume = 0.2
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.stop()
         }
@@ -259,11 +271,17 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
         case 0:
             let sonido = Bundle.main.path(forResource: letraSonidoCurso?.sonido, ofType: "mp3")
             reproductorLetra = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+            do {
+                  try AVAudioSession.sharedInstance().setCategory(.playback)
+               } catch(let error) {
+                   print(error.localizedDescription)
+               }
             reproductorLetra?.play()
             reproductorLetra?.delegate = self
         case 1:
             let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
             reproductorLetra = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
+            
             reproductorLetra?.play()
             reproductorLetra?.delegate = self
         case 2:
@@ -446,7 +464,13 @@ class EncuentraIntrusoViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func preguntarCambioLetra(){
         let alert = UIAlertController(title: "¿Jugar con otro sonido?", message: nil, preferredStyle: .alert)
         let accion1 = UIAlertAction(title: "Sí", style: .default, handler: { [weak self] han in
-            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)]
+            
+            self?.randomNumber = Int.random(in: 0..<Data.sonidosDisponiblesIntrusos.count)
+            self?.letraSonidoCurso =  Data.sonidosDisponiblesIntrusos[self?.randomNumber ?? 0]
+            self?.queueIntrusos =  Data.intrusos.filter { contenido in
+                contenido.sonido == self?.letraSonidoCurso?.tipo || contenido.sonido * -1 == self?.letraSonidoCurso?.tipo
+            }
+            
             self?.reload()
         })
         alert.addAction(accion1)
@@ -469,6 +493,16 @@ extension EncuentraIntrusoViewController{
         let items = [puntaje,flexibleSpace,tiempo,flexibleSpace,boca]
         boca.target = self
         self.toolbarItems = items
+        
+        if #available(iOS 15.0, *) {
+            let appereance = UIToolbarAppearance()
+            appereance.configureWithOpaqueBackground()
+            appereance.backgroundColor = .colorTabBarPalabrasEnBoca
+            navigationController?.toolbar.standardAppearance = appereance
+            navigationController?.toolbar.scrollEdgeAppearance = appereance
+            navigationController?.toolbar.compactAppearance = appereance
+        }
+        
         self.navigationController?.setToolbarHidden(false, animated: true)
         self.navigationController?.toolbar.isTranslucent = false
         self.navigationController?.toolbar.barTintColor = .colorTabBarPalabrasEnBoca

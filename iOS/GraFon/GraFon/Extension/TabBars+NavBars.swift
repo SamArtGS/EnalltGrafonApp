@@ -43,26 +43,14 @@ extension UITabBarController: UINavigationBarDelegate{
         
         if #available(iOS 15.0, *) {
             let appearance = UITabBarAppearance()
-            appearance.backgroundColor = colorFondo
+            
             appearance.configureWithOpaqueBackground()
-            let item = UITabBarItemAppearance()
-            item.normal.iconColor = colorNoSeleccionado
-            item.selected.iconColor = colorSeleccionado
-            item.normal.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: colorNoSeleccionado,
-                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 10)
-            ]
-            item.selected.titleTextAttributes = [NSAttributedString.Key
-                                                .foregroundColor: colorSeleccionado]
-            appearance.stackedLayoutAppearance = item
-            appearance.inlineLayoutAppearance = item
-            appearance.compactInlineLayoutAppearance = item
-            tabBar.standardAppearance = appearance
-            //tabBar.scrollEdgeAppearance = appearance
-        }else if #available(iOS 13.0, *) {
-            let appearance = UITabBarAppearance()
+            
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+            UITabBar.appearance().tintColor = .white
+            
             appearance.backgroundColor = colorFondo
-            
             let item = UITabBarItemAppearance()
             item.normal.iconColor = colorNoSeleccionado
             item.selected.iconColor = colorSeleccionado
@@ -76,7 +64,25 @@ extension UITabBarController: UINavigationBarDelegate{
             appearance.inlineLayoutAppearance = item
             appearance.compactInlineLayoutAppearance = item
             tabBar.standardAppearance = appearance
-            
+       //}
+//        else if #available(iOS 13.0, *) {
+//            let appearance = UITabBarAppearance()
+//            appearance.backgroundColor = colorFondo
+//
+//            let item = UITabBarItemAppearance()
+//            item.normal.iconColor = colorNoSeleccionado
+//            item.selected.iconColor = colorSeleccionado
+//            item.normal.titleTextAttributes = [
+//                NSAttributedString.Key.foregroundColor: colorNoSeleccionado,
+//                NSAttributedString.Key.font: UIFont.Lato(.regular, size: 10)
+//            ]
+//            item.selected.titleTextAttributes = [NSAttributedString.Key
+//                                                .foregroundColor: colorSeleccionado]
+//            appearance.stackedLayoutAppearance = item
+//            appearance.inlineLayoutAppearance = item
+//            appearance.compactInlineLayoutAppearance = item
+//            tabBar.standardAppearance = appearance
+//
         }else{
             tabBar.barTintColor = colorFondo
             tabBar.unselectedItemTintColor = colorNoSeleccionado
@@ -88,12 +94,24 @@ extension UITabBarController: UINavigationBarDelegate{
     func colorearNavigationBar(colorFondo: UIColor, colorLineaAdorno: UIColor, colorLetras: UIColor){
         if #available(iOS 15.0, *) {
                     let appearance = UINavigationBarAppearance()
-                    appearance.backgroundColor = colorFondo
                     navigationController?.delegate = self
+                    
+                    appearance.configureWithOpaqueBackground()
+                    
+                    appearance.backgroundImage = colorFondo.as1ptImage()
+                    appearance.shadowImage = colorLineaAdorno.as1ptImage()
+                    UINavigationBar.appearance().standardAppearance = appearance
+                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                    UINavigationBar.appearance().tintColor = .white
+                    
+                    appearance.backgroundColor = colorFondo
+                    appearance.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor: colorLetras,
+                            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+                    ]
                     navigationController?.navigationBar.delegate = self
-                    navigationController?.navigationBar.standardAppearance = appearance;
-                    navigationController?.navigationBar.scrollEdgeAppearance = appearance;
-                    navigationController?.navigationBar.compactAppearance = appearance;
+                    navigationController?.toolbar.isTranslucent = false
+                    navigationController?.toolbar.scrollEdgeAppearance = navigationController?.toolbar.standardAppearance
                     
                 } else {
                     let apariencia = UINavigationBar.appearance()

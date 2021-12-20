@@ -64,13 +64,13 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*cha*t", enGriego: "ʃa")
+                    Palabra(palabra: "*cha*t", enGriego: "∫a")
               ],
               pronuciacion: "ch",
               explicacion: """
                               Seguidas de una vocal \n\n transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: nil,
               textodeAbajo: nil
             ),
@@ -110,12 +110,12 @@ extension tarjetas{
             Palabra(palabra: "orchidée", enGriego: "oʀ.ki.dᴇ"),
             Palabra(palabra: "écho", enGriego: "ᴇ.ko"),
             Palabra(palabra: "", enGriego: ""),
-            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwiʃ"),
-            Palabra(palabra: "scotch", enGriego: "skotʃ"),
+            Palabra(palabra: "sandwich", enGriego: "sɑ̃.dwi∫"),
+            Palabra(palabra: "scotch", enGriego: "skot∫"),
             Palabra(palabra: "", enGriego: ""),
-            Palabra(palabra: "psychique", enGriego: "psi.ʃik"),
-            Palabra(palabra: "psychisme", enGriego: "psi.ʃism"),
-            Palabra(palabra: "psyché", enGriego: "psi.ʃᴇ")
+            Palabra(palabra: "psychique", enGriego: "psi.∫ik"),
+            Palabra(palabra: "psychisme", enGriego: "psi.∫ism"),
+            Palabra(palabra: "psyché", enGriego: "psi.∫ᴇ")
           ]
         ),
         
@@ -141,13 +141,13 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*sh*opping", enGriego: "ʃo.piŋ")
+                    Palabra(palabra: "*sh*opping", enGriego: "∫o.piŋ")
               ],
               pronuciacion: "sh",
               explicacion: """
                               transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: nil,
               textodeAbajo: nil
             )
@@ -159,15 +159,15 @@ extension tarjetas{
           silabas: [
             Silaba(
               palabras: [
-                    Palabra(palabra: "*sch*éma", enGriego: "ʃᴇ.ma"),
-                    Palabra(palabra: "ha*sch*ich", enGriego: "a.ʃiʃ"),
-                    Palabra(palabra: "goula*sch*", enGriego: "gu.laʃ")
+                    Palabra(palabra: "*sch*éma", enGriego: "∫ᴇ.ma"),
+                    Palabra(palabra: "ha*sch*ich", enGriego: "a.∫i∫"),
+                    Palabra(palabra: "goula*sch*", enGriego: "gu.la∫")
               ],
               pronuciacion: "sch",
               explicacion: """
                               transcriben el sonido
                           """,
-              imagenFonema: "ʃ",
+              imagenFonema: "∫",
               imagenConsejo: "e_retro_varias-letras_n2", // ¡No te espantes! Eso pasa muy seguido en francés: varias letras, un solo sonido.
               textodeAbajo: nil
             )

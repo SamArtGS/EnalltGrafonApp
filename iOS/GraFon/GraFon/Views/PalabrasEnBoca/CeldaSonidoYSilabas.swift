@@ -314,6 +314,13 @@ class CeldaSonidoYSilabas: UICollectionViewCell {
         let sonido = Bundle.main.path(forResource: self.sonido, ofType: "mp3")
         reproductorAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: sonido ?? "15"))
         reproductorAudio?.delegate = self
+        
+        do {
+              try AVAudioSession.sharedInstance().setCategory(.playback)
+           } catch(let error) {
+               print(error.localizedDescription)
+           }
+        
         if (reproductorAudio?.isPlaying ?? false) {
             reproductorAudio?.stop()
         }
