@@ -281,6 +281,8 @@
 		54AB30D12745B9BB00F2F13B /* JuegoCitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D02745B9BB00F2F13B /* JuegoCitas.swift */; };
 		54AB30D32745B9CF00F2F13B /* JuegoSiNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D22745B9CF00F2F13B /* JuegoSiNo.swift */; };
 		54AB30D52745B9D800F2F13B /* JuegoDilemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D42745B9D800F2F13B /* JuegoDilemas.swift */; };
+		54AD0A782771216500783D3D /* EstructuraDilemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A772771216500783D3D /* EstructuraDilemas.swift */; };
+		54AD0A7A277121F500783D3D /* EstructuraSiNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A79277121F500783D3D /* EstructuraSiNo.swift */; };
 		54B41BF826C419F40061A7C0 /* PantallaExcepciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */; };
 		54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF002665968300E07A0B /* PantallaCreditos.swift */; };
 		54BDCF032665F28F00E07A0B /* ReGex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF022665F28E00E07A0B /* ReGex.swift */; };
@@ -808,6 +810,8 @@
 		54AB30D02745B9BB00F2F13B /* JuegoCitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoCitas.swift; sourceTree = "<group>"; };
 		54AB30D22745B9CF00F2F13B /* JuegoSiNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoSiNo.swift; sourceTree = "<group>"; };
 		54AB30D42745B9D800F2F13B /* JuegoDilemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoDilemas.swift; sourceTree = "<group>"; };
+		54AD0A772771216500783D3D /* EstructuraDilemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructuraDilemas.swift; sourceTree = "<group>"; };
+		54AD0A79277121F500783D3D /* EstructuraSiNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructuraSiNo.swift; sourceTree = "<group>"; };
 		54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaExcepciones.swift; sourceTree = "<group>"; };
 		54BDCF002665968300E07A0B /* PantallaCreditos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaCreditos.swift; sourceTree = "<group>"; };
 		54BDCF022665F28E00E07A0B /* ReGex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGex.swift; sourceTree = "<group>"; };
@@ -1228,6 +1232,8 @@
 				54BFA47326D9B6980050FD61 /* Trivia.swift */,
 				5452030227147C5100582D49 /* Loteria.swift */,
 				54AB30CC274547D100F2F13B /* Tourofon.swift */,
+				54AD0A772771216500783D3D /* EstructuraDilemas.swift */,
+				54AD0A79277121F500783D3D /* EstructuraSiNo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2333,6 +2339,7 @@
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
 				5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */,
+				54AD0A782771216500783D3D /* EstructuraDilemas.swift in Sources */,
 				5407186E265506BF00B664D6 /* TarjetasB-G.swift in Sources */,
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
 				54AB30D32745B9CF00F2F13B /* JuegoSiNo.swift in Sources */,
@@ -2351,6 +2358,7 @@
 				5449C1E626D6FCF600AEBCA9 /* Memorama.swift in Sources */,
 				54A2049626D5CBAB0000BB1B /* Intruso.swift in Sources */,
 				54A2049826D5CBD50000BB1B /* DataIntruso.swift in Sources */,
+				54AD0A7A277121F500783D3D /* EstructuraSiNo.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */,
 				54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */,

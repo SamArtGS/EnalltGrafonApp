@@ -49,7 +49,6 @@ class MenuTarjetas: UICollectionViewController, UIToolbarDelegate{
                 navigationController?.toolbar.scrollEdgeAppearance = appereance
                 navigationController?.toolbar.compactAppearance = appereance
             }
-            
         }
         if puertaSeleccionada == 2{
             self.title = "Palabras en la boca"

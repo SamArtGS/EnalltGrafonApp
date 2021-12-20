@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "tutorial_juego3_citas.png",
+      "filename" : "tutorial_juego1_si-no.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tutorial_juego3_citas@2x.png",
+      "filename" : "tutorial_juego1_si-no@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tutorial_juego3_citas@3x.png",
+      "filename" : "tutorial_juego1_si-no@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
