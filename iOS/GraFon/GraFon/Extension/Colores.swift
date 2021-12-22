@@ -82,7 +82,8 @@ extension UIColor {
     static let colorBotonJuegosTurbobonSelected: UIColor = UIColor(red: 232/255, green: 189/255, blue: 12/255, alpha: 1.0)
     
     
-    
+    static let colorGris1: UIColor = UIColor(red: 199/255, green: 199/255, blue: 204/255, alpha: 1.0)
+    static let colorGris2: UIColor = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1.0)
 }
 
 

@@ -28,7 +28,15 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     
-    
+    private var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.tintColor = .white
+        pageControl.pageIndicatorTintColor = .colorGris1
+        pageControl.currentPageIndicatorTintColor = .colorGris2
+        pageControl.isUserInteractionEnabled = false
+        return pageControl
+    }()
     
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
@@ -120,18 +128,40 @@ class PagePuertasCV: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         
         
+        configurePageControl()
+        
         let boton: UIButton = menuBotonExtras(self, action: #selector(mostrarExtras), imageName: "icons8-view_more")
+        boton.tintColor = .colorGris1
         view.addSubview(boton)
+        view.addSubview(pageControl)
+        
         NSLayoutConstraint.activate([
             boton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             boton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             boton.widthAnchor.constraint(equalToConstant: 30),
-            boton.heightAnchor.constraint(equalToConstant: 30)
+            boton.heightAnchor.constraint(equalToConstant: 30),
+            
+            pageControl.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            pageControl.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pageControl.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pageControl.heightAnchor.constraint(equalToConstant: 30)
         ])
         
-        
+        view.bringSubviewToFront(pageControl)
     }
     
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        debugPrint(pageNumber)
+            pageControl.currentPage = Int(pageNumber)
+    }
+    
+    var currentPage = 0
+    
+    func configurePageControl() {
+         self.pageControl.numberOfPages = 4
+         self.pageControl.currentPage = 0
+     }
     
     
     @objc func mostrarExtras(){

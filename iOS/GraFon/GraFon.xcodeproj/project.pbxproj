@@ -276,13 +276,13 @@
 		54A2049A26D5CC170000BB1B /* ImagenHoja.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2049926D5CC170000BB1B /* ImagenHoja.swift */; };
 		54A3084126E3262800B0A208 /* pb_n_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54A3084026E3262800B0A208 /* pb_n_01.mp3 */; };
 		54A712802742D6D600927588 /* 37_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54A7127F2742D6D600927588 /* 37_1.mp3 */; };
-		54AB30CD274547D100F2F13B /* Tourofon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30CC274547D100F2F13B /* Tourofon.swift */; };
+		54AB30CD274547D100F2F13B /* Cita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30CC274547D100F2F13B /* Cita.swift */; };
 		54AB30CF274555C000F2F13B /* MenuJuegos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30CE274555C000F2F13B /* MenuJuegos.swift */; };
 		54AB30D12745B9BB00F2F13B /* JuegoCitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D02745B9BB00F2F13B /* JuegoCitas.swift */; };
 		54AB30D32745B9CF00F2F13B /* JuegoSiNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D22745B9CF00F2F13B /* JuegoSiNo.swift */; };
 		54AB30D52745B9D800F2F13B /* JuegoDilemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB30D42745B9D800F2F13B /* JuegoDilemas.swift */; };
-		54AD0A782771216500783D3D /* EstructuraDilemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A772771216500783D3D /* EstructuraDilemas.swift */; };
-		54AD0A7A277121F500783D3D /* EstructuraSiNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A79277121F500783D3D /* EstructuraSiNo.swift */; };
+		54AD0A782771216500783D3D /* Dilema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A772771216500783D3D /* Dilema.swift */; };
+		54AD0A7A277121F500783D3D /* SiNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD0A79277121F500783D3D /* SiNo.swift */; };
 		54B41BF826C419F40061A7C0 /* PantallaExcepciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */; };
 		54BDCF012665968300E07A0B /* PantallaCreditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF002665968300E07A0B /* PantallaCreditos.swift */; };
 		54BDCF032665F28F00E07A0B /* ReGex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BDCF022665F28E00E07A0B /* ReGex.swift */; };
@@ -805,13 +805,13 @@
 		54A2049926D5CC170000BB1B /* ImagenHoja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenHoja.swift; sourceTree = "<group>"; };
 		54A3084026E3262800B0A208 /* pb_n_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pb_n_01.mp3; sourceTree = "<group>"; };
 		54A7127F2742D6D600927588 /* 37_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 37_1.mp3; sourceTree = "<group>"; };
-		54AB30CC274547D100F2F13B /* Tourofon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tourofon.swift; sourceTree = "<group>"; };
+		54AB30CC274547D100F2F13B /* Cita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cita.swift; sourceTree = "<group>"; };
 		54AB30CE274555C000F2F13B /* MenuJuegos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuJuegos.swift; sourceTree = "<group>"; };
 		54AB30D02745B9BB00F2F13B /* JuegoCitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoCitas.swift; sourceTree = "<group>"; };
 		54AB30D22745B9CF00F2F13B /* JuegoSiNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoSiNo.swift; sourceTree = "<group>"; };
 		54AB30D42745B9D800F2F13B /* JuegoDilemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoDilemas.swift; sourceTree = "<group>"; };
-		54AD0A772771216500783D3D /* EstructuraDilemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructuraDilemas.swift; sourceTree = "<group>"; };
-		54AD0A79277121F500783D3D /* EstructuraSiNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructuraSiNo.swift; sourceTree = "<group>"; };
+		54AD0A772771216500783D3D /* Dilema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dilema.swift; sourceTree = "<group>"; };
+		54AD0A79277121F500783D3D /* SiNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiNo.swift; sourceTree = "<group>"; };
 		54B41BF726C419F40061A7C0 /* PantallaExcepciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaExcepciones.swift; sourceTree = "<group>"; };
 		54BDCF002665968300E07A0B /* PantallaCreditos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaCreditos.swift; sourceTree = "<group>"; };
 		54BDCF022665F28E00E07A0B /* ReGex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGex.swift; sourceTree = "<group>"; };
@@ -1231,9 +1231,9 @@
 				5449C1E526D6FCF600AEBCA9 /* Memorama.swift */,
 				54BFA47326D9B6980050FD61 /* Trivia.swift */,
 				5452030227147C5100582D49 /* Loteria.swift */,
-				54AB30CC274547D100F2F13B /* Tourofon.swift */,
-				54AD0A772771216500783D3D /* EstructuraDilemas.swift */,
-				54AD0A79277121F500783D3D /* EstructuraSiNo.swift */,
+				54AB30CC274547D100F2F13B /* Cita.swift */,
+				54AD0A772771216500783D3D /* Dilema.swift */,
+				54AD0A79277121F500783D3D /* SiNo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1828,7 +1828,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = SamArtGS;
 				TargetAttributes = {
 					546B135925DAFACD00CF2ED5 = {
@@ -2339,7 +2339,7 @@
 				546B139725DB381400CF2ED5 /* Puerta.swift in Sources */,
 				54CD4DE425E0D429002D0006 /* MenuMoldeVC.swift in Sources */,
 				5406E83B26403BE900EE25B3 /* CeldaPalabras.swift in Sources */,
-				54AD0A782771216500783D3D /* EstructuraDilemas.swift in Sources */,
+				54AD0A782771216500783D3D /* Dilema.swift in Sources */,
 				5407186E265506BF00B664D6 /* TarjetasB-G.swift in Sources */,
 				546B139925DB3DF400CF2ED5 /* PaginacionPuertasVC.swift in Sources */,
 				54AB30D32745B9CF00F2F13B /* JuegoSiNo.swift in Sources */,
@@ -2358,7 +2358,7 @@
 				5449C1E626D6FCF600AEBCA9 /* Memorama.swift in Sources */,
 				54A2049626D5CBAB0000BB1B /* Intruso.swift in Sources */,
 				54A2049826D5CBD50000BB1B /* DataIntruso.swift in Sources */,
-				54AD0A7A277121F500783D3D /* EstructuraSiNo.swift in Sources */,
+				54AD0A7A277121F500783D3D /* SiNo.swift in Sources */,
 				54A0F88E262751C200A6D308 /* Letras.swift in Sources */,
 				54DCA04D26365AFA003D4F68 /* PantallaResultados.swift in Sources */,
 				54DCA05626367AE2003D4F68 /* HalfModalInteractiveTransition.swift in Sources */,
@@ -2380,7 +2380,7 @@
 				542D5AF62604E7CE0074927F /* imageButtons.swift in Sources */,
 				5420D225265460DA0069ABF1 /* TarjetaEEE-Y.swift in Sources */,
 				54581468270B5CB200791FC3 /* LoteriaViewController.swift in Sources */,
-				54AB30CD274547D100F2F13B /* Tourofon.swift in Sources */,
+				54AB30CD274547D100F2F13B /* Cita.swift in Sources */,
 				542D1332275583E700594499 /* CitasJuegoCell.swift in Sources */,
 				548FBA9326C0243300E8A109 /* GrupoPalabras.swift in Sources */,
 				54E70BDF264C1A8B00DA062F /* TarjetaSeleccionadaController.swift in Sources */,
@@ -2466,7 +2466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2522,7 +2522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2537,7 +2537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -2558,7 +2558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = GraFon/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

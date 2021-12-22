@@ -77,7 +77,7 @@ class PresentacionCreditos: UIViewController {
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
-        NSMutableAttributedString(string: "Universidad de Jyväskylä  (Finlandia)\n",
+        NSMutableAttributedString(string: "Universidad de Jyväskylä  (Finlandia)\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
@@ -89,9 +89,22 @@ class PresentacionCreditos: UIViewController {
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
-        NSMutableAttributedString(string: "Celestino Velázquez Martínez \n Edwin Monreal Alemán\n Braulio Nieto Cerca\n Aladar Martínez\n\n",
+        NSMutableAttributedString(string: "Celestino Velázquez Martínez \n Edwin Monreal Alemán\n Braulio Nieto Cercano ",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "(oct. - dic. 21) \n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "Missaeel Aladar Portilla Martínez ",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
+        NSMutableAttributedString(string: "(nov. - dic. 21) \n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
+        
         
         NSMutableAttributedString(string: "Alumnas de la Licenciatura en Traducción de la ENALLT-UNAM\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
@@ -128,11 +141,14 @@ class PresentacionCreditos: UIViewController {
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
-        NSMutableAttributedString(string: "Samuel Arturo Garrido Sánchez\n\n",
+        NSMutableAttributedString(string: "Samuel Arturo Garrido Sánchez\n\n\n\n",
                                   attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
                                                NSAttributedString.Key.foregroundColor: UIColor.black]),
         
        
+        NSMutableAttributedString(string: "https://ced.enallt.unam.mx/grafon/ \n\n\n",
+                                  attributes: [NSAttributedString.Key.font: UIFont.Roboto(.bold, size: 14),
+                                               NSAttributedString.Key.foregroundColor: UIColor.black]),
         
     ]
     

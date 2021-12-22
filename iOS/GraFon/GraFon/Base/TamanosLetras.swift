@@ -9,68 +9,91 @@
 import UIKit
 
 struct Tamanio {
-    static let letraCafeTarjetasMenu: CGFloat = 14
-    static let letrasCafeBocina:CGFloat = 22
-    static let letrasRosaBocina:CGFloat = 20
-    
-    static let letrasCafeBloques: CGFloat = 20
-    static let letrasRosasBloques: CGFloat = 20
-    static let letraPosicionBloque: CGFloat = 25
-    static let letraExplicacion:CGFloat = 16
-    static let letraFonema:CGFloat = 25
-
-}
-
-enum TamanioDispositivo: String{
-    
-    case iPhoneMuyGrande
-    case iPhone12Mini
-    case iPhoneGrande
-    case iPhoneMediano
-    case iPhonePequeño
-    
-    public init?(rawValue: String) {
-        switch rawValue {
-        case "iPhone Xs Max":
-            self = .iPhoneMuyGrande
-        case "iPhone 6":
-            self = .iPhoneMediano
-        case "iPhone 5s":
-            self = .iPhonePequeño
-        case "iPhone 12 mini":
-            self = .iPhone12Mini
-        case "iPhone 12":
-            self = .iPhoneGrande
-        default:
-            self = .iPhoneMediano
+    static let letraCafeTarjetasMenu: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 13
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 14
+            default:
+                return 14
         }
-    }
+    }()
     
-//    func establecer() -> [CGFloat]{
-//        var letraCafeTarjetasMenu: CGFloat = 14
-//        var letrasCafeBocina:CGFloat = 22
-//        var letrasRosaBocina:CGFloat = 20
-//        var letrasCafeBloques: CGFloat = 20
-//        var letrasRosasBloques: CGFloat = 20
-//        var letraPosicionBloque: CGFloat = 25
-//        var letraExplicacion:CGFloat = 16
-//        var letraFonema:CGFloat = 25
-//        switch self {
-//        case .iPhonePequeño:
-//            <#code#>
-//        case .iPhone12Mini:
-//            <#code#>
-//        case .iPhoneMediano:
-//            <#code#>
-//        case .iPhoneGrande:
-//            <#code#>
-//        case .iPhoneMuyGrande:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-//    }
+    static let letrasCafeBocina: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 17
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 22
+            default:
+                return 22
+        }
+    }()
     
+    static let letrasRosaBocina: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 15
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 20
+            default:
+                return 20
+        }
+    }()
+    
+    static let letrasCafeBloques: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 17
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 20
+            default:
+                return 20
+        }
+    }()
+    
+    static let letrasRosasBloques: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 17
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 20
+            default:
+                return 20
+        }
+    }()
+    
+    static let letraPosicionBloque: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 22
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 25
+            default:
+                return 25
+        }
+    }()
+    
+    static let letraExplicacion: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 15
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 16
+            default:
+                return 16
+        }
+    }()
+    
+    static let letraFonema: CGFloat = {
+        switch UIDevice().type{
+        case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                return 22
+            case .iPhone6, .iPhone7, .iPhone8, .iPhone6S, .iPhoneX:
+                return 25
+            default:
+                return 25
+        }
+    }()
 }
-
-//SKU: 20210623

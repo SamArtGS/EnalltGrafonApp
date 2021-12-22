@@ -246,7 +246,7 @@ extension Data{
                incorrecta2: "visite"),
         
         
-        Trivia(letra: "ʃᴇ",
+        Trivia(letra: "∫ᴇ",
                audio: "153",
                respuesta: "échec",
                incorrecta1: "reproche",

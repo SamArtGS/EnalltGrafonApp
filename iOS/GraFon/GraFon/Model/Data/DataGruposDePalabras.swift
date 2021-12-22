@@ -399,7 +399,7 @@ extension Data{
               silabas: [
                 Silaba(
                   palabras: [
-                        Palabra(palabra: "ºelleºªs tªºe proposentº", enGriego: "ᴇl.tɶ.pʀo.poz"),
+                        Palabra(palabra: "ºelleºªs tªºe proposentº", enGriego: "ᴇl.t&Œ&.pʀo.poz"),
                         Palabra(palabra: "vou*s l*ui parlez", enGriego: "vu.lɥi.paʀ.lᴇ")
                   ],
                   pronuciacion: "-s",

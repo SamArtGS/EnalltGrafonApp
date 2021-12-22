@@ -327,7 +327,7 @@ extension tarjetas{
             Palabra(palabra: "index", enGriego: "ɛ̃.dᴇks"),
             Palabra(palabra: "furax", enGriego: "fy.ʀaks"),
             Palabra(palabra: "codex", enGriego: "ko.dᴇks"),
-            Palabra(palabra: "relax", enGriego: "ʀᴇ.laks"),
+            Palabra(palabra: "relax", enGriego: "ʀ&Œ&.laks"),
             Palabra(palabra: "reflex", enGriego: "ʀᴇ.flᴇks"),
             Palabra(palabra: "duplex", enGriego: "dy.plᴇks"),
             Palabra(palabra: "climax", enGriego: "kli.maks")

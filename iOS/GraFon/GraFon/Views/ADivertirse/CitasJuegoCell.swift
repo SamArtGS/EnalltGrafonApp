@@ -12,10 +12,11 @@ class CitaCell: UICollectionViewCell{
     
     weak var delegate: juegoCitasDelegate?
     
-    
     var cita: Cita?{
         didSet{
             guard let cita = cita else { return }
+            
+            
             
             tituloLabel.text = "Si lees en voz alta, \n ¿cuántos sonidos como este encuentras?"
             letraLabel.text = cita.simbolo
@@ -23,7 +24,12 @@ class CitaCell: UICollectionViewCell{
             if UIDevice().userInterfaceIdiom == .pad{
                 letraLabel.font = .Roboto(.bold, size: 27)
             }else{
-                letraLabel.font = .Roboto(.bold, size: 17)
+                switch UIDevice().type{
+                    case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                    letraLabel.font =  .Roboto(.bold, size: 15)
+                    default:
+                    letraLabel.font = .Roboto(.bold, size: 17)
+                }
             }
             
             citaLabel.text = cita.texto
@@ -41,16 +47,29 @@ class CitaCell: UICollectionViewCell{
                 libroLabel.attributedText = partOne
                 
             }else{
-                let atributoObra = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14)]
-                let atributoAutor = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14)]
                 
-                let partOne = NSMutableAttributedString(string: cita.obra + "\n", attributes: atributoObra)
-                let partTwo = NSMutableAttributedString(string: cita.autor, attributes: atributoAutor)
-                
-                partOne.append(partTwo)
-                
-                libroLabel.attributedText = partOne
-                
+                switch UIDevice().type{
+                    case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                        let atributoObra = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 12)]
+                        let atributoAutor = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 12)]
+                        
+                        let partOne = NSMutableAttributedString(string: cita.obra + "\n", attributes: atributoObra)
+                        let partTwo = NSMutableAttributedString(string: cita.autor, attributes: atributoAutor)
+                        
+                        partOne.append(partTwo)
+                        
+                        libroLabel.attributedText = partOne
+                    default:
+                        let atributoObra = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.italic, size: 14)]
+                        let atributoAutor = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.Roboto(.regular, size: 14)]
+                        
+                        let partOne = NSMutableAttributedString(string: cita.obra + "\n", attributes: atributoObra)
+                        let partTwo = NSMutableAttributedString(string: cita.autor, attributes: atributoAutor)
+                        
+                        partOne.append(partTwo)
+                        
+                        libroLabel.attributedText = partOne
+                }
             }
         }
     }
@@ -77,10 +96,16 @@ class CitaCell: UICollectionViewCell{
     let tituloLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         if UIDevice().userInterfaceIdiom == .pad{
             label.font = .Roboto(.bold, size: 24)
         }else{
-            label.font = .Roboto(.bold, size: 14)
+            switch UIDevice().type{
+                case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                    label.font =  .Roboto(.bold, size: 12)
+                default:
+                    label.font = .Roboto(.bold, size: 14)
+            }
         }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
@@ -112,7 +137,12 @@ class CitaCell: UICollectionViewCell{
         if UIDevice().userInterfaceIdiom == .pad{
             label.font = .Roboto(.italic, size: 24)
         }else{
-            label.font = .Roboto(.italic, size: 14)
+            switch UIDevice().type{
+                case .iPhoneSE, .iPhone5, .iPhone5S, .iPhone12Mini, .iPhone13Mini:
+                label.font =  .Roboto(.italic, size: 12)
+                default:
+                label.font = .Roboto(.italic, size: 14)
+            }
         }
         label.textColor = .black
         label.lineBreakMode = .byWordWrapping
