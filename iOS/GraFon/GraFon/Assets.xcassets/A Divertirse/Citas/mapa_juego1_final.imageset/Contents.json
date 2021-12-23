@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "tutorial_juego1_si-no(1).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tutorial_juego1_si-no@2x(1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tutorial_juego1_si-no@3x(1).png",
+      "filename" : "mapa_juego1_00@3x(1).png",
       "idiom" : "universal",
       "scale" : "3x"
     }

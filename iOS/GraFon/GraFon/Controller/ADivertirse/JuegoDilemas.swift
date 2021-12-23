@@ -145,7 +145,7 @@ class JuegoDilemas: UIViewController{
             //Están componiendo una puerta en mi casa //Si lo oigo
             if bool{
                 tituloAlert = "¡Felicidades, llegaste a la meta!"
-                mapa.image = UIImage(named: "cruce_meta_juego3")
+                mapa.image = UIImage(named: "mapa_juego2_final")
             }else{
                 tituloAlert = "¡Intentalo de nuevo para llegar más lejos!"
             }

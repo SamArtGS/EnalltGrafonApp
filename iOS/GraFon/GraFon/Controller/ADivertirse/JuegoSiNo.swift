@@ -13,7 +13,7 @@ class JuegoSiNo: UIViewController{
         private var score: Int = 0
         var sino = Data.siNo.shuffled()
         var timer: Timer?
-        private var segundosRestantes = 60
+        private var segundosRestantes = 120
         
         let mapa: UIImageView = {
             let imageView = UIImageView()
@@ -144,7 +144,7 @@ class JuegoSiNo: UIViewController{
             //Están componiendo una puerta en mi casa //Si lo oigo
             if bool{
                 tituloAlert = "¡Felicidades, llegaste a la meta!"
-                mapa.image = UIImage(named: "cruce_meta_juego3")
+                mapa.image = UIImage(named: "mapa_juego1_final")
             }else{
                 tituloAlert = "¡Intentalo de nuevo para llegar más lejos!"
             }
@@ -154,7 +154,7 @@ class JuegoSiNo: UIViewController{
                 self?.timer?.invalidate()
                 self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
                 self?.score = 0
-                self?.segundosRestantes = 60
+                self?.segundosRestantes = 120
                 self?.puntaje.title = "Puntos: 0"
                 self?.sino = Data.siNo.shuffled()
                 self?.coleccionView.reloadData()
