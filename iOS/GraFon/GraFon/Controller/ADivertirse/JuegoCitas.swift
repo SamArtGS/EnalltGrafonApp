@@ -162,6 +162,7 @@ class JuegoCitas: UIViewController{
             self?.puntaje.title = "Puntos: 0"
             self?.citas = Data.citas.shuffled()
             self?.coleccionView.reloadData()
+            self?.coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
             self?.mapa.image = UIImage(named: "mapa_juego3_1")
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
@@ -377,7 +378,7 @@ extension JuegoCitas: juegoCitasDelegate{
                 
                 self.citas = Data.citas.shuffled()
                 self.coleccionView.reloadData()
-                coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+                coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
                 
             }else{
                 coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)

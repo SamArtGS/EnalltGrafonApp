@@ -57,7 +57,9 @@ class UILabelPersonalizado: UILabel{
         let formatos: [Formato] = [
             Formato(simbolo: "£", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
             
-            Formato(simbolo: "*", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
+            Formato(simbolo: "*", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize)),
+            Formato(simbolo: "π", color: self.textColor, fuente: .Roboto(.bold, size: font.pointSize)),
+            // Con * se pone las Negrita Negro
             Formato(simbolo: "¿", color: .black, fuente: .Roboto(.regular, size: font.pointSize-7)),  // Con * se pone las Negrita Negro,
             Formato(simbolo: "$", color: .colorLetras, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
             Formato(simbolo: "#", color: .colorLetraRosa, fuente: .Roboto(.bold, size: Tamanio.letraFonema)),

@@ -161,11 +161,11 @@ extension SeleccionarNivelController{
             switch indexPath.item {
             case 0:
                 //Tutorial de Si/No
-                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon1)
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego1_si-no", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon1)
                 self.navigationController?.pushViewController(vcs, animated: true)
             case 1:
                 //Tutorial de Dilemas
-                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon2)
+                let vcs = InstruccionesVC(imagenInstruccion: "tutorial_juego2_dilemas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon2)
                 self.navigationController?.pushViewController(vcs, animated: true)
             case 2:
                 //Tutorial de Citas

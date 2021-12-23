@@ -11,15 +11,15 @@ import AVFoundation
 class JuegoSiNo: UIViewController{
         
         private var score: Int = 0
-        var citas = Data.citas.shuffled()
+        var sino = Data.siNo.shuffled()
         var timer: Timer?
-        private var segundosRestantes = 300
+        private var segundosRestantes = 60
         
         let mapa: UIImageView = {
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.contentMode = .scaleAspectFit
-            imageView.image = UIImage(named: "mapa_juego3_1")
+            imageView.image = UIImage(named: "mapa_juego1_1")
             return imageView
         }()
         
@@ -42,7 +42,7 @@ class JuegoSiNo: UIViewController{
             coleccionView.dataSource = self
             coleccionView.backgroundColor = .clear
             view.backgroundColor = .colorFondoTurboFon
-            coleccionView.register(CitaCell.self, forCellWithReuseIdentifier: "cell_cita")
+            coleccionView.register(SiNoCell.self, forCellWithReuseIdentifier: "cell_sino")
             distribucionConstraints()
             configuracionToolBar()
             coleccionView.isScrollEnabled = false
@@ -153,13 +153,13 @@ class JuegoSiNo: UIViewController{
             alert.addAction(UIAlertAction(title: "Sí", style: .default, handler: {[weak self] _ in
                 self?.timer?.invalidate()
                 self?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self!, selector: #selector(self?.updateCounter(sender:)), userInfo: nil, repeats: true)
-                self?.citas = Data.citas.shuffled()
                 self?.score = 0
-                self?.segundosRestantes = 300
+                self?.segundosRestantes = 60
                 self?.puntaje.title = "Puntos: 0"
-                self?.citas = Data.citas.shuffled()
+                self?.sino = Data.siNo.shuffled()
                 self?.coleccionView.reloadData()
-                self?.mapa.image = UIImage(named: "mapa_juego3_1")
+                self?.coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
+                self?.mapa.image = UIImage(named: "mapa_juego1_1")
             }))
             alert.addAction(UIAlertAction(title: "No", style: .default, handler: {[weak self] _ in
                 guard let viewController = self?.navigationController?.viewControllers else { return }
@@ -174,7 +174,7 @@ class JuegoSiNo: UIViewController{
         
         @objc
         func mostrarInstrucciones(){
-            present(InstruccionesVC(imagenInstruccion: "tutorial_juego_citas", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon3, modal: true), animated: true)
+            present(InstruccionesVC(imagenInstruccion: "tutorial_juego1_si-no", imagenBoton: "btn_jugar_n4", juegoLanzar: .turbofon1, modal: true), animated: true)
         }
         
         deinit {
@@ -209,7 +209,7 @@ class JuegoSiNo: UIViewController{
         }
         
         var reproductorMusica: AVAudioPlayer?
-        private var fondoSonido: String = "Juego_de_citas"
+        private var fondoSonido: String = "SioNo"
         
         func audioFondo(){
             let sonido12 = Bundle.main.path(forResource: fondoSonido, ofType: "mp3")
@@ -277,7 +277,7 @@ class JuegoSiNo: UIViewController{
             return UIBarButtonItem(title: "Puntos: 0",style: .plain, target: nil, action: nil)
         }()
         private var tiempo: UIBarButtonItem = {
-            return UIBarButtonItem(title: "Tiempo: 5:00",style: .plain, target: nil, action: nil)
+            return UIBarButtonItem(title: "Tiempo: 1:00",style: .plain, target: nil, action: nil)
         }()
         private var flexibleSpace: UIBarButtonItem = {
             return UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -299,12 +299,12 @@ class JuegoSiNo: UIViewController{
 
 extension JuegoSiNo: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return citas.count
+        return sino.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_cita", for: indexPath) as! CitaCell
-        cell.cita = citas[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_sino", for: indexPath) as! SiNoCell
+        cell.sino = sino[indexPath.item]
         cell.backgroundColor = .clear
         cell.delegate = self
         return cell
@@ -328,9 +328,18 @@ extension JuegoSiNo: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        coleccionView.visibleCells.forEach { cell in
+            cell.isUserInteractionEnabled = true
+            cell.subviews.forEach { view in
+                view.isUserInteractionEnabled = true
+            }
+        }
+        
+    }
 }
 
-extension JuegoSiNo: juegoCitasDelegate{
+extension JuegoSiNo: juegoSiNoDelegate{
         func sonarPoint(bool: Bool) {
             if bool{
                 let sonido = Bundle.main.path(forResource: "buena", ofType: "wav")
@@ -353,7 +362,7 @@ extension JuegoSiNo: juegoCitasDelegate{
             
             if correcto{
                 score += 1
-                mapa.image = UIImage(named: "mapa_juego3_\(score + 1)")
+                mapa.image = UIImage(named: "mapa_juego1_\(score + 1)")
                 puntaje.title = "Puntos: \(score)"
             }else{
                 puntaje.title = "Puntos: \(score)"
@@ -370,11 +379,11 @@ extension JuegoSiNo: juegoCitasDelegate{
                 
             }else{
                 
-                if indexPath.item + 1 == citas.count{
+                if indexPath.item + 1 == sino.count{
                     
-                    self.citas = Data.citas.shuffled()
+                    self.sino = Data.siNo.shuffled()
                     self.coleccionView.reloadData()
-                    coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)
+                    coleccionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
                     
                 }else{
                     coleccionView.scrollToItem(at: IndexPath(item: indexPath.item + 1, section: 0), at: .centeredHorizontally, animated: true)

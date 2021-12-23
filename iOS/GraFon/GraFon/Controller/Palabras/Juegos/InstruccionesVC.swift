@@ -43,7 +43,7 @@ enum JuegoLanzarPalabras {
         case .loteria2:
             return "Lotofón 2"
         case .turbofon1:
-            return "Juego sí o no"
+            return "Juego de sí o no"
         case .turbofon2:
             return "Juego de los dilemas"
         case .turbofon3:
@@ -158,11 +158,11 @@ class InstruccionesVC: UIViewController {
             navigationController?.pushViewController(loteria, animated: true)
             
         case .turbofon1:
-            let citas = JuegoCitas()
+            let citas = JuegoSiNo()
             citas.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(citas, animated: true)
         case .turbofon2:
-            let citas = JuegoCitas()
+            let citas = JuegoDilemas()
             citas.title = juegoLanzar.retuTitle()
             navigationController?.pushViewController(citas, animated: true)
         case .turbofon3:
