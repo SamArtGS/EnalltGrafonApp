@@ -202,6 +202,7 @@ class PresentacionCreditos: UIViewController {
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.isScrollEnabled = true
         scroll.isPagingEnabled = false
+        scroll.backgroundColor = .white
         scroll.isUserInteractionEnabled = true
         return scroll
     }()

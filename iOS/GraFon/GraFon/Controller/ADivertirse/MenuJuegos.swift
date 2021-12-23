@@ -53,8 +53,27 @@ class MenuJuegos: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.shadowImage = UIColor.colorBarraNavigationBarADivertirse.as1ptImage()
-        navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarADivertirse.as1ptImage(), for: .default)
+        
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .colorNavigationBarADivertirse
+            appearance.shadowImage = UIColor.colorBarraNavigationBarADivertirse.as1ptImage()
+            navigationController?.navigationBar.tintColor = .white
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+            ]
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
+        }else{
+            navigationController?.navigationBar.shadowImage = UIColor.colorBarraNavigationBarADivertirse.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarADivertirse.as1ptImage(), for: .default)
+            
+        }
+        
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.setToolbarHidden(true, animated: false)
         self.tabBarController?.tabBar.isHidden = true
@@ -140,7 +159,14 @@ extension MenuJuegos{
         let vc = SeleccionarNivelController(collectionViewLayout: scrollLayout, puertaSeleccionada: 1)
         navigationController?.navigationBar.shadowImage = UIColor.colorBarraNavigationBarADivertirse.as1ptImage()
         navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarADivertirse.as1ptImage(), for: .default)
+        
+        
+        
+       
         vc.title = "Tourofón"
+        
+        
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -149,8 +175,25 @@ extension MenuJuegos{
         scrollLayout.scrollDirection = .vertical
         let vc = SeleccionarNivelController(collectionViewLayout: scrollLayout, puertaSeleccionada: 3)
         vc.title = "Simbolofón"
-        navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
-        navigationController?.navigationBar.setBackgroundImage(UIColor.colorTabBarSonidoSimbolo.as1ptImage(), for: .default)
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .colorTabBarSonidoSimbolo
+            appearance.shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
+            navigationController?.navigationBar.tintColor = .white
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+            ]
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
+        }else{
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorSyS.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorTabBarSonidoSimbolo.as1ptImage(), for: .default)
+            
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -159,8 +202,26 @@ extension MenuJuegos{
         scrollLayout.scrollDirection = .vertical
         let vc = SeleccionarNivelController(collectionViewLayout: scrollLayout, puertaSeleccionada: 0)
         vc.title = "Lotofón"
-        navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorGruposPalabras.as1ptImage()
-        navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarGruposPalabras.as1ptImage(), for: .default)
+        
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .colorNavigationBarGruposPalabras
+            appearance.shadowImage = UIColor.colorLineaBarraSuperiorGruposPalabras.as1ptImage()
+            navigationController?.navigationBar.tintColor = .white
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+            ]
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
+        }else{
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorGruposPalabras.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorNavigationBarGruposPalabras.as1ptImage(), for: .default)
+        }
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -169,8 +230,60 @@ extension MenuJuegos{
         scrollLayout.scrollDirection = .vertical
         let vc = SeleccionarNivelController(collectionViewLayout: scrollLayout, puertaSeleccionada: 2)
         vc.title = "Grafefón"
-        navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
-        navigationController?.navigationBar.setBackgroundImage(UIColor.colorBarraSuperiorPalabras.as1ptImage(), for: .default)
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .colorBarraSuperiorPalabras
+            appearance.shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
+            navigationController?.navigationBar.tintColor = .white
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+            ]
+            navigationController?.navigationBar.standardAppearance = appearance;
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
+        }else{
+            navigationController?.navigationBar.shadowImage = UIColor.colorLineaBarraSuperiorPalabras.as1ptImage()
+            navigationController?.navigationBar.setBackgroundImage(UIColor.colorBarraSuperiorPalabras.as1ptImage(), for: .default)
+        }
+        
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    
+    func colorearNavigationBar(colorFondo: UIColor, colorLineaAdorno: UIColor, colorLetras: UIColor){
+        if #available(iOS 15.0, *) {
+                    let appearance = UINavigationBarAppearance()
+                    
+                    appearance.configureWithOpaqueBackground()
+                    
+                    appearance.backgroundImage = colorFondo.as1ptImage()
+                    appearance.shadowImage = colorLineaAdorno.as1ptImage()
+                    UINavigationBar.appearance().standardAppearance = appearance
+                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                    UINavigationBar.appearance().tintColor = .white
+                    
+                    appearance.backgroundColor = colorFondo
+                    appearance.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor: colorLetras,
+                            NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+                    ]
+                    navigationController?.toolbar.isTranslucent = false
+                    navigationController?.toolbar.scrollEdgeAppearance = navigationController?.toolbar.standardAppearance
+                    
+                } else {
+                    let apariencia = UINavigationBar.appearance()
+                    apariencia.setBackgroundImage(colorFondo.as1ptImage(), for: .default)
+                    apariencia.shadowImage = colorLineaAdorno.as1ptImage()
+                    apariencia.titleTextAttributes = [
+                        NSAttributedString.Key.foregroundColor: colorLetras,
+                        NSAttributedString.Key.font: UIFont.Lato(.regular, size: 18)
+                    ]
+                    apariencia.tintColor = colorLetras
+                }
+    }
 }
+
+
