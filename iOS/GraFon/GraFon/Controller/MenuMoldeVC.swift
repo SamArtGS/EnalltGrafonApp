@@ -181,11 +181,11 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
-                case 1136: //5,5s,SE
+                case 0...1136: //5,5s,SE
                     return view.frame.size.height/70
-                case 1334: //6,7,8
+            case 1136...1334: //6,7,8
                     return view.frame.size.height/60
-                case 1920, 2208:// 6+,7+,8+
+            case 1334...2208:// 6+,7+,8+
                     return view.frame.size.height/55
                 case 2436: // X, Xs, 11Pro
                     return view.frame.size.height/30
@@ -194,7 +194,7 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
                 case 1792: // Xr, 11
                     return view.frame.size.height/28
                 default:
-                    return view.frame.size.height/17.5
+                    return view.frame.size.height/28
                 }
         }else{
             if UIDevice().userInterfaceIdiom == .pad{
@@ -212,7 +212,7 @@ extension MenuMoldeVC : UICollectionViewDelegateFlowLayout{
                     case 1792: //Pro 12.9
                         return view.frame.size.height/28
                     default:
-                        return view.frame.size.height/130
+                        return view.frame.size.height/70
                     }
             }
         }
